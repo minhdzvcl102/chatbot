@@ -1,5 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+
+import path from 'path'; 
+import { fileURLToPath } from 'url';
+import fs from 'fs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const LOG_FILE_PATH = path.join(__dirname, '../../app.log'); // Log file trong thư mục gốc của Node.js backend
 
 let currentLogMode = "CONSOLE"; // Mặc định chỉ log ra console
@@ -38,7 +43,4 @@ function logMessage(level, message, stackTrace = null) {
     }
 }
 
-module.exports = {
-    logMessage,
-    setLogMode
-};
+export { logMessage, setLogMode };

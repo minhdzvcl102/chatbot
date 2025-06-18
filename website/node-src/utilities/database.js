@@ -2,7 +2,7 @@ import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { logMessage } from './logger.js';
+import  {logMessage}  from './logger.js';
 import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
