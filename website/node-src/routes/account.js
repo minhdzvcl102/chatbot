@@ -3,7 +3,9 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { getDb } from '../utilities/database.js'; // Lấy instance DB đã khởi tạo từ SQLite
 import { logMessage } from '../utilities/logger.js';
-
+import { configDotenv } from 'dotenv';
+configDotenv(); // Tải biến môi trường từ file .env
+import authenticateToken from '../middleware/auth.js';
 const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -38,6 +40,28 @@ router.post('/register', async (req, res) => {
     }
 });
 
+router.post('/login', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const db = await getDb(); // Lấy database instance
+        const user = await db.get('SELECT * FROM users WHERE email = ?', [email]);
+        if (!user) {
+            logMessage("WRN", `Login failed for non-existent user: ${email}`);
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) {
+            logMessage("WRN", `Login failed for user ${email} - Incorrect password`);
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+        const token = jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
+        logMessage("INF", `User ${email} logged in successfully`);
+        return res.json({ token, userId: user.id, username: user.username });
+    } catch (error) {
+        logMessage("ERR", `Error during login: ${error.message}`, error.stack);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
 
 
 export default router;

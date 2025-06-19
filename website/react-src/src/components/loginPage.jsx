@@ -1,17 +1,61 @@
 import React, { useState } from "react";
-// Cài đặt thư viện icon nếu cần: npm install lucide-react
 import { Menu } from "lucide-react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   // Sử dụng state để quản lý giá trị của các ô input
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({}); // State để quản lý lỗi
 
-  // Hàm xử lý khi người dùng nhấn nút đăng nhập
-  const handleLogin = (e) => {
-    e.preventDefault(); // Ngăn trình duyệt tải lại trang
-    // Tại đây, bạn có thể thêm logic xác thực người dùng
-    console.log("Đăng nhập với:", { username, password });
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    setErrors({}); // Đặt lại tất cả lỗi về rỗng trước mỗi lần submit
+
+    let newErrors = {}; // Tạo một đối tượng tạm thời để thu thập lỗi client-side
+
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email format is invalid";
+    }
+
+    if (!password.trim()) {
+      newErrors.password = "Password is required";
+    } else if (password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:3000/account/login', {
+        email: email,
+        password: password,
+      });
+
+      if (response.status === 200) {
+        console.log("Đăng nhập thành công:", response.data);
+        localStorage.setItem('authToken', response.data.token);
+        navigate('/'); // Chuyển hướng đến trang chủ
+      }
+
+    } catch (error) {
+      // Cập nhật state `errors` với thông báo lỗi từ server
+      setErrors(prevErrors => ({
+        ...prevErrors, // Giữ lại các lỗi client-side nếu có (tùy thuộc vào UX mong muốn)
+        server: error.response?.data?.message || "Đăng nhập thất bại. Vui lòng thử lại.",
+      }));
+
+      navigate('/login');
+    }
   };
 
   return (
@@ -34,20 +78,25 @@ const LoginPage = () => {
           </h2>
           <div className="flex flex-col gap-1">
             <label
-              htmlFor="username"
+              htmlFor="email"
               className="font-semibold text-base text-black mb-1"
             >
-              Username
+              Email
             </label>
             <input
-              id="username"
+              id="email"
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Username"
-              className="w-full px-5 py-3 rounded-xl bg-[#eef2f6] text-base text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 border-none"
-              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="email"
+              className={`w-full px-5 py-3 rounded-xl bg-[#eef2f6] text-base text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 border-none ${errors.email ? 'border border-red-500' : ''
+                }`}
             />
+            {errors.email && (
+              <span className="text-red-500 text-sm">
+                {errors.email}
+              </span>
+            )}
           </div>
           <div className="flex flex-col gap-1">
             <label
@@ -62,10 +111,20 @@ const LoginPage = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
-              className="w-full px-5 py-3 rounded-xl bg-[#eef2f6] text-base text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 border-none"
-              required
+              className={`w-full px-5 py-3 rounded-xl bg-[#eef2f6] text-base text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 border-none ${errors.password ? 'border border-red-500' : ''
+                }`}
             />
+            {errors.password && (
+              <span className="text-red-500 text-sm">
+                {errors.password}
+              </span>
+            )}
           </div>
+
+          {errors.server && (
+            <p className="text-red-500 text-center text-sm mt-2">{errors.server}</p>
+          )}
+
           <button
             type="submit"
             className="w-full bg-[#1884f7] hover:bg-[#166cd8] text-white font-semibold text-lg py-3 rounded-xl transition-colors mt-2 mb-1"
@@ -74,7 +133,7 @@ const LoginPage = () => {
           </button>
           <div className="flex flex-col items-center gap-2 mt-1">
             <a href="#" className="text-sm text-gray-500 hover:underline">
-              Forgot your username or password?
+              Forgot your email or password?
             </a>
             <span className="text-sm text-gray-500">
               New to SecureChat?{" "}
