@@ -61,7 +61,23 @@ const Chatbox = () => {
   // Avatar menu
   const [menuOpen, setMenuOpen] = useState(false);
   const avatarRef = useRef();
-
+  const logout = async () => {
+    try {
+      if (localStorage.getItem('authToken')) {
+        await fetch('/account/logout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+          }
+        });
+        localStorage.removeItem('authToken'); // Xoá token khỏi localStorage
+        navigate('/login'); // Chuyển hướng về trang đăng nhập
+      }
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  }
   // Gửi message (demo)
   const handleSend = () => {
     if (!message.trim()) return;
@@ -69,17 +85,17 @@ const Chatbox = () => {
       prevChats.map((chat) =>
         chat.id === selectedChatId
           ? {
-              ...chat,
-              messages: [
-                ...chat.messages,
-                {
-                  id: Date.now(),
-                  text: message,
-                  sender: "user",
-                  time: new Date().toLocaleTimeString(),
-                },
-              ],
-            }
+            ...chat,
+            messages: [
+              ...chat.messages,
+              {
+                id: Date.now(),
+                text: message,
+                sender: "user",
+                time: new Date().toLocaleTimeString(),
+              },
+            ],
+          }
           : chat
       )
     );
@@ -121,6 +137,7 @@ const Chatbox = () => {
                   onClick={() => {
                     setMenuOpen(false);
                     setShowLogoutModal(true);
+                    logout()
                   }}
                 >
                   Đăng xuất
@@ -202,18 +219,16 @@ const Chatbox = () => {
                     {currentChat.messages.map((msg) => (
                       <div
                         key={msg.id}
-                        className={`flex ${
-                          msg.sender === "user"
-                            ? "justify-end"
-                            : "justify-start"
-                        }`}
+                        className={`flex ${msg.sender === "user"
+                          ? "justify-end"
+                          : "justify-start"
+                          }`}
                       >
                         <div
-                          className={`px-6 py-3 rounded-xl max-w-[90%] text-base ${
-                            msg.sender === "user"
-                              ? "bg-blue-100 text-blue-900"
-                              : "bg-gray-100 text-gray-800"
-                          }`}
+                          className={`px-6 py-3 rounded-xl max-w-[90%] text-base ${msg.sender === "user"
+                            ? "bg-blue-100 text-blue-900"
+                            : "bg-gray-100 text-gray-800"
+                            }`}
                         >
                           {msg.text}
                         </div>

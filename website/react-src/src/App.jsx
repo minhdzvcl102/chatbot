@@ -3,14 +3,25 @@ import LoginPage from './components/loginPage';
 import Chatbox from './components/chatbox';
 // 1. Import Routes và Route từ 'react-router-dom'
 import { Routes, Route } from 'react-router-dom';
-
+import PrivateRoute from './components/PrivateRoute';
 function App() {
   return (
-    // 2. Bọc tất cả các Route của bạn trong một component <Routes> duy nhất
     <Routes>
       <Route path="/login" element={<LoginPage />} />
+
+      {/* Routes được bảo vệ */}
+      <Route element={<PrivateRoute />}>
+        <Route path="/" element={<Chatbox />} />
+        <Route path="/chat" element={<Chatbox />} />
+        {/* ... các route được bảo vệ khác */}
+      </Route>
+
+      {/* Tùy chọn: Route catch-all cho trang 404 hoặc để ẩn cảnh báo */}
+      {/* KHÔNG NÊN DÙNG CÁCH NÀY ĐỂ CHE GIẤU LỖI THỰC SỰ */}
+      {/* <Route path="*" element={<NotFoundPage />} /> */}
     </Routes>
   );
 }
+
 
 export default App;

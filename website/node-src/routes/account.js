@@ -62,6 +62,11 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+router.post('/logout', authenticateToken, (req, res) => {
+    // Xóa token khỏi client (thực tế không thể xóa token server-side)
+    localStorage.removeItem('authToken'); // Giả sử bạn đang dùng localStorage trên client
+    res.status(200).json({ message: 'Logged out successfully' });
+});
 
 
 export default router;
