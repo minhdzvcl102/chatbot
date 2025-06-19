@@ -15,10 +15,6 @@ function App() {
         <Route path="/chat" element={<Chatbox />} />
         {/* ... các route được bảo vệ khác */}
       </Route>
-
-      {/* Tùy chọn: Route catch-all cho trang 404 hoặc để ẩn cảnh báo */}
-      {/* KHÔNG NÊN DÙNG CÁCH NÀY ĐỂ CHE GIẤU LỖI THỰC SỰ */}
-      {/* <Route path="*" element={<NotFoundPage />} /> */}
     </Routes>
   );
 }

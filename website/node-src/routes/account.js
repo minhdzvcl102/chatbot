@@ -6,6 +6,7 @@ import { logMessage } from '../utilities/logger.js';
 import { configDotenv } from 'dotenv';
 configDotenv(); // Tải biến môi trường từ file .env
 import authenticateToken from '../middleware/auth.js';
+import { log } from 'console';
 const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -62,10 +63,16 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
-router.post('/logout', authenticateToken, (req, res) => {
+router.post('/logout', (req, res) => {
     // Xóa token khỏi client (thực tế không thể xóa token server-side)
-    localStorage.removeItem('authToken'); // Giả sử bạn đang dùng localStorage trên client
-    res.status(200).json({ message: 'Logged out successfully' });
+    try {
+        logMessage("INF", `User  logged out successfully`);
+        res.status(200).json({ message: 'Logged out successfully' });
+    }
+    catch (error) {
+        logMessage("ERR", `Error during logout: ${error.message}`, error.stack);
+        res.status(500).json({ message: 'Internal server error' });
+    }
 });
 
 

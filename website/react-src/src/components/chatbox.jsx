@@ -23,6 +23,7 @@ import SidebarWrapper from "./SidebarWrapper";
 import SidebarContent from "./SidebarContent";
 import ChatInput from "./ChatInput";
 import ChatHistory from "./ChatHistory";
+import axios from "axios";
 
 // --- Dữ liệu mẫu cho Lịch sử Chat ---
 const chatHistory = [
@@ -64,18 +65,12 @@ const Chatbox = () => {
   const logout = async () => {
     try {
       if (localStorage.getItem('authToken')) {
-        await fetch('/account/logout', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
-          }
-        });
-        localStorage.removeItem('authToken'); // Xoá token khỏi localStorage
+        await axios.post('http://localhost:3000' +'/account/logout');
+        localStorage.removeItem('authToken'); // Giả sử bạn đang dùng localStorage trên client
         navigate('/login'); // Chuyển hướng về trang đăng nhập
       }
     } catch (error) {
-      console.error("Logout failed:", error);
+      // console.error("Logout failed:", error);
     }
   }
   // Gửi message (demo)
