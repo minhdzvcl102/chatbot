@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors'); // Middleware CORS
-const jwt = require('jsonwebtoken'); // Giả sử đã cài đặt và cấu hình
 
+import express from 'express';
+import cors from 'cors';
+import jwt from 'jsonwebtoken';
 const app = express();
 const JWT_SECRET = process.env.JWT_SECRET || 'your_super_secret_key'; // Lấy từ biến môi trường
 
