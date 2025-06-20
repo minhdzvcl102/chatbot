@@ -12,7 +12,7 @@ dotenv.config(); // Gọi config() để tải biến môi trường
 import {initDb, getDb} from "./utilities/database.js"; 
 import accountRoutes from './routes/account.js';
 // import chatRoutes from './routes/chat.js';
-// import setupWebSocketChat from './websocket_chat.js'; 
+import setupWebSocketChat from './websocket_chat.js'; 
 
 setLogMode("CONSOLE+FILE");
 
@@ -41,7 +41,7 @@ app.use("/account", accountRoutes);
 // app.use("/chat", chatRoutes); // 
 
 // Setup WebSocket server
-// const wss = setupWebSocketChat(server); 
+const wss = setupWebSocketChat(); 
 
 server.listen(process.env.PORT || 3000, () => {
     logMessage("INF", `Node.js Server is running on port ${process.env.PORT || 3000}`, `http://localhost:${process.env.PORT || 3000}`);

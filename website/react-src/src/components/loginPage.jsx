@@ -36,14 +36,15 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/account/login', {
+      const response = await axios.post('http://localhost:3001/account/login', {
         email: email,
         password: password,
       });
 
       if (response.status === 200) {
-        console.log("Đăng nhập thành công:", response.data);
         localStorage.setItem('authToken', response.data.token);
+        localStorage.setItem('userId', response.data.userId);
+        console.log("Đăng nhập thành công:", response.data);
         navigate('/'); // Chuyển hướng đến trang chủ
       }
 

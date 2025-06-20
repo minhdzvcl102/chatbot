@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 // Cài đặt thư viện icon: npm install lucide-react
 import {
@@ -22,8 +22,11 @@ import AppLayout from "./AppLayout";
 import SidebarWrapper from "./SidebarWrapper";
 import SidebarContent from "./SidebarContent";
 import ChatInput from "./ChatInput";
-import ChatHistory from "./ChatHistory";
+// import ChatHistory from "./ChatHistory"; // Có thể không cần import nếu không dùng trực tiếp
 import axios from "axios";
+
+// Import custom Hook useWebSocket
+import useWebSocket from "../websocket"; // Điều chỉnh đường dẫn nếu cần
 
 // --- Dữ liệu mẫu cho Lịch sử Chat ---
 const chatHistory = [
@@ -32,7 +35,7 @@ const chatHistory = [
     user: "ChatGPT",
     type: "AI chat",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    messages: [],
+    messages: [], // This will hold the actual chat messages
   },
 ];
 
@@ -53,55 +56,75 @@ const Chatbox = () => {
   const [chats, setChats] = useState(chatHistory);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selectedChatId, setSelectedChatId] = useState(chats[0]?.id || null);
-  const [message, setMessage] = useState("");
+  const [inputMessage, setInputMessage] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef();
   const navigate = useNavigate();
+
+  // Sử dụng custom Hook useWebSocket ở đây
+  const WEBSOCKET_URL = "ws://localhost:8080";
+  const ws = useWebSocket(WEBSOCKET_URL, selectedChatId, setChats); // Truyền các props cần thiết
+
   // Đăng xuất modal
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   // Avatar menu
   const [menuOpen, setMenuOpen] = useState(false);
   const avatarRef = useRef();
+
   const logout = async () => {
     try {
-      if (localStorage.getItem('authToken')) {
-        await axios.post('http://localhost:3000' +'/account/logout');
-        localStorage.removeItem('authToken'); // Giả sử bạn đang dùng localStorage trên client
-        navigate('/login'); // Chuyển hướng về trang đăng nhập
+      if (localStorage.getItem("authToken")) {
+        await axios.post("http://localhost:3001" + "/account/logout");
+        localStorage.removeItem("authToken");
+        if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+          ws.current.close(); // Đóng kết nối WebSocket khi đăng xuất
+        }
+        navigate("/login");
       }
     } catch (error) {
-      // console.error("Logout failed:", error);
+      console.error("Logout failed:", error);
     }
-  }
+  };
+
   // Gửi message (demo)
   const handleSend = () => {
-    if (!message.trim()) return;
+    if (!inputMessage.trim()) return;
+
+    // Gửi tin nhắn qua WebSocket
+    if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+      ws.current.send(JSON.stringify({ type: "user_message", content: inputMessage }));
+    }
+
+    // Cập nhật tin nhắn vào state của chat hiện tại
     setChats((prevChats) =>
       prevChats.map((chat) =>
         chat.id === selectedChatId
           ? {
-            ...chat,
-            messages: [
-              ...chat.messages,
-              {
-                id: Date.now(),
-                text: message,
-                sender: "user",
-                time: new Date().toLocaleTimeString(),
-              },
-            ],
-          }
+              ...chat,
+              messages: [
+                ...chat.messages,
+                {
+                  id: Date.now(),
+                  text: inputMessage,
+                  sender: "user",
+                  time: new Date().toLocaleTimeString(),
+                },
+              ],
+            }
           : chat
       )
     );
-    setMessage("");
+    setInputMessage(""); // Xóa nội dung input sau khi gửi
   };
+
   // Đính kèm file (demo)
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       setSelectedFile(e.target.files[0]);
     }
   };
+
+  const currentChat = chats.find((c) => c.id === selectedChatId);
 
   return (
     <AppLayout
@@ -113,7 +136,6 @@ const Chatbox = () => {
             className="w-10 h-10 rounded-full object-cover border cursor-pointer hover:ring-2 hover:ring-blue-400 transition"
             onClick={() => setMenuOpen((v) => !v)}
           />
-          {/* AvatarMenu và modal logout giữ nguyên như cũ, có thể tách riêng nếu muốn */}
           {menuOpen && (
             <div
               className="absolute right-0 top-14 w-48 bg-white rounded-xl shadow-xl border border-gray-100 z-30 animate-fade-in"
@@ -132,7 +154,6 @@ const Chatbox = () => {
                   onClick={() => {
                     setMenuOpen(false);
                     setShowLogoutModal(true);
-                    logout()
                   }}
                 >
                   Đăng xuất
@@ -151,7 +172,7 @@ const Chatbox = () => {
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
                     onClick={() => {
                       setShowLogoutModal(false);
-                      navigate("/login");
+                      logout();
                     }}
                   >
                     Xác nhận
@@ -180,67 +201,61 @@ const Chatbox = () => {
           setActiveTab={setActiveTab}
           setShowNewChatForm={setShowNewChatForm}
           isCollapsed={isCollapsed}
+          setSelectedChatId={setSelectedChatId}
+          selectedChatId={selectedChatId}
         />
       </SidebarWrapper>
       {/* Main content */}
       <div className="flex-1 flex flex-col h-full min-h-0">
-        {/* Vùng chat cuộn riêng */}
         <div className="flex-1 overflow-y-auto min-h-0 px-0">
-          {chats.length === 0 ? (
+          {chats.length === 0 || !selectedChatId ? (
             <div className="w-full h-full flex flex-col flex-1 justify-center items-center">
               <p className="text-lg text-gray-500 font-semibold">
                 Không có đoạn hội thoại nào tồn tại.
               </p>
             </div>
           ) : (
-            <div className="w-full h-full flex flex-col flex-1 gap-4">
-              {(() => {
-                const currentChat = chats.find((c) => c.id === selectedChatId);
-                if (!currentChat || currentChat.messages.length === 0) {
-                  return (
-                    <>
-                      <h1 className="text-3xl font-bold text-black mb-2 text-center">
-                        ChatGPT 3.5
-                      </h1>
-                      <p className="text-gray-500 text-center max-w-lg mx-auto">
-                        This is a preview of the next generation of AI chat,
-                        available for a limited time.
-                      </p>
-                    </>
-                  );
-                }
-                return (
-                  <div className="flex flex-col gap-3 w-full">
-                    {currentChat.messages.map((msg) => (
+            <div className="w-full h-full flex flex-col flex-1 gap-4 pt-4">
+              {currentChat && currentChat.messages.length === 0 ? (
+                <>
+                  <h1 className="text-3xl font-bold text-black mb-2 text-center">
+                    ChatGPT 3.5
+                  </h1>
+                  <p className="text-gray-500 text-center max-w-lg mx-auto">
+                    This is a preview of the next generation of AI chat,
+                    available for a limited time.
+                  </p>
+                </>
+              ) : (
+                <div className="flex flex-col gap-3 w-full px-4">
+                  {currentChat?.messages.map((msg) => (
+                    <div
+                      key={msg.id}
+                      className={`flex ${
+                        msg.sender === "user" ? "justify-end" : "justify-start"
+                      }`}
+                    >
                       <div
-                        key={msg.id}
-                        className={`flex ${msg.sender === "user"
-                          ? "justify-end"
-                          : "justify-start"
-                          }`}
-                      >
-                        <div
-                          className={`px-6 py-3 rounded-xl max-w-[90%] text-base ${msg.sender === "user"
+                        className={`px-6 py-3 rounded-xl max-w-[90%] text-base ${
+                          msg.sender === "user"
                             ? "bg-blue-100 text-blue-900"
                             : "bg-gray-100 text-gray-800"
-                            }`}
-                        >
-                          {msg.text}
-                        </div>
+                        }`}
+                      >
+                        {msg.text}
                       </div>
-                    ))}
-                  </div>
-                );
-              })()}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
-        {/* Input message cố định dưới cùng */}
-        {chats.length > 0 && (
+        {chats.length > 0 && selectedChatId && (
           <div className="w-full">
             <ChatInput
-              message={message}
-              setMessage={setMessage}
+              message={inputMessage}
+              setMessage={setInputMessage}
               handleSend={handleSend}
               handleFileChange={handleFileChange}
               fileInputRef={fileInputRef}
@@ -249,9 +264,8 @@ const Chatbox = () => {
           </div>
         )}
       </div>
-      {/* Modal tạo New chat */}
       {showNewChatForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-xl shadow-lg p-8 min-w-[320px] max-w-xs flex flex-col items-center animate-fade-in">
             <h3 className="text-lg font-bold mb-4 text-center">
               Tạo đoạn hội thoại mới

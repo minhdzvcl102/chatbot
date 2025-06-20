@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
         }
         const token = jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
         logMessage("INF", `User ${email} logged in successfully`);
-        return res.json({ token, userId: user.id, username: user.username });
+        return res.status(200).json({ token, userId: user.id, message: 'Login successful' });
     } catch (error) {
         logMessage("ERR", `Error during login: ${error.message}`, error.stack);
         res.status(500).json({ message: 'Internal server error' });
