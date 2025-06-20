@@ -1,11 +1,14 @@
 import { useEffect, useRef } from "react";
 
 const useWebSocket = (url, selectedChatId, setChats) => {
-  const ws = useRef(null);
+  const ws = useRef(null); // Đây là đối tượng ref
 
   useEffect(() => {
+    const authToken = localStorage.getItem('authToken');
+    const wsUrlWithToken = authToken ? `${url}?token=${authToken}` : url;
+
     // Khởi tạo kết nối WebSocket
-    ws.current = new WebSocket(url);
+    ws.current = new WebSocket(wsUrlWithToken);
 
     ws.current.onopen = () => {
       console.log("WebSocket connected!");
@@ -14,9 +17,7 @@ const useWebSocket = (url, selectedChatId, setChats) => {
     ws.current.onmessage = (event) => {
       try {
         const data = JSON.parse(event.data);
-        console.log("Received from server:", data);
-
-        // Cập nhật messages cho chat hiện tại
+        // ... (logic xử lý tin nhắn)
         setChats((prevChats) =>
           prevChats.map((chat) =>
             chat.id === selectedChatId
@@ -38,72 +39,18 @@ const useWebSocket = (url, selectedChatId, setChats) => {
         );
       } catch (error) {
         console.error("Failed to parse message from server:", error);
-        setChats((prevChats) =>
-          prevChats.map((chat) =>
-            chat.id === selectedChatId
-              ? {
-                  ...chat,
-                  messages: [
-                    ...chat.messages,
-                    {
-                      id: Date.now(),
-                      type: "system",
-                      text: `Received unparseable message: ${event.data}`,
-                      sender: "system",
-                      time: new Date().toLocaleTimeString(),
-                    },
-                  ],
-                }
-              : chat
-          )
-        );
+        // ... (logic xử lý lỗi)
       }
     };
 
     ws.current.onclose = () => {
       console.log("WebSocket disconnected");
-      setChats((prevChats) =>
-        prevChats.map((chat) =>
-          chat.id === selectedChatId
-            ? {
-                ...chat,
-                messages: [
-                  ...chat.messages,
-                  {
-                    id: Date.now(),
-                    type: "system",
-                    text: "Disconnected from chatbot.",
-                    sender: "system",
-                    time: new Date().toLocaleTimeString(),
-                  },
-                ],
-              }
-            : chat
-        )
-      );
+      
     };
 
     ws.current.onerror = (error) => {
       console.error("WebSocket error:", error);
-      setChats((prevChats) =>
-        prevChats.map((chat) =>
-          chat.id === selectedChatId
-            ? {
-                ...chat,
-                messages: [
-                  ...chat.messages,
-                  {
-                    id: Date.now(),
-                    type: "system",
-                    text: "WebSocket error occurred.",
-                    sender: "system",
-                    time: new Date().toLocaleTimeString(),
-                  },
-                ],
-              }
-            : chat
-        )
-      );
+      // ... (logic xử lý lỗi)
     };
 
     // Hàm cleanup: đóng kết nối khi component unmount hoặc dependencies thay đổi
@@ -112,9 +59,9 @@ const useWebSocket = (url, selectedChatId, setChats) => {
         ws.current.close();
       }
     };
-  }, [url, selectedChatId, setChats]); // Dependencies: reconnect nếu url hoặc chat được chọn thay đổi
+  }, [url, selectedChatId, setChats]);
 
-  // Trả về instance của WebSocket để component cha có thể sử dụng
+  return ws; // <-- Đảm bảo bạn trả về đối tượng ref (ws)
 };
 
 export default useWebSocket;
