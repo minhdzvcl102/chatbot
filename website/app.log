@@ -651,15 +651,13 @@ http://localhost:3000
 [2025-06-21T16:03:55.510Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
 [2025-06-21T16:03:55.510Z] [INFO] SQLite database initialized successfully.
 [2025-06-21T16:03:55.531Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
-[2025-06-21T16:16:42.668Z] [INFO] Log mode set to: CONSOLE+FILE
-[2025-06-21T16:16:42.692Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T16:36:12.384Z] [INFO] Log mode set to: CONSOLE+FILE
 http://localhost:3000
-[2025-06-21T16:16:42.711Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
-[2025-06-21T16:16:42.711Z] [INFO] SQLite database initialized successfully.
-[2025-06-21T16:16:42.733Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
-[2025-06-21T16:16:46.161Z] [INFO] Loaded 1 conversations for user 1
-[2025-06-21T16:16:46.166Z] [INFO] Loaded 1 conversations for user 1
-[2025-06-21T16:16:46.254Z] [INFO] Loaded 1 messages for conversation 3 by user 1
-[2025-06-21T16:16:46.256Z] [INFO] Loaded 1 files for conversation 3 by user 1
-[2025-06-21T16:16:52.884Z] [INFO] Conversation 3 title updated by user 1
-[2025-06-21T16:16:55.635Z] [INFO] Conversation 3 title updated by user 1
+[2025-06-21T16:36:12.410Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T16:36:12.419Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T16:36:12.419Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T16:36:12.470Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T16:36:14.615Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T16:36:14.619Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T16:36:14.633Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T16:36:14.634Z] [INFO] Loaded 1 files for conversation 3 by user 1
