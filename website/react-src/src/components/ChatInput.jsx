@@ -1,5 +1,5 @@
 import React from "react";
-import { Paperclip, Send } from "lucide-react";
+import { Send, Paperclip } from "lucide-react";
 
 const ChatInput = ({
   message,
@@ -8,39 +8,54 @@ const ChatInput = ({
   handleFileChange,
   fileInputRef,
   selectedFile,
+  disabled,
+  onChange,
+  onBlur,
 }) => {
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
+
   return (
-    <div className="w-full flex items-center pb-8">
-      <div className="flex items-center w-full max-w-3xl mx-auto bg-white border border-gray-200 rounded-xl overflow-hidden">
+    <div className="w-full max-w-4xl mx-auto px-4 py-4 border-t border-gray-200 bg-white">
+      <div className="flex items-center gap-3">
         <input
-          type="text"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Message AI..."
-          className="flex-1 px-5 py-4 text-base bg-transparent focus:outline-none"
-          onKeyDown={(e) => {
-            if (e.key === "Enter") handleSend();
-          }}
+          type="file"
+          accept="application/pdf"
+          onChange={handleFileChange}
+          ref={fileInputRef}
+          className="hidden"
         />
         <button
-          className="p-3 text-gray-400 hover:text-blue-600 transition"
-          type="button"
-          onClick={() => fileInputRef.current && fileInputRef.current.click()}
+          onClick={() => fileInputRef.current?.click()}
+          className="p-2 text-gray-500 hover:text-blue-600 transition"
+          disabled={disabled}
         >
           <Paperclip size={20} />
-          <input
-            type="file"
-            ref={fileInputRef}
-            className="hidden"
-            onChange={handleFileChange}
-          />
         </button>
+        <textarea
+          className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+          placeholder="Nhập tin nhắn..."
+          value={message}
+          onChange={(e) => {
+            setMessage(e.target.value);
+            onChange?.(e);
+          }}
+          onBlur={onBlur}
+          onKeyPress={handleKeyPress}
+          disabled={disabled}
+          rows={1}
+          style={{ minHeight: "40px" }}
+        />
         <button
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-none rounded-r-xl transition text-base"
           onClick={handleSend}
+          className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={disabled || !message.trim()}
         >
-          Send
-          <Send size={18} className="inline ml-2 -mt-1" />
+          <Send size={20} />
         </button>
       </div>
     </div>

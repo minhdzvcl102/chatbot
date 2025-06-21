@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import WebSocket from 'ws'; // Giữ nguyên WebSocket nếu bạn dùng nó
 import dotenv from 'dotenv'; // Import dotenv
+import WebSocketHandler from './socketHandler.js';
 dotenv.config(); // Gọi config() để tải biến môi trường
 
 import {initDb, getDb} from "./utilities/database.js"; 
@@ -18,6 +19,7 @@ setLogMode("CONSOLE+FILE");
 
 const app = express();
 const server = http.createServer(app);
+const wsHandler = new WebSocketHandler(server);
 
 // Middleware
 app.use(express.json());
@@ -40,8 +42,7 @@ app.get('/', (req, res) => {
 app.use("/account", accountRoutes);
 app.use("/chat", chatRoutes);
 
-// Setup WebSocket server
-// const wss = setupWebSocketChat(server); 
+
 
 server.listen(process.env.PORT || 3000, () => {
     logMessage("INF", `Node.js Server is running on port ${process.env.PORT || 3000}`, `http://localhost:${process.env.PORT || 3000}`);

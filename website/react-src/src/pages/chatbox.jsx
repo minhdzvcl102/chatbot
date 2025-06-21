@@ -12,12 +12,14 @@ import AppLayout from "../components/AppLayout";
 import SidebarWrapper from "../components/SidebarWrapper";
 import SidebarContent from "../components/SidebarContent";
 import ChatInput from "../components/ChatInput";
+import { APP_WEBSOCKET_URL } from "../config/config";
 import {
   conversationService,
   authService,
 } from "../services/conversationService";
 import { messageService } from "../services/messageService";
 import { uploadService } from "../services/uploadService";
+import { useWebSocket, useTypingIndicator } from "../hooks/useWebSocket";
 
 const Chatbox = () => {
   // State management
@@ -25,14 +27,14 @@ const Chatbox = () => {
   const [showNewChatForm, setShowNewChatForm] = useState(false);
   const [newChatName, setNewChatName] = useState("");
   const [conversations, setConversations] = useState([]);
+  const [message, setMessage] = useState("");
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selectedConversationId, setSelectedConversationId] = useState(null);
-  const [message, setMessage] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [messages, setMessages] = useState([]);
+
   const [loadingMessages, setLoadingMessages] = useState(false);
   const [sendingMessage, setSendingMessage] = useState(false);
 
@@ -42,6 +44,32 @@ const Chatbox = () => {
   const [uploadingFile, setUploadingFile] = useState(false);
   const [showFileUpload, setShowFileUpload] = useState(false);
   const [uploadError, setUploadError] = useState("");
+
+  // WebSocket initialization
+  const serverUrl = APP_WEBSOCKET_URL || "ws://localhost:3000";
+  const authToken = localStorage.getItem("authToken");
+  const {
+    isConnected,
+    messages,
+    connectionError,
+    joinConversation,
+    leaveConversation,
+    sendMessage: sendWebSocketMessage,
+    sendTyping,
+    notifyFileUploaded,
+    messages: wsMessages,
+    onlineUsers,
+    typingUsers,
+    addMessage,
+    clearMessages,
+    setMessagesFromAPI,
+  } = useWebSocket(authToken, serverUrl);
+
+  // Typing indicator
+  const { startTyping, stopTyping } = useTypingIndicator(
+    selectedConversationId,
+    1000
+  );
 
   const fileInputRef = useRef();
   const avatarRef = useRef();
@@ -54,16 +82,34 @@ const Chatbox = () => {
     loadConversations();
   }, []);
 
-  // Load messages when conversation is selected
+  // Handle WebSocket messages and conversation changes
   useEffect(() => {
     if (selectedConversationId) {
+      console.log("🔗 Joining WebSocket conversation:", selectedConversationId);
+      joinConversation(selectedConversationId);
       loadMessages(selectedConversationId);
       loadUploadedFiles(selectedConversationId);
     } else {
-      setMessages([]);
       setUploadedFiles([]);
+      clearMessages();
     }
-  }, [selectedConversationId]);
+
+    return () => {
+      if (selectedConversationId) {
+        leaveConversation(selectedConversationId);
+      }
+    };
+  }, [
+    selectedConversationId,
+    joinConversation,
+    leaveConversation,
+    clearMessages,
+  ]);
+
+  // Update messages from WebSocket
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   // Auto scroll to bottom when messages change
   useEffect(() => {
@@ -115,10 +161,10 @@ const Chatbox = () => {
       const conversationMessages = await messageService.getMessages(
         conversationId
       );
-      setMessages(conversationMessages);
+      setMessagesFromAPI(conversationMessages);
     } catch (error) {
       console.error("❌ Error loading messages:", error);
-      setMessages([]);
+      clearMessages();
     } finally {
       setLoadingMessages(false);
     }
@@ -231,6 +277,9 @@ const Chatbox = () => {
 
       console.log("✅ File uploaded successfully:", result);
 
+      // Notify WebSocket about file upload
+      notifyFileUploaded(selectedConversationId, result.file);
+
       // Reload files list
       await loadUploadedFiles(selectedConversationId);
 
@@ -278,6 +327,7 @@ const Chatbox = () => {
   };
 
   const handleSend = async () => {
+    console.log("🚀 handleSend called at:", new Date().toISOString());
     if (!message.trim() || !selectedConversationId || sendingMessage) {
       console.log("⚠️ Cannot send message:", {
         message: message.trim(),
@@ -295,14 +345,19 @@ const Chatbox = () => {
       );
       console.log("📝 Message content:", message);
 
-      // Send the message
-      await messageService.sendMessage(selectedConversationId, message);
+      const tempMessage = {
+        id: `temp-${Date.now()}`,
+        conversationId: selectedConversationId,
+        role: "user",
+        content: message,
+        createdAt: new Date().toISOString(),
+        userId: authService.getCurrentUserId(),
+        username: "You",
+      };
+      // addMessage(tempMessage);
 
-      // Clear the input
+      sendWebSocketMessage(selectedConversationId, message);
       setMessage("");
-
-      // Reload messages to get the latest ones (including AI response if implemented)
-      await loadMessages(selectedConversationId);
     } catch (error) {
       console.error("❌ Error sending message:", error);
     } finally {
@@ -317,6 +372,15 @@ const Chatbox = () => {
       setSelectedFile(file);
       setShowFileUpload(true);
     }
+  };
+
+  const handleTyping = (e) => {
+    setMessage(e.target.value);
+    startTyping();
+  };
+
+  const handleStopTyping = () => {
+    stopTyping();
   };
 
   const handleLogout = () => {
@@ -548,6 +612,21 @@ const Chatbox = () => {
                     </div>
                   )}
 
+                  {typingUsers.length > 0 && (
+                    <div className="flex justify-start">
+                      <div className="flex max-w-[80%] flex-row gap-3">
+                        <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-semibold">
+                          AI
+                        </div>
+                        <div className="flex flex-col items-start">
+                          <div className="px-4 py-3 rounded-2xl bg-gray-100 text-gray-800 rounded-bl-md">
+                            <p className="text-sm">Đang gõ...</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <div ref={messagesEndRef} />
                 </div>
               )}
@@ -566,6 +645,8 @@ const Chatbox = () => {
               fileInputRef={fileInputRef}
               selectedFile={selectedFile}
               disabled={sendingMessage}
+              onChange={handleTyping}
+              onBlur={handleStopTyping}
             />
           </div>
         )}
@@ -573,10 +654,9 @@ const Chatbox = () => {
 
       {/* File upload modal */}
       {showFileUpload && selectedFile && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-xl shadow-lg p-6 min-w-[400px] max-w-md mx-4">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold">Upload File</h3>
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="bg-white rounded-xl shadow-lg p-8 min-w-[320px] max-w-xs flex flex-col items-center animate-fade-in">
+            <div className="relative w-full">
               <button
                 onClick={() => {
                   setShowFileUpload(false);
@@ -586,10 +666,14 @@ const Chatbox = () => {
                     fileInputRef.current.value = "";
                   }
                 }}
-                className="text-gray-400 hover:text-gray-600"
+                className="absolute top-0 right-0 mt-2 mr-2 text-gray-400 hover:text-gray-600"
+                title="Đóng"
               >
                 <X size={20} />
               </button>
+              <h3 className="text-lg font-bold mb-4 text-center">
+                Upload File
+              </h3>
             </div>
 
             <div className="mb-4">

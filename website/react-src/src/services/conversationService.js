@@ -109,5 +109,10 @@ export const authService = {
       console.error("❌ Logout failed:", error);
       throw error;
     }
+  },
+
+    getCurrentUserId() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    return user?.id || null;
   }
 };

@@ -11,7 +11,7 @@ export const SERVER_CONFIG = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   
   // Frontend settings
-  FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:3001',
+  FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:3000',
   
   // Request limits
   JSON_LIMIT: '50mb',

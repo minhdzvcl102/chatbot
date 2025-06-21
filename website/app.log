@@ -661,3 +661,1122 @@ http://localhost:3000
 [2025-06-21T16:36:14.619Z] [INFO] Loaded 1 conversations for user 1
 [2025-06-21T16:36:14.633Z] [INFO] Loaded 1 messages for conversation 3 by user 1
 [2025-06-21T16:36:14.634Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T16:41:41.857Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T16:41:41.877Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T16:41:41.881Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T16:41:41.881Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T16:41:41.906Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T18:27:13.651Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T18:27:13.674Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T18:27:13.685Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T18:27:13.685Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T18:27:13.751Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T18:27:43.468Z] [INFO] User  logged out successfully
+[2025-06-21T18:27:48.610Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T18:27:48.634Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T18:27:48.637Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T18:27:48.653Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T18:27:48.654Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T18:37:43.967Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T18:37:44.009Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T18:37:44.020Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T18:37:44.020Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T18:37:44.133Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T18:45:29.879Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T18:45:29.920Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T18:45:29.934Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T18:45:29.934Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T18:45:29.994Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T18:45:43.062Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T18:45:43.090Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T18:45:43.099Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T18:45:43.099Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T18:45:43.124Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:05:12.875Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T19:05:12.916Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T19:05:12.930Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:05:12.931Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:05:13.003Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:05:19.007Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T19:05:19.046Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:05:19.050Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:05:19.077Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T19:05:19.078Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:05:29.861Z] [INFO] Message saved to conversation 3 by user 1
+[2025-06-21T19:05:29.868Z] [INFO] Loaded 2 messages for conversation 3 by user 1
+[2025-06-21T19:05:52.318Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:05:52.339Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:05:52.344Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:05:52.344Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:05:52.370Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:11:25.384Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:11:25.422Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:11:25.434Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:11:25.434Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:11:25.707Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:11:39.272Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:11:39.284Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:11:39.363Z] [INFO] Loaded 2 messages for conversation 3 by user 1
+[2025-06-21T19:11:39.368Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:11:45.218Z] [INFO] Message saved to conversation 3 by user 1
+[2025-06-21T19:11:45.226Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:25:06.442Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:06.454Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:11.315Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:11.321Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:12.303Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:12.307Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:14.317Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:14.323Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:16.378Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:16.394Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:56.309Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:25:56.313Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:27:49.264Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:27:49.274Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:27:49.327Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:27:50.582Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:27:50.596Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:27:50.676Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:28:25.909Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:28:25.912Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:28:25.930Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:28:26.047Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:28:28.254Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:28:28.305Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:28:28.361Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:28:28.362Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:34:14.021Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:34:14.028Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:34:14.080Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:34:14.083Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:35:16.323Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:35:16.325Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:35:25.155Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:35:25.161Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:35:25.200Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:35:25.201Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:38:20.108Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:38:20.128Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:38:20.201Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:38:20.204Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:39:35.648Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:39:35.656Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:39:35.723Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:39:35.726Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:39:46.317Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:39:46.318Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:40:06.319Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:40:06.320Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:40:14.330Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:40:14.332Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:40:16.220Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:40:16.224Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:40:16.253Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:40:16.254Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:40:31.429Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:40:31.473Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:40:31.483Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:40:31.483Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:40:31.602Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:40:34.729Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:40:34.735Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:40:34.784Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:40:34.787Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:41:35.351Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:41:35.352Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:41:38.050Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:41:38.057Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:41:38.120Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:41:38.122Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:42:56.069Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:42:56.107Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:42:56.116Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:42:56.117Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:42:56.179Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:43:58.889Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:43:58.910Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:43:58.914Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:43:58.915Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:43:58.933Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:44:10.237Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:44:10.247Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T19:44:10.268Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:44:10.272Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:44:10.272Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:44:10.287Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:44:12.832Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:44:12.864Z] [INFO] ✅ Socket p7goIZOHfYOEAnJiAAAC authenticated for user demo (ID: 1)
+[2025-06-21T19:44:12.869Z] [INFO] 🔗 User demo (1) connected with socket p7goIZOHfYOEAnJiAAAC
+[2025-06-21T19:44:12.872Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:44:12.901Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T19:44:12.907Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T19:44:12.936Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:44:12.939Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:44:17.149Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T19:44:18.774Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T19:48:01.318Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T19:48:01.322Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T19:48:01.331Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T19:48:01.330Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T19:48:01.342Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:48:01.343Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:48:01.788Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T19:48:01.789Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T19:48:01.797Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T19:48:01.798Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T19:48:01.802Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:48:01.805Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:48:03.405Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T19:48:03.956Z] [INFO] ✅ Socket VxFagaqtoTjGtzVaAAAF authenticated for user demo (ID: 1)
+[2025-06-21T19:48:03.957Z] [INFO] 🔗 User demo (1) connected with socket VxFagaqtoTjGtzVaAAAF
+[2025-06-21T19:48:03.960Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:48:03.969Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:48:04.008Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T19:48:04.014Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T19:48:04.018Z] [INFO] Loaded 3 messages for conversation 3 by user 1
+[2025-06-21T19:48:04.023Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:48:07.140Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T19:48:08.343Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T19:48:09.047Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T19:48:11.211Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T19:48:35.307Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T19:48:35.307Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T19:48:35.314Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T19:48:35.316Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T19:48:35.320Z] [INFO] Loaded 5 messages for conversation 3 by user 1
+[2025-06-21T19:48:35.322Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:49:14.424Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T19:49:14.780Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:49:14.788Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T19:49:14.804Z] [INFO] ✅ Socket zgI1GgFCJ46BSQ_aAAAI authenticated for user demo (ID: 1)
+[2025-06-21T19:49:14.806Z] [INFO] 🔗 User demo (1) connected with socket zgI1GgFCJ46BSQ_aAAAI
+[2025-06-21T19:49:14.833Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T19:49:14.834Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T19:49:14.845Z] [INFO] Loaded 5 messages for conversation 3 by user 1
+[2025-06-21T19:49:14.846Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T19:49:21.459Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T19:49:23.086Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T19:49:23.733Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T19:49:24.821Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T19:53:02.192Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:53:02.200Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T19:53:02.231Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:53:02.250Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:53:02.251Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:53:02.354Z] [INFO] ✅ Socket WswRmDDhGOSiXHZ3AAAB authenticated for user demo (ID: 1)
+[2025-06-21T19:53:02.355Z] [INFO] 🔗 User demo (1) connected with socket WswRmDDhGOSiXHZ3AAAB
+[2025-06-21T19:53:02.369Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:58:30.452Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T19:58:30.463Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T19:58:30.493Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T19:58:30.504Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T19:58:30.505Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T19:58:30.548Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T19:58:31.335Z] [INFO] ✅ Socket ZI3cpbK2sWDs_52mAAAB authenticated for user demo (ID: 1)
+[2025-06-21T19:58:31.336Z] [INFO] 🔗 User demo (1) connected with socket ZI3cpbK2sWDs_52mAAAB
+[2025-06-21T20:00:44.357Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:00:44.361Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:00:44.382Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:00:44.388Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:00:44.388Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:00:44.421Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:00:45.316Z] [INFO] ✅ Socket NJP8kg8vosMkwHxBAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:00:45.317Z] [INFO] 🔗 User demo (1) connected with socket NJP8kg8vosMkwHxBAAAB
+[2025-06-21T20:00:48.127Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:00:48.130Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:00:48.149Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:00:48.153Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:00:48.153Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:00:48.172Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:00:49.303Z] [INFO] ✅ Socket T8kgCplyk-gmIiNPAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:00:49.304Z] [INFO] 🔗 User demo (1) connected with socket T8kgCplyk-gmIiNPAAAB
+[2025-06-21T20:01:51.539Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:01:51.543Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-21T20:01:51.577Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T20:01:51.583Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:01:51.583Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:01:51.614Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:01:52.317Z] [INFO] ✅ Socket f_MiyAvzLFmaatEdAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:01:52.318Z] [INFO] 🔗 User demo (1) connected with socket f_MiyAvzLFmaatEdAAAB
+[2025-06-21T20:02:14.415Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:02:14.412Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T20:02:14.436Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T20:02:14.440Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:02:14.441Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:02:14.460Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:02:15.318Z] [INFO] ✅ Socket NFiMhryIB7nPz32YAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:02:15.319Z] [INFO] 🔗 User demo (1) connected with socket NFiMhryIB7nPz32YAAAB
+[2025-06-21T20:02:16.384Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:02:16.388Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:02:16.407Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:02:16.412Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:02:16.412Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:02:16.427Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:02:17.320Z] [INFO] ✅ Socket IwsWK09Ri1xbdLAbAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:02:17.321Z] [INFO] 🔗 User demo (1) connected with socket IwsWK09Ri1xbdLAbAAAB
+[2025-06-21T20:02:53.313Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:02:53.315Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:02:53.321Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:02:53.322Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:02:53.329Z] [INFO] Loaded 7 messages for conversation 3 by user 1
+[2025-06-21T20:02:53.332Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:04:28.467Z] [INFO] File 3 deleted from conversation 3 by user 1
+[2025-06-21T20:04:28.477Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T20:04:39.997Z] [INFO] File uploaded successfully to conversation 3 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T20:04:40.002Z] [INFO] 📁 File uploaded by demo to conversation 3: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T20:04:40.008Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:05:01.324Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:05:01.325Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:05:01.334Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:05:01.335Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:05:01.337Z] [INFO] Loaded 7 messages for conversation 3 by user 1
+[2025-06-21T20:05:01.338Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:05:03.062Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:05:03.067Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:05:03.092Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:05:03.097Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:05:03.098Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:05:03.116Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:05:03.318Z] [INFO] ✅ Socket Ps4BjrcGKBOL_OabAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:05:03.319Z] [INFO] 🔗 User demo (1) connected with socket Ps4BjrcGKBOL_OabAAAB
+[2025-06-21T20:05:14.312Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:05:14.315Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:05:14.326Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:05:14.327Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:05:14.330Z] [INFO] Loaded 7 messages for conversation 3 by user 1
+[2025-06-21T20:05:14.334Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:05:25.629Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:05:25.797Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-21T20:05:47.023Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-21T20:06:00.262Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:06:00.265Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:06:00.288Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:06:00.292Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:06:00.292Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:06:00.331Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:06:01.339Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-21T20:06:13.706Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:06:13.709Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:06:13.729Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:06:13.733Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:06:13.734Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:06:13.756Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:06:16.336Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:06:16.340Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:06:16.360Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:06:16.364Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:06:16.365Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:06:16.379Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:06:17.471Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-21T20:06:31.078Z] [INFO] User  logged out successfully
+[2025-06-21T20:06:40.976Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T20:06:41.014Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:06:41.018Z] [INFO] ✅ Socket DekCnFMQkHEFpXsjAAAF authenticated for user demo (ID: 1)
+[2025-06-21T20:06:41.020Z] [INFO] 🔗 User demo (1) connected with socket DekCnFMQkHEFpXsjAAAF
+[2025-06-21T20:06:41.021Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:06:41.039Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:06:41.040Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:06:41.046Z] [INFO] Loaded 7 messages for conversation 3 by user 1
+[2025-06-21T20:06:41.047Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:06:48.228Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:06:49.330Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:06:49.863Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:06:50.964Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:07:04.450Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:07:06.564Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:07:07.333Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:07:07.595Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:07:35.309Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:07:35.312Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:07:35.332Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:07:35.337Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:07:35.337Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:07:35.367Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:07:36.313Z] [INFO] ✅ Socket L-xLKtyHCVnnCQUoAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:07:36.314Z] [INFO] 🔗 User demo (1) connected with socket L-xLKtyHCVnnCQUoAAAB
+[2025-06-21T20:07:36.928Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:07:36.931Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:07:36.952Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:07:36.957Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:07:36.957Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:07:36.974Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:07:37.918Z] [INFO] ✅ Socket 5aesDdz6nMxKueFiAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:07:37.920Z] [INFO] 🔗 User demo (1) connected with socket 5aesDdz6nMxKueFiAAAB
+[2025-06-21T20:08:22.307Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:08:22.309Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:08:22.315Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:08:22.316Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:08:22.320Z] [INFO] Loaded 11 messages for conversation 3 by user 1
+[2025-06-21T20:08:22.322Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:08:23.314Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:08:23.314Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:08:23.323Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:08:23.324Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:08:23.325Z] [INFO] Loaded 11 messages for conversation 3 by user 1
+[2025-06-21T20:08:23.326Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:08:24.373Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:08:24.657Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:08:24.663Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:08:24.681Z] [INFO] 🔗 User demo (1) connected with socket qDAs81eEvyiTIFQEAAAE
+[2025-06-21T20:08:24.679Z] [INFO] ✅ Socket qDAs81eEvyiTIFQEAAAE authenticated for user demo (ID: 1)
+[2025-06-21T20:08:24.714Z] [INFO] Loaded 11 messages for conversation 3 by user 1
+[2025-06-21T20:08:24.715Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:08:27.614Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:08:33.003Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:08:33.082Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:08:35.162Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:08:50.146Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:08:50.465Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:08:50.473Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:08:50.475Z] [INFO] 🔗 User demo (1) connected with socket ko2f9gfhBzlTuZ3gAAAH
+[2025-06-21T20:08:50.474Z] [INFO] ✅ Socket ko2f9gfhBzlTuZ3gAAAH authenticated for user demo (ID: 1)
+[2025-06-21T20:08:50.500Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:08:50.501Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:08:50.524Z] [INFO] Loaded 13 messages for conversation 3 by user 1
+[2025-06-21T20:08:50.525Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:08:53.438Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:08:59.534Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:09:00.434Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:09:00.771Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:12:14.325Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:12:14.332Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:12:14.339Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:12:14.340Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:12:14.350Z] [INFO] Loaded 15 messages for conversation 3 by user 1
+[2025-06-21T20:12:14.352Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:12:20.985Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:12:22.497Z] [INFO] Loaded 16 messages for conversation 3 by user 1
+[2025-06-21T20:12:22.499Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:12:23.107Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:12:24.297Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:12:35.605Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:12:35.961Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:12:35.977Z] [INFO] ✅ Socket tbGt6unhe-Rff4rzAAAK authenticated for user demo (ID: 1)
+[2025-06-21T20:12:35.979Z] [INFO] 🔗 User demo (1) connected with socket tbGt6unhe-Rff4rzAAAK
+[2025-06-21T20:12:35.982Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:12:36.044Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:12:36.045Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:12:36.056Z] [INFO] Loaded 17 messages for conversation 3 by user 1
+[2025-06-21T20:12:36.059Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:13:00.858Z] [INFO] User  logged out successfully
+[2025-06-21T20:13:00.869Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:13:12.271Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T20:13:12.307Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:13:12.315Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:13:12.316Z] [INFO] ✅ Socket 0Nu_X4AU0LNkQBcSAAAN authenticated for user demo (ID: 1)
+[2025-06-21T20:13:12.317Z] [INFO] 🔗 User demo (1) connected with socket 0Nu_X4AU0LNkQBcSAAAN
+[2025-06-21T20:13:12.334Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:13:12.334Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:13:12.340Z] [INFO] Loaded 17 messages for conversation 3 by user 1
+[2025-06-21T20:13:12.341Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:13:19.129Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:13:21.948Z] [INFO] Loaded 18 messages for conversation 3 by user 1
+[2025-06-21T20:13:21.949Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:13:22.512Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:13:24.753Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:13:47.962Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:13:48.224Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:13:48.233Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:13:48.265Z] [INFO] ✅ Socket OF8HpNDHJ9V0VBuaAAAQ authenticated for user demo (ID: 1)
+[2025-06-21T20:13:48.266Z] [INFO] 🔗 User demo (1) connected with socket OF8HpNDHJ9V0VBuaAAAQ
+[2025-06-21T20:13:48.290Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:13:48.290Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:13:48.296Z] [INFO] Loaded 19 messages for conversation 3 by user 1
+[2025-06-21T20:13:48.297Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:15:50.381Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:15:50.387Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T20:15:50.410Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T20:15:50.416Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:15:50.416Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:15:50.463Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:15:51.318Z] [INFO] ✅ Socket fYP0dBhQAKgGaWU9AAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:15:51.319Z] [INFO] 🔗 User demo (1) connected with socket fYP0dBhQAKgGaWU9AAAB
+[2025-06-21T20:16:25.301Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:16:25.323Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:16:25.325Z] [INFO] ✅ Socket wFJXy50zyboBjg3GAAAD authenticated for user demo (ID: 1)
+[2025-06-21T20:16:25.326Z] [INFO] 🔗 User demo (1) connected with socket wFJXy50zyboBjg3GAAAD
+[2025-06-21T20:16:25.347Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:16:25.350Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:16:25.360Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:16:25.361Z] [INFO] Loaded 19 messages for conversation 3 by user 1
+[2025-06-21T20:16:26.311Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:16:26.312Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:16:26.320Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:16:26.321Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:16:26.324Z] [INFO] Loaded 19 messages for conversation 3 by user 1
+[2025-06-21T20:16:26.325Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:16:47.300Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:16:47.301Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:16:47.308Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:16:47.309Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:16:47.312Z] [INFO] Loaded 19 messages for conversation 3 by user 1
+[2025-06-21T20:16:47.313Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:16:53.586Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:16:53.850Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:16:53.858Z] [INFO] ✅ Socket dmaseuFFRpsNkqfyAAAG authenticated for user demo (ID: 1)
+[2025-06-21T20:16:53.859Z] [INFO] 🔗 User demo (1) connected with socket dmaseuFFRpsNkqfyAAAG
+[2025-06-21T20:16:53.860Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:16:53.897Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:16:53.897Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:16:53.904Z] [INFO] Loaded 19 messages for conversation 3 by user 1
+[2025-06-21T20:16:53.905Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:17:04.387Z] [INFO] User  logged out successfully
+[2025-06-21T20:17:04.396Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:17:12.823Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T20:17:12.846Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:17:12.852Z] [INFO] ✅ Socket IXvhXDKJqvQErFkAAAAJ authenticated for user demo (ID: 1)
+[2025-06-21T20:17:12.853Z] [INFO] 🔗 User demo (1) connected with socket IXvhXDKJqvQErFkAAAAJ
+[2025-06-21T20:17:12.853Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:17:12.861Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:17:12.862Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:17:12.865Z] [INFO] Loaded 19 messages for conversation 3 by user 1
+[2025-06-21T20:17:12.866Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:17:33.536Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:17:35.143Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:17:35.164Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:17:35.171Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:17:36.568Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:17:46.317Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:17:46.319Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T20:17:46.349Z] [INFO] ✅ Socket pKFmnBUdwLgqtWOkAAAM authenticated for user demo (ID: 1)
+[2025-06-21T20:17:46.350Z] [INFO] 🔗 User demo (1) connected with socket pKFmnBUdwLgqtWOkAAAM
+[2025-06-21T20:17:46.354Z] [INFO] Loaded 21 messages for conversation 3 by user 1
+[2025-06-21T20:17:46.355Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:17:49.310Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T20:17:49.314Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-21T20:17:49.335Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T20:17:49.339Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T20:17:49.339Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T20:17:49.360Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T20:17:49.511Z] [INFO] ✅ Socket X79miqGuVaPGHNSJAAAB authenticated for user demo (ID: 1)
+[2025-06-21T20:17:49.513Z] [INFO] 🔗 User demo (1) connected with socket X79miqGuVaPGHNSJAAAB
+[2025-06-21T20:17:55.764Z] [INFO] ⌨️ User demo started typing in conversation 3
+[2025-06-21T20:17:57.113Z] [INFO] 📤 Message sent by demo to conversation 3
+[2025-06-21T20:17:57.864Z] [INFO] ⌨️ User demo stopped typing in conversation 3
+[2025-06-21T20:17:59.973Z] [INFO] 🤖 AI response sent to conversation 3
+[2025-06-21T20:18:34.258Z] [INFO] Conversation 4 created for user 1
+[2025-06-21T20:18:34.269Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:18:34.296Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:18:34.297Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:18:34.302Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:18:34.306Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:18:34.335Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:18:34.336Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:18:35.280Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:18:35.281Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:18:35.285Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:18:35.286Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:18:35.290Z] [INFO] Loaded 23 messages for conversation 3 by user 1
+[2025-06-21T20:18:35.292Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:18:57.599Z] [INFO] User  logged out successfully
+[2025-06-21T20:18:57.610Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:19:02.329Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T20:19:02.358Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:19:02.358Z] [INFO] ✅ Socket viiQuS3PvyJbi41YAAAE authenticated for user demo (ID: 1)
+[2025-06-21T20:19:02.359Z] [INFO] 🔗 User demo (1) connected with socket viiQuS3PvyJbi41YAAAE
+[2025-06-21T20:19:02.361Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:19:02.374Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:19:02.375Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:19:02.375Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:19:02.376Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:19:03.720Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:19:03.721Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:19:03.723Z] [INFO] 👥 User demo joined conversation 3
+[2025-06-21T20:19:03.724Z] [INFO] 👥 Sent online users list for conversation 3: 1 users
+[2025-06-21T20:19:03.726Z] [INFO] Loaded 23 messages for conversation 3 by user 1
+[2025-06-21T20:19:03.728Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T20:19:13.307Z] [INFO] Conversation 3 deleted by user 1
+[2025-06-21T20:19:13.324Z] [INFO] 👋 User demo left conversation 3
+[2025-06-21T20:19:13.325Z] [INFO] 👥 Sent online users list for conversation 3: 0 users
+[2025-06-21T20:19:13.327Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:19:13.327Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:19:13.331Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:19:13.331Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:19:24.704Z] [INFO] Conversation 5 created for user 1
+[2025-06-21T20:19:24.709Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:19:24.715Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:19:24.716Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:19:24.717Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:19:24.718Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:19:24.742Z] [INFO] Loaded 0 messages for conversation 5 by user 1
+[2025-06-21T20:19:24.743Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:19:26.819Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:19:27.667Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:19:27.674Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:19:30.398Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:19:51.721Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:19:51.727Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:19:51.768Z] [INFO] ✅ Socket ZHcNkw4AcQpnXRXPAAAH authenticated for user demo (ID: 1)
+[2025-06-21T20:19:51.769Z] [INFO] 🔗 User demo (1) connected with socket ZHcNkw4AcQpnXRXPAAAH
+[2025-06-21T20:19:51.785Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:19:51.786Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:19:51.793Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:19:51.794Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:19:52.863Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:19:53.119Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:19:53.144Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:19:53.150Z] [INFO] ✅ Socket is0KttNbyd-DUC0ZAAAK authenticated for user demo (ID: 1)
+[2025-06-21T20:19:53.151Z] [INFO] 🔗 User demo (1) connected with socket is0KttNbyd-DUC0ZAAAK
+[2025-06-21T20:19:53.186Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:19:53.188Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:19:53.966Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:19:53.967Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:19:53.970Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:19:53.971Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:19:53.974Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:19:53.975Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:19:54.408Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:19:54.409Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:19:54.415Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:19:54.415Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:19:54.416Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:19:54.417Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:20:02.239Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:20:02.563Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:20:02.572Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:20:02.586Z] [INFO] ✅ Socket ftO5AN0zLKR4cm1YAAAN authenticated for user demo (ID: 1)
+[2025-06-21T20:20:02.587Z] [INFO] 🔗 User demo (1) connected with socket ftO5AN0zLKR4cm1YAAAN
+[2025-06-21T20:20:02.614Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:20:02.615Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:20:02.641Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:20:02.642Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:20:05.556Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:20:05.556Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:20:05.560Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:20:05.561Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:20:05.566Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:20:05.567Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:20:06.562Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:20:06.563Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:20:06.567Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:20:06.568Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:20:06.569Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:20:06.569Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:21:04.030Z] [INFO] User  logged out successfully
+[2025-06-21T20:21:04.039Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:21:11.948Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T20:21:11.979Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:21:11.985Z] [INFO] ✅ Socket 2Bab6V14MGXmNPRYAAAQ authenticated for user demo (ID: 1)
+[2025-06-21T20:21:11.985Z] [INFO] 🔗 User demo (1) connected with socket 2Bab6V14MGXmNPRYAAAQ
+[2025-06-21T20:21:11.986Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:21:11.998Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:21:11.998Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:21:12.002Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:21:12.002Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:21:13.729Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:21:13.730Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:21:13.731Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:21:13.731Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:21:13.736Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:21:13.737Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:21:14.523Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:21:14.524Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:21:14.525Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:21:14.525Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:21:14.529Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:21:14.529Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:21:15.730Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:21:15.730Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:21:15.731Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:21:15.732Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:21:15.735Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:21:15.736Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:21:16.307Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:21:16.308Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:21:16.310Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:21:16.311Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:21:16.312Z] [INFO] Loaded 2 messages for conversation 5 by user 1
+[2025-06-21T20:21:16.312Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:21:18.928Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:21:22.013Z] [INFO] Loaded 3 messages for conversation 5 by user 1
+[2025-06-21T20:21:22.014Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:21:22.775Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:21:23.100Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:22:41.306Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:22:41.307Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:22:41.312Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:22:41.313Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:22:41.317Z] [INFO] Loaded 4 messages for conversation 5 by user 1
+[2025-06-21T20:22:41.317Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:23:12.305Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:23:12.306Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:23:12.309Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:23:12.310Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:23:12.313Z] [INFO] Loaded 4 messages for conversation 5 by user 1
+[2025-06-21T20:23:12.315Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:23:32.615Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:23:32.736Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:23:32.740Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:23:32.749Z] [INFO] ✅ Socket xHdUqhg6fK9QRBDXAAAT authenticated for user demo (ID: 1)
+[2025-06-21T20:23:32.749Z] [INFO] 🔗 User demo (1) connected with socket xHdUqhg6fK9QRBDXAAAT
+[2025-06-21T20:23:32.764Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:23:32.765Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:23:32.770Z] [INFO] Loaded 4 messages for conversation 5 by user 1
+[2025-06-21T20:23:32.770Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:23:35.617Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:23:38.581Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:23:39.292Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:23:40.043Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:23:45.990Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:23:46.067Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:23:46.067Z] [INFO] ✅ Socket 6_vUWjS3rIz0uLO8AAAW authenticated for user demo (ID: 1)
+[2025-06-21T20:23:46.068Z] [INFO] 🔗 User demo (1) connected with socket 6_vUWjS3rIz0uLO8AAAW
+[2025-06-21T20:23:46.070Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:23:46.081Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:23:46.081Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:23:46.085Z] [INFO] Loaded 6 messages for conversation 5 by user 1
+[2025-06-21T20:23:46.086Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:30:23.313Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:30:23.316Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:30:23.358Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:30:23.359Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:30:23.360Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:30:23.361Z] [INFO] Loaded 6 messages for conversation 5 by user 1
+[2025-06-21T20:30:27.388Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:30:27.544Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:30:27.546Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:30:27.557Z] [INFO] ✅ Socket Vgv4EDDX3MurVpxMAAAZ authenticated for user demo (ID: 1)
+[2025-06-21T20:30:27.558Z] [INFO] 🔗 User demo (1) connected with socket Vgv4EDDX3MurVpxMAAAZ
+[2025-06-21T20:30:27.567Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:30:27.567Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:30:27.576Z] [INFO] Loaded 6 messages for conversation 5 by user 1
+[2025-06-21T20:30:27.577Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:30:29.400Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:30:30.210Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:30:30.959Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:30:32.676Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:30:44.666Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:30:44.666Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:30:44.667Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:30:44.668Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:30:44.673Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:30:44.674Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:30:45.221Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:30:45.221Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:30:45.223Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:30:45.223Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:30:45.228Z] [INFO] Loaded 8 messages for conversation 5 by user 1
+[2025-06-21T20:30:45.229Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:31:24.197Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:31:25.600Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:31:26.279Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:31:28.191Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:31:38.178Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:31:38.276Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:31:38.277Z] [INFO] ✅ Socket efqhw_5mFfbkgIWDAAAc authenticated for user demo (ID: 1)
+[2025-06-21T20:31:38.278Z] [INFO] 🔗 User demo (1) connected with socket efqhw_5mFfbkgIWDAAAc
+[2025-06-21T20:31:38.281Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:31:38.292Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:31:38.293Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:31:38.300Z] [INFO] Loaded 10 messages for conversation 5 by user 1
+[2025-06-21T20:31:38.301Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:32:48.300Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:32:48.301Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:32:48.302Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:32:48.302Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:32:48.309Z] [INFO] Loaded 10 messages for conversation 5 by user 1
+[2025-06-21T20:32:48.309Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:32:57.722Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:32:58.987Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:32:59.767Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:33:00.242Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:33:41.382Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:33:41.476Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:33:41.477Z] [INFO] ✅ Socket PgkW0a2M8JeeWpAOAAAf authenticated for user demo (ID: 1)
+[2025-06-21T20:33:41.478Z] [INFO] 🔗 User demo (1) connected with socket PgkW0a2M8JeeWpAOAAAf
+[2025-06-21T20:33:41.479Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:33:41.495Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:33:41.496Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:33:41.502Z] [INFO] Loaded 12 messages for conversation 5 by user 1
+[2025-06-21T20:33:41.502Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:33:43.099Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:33:44.098Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:33:44.907Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:33:46.088Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:35:46.298Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:35:46.299Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:35:46.302Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:35:46.302Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:35:46.305Z] [INFO] Loaded 14 messages for conversation 5 by user 1
+[2025-06-21T20:35:46.306Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:35:50.215Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:35:50.215Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:35:50.219Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:35:50.219Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:35:50.239Z] [INFO] Loaded 14 messages for conversation 5 by user 1
+[2025-06-21T20:35:50.246Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:35:53.151Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:35:54.379Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:35:55.158Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:35:57.391Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:38:13.303Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:38:13.314Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:38:13.315Z] [INFO] ✅ Socket _5CXY05DBe8fBxhiAAAh authenticated for user demo (ID: 1)
+[2025-06-21T20:38:13.315Z] [INFO] 🔗 User demo (1) connected with socket _5CXY05DBe8fBxhiAAAh
+[2025-06-21T20:38:13.373Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:38:13.374Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:38:13.382Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:38:13.383Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:38:26.295Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:38:26.306Z] [INFO] ✅ Socket Md4vp5zzeIAj_HNcAAAj authenticated for user demo (ID: 1)
+[2025-06-21T20:38:26.307Z] [INFO] 🔗 User demo (1) connected with socket Md4vp5zzeIAj_HNcAAAj
+[2025-06-21T20:38:26.307Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:38:26.317Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:38:26.317Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:38:26.323Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:38:26.324Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:39:15.298Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:39:15.303Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:39:19.819Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:39:19.822Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:41:01.320Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:41:01.325Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:41:01.337Z] [INFO] 🔗 User demo (1) connected with socket v_VkuxrlF2CA-oluAAAp
+[2025-06-21T20:41:01.336Z] [INFO] ✅ Socket v_VkuxrlF2CA-oluAAAp authenticated for user demo (ID: 1)
+[2025-06-21T20:41:01.361Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:41:01.361Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:41:01.372Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:41:01.373Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:41:03.300Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:41:03.306Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:41:05.035Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:41:05.042Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:41:45.227Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:41:45.231Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:44:01.325Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:44:01.328Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:44:01.336Z] [INFO] ✅ Socket JyxxEv2HLp42PUKRAAAx authenticated for user demo (ID: 1)
+[2025-06-21T20:44:01.336Z] [INFO] 🔗 User demo (1) connected with socket JyxxEv2HLp42PUKRAAAx
+[2025-06-21T20:44:01.358Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:44:01.358Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:44:01.370Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:44:01.370Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:44:18.047Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:44:18.352Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:44:18.371Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:44:18.382Z] [INFO] ✅ Socket h8krgWl8ydD35WORAAA0 authenticated for user demo (ID: 1)
+[2025-06-21T20:44:18.383Z] [INFO] 🔗 User demo (1) connected with socket h8krgWl8ydD35WORAAA0
+[2025-06-21T20:44:18.454Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:44:18.455Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:45:27.943Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:47:01.389Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:47:01.403Z] [INFO] ✅ Socket IpK3BDz7Si4fas52AAA3 authenticated for user demo (ID: 1)
+[2025-06-21T20:47:01.404Z] [INFO] 🔗 User demo (1) connected with socket IpK3BDz7Si4fas52AAA3
+[2025-06-21T20:47:01.404Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:47:01.482Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:47:01.481Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:47:01.536Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:47:01.537Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:47:52.304Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:47:52.330Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:47:52.341Z] [INFO] ✅ Socket 7spTnFd6xecl2CTqAAA5 authenticated for user demo (ID: 1)
+[2025-06-21T20:47:52.342Z] [INFO] 🔗 User demo (1) connected with socket 7spTnFd6xecl2CTqAAA5
+[2025-06-21T20:47:52.424Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:47:54.038Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:47:54.045Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:47:54.098Z] [INFO] ✅ Socket Vd03kgWO8kxbgUlIAAA8 authenticated for user demo (ID: 1)
+[2025-06-21T20:47:54.099Z] [INFO] 🔗 User demo (1) connected with socket Vd03kgWO8kxbgUlIAAA8
+[2025-06-21T20:47:54.103Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:48:12.127Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:48:12.138Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:48:12.144Z] [INFO] 🔗 User demo (1) connected with socket qz8LbrlBOheOvAuLAAA_
+[2025-06-21T20:48:12.142Z] [INFO] ✅ Socket qz8LbrlBOheOvAuLAAA_ authenticated for user demo (ID: 1)
+[2025-06-21T20:48:12.155Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:48:51.735Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:48:51.742Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:48:51.773Z] [INFO] ✅ Socket KtZJ5RL1nfPeiwlVAABC authenticated for user demo (ID: 1)
+[2025-06-21T20:48:51.774Z] [INFO] 🔗 User demo (1) connected with socket KtZJ5RL1nfPeiwlVAABC
+[2025-06-21T20:48:51.792Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:49:21.227Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:49:21.237Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:49:21.239Z] [INFO] ✅ Socket jlWv41drhHtiqjeGAABF authenticated for user demo (ID: 1)
+[2025-06-21T20:49:21.240Z] [INFO] 🔗 User demo (1) connected with socket jlWv41drhHtiqjeGAABF
+[2025-06-21T20:49:21.246Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:49:25.199Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:49:25.212Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:49:25.250Z] [INFO] ✅ Socket Jg_B7zMtIpubl8GWAABI authenticated for user demo (ID: 1)
+[2025-06-21T20:50:08.310Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:08.313Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:08.317Z] [INFO] ✅ Socket yeswUl6iLpqEYCoMAABL authenticated for user demo (ID: 1)
+[2025-06-21T20:50:08.318Z] [INFO] 🔗 User demo (1) connected with socket yeswUl6iLpqEYCoMAABL
+[2025-06-21T20:50:08.326Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:50:11.069Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:11.074Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:11.103Z] [INFO] ✅ Socket FoqArxwf0vdkbxMTAABO authenticated for user demo (ID: 1)
+[2025-06-21T20:50:11.104Z] [INFO] 🔗 User demo (1) connected with socket FoqArxwf0vdkbxMTAABO
+[2025-06-21T20:50:11.116Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:50:52.590Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:52.595Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:52.600Z] [INFO] ✅ Socket vG62xJRnI51SvmEKAABR authenticated for user demo (ID: 1)
+[2025-06-21T20:50:52.601Z] [INFO] 🔗 User demo (1) connected with socket vG62xJRnI51SvmEKAABR
+[2025-06-21T20:50:52.636Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:50:54.977Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:54.984Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:50:55.052Z] [INFO] ✅ Socket EgKUdhjg6EqU-aUgAABU authenticated for user demo (ID: 1)
+[2025-06-21T20:50:55.053Z] [INFO] 🔗 User demo (1) connected with socket EgKUdhjg6EqU-aUgAABU
+[2025-06-21T20:50:55.058Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:51:33.305Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:51:33.308Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:51:33.316Z] [INFO] 🔗 User demo (1) connected with socket QO3SQGK7NNm6NuILAABX
+[2025-06-21T20:51:33.316Z] [INFO] ✅ Socket QO3SQGK7NNm6NuILAABX authenticated for user demo (ID: 1)
+[2025-06-21T20:51:33.338Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:51:33.338Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:51:33.345Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:51:33.346Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:51:35.857Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:51:36.153Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:51:36.165Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:51:36.194Z] [INFO] ✅ Socket IbX7eMVUl3VeTNAoAABa authenticated for user demo (ID: 1)
+[2025-06-21T20:51:36.201Z] [INFO] 🔗 User demo (1) connected with socket IbX7eMVUl3VeTNAoAABa
+[2025-06-21T20:51:36.251Z] [INFO] Loaded 16 messages for conversation 5 by user 1
+[2025-06-21T20:51:36.253Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:51:38.632Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:51:39.677Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:51:40.462Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:51:41.835Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:51:48.004Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:51:48.004Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:51:48.010Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:51:48.012Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:51:48.017Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:51:48.018Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:51:48.646Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:51:48.647Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:51:48.653Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:51:48.654Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:51:48.657Z] [INFO] Loaded 18 messages for conversation 5 by user 1
+[2025-06-21T20:51:48.658Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:51:55.508Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:51:57.595Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:51:57.972Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:51:58.694Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:51:59.209Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:52:01.235Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:52:03.219Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:52:05.112Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:52:05.822Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:52:07.499Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:52:14.667Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:52:15.061Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:52:15.067Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:52:15.083Z] [INFO] ✅ Socket 0LP3rk_bExKin8I6AABd authenticated for user demo (ID: 1)
+[2025-06-21T20:52:15.084Z] [INFO] 🔗 User demo (1) connected with socket 0LP3rk_bExKin8I6AABd
+[2025-06-21T20:52:15.134Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:52:15.138Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:52:15.152Z] [INFO] Loaded 22 messages for conversation 5 by user 1
+[2025-06-21T20:52:15.154Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:52:18.116Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:52:19.232Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:52:19.956Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:52:21.528Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:52:22.822Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T20:52:24.277Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T20:52:24.982Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T20:52:26.005Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T20:52:27.553Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:52:27.554Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:52:27.562Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:52:27.563Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:52:27.566Z] [INFO] Loaded 0 messages for conversation 4 by user 1
+[2025-06-21T20:52:27.567Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T20:52:29.259Z] [INFO] ⌨️ User demo started typing in conversation 4
+[2025-06-21T20:52:30.226Z] [INFO] 📤 Message sent by demo to conversation 4
+[2025-06-21T20:52:31.047Z] [INFO] ⌨️ User demo stopped typing in conversation 4
+[2025-06-21T20:52:32.581Z] [INFO] 🤖 AI response sent to conversation 4
+[2025-06-21T20:52:33.589Z] [INFO] ⌨️ User demo started typing in conversation 4
+[2025-06-21T20:52:35.871Z] [INFO] ⌨️ User demo stopped typing in conversation 4
+[2025-06-21T20:52:36.944Z] [INFO] 📤 Message sent by demo to conversation 4
+[2025-06-21T20:52:37.771Z] [INFO] ⌨️ User demo started typing in conversation 4
+[2025-06-21T20:52:39.418Z] [INFO] 🤖 AI response sent to conversation 4
+[2025-06-21T20:52:41.981Z] [INFO] 📤 Message sent by demo to conversation 4
+[2025-06-21T20:52:42.789Z] [INFO] ⌨️ User demo stopped typing in conversation 4
+[2025-06-21T20:52:43.715Z] [INFO] 🤖 AI response sent to conversation 4
+[2025-06-21T20:53:11.090Z] [INFO] File uploaded successfully to conversation 4 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T20:53:11.095Z] [INFO] 📁 File uploaded by demo to conversation 4: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T20:53:11.099Z] [INFO] Loaded 1 files for conversation 4 by user 1
+[2025-06-21T20:53:29.946Z] [INFO] User  logged out successfully
+[2025-06-21T20:53:29.974Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T20:53:38.051Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T20:53:38.085Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:53:38.093Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:53:38.093Z] [INFO] ✅ Socket hmD6gXPcgkhl_V5aAABg authenticated for user demo (ID: 1)
+[2025-06-21T20:53:38.094Z] [INFO] 🔗 User demo (1) connected with socket hmD6gXPcgkhl_V5aAABg
+[2025-06-21T20:53:38.117Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:53:38.117Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:53:38.131Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T20:53:38.132Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:53:41.500Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:53:41.501Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:53:41.506Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:53:41.506Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:53:41.512Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T20:53:41.512Z] [INFO] Loaded 1 files for conversation 4 by user 1
+[2025-06-21T20:53:42.736Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:53:42.736Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:53:42.742Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:53:42.742Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:53:42.743Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T20:53:42.744Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:54:10.391Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T20:54:11.369Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:54:11.372Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T20:54:11.378Z] [INFO] ✅ Socket CGS_KW0JZwaXYB2vAABj authenticated for user demo (ID: 1)
+[2025-06-21T20:54:11.378Z] [INFO] 🔗 User demo (1) connected with socket CGS_KW0JZwaXYB2vAABj
+[2025-06-21T20:54:11.398Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:54:11.398Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:54:11.404Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:54:11.406Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T20:59:17.772Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:59:17.773Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:59:17.783Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:59:17.784Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:59:17.787Z] [INFO] Loaded 1 files for conversation 4 by user 1
+[2025-06-21T20:59:17.789Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T20:59:18.753Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:59:18.754Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:59:18.759Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:59:18.760Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:59:18.766Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T20:59:18.767Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T20:59:27.214Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T20:59:27.219Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T20:59:27.226Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T20:59:43.629Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T20:59:43.630Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T20:59:43.634Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T20:59:43.635Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T20:59:43.640Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T20:59:43.640Z] [INFO] Loaded 1 files for conversation 4 by user 1
+[2025-06-21T20:59:45.431Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T20:59:45.431Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T20:59:45.436Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T20:59:45.436Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T20:59:45.441Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T20:59:45.442Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T20:59:55.267Z] [INFO] User  logged out successfully
+[2025-06-21T20:59:55.296Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T21:00:00.334Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T21:00:00.382Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:00:00.390Z] [INFO] ✅ Socket oyMEqEgpWsfGP_n9AABm authenticated for user demo (ID: 1)
+[2025-06-21T21:00:00.392Z] [INFO] 🔗 User demo (1) connected with socket oyMEqEgpWsfGP_n9AABm
+[2025-06-21T21:00:00.393Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:00:00.413Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:00:00.414Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:00:00.420Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:00:00.423Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:00:06.127Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:00:06.128Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:00:06.129Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T21:00:06.129Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T21:00:06.134Z] [INFO] Loaded 1 files for conversation 4 by user 1
+[2025-06-21T21:00:06.134Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T21:00:35.367Z] [INFO] File 5 deleted from conversation 4 by user 1
+[2025-06-21T21:00:35.374Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T21:00:52.344Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T21:00:52.345Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T21:00:52.346Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:00:52.347Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:00:52.353Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:00:52.354Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:00:59.341Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T21:00:59.344Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T21:00:59.350Z] [INFO] Loaded 2 files for conversation 5 by user 1
+[2025-06-21T21:01:09.367Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T21:01:09.551Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:01:09.558Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:01:09.559Z] [INFO] ✅ Socket 1LJGjRShYzFUbMr6AABp authenticated for user demo (ID: 1)
+[2025-06-21T21:01:09.560Z] [INFO] 🔗 User demo (1) connected with socket 1LJGjRShYzFUbMr6AABp
+[2025-06-21T21:01:09.574Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:01:09.575Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:01:09.580Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:01:09.581Z] [INFO] Loaded 2 files for conversation 5 by user 1
+[2025-06-21T21:01:11.466Z] [INFO] File 7 deleted from conversation 5 by user 1
+[2025-06-21T21:01:11.471Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:01:18.564Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T21:01:18.668Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:01:18.671Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:01:18.679Z] [INFO] ✅ Socket gI-FwhZA42uigbkoAABs authenticated for user demo (ID: 1)
+[2025-06-21T21:01:18.680Z] [INFO] 🔗 User demo (1) connected with socket gI-FwhZA42uigbkoAABs
+[2025-06-21T21:01:18.697Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:01:18.698Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:01:18.704Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:01:18.705Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:01:20.476Z] [INFO] File 6 deleted from conversation 5 by user 1
+[2025-06-21T21:01:20.482Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T21:01:29.221Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T21:01:29.226Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T21:01:29.233Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:01:35.868Z] [INFO] File 8 deleted from conversation 5 by user 1
+[2025-06-21T21:01:35.875Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-21T21:01:48.705Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T21:01:48.708Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T21:01:48.713Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:02:33.276Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T21:02:33.411Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:02:33.419Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:02:33.420Z] [INFO] ✅ Socket CVqL7xFBsgmZ85RpAABv authenticated for user demo (ID: 1)
+[2025-06-21T21:02:33.420Z] [INFO] 🔗 User demo (1) connected with socket CVqL7xFBsgmZ85RpAABv
+[2025-06-21T21:02:33.438Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:02:33.438Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:02:33.441Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:02:33.442Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:05:41.303Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-21T21:05:41.314Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:05:41.314Z] [INFO] ✅ Socket UGsS4v2Dfms4As6rAABx authenticated for user demo (ID: 1)
+[2025-06-21T21:05:41.315Z] [INFO] 🔗 User demo (1) connected with socket UGsS4v2Dfms4As6rAABx
+[2025-06-21T21:05:41.322Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:05:41.322Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:05:41.328Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:05:41.329Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:07:57.320Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:07:57.321Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:07:57.325Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:07:57.326Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:07:57.336Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:07:57.339Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:08:06.724Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:08:06.725Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:08:06.726Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:08:06.727Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:08:06.733Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:08:06.733Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:08:27.329Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:08:27.330Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:08:27.335Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:08:27.336Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:08:27.340Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:08:27.341Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:08:29.338Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:08:29.339Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:08:29.342Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:08:29.342Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:08:29.348Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:08:29.349Z] [INFO] Loaded 1 files for conversation 5 by user 1
