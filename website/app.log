@@ -1,0 +1,665 @@
+[2025-06-19T11:29:35.408Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T11:29:35.417Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T11:29:35.421Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:29:51.015Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T11:29:58.392Z] [INFO] User  logged out successfully
+[2025-06-19T11:35:04.038Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T11:35:30.992Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T11:35:31.019Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T11:35:31.032Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:35:34.449Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T11:35:34.455Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T11:35:34.457Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:36:50.418Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T11:36:50.439Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T11:36:50.450Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:37:20.816Z] [INFO] User  logged out successfully
+[2025-06-19T11:37:30.572Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T11:38:38.072Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T11:38:38.102Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T11:38:38.114Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:39:37.841Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T11:39:37.857Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T11:39:37.869Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:39:42.329Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T11:39:42.335Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T11:39:42.338Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:39:50.041Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T11:39:50.050Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T11:39:50.052Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:51:47.910Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T11:51:47.932Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T11:51:47.943Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:52:12.306Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T11:53:15.082Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T11:53:15.091Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T11:53:15.094Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:54:06.762Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T11:54:06.960Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T11:54:06.978Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T11:54:08.178Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T11:54:08.184Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T11:54:08.187Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:00:50.573Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T12:05:10.394Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:05:10.416Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:05:10.428Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:06:02.094Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T12:06:17.254Z] [INFO] User  logged out successfully
+[2025-06-19T12:06:22.773Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T12:13:36.846Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T12:15:23.524Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:15:23.555Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:15:23.567Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:15:25.090Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T12:15:25.096Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T12:15:25.099Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:15:31.260Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-19T12:17:15.748Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:17:15.776Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:17:15.788Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:18:00.969Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:18:00.996Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:18:01.007Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:18:10.649Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:18:10.676Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:18:10.686Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:18:11.756Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:18:11.763Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:18:11.766Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:19:01.170Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:19:01.219Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:19:01.231Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:19:03.307Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:19:03.313Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:19:03.315Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:27:11.288Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:27:11.320Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:27:11.334Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:27:17.243Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:27:17.249Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:27:17.253Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:27:18.678Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:27:18.688Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:27:18.691Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:27:22.124Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T12:27:22.131Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T12:27:22.134Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:27:29.424Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T12:27:29.433Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T12:27:29.436Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:27:35.631Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-19T12:27:35.642Z] [INFO] Node.js Server is running on port 3000
+[2025-06-19T12:27:35.646Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:39:14.654Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:39:14.685Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:39:14.696Z] [INFO] SQLite database initialized successfully.
+[2025-06-19T12:39:16.394Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-19T12:39:16.402Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-19T12:39:16.405Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T10:36:41.461Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T10:36:41.467Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T10:36:41.476Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:54:34.202Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:54:34.208Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:54:34.211Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:56:34.681Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:56:34.687Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:56:34.689Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:56:52.828Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:56:52.834Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:56:52.836Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:56:55.223Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T12:56:55.229Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T12:56:55.231Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:56:58.049Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:56:58.055Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:56:58.057Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:56:58.459Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:56:58.465Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:56:58.467Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:57:07.423Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:57:07.429Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:57:07.431Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:57:15.770Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:57:15.776Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:57:15.778Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:57:39.113Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:57:39.119Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:57:39.121Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:57:44.602Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:57:44.608Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:57:44.610Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:59:02.176Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:59:02.182Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:59:02.184Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T12:59:09.076Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T12:59:09.082Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T12:59:09.084Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:01:02.910Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:01:02.919Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:01:02.932Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:01:02.933Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:01:08.072Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:01:08.078Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:01:08.080Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:01:08.080Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:01:09.170Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:01:09.176Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:01:09.178Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:01:09.178Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:01:50.826Z] [WARNING] Login failed for non-existent user: demo@demo1.com
+[2025-06-21T13:01:56.395Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:09:10.843Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:09:10.849Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:09:10.851Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:09:10.852Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:09:11.421Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:09:11.431Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:09:11.433Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:09:11.433Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:09:15.569Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:09:16.507Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:15:20.384Z] [INFO] User  logged out successfully
+[2025-06-21T13:15:26.386Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:21:37.759Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:21:37.766Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:21:37.770Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:21:37.771Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:22:46.824Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:22:49.430Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:26:48.193Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:26:48.198Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:26:48.200Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:26:48.200Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:26:52.688Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:26:52.693Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:26:52.696Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:26:52.696Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:27:06.585Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:27:26.171Z] [INFO] User  logged out successfully
+[2025-06-21T13:27:31.325Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:28:02.278Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T13:28:02.284Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T13:28:02.287Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:28:02.287Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:28:04.349Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:28:04.356Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:28:04.357Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:28:04.358Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:28:12.097Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:28:12.103Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:28:12.105Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:28:12.105Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:28:13.376Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:28:13.383Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:28:13.386Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:28:13.386Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:28:15.714Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T13:28:15.719Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T13:28:15.722Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:28:15.722Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:28:19.269Z] [INFO] User  logged out successfully
+[2025-06-21T13:28:23.740Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:28:50.549Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:28:50.556Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:28:50.558Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:28:50.558Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:29:25.070Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:37:46.149Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T13:37:46.155Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T13:37:46.157Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:37:46.157Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:45:04.173Z] [INFO] User  logged out successfully
+[2025-06-21T13:45:11.728Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:46:19.681Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T13:46:19.698Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T13:46:19.702Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:46:19.702Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:46:21.034Z] [WARNING] Token verification failed: invalid signature
+[2025-06-21T13:46:21.040Z] [WARNING] Token verification failed: invalid signature
+[2025-06-21T13:48:10.251Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:48:10.257Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:48:10.260Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:48:10.260Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:48:57.459Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T13:48:57.466Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T13:48:57.469Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:48:57.469Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:49:16.578Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:49:16.584Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:49:16.586Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:49:16.586Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:49:21.012Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:49:21.018Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:49:21.020Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:49:21.020Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:49:25.596Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:49:25.602Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:49:28.684Z] [INFO] User  logged out successfully
+[2025-06-21T13:49:33.174Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T13:49:33.198Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:49:33.201Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:49:41.599Z] [WARNING] Invalid conversation data for user 1
+[2025-06-21T13:51:50.814Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:51:50.818Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:51:55.657Z] [WARNING] Invalid conversation data for user 1
+[2025-06-21T13:53:58.680Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T13:53:58.689Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T13:53:58.692Z] [INFO] Database tables 'users' and 'conversations' ensured.
+[2025-06-21T13:53:58.693Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T13:54:00.531Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:54:00.551Z] [INFO] Loaded 0 conversations for user 1
+[2025-06-21T13:54:04.318Z] [INFO] Conversation 1 created for user 1
+[2025-06-21T13:54:04.323Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T13:54:13.723Z] [INFO] Conversation 2 created for user 1
+[2025-06-21T13:54:13.727Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T13:56:48.808Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T13:56:48.961Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T13:56:49.621Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T13:56:49.624Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T13:56:54.149Z] [INFO] Conversation 2 title updated by user 1
+[2025-06-21T14:01:51.863Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T14:01:51.873Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T14:02:06.890Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T14:02:06.895Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T14:02:19.488Z] [INFO] Conversation 2 deleted by user 1
+[2025-06-21T14:02:29.033Z] [INFO] Conversation 1 deleted by user 1
+[2025-06-21T14:02:35.130Z] [INFO] Conversation 3 created for user 1
+[2025-06-21T14:02:35.136Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:03:23.411Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:03:23.413Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:07:58.230Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:07:58.235Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:07:58.273Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:07:58.275Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:08:04.335Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:08:04.340Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:12:12.967Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:12:12.970Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:16:13.608Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:16:13.617Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:16:13.628Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:16:13.629Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:16:51.160Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:16:51.167Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:16:51.170Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:16:51.170Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:16:56.957Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:16:56.961Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:17:18.140Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T14:17:18.162Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:17:18.164Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:22:27.430Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:22:27.437Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:22:27.440Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:22:27.440Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:22:35.318Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:22:35.325Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:22:35.327Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:22:35.327Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:25:14.957Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:25:14.963Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:25:14.965Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:25:14.965Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:25:25.222Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:25:25.227Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:25:25.296Z] [INFO] Loaded 0 messages for conversation 3 by user 1
+[2025-06-21T14:25:28.426Z] [INFO] Message saved to conversation 3 by user 1
+[2025-06-21T14:25:28.431Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T14:25:51.244Z] [INFO] Conversation 3 title updated by user 1
+[2025-06-21T14:28:40.372Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:28:40.379Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:28:40.382Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:28:40.382Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:40:50.616Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T14:40:50.643Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T14:40:50.662Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T14:40:50.665Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:40:50.665Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:40:58.629Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:40:58.656Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:40:58.662Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T14:40:58.662Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:40:58.663Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:48:32.844Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:48:32.870Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:48:32.874Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T14:48:32.875Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:48:32.875Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:53:00.522Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:53:00.532Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:53:00.578Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T14:55:06.883Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:55:06.887Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:55:06.917Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T14:55:11.679Z] [INFO] User  logged out successfully
+[2025-06-21T14:55:18.676Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T14:55:18.696Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:55:18.699Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:55:18.728Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T14:57:56.594Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T14:57:56.635Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T14:57:56.641Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T14:57:56.642Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T14:57:56.643Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T14:59:54.507Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:59:54.512Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T14:59:54.548Z] [ERROR] Error loading files for conversation 3: SQLITE_ERROR: no such table: uploaded_files
+Error: SQLITE_ERROR: no such table: uploaded_files
+[2025-06-21T14:59:54.554Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:01:43.494Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:01:43.517Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:01:43.522Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:01:43.529Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:01:43.529Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:01:51.406Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T15:01:51.429Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T15:01:51.434Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:01:51.435Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:01:51.435Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:01:54.852Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:01:54.875Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:01:54.879Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:01:54.880Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:01:54.880Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:01:59.151Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:01:59.174Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:01:59.178Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:01:59.179Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:01:59.180Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:02:01.078Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:02:01.102Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:02:01.106Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:02:01.106Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:02:01.106Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:02:02.877Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:02:02.901Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:02:02.905Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:02:02.906Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:02:02.906Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:02:05.151Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:02:05.155Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:02:05.209Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:02:05.210Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:02:17.338Z] [ERROR] Error uploading file to conversation 3: 
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1118:18)
+    at afterConnectMultiple (node:net:1685:7)
+[2025-06-21T15:03:29.488Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:03:29.493Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:03:29.540Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:03:29.542Z] [INFO] Loaded 0 files for conversation 3 by user 1
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1118:18)
+    at afterConnectMultiple (node:net:1685:7)
+[2025-06-21T15:03:38.197Z] [ERROR] Error uploading file to conversation 3: 
+[2025-06-21T15:08:06.532Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T15:08:06.554Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T15:08:06.559Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:08:06.560Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:08:06.560Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:08:48.535Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:08:48.558Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:08:48.562Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:08:48.563Z] [INFO] Database tables 'users', 'conversations', and 'messages' ensured.
+[2025-06-21T15:08:48.563Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:08:57.656Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:08:57.679Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:08:57.683Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:08:57.684Z] [INFO] Database tables 'users', 'conversations', 'messages' ensured.
+[2025-06-21T15:08:57.684Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:09:03.718Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:09:03.742Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:09:03.746Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:09:03.747Z] [INFO] Database tables 'users', 'conversations', 'messages', and ' ensured.
+[2025-06-21T15:09:03.747Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:09:04.767Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:09:04.790Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:09:04.794Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:09:04.795Z] [INFO] Database tables 'users', 'conversations', 'messages', and '' ensured.
+[2025-06-21T15:09:04.795Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:09:08.960Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:09:08.983Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:09:08.987Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:09:08.988Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:09:08.988Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:09:38.036Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:09:38.059Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:09:38.064Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:09:38.065Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:09:38.065Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:09:42.159Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T15:09:42.185Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T15:09:42.190Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:09:42.191Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:09:42.191Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:09:43.219Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:09:43.242Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:09:43.246Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:09:43.247Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:09:43.248Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:13:31.226Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:13:31.230Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:13:31.275Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:13:31.276Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:14:09.703Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T15:14:09.733Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T15:14:09.740Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:14:09.741Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:14:09.741Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:14:13.877Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T15:14:13.901Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T15:14:13.906Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:14:13.907Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:14:13.907Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:14:18.121Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:14:18.127Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:14:18.153Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:14:18.155Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:14:24.200Z] [ERROR] Error uploading file to conversation 3: 
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1118:18)
+    at afterConnectMultiple (node:net:1685:7)
+[2025-06-21T15:30:46.963Z] [INFO] Log mode set to: CONSOLE+FILE
+http://localhost:3000
+[2025-06-21T15:30:46.991Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T15:30:46.998Z] [ERROR] MinIO bucket setup error: 
+[2025-06-21T15:30:47.001Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:30:47.001Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:33:02.625Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:33:02.628Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:33:15.100Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:33:15.105Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:33:15.316Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:33:15.318Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:34:31.275Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T15:34:31.305Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T15:34:31.310Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T15:34:31.310Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T15:34:31.353Z] [INFO] ✅ Created MinIO bucket: chat-files
+[2025-06-21T15:34:47.913Z] [INFO] File uploaded successfully to conversation 3 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T15:34:47.925Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:36:22.496Z] [INFO] File 1 deleted from conversation 3 by user 1
+[2025-06-21T15:36:22.505Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:41:00.413Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:41:00.424Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:41:00.479Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:41:00.481Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:41:13.485Z] [INFO] File uploaded successfully to conversation 3 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T15:41:13.494Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:41:39.881Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:41:39.886Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:41:39.914Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:41:39.915Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:43:21.479Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:43:21.482Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:43:21.506Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:43:21.506Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:44:32.322Z] [INFO] User  logged out successfully
+[2025-06-21T15:44:40.027Z] [WARNING] Login failed for non-existent user: tchu280305@gmail.com
+[2025-06-21T15:45:16.887Z] [INFO] User tchu280305@gmail.com.com registered successfully with ID: 2
+[2025-06-21T15:45:24.284Z] [WARNING] Login failed for non-existent user: tchu280305@gmail.com
+[2025-06-21T15:45:30.955Z] [ERROR] Error during registration: SQLITE_CONSTRAINT: UNIQUE constraint failed: users.username
+Error: SQLITE_CONSTRAINT: UNIQUE constraint failed: users.username
+[2025-06-21T15:45:38.867Z] [INFO] User tchu280305@gmail.com registered successfully with ID: 3
+[2025-06-21T15:45:40.371Z] [INFO] User tchu280305@gmail.com logged in successfully
+[2025-06-21T15:45:40.389Z] [INFO] Loaded 0 conversations for user 3
+[2025-06-21T15:45:40.392Z] [INFO] Loaded 0 conversations for user 3
+[2025-06-21T15:45:53.501Z] [INFO] User  logged out successfully
+[2025-06-21T15:45:57.862Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-21T15:45:57.881Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:45:57.885Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:45:57.897Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:45:57.898Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:47:42.183Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:47:42.186Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:47:42.208Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:47:42.210Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:47:54.834Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:47:54.837Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:47:54.852Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:47:54.853Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:50:12.144Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:50:12.146Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:51:19.657Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:51:19.660Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:51:19.716Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:51:19.725Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:53:41.803Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:53:41.806Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:53:41.821Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:53:41.822Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:56:40.277Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:56:40.283Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:56:40.293Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:56:40.294Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:57:05.390Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:57:05.393Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:57:05.442Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:57:05.443Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:57:37.864Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:57:37.869Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:57:37.920Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T15:57:37.922Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:57:39.270Z] [INFO] File 2 deleted from conversation 3 by user 1
+[2025-06-21T15:57:39.277Z] [INFO] Loaded 0 files for conversation 3 by user 1
+[2025-06-21T15:57:50.690Z] [INFO] File uploaded successfully to conversation 3 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-21T15:57:50.701Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:59:38.216Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:59:38.221Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T15:59:38.247Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T15:59:38.245Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T16:00:04.500Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T16:00:04.504Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T16:00:04.531Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T16:00:04.532Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T16:03:55.470Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T16:03:55.503Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T16:03:55.510Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T16:03:55.510Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T16:03:55.531Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T16:16:42.668Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T16:16:42.692Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T16:16:42.711Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T16:16:42.711Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T16:16:42.733Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T16:16:46.161Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T16:16:46.166Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-21T16:16:46.254Z] [INFO] Loaded 1 messages for conversation 3 by user 1
+[2025-06-21T16:16:46.256Z] [INFO] Loaded 1 files for conversation 3 by user 1
+[2025-06-21T16:16:52.884Z] [INFO] Conversation 3 title updated by user 1
+[2025-06-21T16:16:55.635Z] [INFO] Conversation 3 title updated by user 1
