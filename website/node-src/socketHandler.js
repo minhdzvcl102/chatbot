@@ -1,6 +1,7 @@
 // websocket/socketHandler.js
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken';
+import net from 'net';
 import { getDb } from './utilities/database.js';
 import { logMessage } from './utilities/logger.js';
 
@@ -17,6 +18,13 @@ class WebSocketHandler {
     this.connectedUsers = new Map(); // userId -> socket info
     this.roomUsers = new Map(); // conversationId -> Set of userIds
     this.userRooms = new Map(); // userId -> Set of conversationIds
+    
+    // Python AI service connection settings
+    this.pythonAI = {
+      host: process.env.PYTHON_AI_HOST || 'localhost',
+      port: process.env.PYTHON_AI_PORT || 8888,
+      timeout: process.env.PYTHON_AI_TIMEOUT || 30000
+    };
     
     this.setupMiddleware();
     this.setupEventHandlers();
@@ -312,11 +320,18 @@ class WebSocketHandler {
       const roomName = `conversation_${conversationId}`;
       this.io.to(roomName).emit('new_message', messageData);
 
-      // If this is a user message, simulate AI response after a delay
+      // If this is a user message, get AI response from Python service
       if (role === 'user') {
-        setTimeout(() => {
-          this.simulateAIResponse(conversationId, content);
-        }, 1000 + Math.random() * 2000); // 1-3 seconds delay
+        // Show typing indicator for AI
+        this.io.to(roomName).emit('typing', {
+          userId: null,
+          username: 'AI Assistant',
+          conversationId: conversationId,
+          isTyping: true
+        });
+
+        // Get AI response from Python service
+        this.getAIResponse(conversationId, content, socket.username);
       }
 
       // Update conversation info for all users
@@ -449,26 +464,99 @@ class WebSocketHandler {
     }
   }
 
-  // Simulate AI response
-  async simulateAIResponse(conversationId, userMessage) {
+  // Get AI response from Python service via socket
+  async getAIResponse(conversationId, userMessage, username) {
+    return new Promise((resolve) => {
+      const client = new net.Socket();
+      let responseBuffer = '';
+      
+      // Set timeout
+      const timeout = setTimeout(() => {
+        client.destroy();
+        logMessage("ERR", `⏰ Python AI service timeout for conversation ${conversationId}`);
+        this.handleAIError(conversationId, 'AI service timeout');
+        resolve(null);
+      }, this.pythonAI.timeout);
+
+      // Connect to Python AI service
+      client.connect(this.pythonAI.port, this.pythonAI.host, () => {
+        logMessage("INF", `🔗 Connected to Python AI service for conversation ${conversationId}`);
+        
+        // Prepare request data
+        const requestData = {
+          type: 'chat',
+          conversationId: conversationId,
+          message: userMessage,
+          username: username,
+          timestamp: new Date().toISOString()
+        };
+
+        // Send request to Python service
+        client.write(JSON.stringify(requestData) + '\n');
+      });
+
+      // Handle data received from Python service
+      client.on('data', (data) => {
+        responseBuffer += data.toString();
+        
+        // Check if we have a complete response (assuming newline-delimited JSON)
+        const lines = responseBuffer.split('\n');
+        
+        for (let i = 0; i < lines.length - 1; i++) {
+          const line = lines[i].trim();
+          if (line) {
+            try {
+              const response = JSON.parse(line);
+              this.handleAIResponse(conversationId, response);
+            } catch (parseError) {
+              logMessage("ERR", `Error parsing AI response: ${parseError.message}`);
+            }
+          }
+        }
+        
+        // Keep the last incomplete line
+        responseBuffer = lines[lines.length - 1];
+      });
+
+      // Handle connection errors
+      client.on('error', (error) => {
+        clearTimeout(timeout);
+        logMessage("ERR", `Python AI service connection error: ${error.message}`);
+        this.handleAIError(conversationId, 'AI service connection error');
+        resolve(null);
+      });
+
+      // Handle connection close
+      client.on('close', () => {
+        clearTimeout(timeout);
+        logMessage("INF", `🔌 Python AI service connection closed for conversation ${conversationId}`);
+        resolve(true);
+      });
+    });
+  }
+
+  // Handle AI response from Python service
+  async handleAIResponse(conversationId, response) {
     try {
+      const { content, status, error } = response;
+      
+      if (status === 'error' || error) {
+        logMessage("ERR", `AI service error: ${error || 'Unknown error'}`);
+        this.handleAIError(conversationId, error || 'AI processing error');
+        return;
+      }
+
+      if (!content || content.trim() === '') {
+        logMessage("WRN", `Empty AI response for conversation ${conversationId}`);
+        this.handleAIError(conversationId, 'Empty AI response');
+        return;
+      }
+
+      // Save AI response to database
       const db = await getDb();
-      
-      // Generate a simple AI response (you can integrate with actual AI service here)
-      const aiResponses = [
-        "Tôi hiểu câu hỏi của bạn. Đây là một chủ đề thú vị!",
-        "Cảm ơn bạn đã chia sẻ. Tôi sẽ cần thêm thông tin để trả lời chính xác hơn.",
-        "Điều đó rất có ý nghĩa. Bạn có thể cho tôi biết thêm chi tiết không?",
-        "Tôi đã xử lý thông tin của bạn. Đây là phản hồi của tôi về vấn đề này.",
-        "Câu hỏi hay! Hãy để tôi suy nghĩ và đưa ra câu trả lời phù hợp."
-      ];
-      
-      const aiContent = aiResponses[Math.floor(Math.random() * aiResponses.length)];
-      
-      // Save AI message to database
       const messageResult = await db.run(
         'INSERT INTO messages (conversationId, role, content, createdAt) VALUES (?, ?, ?, ?)',
-        [conversationId, 'assistant', aiContent, new Date().toISOString()]
+        [conversationId, 'assistant', content.trim(), new Date().toISOString()]
       );
 
       if (messageResult.lastID) {
@@ -485,22 +573,61 @@ class WebSocketHandler {
           id: savedMessage.id,
           conversationId: conversationId,
           role: 'assistant',
-          content: aiContent,
+          content: content.trim(),
           createdAt: savedMessage.createdAt,
           userId: null,
           username: 'AI Assistant'
         };
 
-        // Broadcast AI response to all users in the conversation room
         const roomName = `conversation_${conversationId}`;
+        
+        // Stop typing indicator
+        this.io.to(roomName).emit('typing', {
+          userId: null,
+          username: 'AI Assistant',
+          conversationId: conversationId,
+          isTyping: false
+        });
+
+        // Broadcast AI response to all users in the conversation room
         this.io.to(roomName).emit('new_message', aiMessageData);
+
+        // Update conversation info
+        this.io.to(roomName).emit('conversation_updated', {
+          conversationId: conversationId,
+          updatedAt: new Date().toISOString(),
+          lastMessage: aiMessageData
+        });
 
         logMessage("INF", `🤖 AI response sent to conversation ${conversationId}`);
       }
       
     } catch (error) {
-      logMessage("ERR", `Error simulating AI response: ${error.message}`, error.stack);
+      logMessage("ERR", `Error handling AI response: ${error.message}`, error.stack);
+      this.handleAIError(conversationId, 'Failed to process AI response');
     }
+  }
+
+  // Handle AI service errors
+  handleAIError(conversationId, errorMessage) {
+    const roomName = `conversation_${conversationId}`;
+    
+    // Stop typing indicator
+    this.io.to(roomName).emit('typing', {
+      userId: null,
+      username: 'AI Assistant',
+      conversationId: conversationId,
+      isTyping: false
+    });
+
+    // Send error message to users
+    this.io.to(roomName).emit('ai_error', {
+      conversationId: conversationId,
+      error: errorMessage || 'AI service is temporarily unavailable',
+      timestamp: new Date().toISOString()
+    });
+
+    logMessage("ERR", `AI service error for conversation ${conversationId}: ${errorMessage}`);
   }
 
   // Handle disconnection
@@ -548,7 +675,12 @@ class WebSocketHandler {
     return {
       connectedUsers: this.connectedUsers.size,
       activeRooms: this.roomUsers.size,
-      totalConnections: this.io.engine.clientsCount
+      totalConnections: this.io.engine.clientsCount,
+      pythonAIConfig: {
+        host: this.pythonAI.host,
+        port: this.pythonAI.port,
+        timeout: this.pythonAI.timeout
+      }
     };
   }
 
@@ -568,6 +700,28 @@ class WebSocketHandler {
     this.io.to(roomName).emit(event, data);
     
     logMessage("INF", `📡 Broadcasted ${event} to conversation ${conversationId}`);
+  }
+
+  // Test Python AI service connection
+  async testPythonAIConnection() {
+    return new Promise((resolve) => {
+      const client = new net.Socket();
+      const timeout = setTimeout(() => {
+        client.destroy();
+        resolve(false);
+      }, 5000);
+
+      client.connect(this.pythonAI.port, this.pythonAI.host, () => {
+        clearTimeout(timeout);
+        client.destroy();
+        resolve(true);
+      });
+
+      client.on('error', () => {
+        clearTimeout(timeout);
+        resolve(false);
+      });
+    });
   }
 }
 

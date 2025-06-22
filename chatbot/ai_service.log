@@ -1,0 +1,40 @@
+2025-06-22 17:23:53,545 - INFO - ✅ OpenAI client initialized with DashScope
+2025-06-22 17:23:53,545 - INFO - 🤖 AI Service initialized on localhost:8888
+2025-06-22 17:23:53,549 - INFO - 🚀 AI Service server started on localhost:8888
+2025-06-22 17:24:05,910 - INFO - 🔗 New connection from ('127.0.0.1', 55743)
+2025-06-22 17:24:05,912 - INFO - 📥 Processing chat request for conversation 5
+2025-06-22 17:24:06,413 - INFO - 🤖 Generating OpenAI response for user: demo
+2025-06-22 17:24:07,826 - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-22 17:24:07,834 - INFO - ✅ OpenAI response generated successfully
+2025-06-22 17:24:07,834 - INFO - 🤖 Generated AI response for conversation 5
+2025-06-22 17:24:35,909 - INFO - 👋 Client 127.0.0.1:55743 connection closed
+2025-06-22 17:24:45,807 - INFO - 🔗 New connection from ('127.0.0.1', 55752)
+2025-06-22 17:24:45,808 - INFO - 📥 Processing chat request for conversation 5
+2025-06-22 17:24:46,309 - INFO - 🤖 Generating OpenAI response for user: demo
+2025-06-22 17:24:46,870 - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-22 17:24:46,870 - INFO - ✅ OpenAI response generated successfully
+2025-06-22 17:24:46,870 - INFO - 🤖 Generated AI response for conversation 5
+2025-06-22 17:25:15,845 - INFO - 👋 Client 127.0.0.1:55752 connection closed
+2025-06-22 18:24:24,835 - INFO - ✅ OpenAI client initialized with DashScope
+2025-06-22 18:24:24,836 - INFO - 🤖 AI Service initialized on localhost:8888
+2025-06-22 18:24:24,840 - INFO - 🚀 AI Service server started on localhost:8888
+2025-06-22 18:24:30,761 - INFO - 🔗 New connection from ('127.0.0.1', 58501)
+2025-06-22 18:24:30,763 - ERROR - ❌ JSON decode error from 127.0.0.1:58501: Expecting value: line 1 column 1 (char 0)
+2025-06-22 18:24:30,763 - INFO - 🔗 New connection from ('127.0.0.1', 58502)
+2025-06-22 18:24:30,764 - ERROR - ❌ JSON decode error from 127.0.0.1:58501: Expecting value: line 1 column 1 (char 0)
+2025-06-22 18:24:30,764 - ERROR - ❌ JSON decode error from 127.0.0.1:58501: Expecting value: line 1 column 1 (char 0)
+2025-06-22 18:24:30,766 - ERROR - ❌ Error handling client 127.0.0.1:58501: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-06-22 18:24:30,767 - INFO - 👋 Client 127.0.0.1:58501 connection closed
+2025-06-22 18:24:31,009 - INFO - 🔗 New connection from ('127.0.0.1', 58503)
+2025-06-22 18:24:31,837 - ERROR - ❌ JSON decode error from 127.0.0.1:58502: Expecting value: line 1 column 1 (char 0)
+2025-06-22 18:24:31,838 - ERROR - ❌ JSON decode error from 127.0.0.1:58502: Expecting value: line 1 column 1 (char 0)
+2025-06-22 18:24:31,838 - ERROR - ❌ JSON decode error from 127.0.0.1:58502: Expecting value: line 1 column 1 (char 0)
+2025-06-22 18:24:31,838 - ERROR - ❌ Error handling client 127.0.0.1:58502: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-06-22 18:24:31,838 - INFO - 👋 Client 127.0.0.1:58502 connection closed
+2025-06-22 18:24:48,014 - INFO - 🔗 New connection from ('127.0.0.1', 58511)
+2025-06-22 18:24:48,035 - INFO - 📥 Processing chat request for conversation 5
+2025-06-22 18:24:48,535 - INFO - 🤖 Generating OpenAI response for user: demo
+2025-06-22 18:24:52,730 - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-22 18:24:52,736 - INFO - ✅ OpenAI response generated successfully
+2025-06-22 18:24:52,736 - INFO - 🤖 Generated AI response for conversation 5
+2025-06-22 18:24:57,226 - INFO - 👋 Client 127.0.0.1:58503 connection closed

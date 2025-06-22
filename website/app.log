@@ -1780,3 +1780,557 @@ http://localhost:3000
 [2025-06-21T21:08:29.342Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
 [2025-06-21T21:08:29.348Z] [INFO] Loaded 26 messages for conversation 5 by user 1
 [2025-06-21T21:08:29.349Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:12:30.097Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T21:12:30.102Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-21T21:12:30.140Z] [INFO] Node.js Server is running on port 3000
+[2025-06-21T21:12:30.154Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T21:12:30.156Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T21:12:30.246Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T21:12:37.181Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:12:37.187Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:12:37.210Z] [INFO] ✅ Socket uZwHB7IrDbVfJB0PAAAC authenticated for user demo (ID: 1)
+[2025-06-21T21:12:37.211Z] [INFO] 🔗 User demo (1) connected with socket uZwHB7IrDbVfJB0PAAAC
+[2025-06-21T21:12:37.226Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:12:37.228Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:12:37.241Z] [INFO] Loaded 26 messages for conversation 5 by user 1
+[2025-06-21T21:12:37.242Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:13:17.624Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-21T21:13:18.849Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-21T21:13:19.655Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-21T21:13:20.451Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-21T21:13:58.408Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T21:13:58.728Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:13:58.737Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:13:58.793Z] [INFO] ✅ Socket eB5Gq2LTwzaB1k1QAAAF authenticated for user demo (ID: 1)
+[2025-06-21T21:13:58.794Z] [INFO] 🔗 User demo (1) connected with socket eB5Gq2LTwzaB1k1QAAAF
+[2025-06-21T21:13:58.848Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:13:58.850Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:14:36.042Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T21:14:36.346Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:14:36.352Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:14:36.389Z] [INFO] ✅ Socket JxrKG95CYYwysB-LAAAI authenticated for user demo (ID: 1)
+[2025-06-21T21:14:36.391Z] [INFO] 🔗 User demo (1) connected with socket JxrKG95CYYwysB-LAAAI
+[2025-06-21T21:14:36.442Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:14:36.444Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:14:36.452Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:14:36.454Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:14:40.070Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:14:40.071Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:14:40.076Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T21:14:40.077Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T21:14:40.082Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T21:14:40.084Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T21:14:55.667Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T21:14:55.668Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T21:14:55.673Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:14:55.675Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:14:55.681Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:14:55.682Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:14:58.279Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:14:58.280Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:14:58.283Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T21:14:58.284Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T21:14:58.289Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T21:14:58.290Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T21:14:59.924Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T21:14:59.925Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T21:14:59.932Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:14:59.932Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:14:59.933Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:14:59.935Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:15:15.034Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:15:15.035Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:15:15.043Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T21:15:15.044Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T21:15:15.048Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T21:15:15.053Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T21:15:17.613Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T21:15:17.614Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T21:15:17.621Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:15:17.622Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:15:17.629Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:15:17.630Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:17:47.123Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:17:47.123Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:17:47.130Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T21:17:47.131Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T21:17:47.144Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T21:17:47.147Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T21:17:50.513Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T21:17:50.514Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T21:17:50.515Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:17:50.515Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:17:50.519Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:17:50.520Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:21:02.958Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T21:21:04.726Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:21:04.928Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:21:04.967Z] [INFO] ✅ Socket UcEWJ6rLta1lR3zMAAAL authenticated for user demo (ID: 1)
+[2025-06-21T21:21:04.967Z] [INFO] 🔗 User demo (1) connected with socket UcEWJ6rLta1lR3zMAAAL
+[2025-06-21T21:21:05.092Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:21:05.100Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:21:15.188Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-21T21:21:15.498Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:21:15.516Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-21T21:21:15.520Z] [INFO] ✅ Socket WtjeSWWCQSeeinYJAAAO authenticated for user demo (ID: 1)
+[2025-06-21T21:21:15.523Z] [INFO] 🔗 User demo (1) connected with socket WtjeSWWCQSeeinYJAAAO
+[2025-06-21T21:21:15.560Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:21:15.563Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:21:15.585Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:21:15.587Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:23:14.153Z] [INFO] 👋 User demo left conversation 5
+[2025-06-21T21:23:14.154Z] [INFO] 👥 Sent online users list for conversation 5: 0 users
+[2025-06-21T21:23:14.157Z] [INFO] 👥 User demo joined conversation 4
+[2025-06-21T21:23:14.158Z] [INFO] 👥 Sent online users list for conversation 4: 1 users
+[2025-06-21T21:23:14.160Z] [INFO] Loaded 6 messages for conversation 4 by user 1
+[2025-06-21T21:23:14.161Z] [INFO] Loaded 0 files for conversation 4 by user 1
+[2025-06-21T21:23:15.269Z] [INFO] 👋 User demo left conversation 4
+[2025-06-21T21:23:15.269Z] [INFO] 👥 Sent online users list for conversation 4: 0 users
+[2025-06-21T21:23:15.270Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-21T21:23:15.271Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-21T21:23:15.275Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-21T21:23:15.276Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-21T21:35:07.647Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T21:35:07.657Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T21:35:07.696Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T21:35:07.709Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T21:35:07.710Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T21:35:07.767Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T21:35:08.331Z] [INFO] ✅ Socket 7WBQRCcsqL-_MBjeAAAB authenticated for user demo (ID: 1)
+[2025-06-21T21:35:08.333Z] [INFO] 🔗 User demo (1) connected with socket 7WBQRCcsqL-_MBjeAAAB
+[2025-06-21T21:35:10.656Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T21:35:10.660Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T21:35:10.680Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T21:35:10.684Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T21:35:10.685Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T21:35:10.702Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T21:35:11.517Z] [INFO] ✅ Socket 8ihGSzLdJaTObkOAAAAB authenticated for user demo (ID: 1)
+[2025-06-21T21:35:11.518Z] [INFO] 🔗 User demo (1) connected with socket 8ihGSzLdJaTObkOAAAAB
+[2025-06-21T21:40:20.250Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-21T21:40:20.253Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-21T21:40:20.274Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-21T21:40:20.277Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-21T21:40:20.278Z] [INFO] SQLite database initialized successfully.
+[2025-06-21T21:40:20.299Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-21T21:40:21.315Z] [INFO] ✅ Socket hV3doGs-fdMP9WJtAAAB authenticated for user demo (ID: 1)
+[2025-06-21T21:40:21.316Z] [INFO] 🔗 User demo (1) connected with socket hV3doGs-fdMP9WJtAAAB
+[2025-06-22T10:20:12.380Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T10:20:12.384Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T10:20:12.409Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T10:20:12.423Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T10:20:12.423Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T10:20:12.564Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-22T10:20:12.577Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T10:20:15.825Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-22T10:20:29.490Z] [INFO] User  logged out successfully
+[2025-06-22T10:20:34.145Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-22T10:20:34.186Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T10:20:34.187Z] [INFO] ✅ Socket EgaQP-zcM-htb92JAAAH authenticated for user demo (ID: 1)
+[2025-06-22T10:20:34.188Z] [INFO] 🔗 User demo (1) connected with socket EgaQP-zcM-htb92JAAAH
+[2025-06-22T10:20:34.192Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T10:20:34.218Z] [INFO] Loaded 28 messages for conversation 5 by user 1
+[2025-06-22T10:20:34.221Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-22T10:20:34.220Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-22T10:20:34.219Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T10:24:00.577Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-22T10:24:02.078Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-22T10:24:02.178Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-22T10:24:05.904Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-22T10:24:05.909Z] [INFO] 🔗 Connected to Python AI service for conversation 5
+[2025-06-22T10:24:06.703Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-22T10:24:07.845Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-22T10:24:35.909Z] [ERROR] ⏰ Python AI service timeout for conversation 5
+[2025-06-22T10:24:35.909Z] [ERROR] AI service error for conversation 5: AI service timeout
+[2025-06-22T10:24:35.910Z] [INFO] 🔌 Python AI service connection closed for conversation 5
+[2025-06-22T10:24:41.039Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-22T10:24:45.804Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-22T10:24:45.806Z] [INFO] 🔗 Connected to Python AI service for conversation 5
+[2025-06-22T10:24:46.595Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-22T10:24:46.882Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-22T10:25:15.843Z] [ERROR] ⏰ Python AI service timeout for conversation 5
+[2025-06-22T10:25:15.846Z] [ERROR] AI service error for conversation 5: AI service timeout
+[2025-06-22T10:25:15.877Z] [INFO] 🔌 Python AI service connection closed for conversation 5
+[2025-06-22T10:28:20.460Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T10:28:20.463Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T10:28:20.484Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T10:28:20.490Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T10:28:20.491Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T10:28:20.524Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T10:28:21.313Z] [INFO] ✅ Socket T0wLISLhCCbld6HYAAAB authenticated for user demo (ID: 1)
+[2025-06-22T10:28:21.314Z] [INFO] 🔗 User demo (1) connected with socket T0wLISLhCCbld6HYAAAB
+[2025-06-22T10:44:15.632Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T10:44:15.636Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-22T10:44:15.663Z] [INFO] Node.js Server is running on port 3000
+[2025-06-22T10:44:15.673Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T10:44:15.674Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T10:44:15.777Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T10:58:53.472Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T10:58:53.480Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T10:58:53.511Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T10:58:53.525Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T10:58:53.525Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T10:58:53.583Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:00:34.633Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:00:34.637Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:00:34.656Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:00:34.660Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:00:34.661Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:00:34.687Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:00:39.917Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:00:39.920Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:00:39.939Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:00:39.944Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:00:39.944Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:00:39.957Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:00:46.644Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:00:46.648Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:00:46.668Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:00:46.672Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:00:46.672Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:00:46.688Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:00:48.568Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:00:48.572Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:00:48.590Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:00:48.594Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:00:48.594Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:00:48.607Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:00:58.814Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:00:58.818Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:00:58.838Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:00:58.844Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:00:58.844Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:00:58.863Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:01:25.026Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:01:25.030Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-22T11:01:25.050Z] [INFO] Node.js Server is running on port 3000
+[2025-06-22T11:01:25.054Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:01:25.054Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:01:25.069Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:01:26.904Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:01:26.908Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:01:26.927Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:01:26.933Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:01:26.933Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:01:26.952Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:01:29.914Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:01:29.918Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-22T11:01:29.936Z] [INFO] Node.js Server is running on port 3000
+[2025-06-22T11:01:29.940Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:01:29.941Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:01:29.955Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:01:40.535Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:01:40.538Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:01:40.562Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:01:40.567Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:01:40.567Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:01:40.585Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:01:45.859Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:01:45.861Z] [INFO] ✅ Socket pKt0CYBF6YSMXKZ7AAAC authenticated for user demo (ID: 1)
+[2025-06-22T11:01:45.863Z] [INFO] 🔗 User demo (1) connected with socket pKt0CYBF6YSMXKZ7AAAC
+[2025-06-22T11:01:45.865Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:01:45.953Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:01:45.954Z] [INFO] Loaded 32 messages for conversation 5 by user 1
+[2025-06-22T11:01:45.998Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-22T11:01:46.000Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-22T11:01:50.220Z] [INFO] File 9 deleted from conversation 5 by user 1
+[2025-06-22T11:01:50.226Z] [INFO] Loaded 0 files for conversation 5 by user 1
+ReferenceError: require is not defined
+    at file:///C:/laragon/www/chatbot/website/node-src/routes/chat.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-06-22T11:02:04.263Z] [ERROR] Error uploading file to conversation 5: require is not defined
+[2025-06-22T11:02:17.677Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-22T11:02:19.569Z] [INFO] ✅ Socket ywAZcAgyHgkLCSV3AAAF authenticated for user demo (ID: 1)
+[2025-06-22T11:02:19.570Z] [INFO] 🔗 User demo (1) connected with socket ywAZcAgyHgkLCSV3AAAF
+[2025-06-22T11:02:19.663Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-22T11:02:19.664Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-22T11:02:19.672Z] [INFO] Loaded 32 messages for conversation 5 by user 1
+[2025-06-22T11:02:19.673Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:02:30.306Z] [ERROR] Error uploading file to conversation 5: require is not defined
+ReferenceError: require is not defined
+    at file:///C:/laragon/www/chatbot/website/node-src/routes/chat.js:328:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-06-22T11:04:59.289Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:04:59.296Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:04:59.338Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:04:59.348Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:04:59.349Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:04:59.393Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:05:00.330Z] [INFO] ✅ Socket lSWma8M30RDRPMViAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:05:00.331Z] [INFO] 🔗 User demo (1) connected with socket lSWma8M30RDRPMViAAAB
+[2025-06-22T11:05:01.779Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:05:01.782Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:05:01.803Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:05:01.808Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:05:01.808Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:05:01.827Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:05:02.327Z] [INFO] ✅ Socket DzX5iTXh6dPns9XiAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:05:02.328Z] [INFO] 🔗 User demo (1) connected with socket DzX5iTXh6dPns9XiAAAB
+[2025-06-22T11:05:03.554Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:05:03.558Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-22T11:05:03.579Z] [INFO] Node.js Server is running on port 3000
+[2025-06-22T11:05:03.583Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:05:03.584Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:05:03.600Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:05:04.311Z] [INFO] ✅ Socket YCsJ9Uc4-llMtf_EAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:05:04.313Z] [INFO] 🔗 User demo (1) connected with socket YCsJ9Uc4-llMtf_EAAAB
+[2025-06-22T11:05:15.878Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-22T11:05:16.501Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:05:16.526Z] [INFO] ✅ Socket oVcSSsY_1YLflmhdAAAE authenticated for user demo (ID: 1)
+[2025-06-22T11:05:16.527Z] [INFO] 🔗 User demo (1) connected with socket oVcSSsY_1YLflmhdAAAE
+[2025-06-22T11:05:16.527Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:05:16.550Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-22T11:05:16.547Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-22T11:05:16.555Z] [INFO] Loaded 32 messages for conversation 5 by user 1
+[2025-06-22T11:05:16.571Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:05:18.040Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-22T11:05:18.173Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:05:18.179Z] [INFO] ✅ Socket dYUeRfTJj2073ejJAAAH authenticated for user demo (ID: 1)
+[2025-06-22T11:05:18.180Z] [INFO] 🔗 User demo (1) connected with socket dYUeRfTJj2073ejJAAAH
+[2025-06-22T11:05:18.181Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:05:18.193Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-22T11:05:18.193Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-22T11:05:18.194Z] [INFO] Loaded 32 messages for conversation 5 by user 1
+[2025-06-22T11:05:18.195Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:05:24.099Z] [ERROR] Error uploading file to conversation 5: require is not defined
+ReferenceError: require is not defined
+    at file:///C:/laragon/www/chatbot/website/node-src/routes/chat.js:332:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-06-22T11:08:17.802Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:08:17.808Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:08:17.837Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:08:17.842Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:08:17.842Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:08:17.866Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:08:19.312Z] [INFO] ✅ Socket fCz18i9fLVeKDJ13AAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:08:19.313Z] [INFO] 🔗 User demo (1) connected with socket fCz18i9fLVeKDJ13AAAB
+[2025-06-22T11:08:29.713Z] [INFO] Created data directory: C:\laragon\www\chatbot\mcp-server\data
+[2025-06-22T11:08:29.720Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\mcp-server\data\1_5_1750590509538.pdf
+[2025-06-22T11:08:29.729Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:08:29.736Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:08:29.743Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:09:09.539Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:09:09.544Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:09:09.564Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:09:09.568Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:09:09.568Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:09:09.587Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:09:09.936Z] [INFO] ✅ Socket SmAmNVEJ4f9LB9EUAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:09:09.937Z] [INFO] 🔗 User demo (1) connected with socket SmAmNVEJ4f9LB9EUAAAB
+[2025-06-22T11:09:15.911Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-22T11:09:16.298Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:09:16.306Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:09:16.339Z] [INFO] ✅ Socket UnYBROBm4BlnIXRHAAAE authenticated for user demo (ID: 1)
+[2025-06-22T11:09:16.339Z] [INFO] 🔗 User demo (1) connected with socket UnYBROBm4BlnIXRHAAAE
+[2025-06-22T11:09:16.399Z] [INFO] Loaded 32 messages for conversation 5 by user 1
+[2025-06-22T11:09:16.403Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:09:19.867Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\mcp-server\data\1_5_1750590509538.pdf'
+[2025-06-22T11:09:19.873Z] [INFO] File 10 deleted from conversation 5 by user 1
+[2025-06-22T11:09:19.882Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:09:26.369Z] [INFO] Created data directory: C:\laragon\www\chatbot\mcp-server\data
+[2025-06-22T11:09:26.377Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\mcp-server\data\1_5_1750590566152.pdf
+[2025-06-22T11:09:26.384Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:09:26.391Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:09:26.398Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:10:09.548Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:10:09.551Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:10:09.572Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:10:09.577Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:10:09.577Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:10:09.594Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:10:10.358Z] [INFO] ✅ Socket xks4JyH13B7jBqXfAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:10:10.359Z] [INFO] 🔗 User demo (1) connected with socket xks4JyH13B7jBqXfAAAB
+[2025-06-22T11:10:11.484Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:10:11.487Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-22T11:10:11.525Z] [INFO] Node.js Server is running on port 3000
+[2025-06-22T11:10:11.540Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:10:11.541Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:10:11.562Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:10:12.473Z] [INFO] ✅ Socket AS-DkQ63wsZLgu4PAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:10:12.474Z] [INFO] 🔗 User demo (1) connected with socket AS-DkQ63wsZLgu4PAAAB
+[2025-06-22T11:10:12.575Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\chatbot\chatbot\mcp-server\data\1_5_1750590566152.pdf'
+[2025-06-22T11:10:12.581Z] [INFO] File 11 deleted from conversation 5 by user 1
+[2025-06-22T11:10:12.590Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:10:23.291Z] [INFO] Created data directory: C:\laragon\www\chatbot\mcp-server\data
+[2025-06-22T11:10:23.297Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\mcp-server\data\1_5_1750590623120.pdf
+[2025-06-22T11:10:23.303Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:10:23.309Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:10:23.315Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:10:34.369Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:10:34.374Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:10:34.402Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:10:34.410Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:10:34.411Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:10:34.430Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:10:34.765Z] [INFO] ✅ Socket UmNBsGKz5PfJvl1eAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:10:34.766Z] [INFO] 🔗 User demo (1) connected with socket UmNBsGKz5PfJvl1eAAAB
+[2025-06-22T11:10:36.090Z] [INFO] PDF deleted from data folder: C:\laragon\www\chatbot\mcp-server\data\1_5_1750590623120.pdf
+[2025-06-22T11:10:36.097Z] [INFO] File 12 deleted from conversation 5 by user 1
+[2025-06-22T11:10:36.108Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:10:49.741Z] [INFO] Created data directory: C:\laragon\www\chatbot\mcp-server\data
+[2025-06-22T11:10:49.747Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\mcp-server\data\1_5_1750590649577.pdf
+[2025-06-22T11:10:49.752Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:10:49.757Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:10:49.763Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:11:00.491Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:11:00.495Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:11:00.514Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:11:00.518Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:11:00.518Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:11:00.531Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:11:01.230Z] [INFO] ✅ Socket Xh5osgADFH0BrsgpAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:11:01.231Z] [INFO] 🔗 User demo (1) connected with socket Xh5osgADFH0BrsgpAAAB
+[2025-06-22T11:11:05.675Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:11:05.678Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:11:05.699Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:11:05.704Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:11:05.704Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:11:05.718Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:11:05.739Z] [INFO] ✅ Socket 5xCIIuWbCGbVAETKAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:11:05.741Z] [INFO] 🔗 User demo (1) connected with socket 5xCIIuWbCGbVAETKAAAB
+[2025-06-22T11:11:11.844Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\chatbot\website\chatbot\mcp-server\data\1_5_1750590649577.pdf'
+[2025-06-22T11:11:11.849Z] [INFO] File 13 deleted from conversation 5 by user 1
+[2025-06-22T11:11:11.860Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:11:16.666Z] [INFO] Created data directory: C:\laragon\www\chatbot\mcp-server\data
+[2025-06-22T11:11:16.672Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\mcp-server\data\1_5_1750590676513.pdf
+[2025-06-22T11:11:16.680Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:11:16.686Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:11:16.690Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:13:28.346Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:13:28.350Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:13:28.374Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:13:28.379Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:13:28.380Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:13:28.397Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:13:28.972Z] [INFO] ✅ Socket iPlaHkdhVvgoAvZMAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:13:28.974Z] [INFO] 🔗 User demo (1) connected with socket iPlaHkdhVvgoAvZMAAAB
+[2025-06-22T11:13:37.635Z] [INFO] Created data directory: C:\laragon\www\chatbot\mcp-server\data
+[2025-06-22T11:13:37.641Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\mcp-server\data\1_5_1750590817477.pdf
+[2025-06-22T11:13:37.650Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:13:37.655Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:13:37.662Z] [INFO] Loaded 2 files for conversation 5 by user 1
+[2025-06-22T11:13:59.436Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:13:59.440Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:13:59.463Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:13:59.467Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:13:59.467Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:13:59.485Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:14:00.498Z] [INFO] ✅ Socket oJotCXCKsmNIztpNAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:14:00.500Z] [INFO] 🔗 User demo (1) connected with socket oJotCXCKsmNIztpNAAAB
+[2025-06-22T11:14:47.215Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:14:47.221Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-22T11:14:47.249Z] [INFO] Node.js Server is running on port 3000
+[2025-06-22T11:14:47.256Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:14:47.256Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:14:47.282Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:14:48.022Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:14:48.025Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:14:48.047Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:14:48.059Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:14:48.059Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:14:48.075Z] [INFO] ✅ Socket iRlQExQ5mC4OQetuAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:14:48.076Z] [INFO] 🔗 User demo (1) connected with socket iRlQExQ5mC4OQetuAAAB
+[2025-06-22T11:14:48.081Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:14:56.219Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\chatbot\website\chatbot\mcp-server\data\1_5_1750590817477.pdf'
+[2025-06-22T11:14:56.225Z] [INFO] File 15 deleted from conversation 5 by user 1
+[2025-06-22T11:14:56.236Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:14:56.878Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\chatbot\website\chatbot\mcp-server\data\1_5_1750590676513.pdf'
+[2025-06-22T11:14:56.884Z] [INFO] File 14 deleted from conversation 5 by user 1
+[2025-06-22T11:14:56.890Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:15:01.481Z] [INFO] Created data directory: C:\laragon\www\chatbot\website\chatbot\mcp-server\data
+[2025-06-22T11:15:01.489Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\website\chatbot\mcp-server\data\1_5_1750590901341.pdf
+[2025-06-22T11:15:01.496Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:15:01.500Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:15:01.507Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:15:17.872Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:15:17.875Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:15:17.895Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:15:17.899Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:15:17.900Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:15:17.913Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:15:18.320Z] [INFO] ✅ Socket hqL9y1m5w83Fuw8BAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:15:18.321Z] [INFO] 🔗 User demo (1) connected with socket hqL9y1m5w83Fuw8BAAAB
+[2025-06-22T11:15:38.412Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\chatbot\website\chatbot\mcp-server\data\1_5_1750590901341.pdf'
+[2025-06-22T11:15:38.418Z] [INFO] File 16 deleted from conversation 5 by user 1
+[2025-06-22T11:15:38.428Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:15:42.633Z] [INFO] Created data directory: C:\laragon\www\chatbot\chatbot\mcp-server\data
+[2025-06-22T11:15:42.639Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_5_1750590942434.pdf
+[2025-06-22T11:15:42.646Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:15:42.653Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:15:42.657Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:16:05.086Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:16:05.089Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:16:05.112Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:16:05.117Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:16:05.117Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:16:05.132Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-22T11:16:05.749Z] [INFO] ✅ Socket 1u86oLq0mUcB-GIWAAAB authenticated for user demo (ID: 1)
+[2025-06-22T11:16:05.751Z] [INFO] 🔗 User demo (1) connected with socket 1u86oLq0mUcB-GIWAAAB
+[2025-06-22T11:16:42.807Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-22T11:16:42.975Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:16:42.977Z] [INFO] ✅ Socket P_DgfA-SyEBKqV6qAAAE authenticated for user demo (ID: 1)
+[2025-06-22T11:16:42.978Z] [INFO] 🔗 User demo (1) connected with socket P_DgfA-SyEBKqV6qAAAE
+[2025-06-22T11:16:42.981Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-22T11:16:42.989Z] [INFO] 👥 User demo joined conversation 5
+[2025-06-22T11:16:42.991Z] [INFO] 👥 Sent online users list for conversation 5: 1 users
+[2025-06-22T11:16:42.998Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:16:42.999Z] [INFO] Loaded 32 messages for conversation 5 by user 1
+[2025-06-22T11:16:45.177Z] [INFO] PDF deleted from data folder: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_5_1750590942434.pdf
+[2025-06-22T11:16:45.183Z] [INFO] File 17 deleted from conversation 5 by user 1
+[2025-06-22T11:16:45.190Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:16:54.454Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_5_1750591014150.pdf
+[2025-06-22T11:16:54.507Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:16:54.511Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:16:54.515Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:17:05.913Z] [INFO] PDF deleted from data folder: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_5_1750591014150.pdf
+[2025-06-22T11:17:05.919Z] [INFO] File 18 deleted from conversation 5 by user 1
+[2025-06-22T11:17:05.928Z] [INFO] Loaded 0 files for conversation 5 by user 1
+[2025-06-22T11:17:21.665Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_5_1750591041519.pdf
+[2025-06-22T11:17:21.672Z] [INFO] File uploaded successfully to conversation 5 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:17:21.675Z] [INFO] 📁 File uploaded by demo to conversation 5: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-22T11:17:21.681Z] [INFO] Loaded 1 files for conversation 5 by user 1
+[2025-06-22T11:24:43.927Z] [INFO] ⌨️ User demo started typing in conversation 5
+[2025-06-22T11:24:47.761Z] [INFO] 📤 Message sent by demo to conversation 5
+[2025-06-22T11:24:48.014Z] [INFO] 🔗 Connected to Python AI service for conversation 5
+[2025-06-22T11:24:48.055Z] [INFO] ⌨️ User demo stopped typing in conversation 5
+[2025-06-22T11:24:52.750Z] [INFO] 🤖 AI response sent to conversation 5
+[2025-06-22T11:25:00.864Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-22T11:25:09.089Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-22T11:25:09.096Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-22T11:25:09.120Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-22T11:25:09.126Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-22T11:25:09.127Z] [INFO] SQLite database initialized successfully.
+[2025-06-22T11:25:09.187Z] [INFO] ✅ MinIO bucket "chat-files" already exists.

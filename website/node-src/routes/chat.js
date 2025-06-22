@@ -4,72 +4,77 @@ import * as Minio from 'minio';
 import { getDb } from '../utilities/database.js';
 import { logMessage } from '../utilities/logger.js';
 import authenticateToken from '../middleware/auth.js';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import { promises as fs } from 'fs';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const router = express.Router();
 
 // Initialize MinIO client
 const minioClient = new Minio.Client({
-  endPoint: process.env.MINIO_ENDPOINT || 'localhost',
-  port: parseInt(process.env.MINIO_PORT) || 9000,
-  useSSL: process.env.MINIO_USE_SSL === 'true',
-  accessKey: process.env.MINIO_ACCESS_KEY || 'minioadmin',
-  secretKey: process.env.MINIO_SECRET_KEY || 'minioadmin'
+    endPoint: process.env.MINIO_ENDPOINT || 'localhost',
+    port: parseInt(process.env.MINIO_PORT) || 9000,
+    useSSL: process.env.MINIO_USE_SSL === 'true',
+    accessKey: process.env.MINIO_ACCESS_KEY || 'minioadmin',
+    secretKey: process.env.MINIO_SECRET_KEY || 'minioadmin'
 });
 
 const bucketName = process.env.MINIO_BUCKET || 'chat-files';
 
 // Ensure bucket exists
 (async () => {
-  try {
-    logMessage("INF", `🔍 Checking if MinIO bucket "${bucketName}" exists...`);
-    const bucketExists = await minioClient.bucketExists(bucketName);
-    
-    if (!bucketExists) {
-      await minioClient.makeBucket(bucketName);
-      logMessage("INF", `✅ Created MinIO bucket: ${bucketName}`);
-    } else {
-      logMessage("INF", `✅ MinIO bucket "${bucketName}" already exists.`);
+    try {
+        logMessage("INF", `🔍 Checking if MinIO bucket "${bucketName}" exists...`);
+        const bucketExists = await minioClient.bucketExists(bucketName);
+
+        if (!bucketExists) {
+            await minioClient.makeBucket(bucketName);
+            logMessage("INF", `✅ Created MinIO bucket: ${bucketName}`);
+        } else {
+            logMessage("INF", `✅ MinIO bucket "${bucketName}" already exists.`);
+        }
+    } catch (error) {
+        logMessage("ERR", `❌ MinIO bucket setup error: ${error.message}`);
     }
-  } catch (error) {
-    logMessage("ERR", `❌ MinIO bucket setup error: ${error.message}`);
-  }
 })();
 
 // Configure multer for file upload
 const upload = multer({
-  storage: multer.memoryStorage(),
-  limits: {
-    fileSize: 20 * 1024 * 1024, // 20MB limit
-  },
-  fileFilter: (req, file, cb) => {
-    // Allow only PDF files
-    if (file.mimetype === 'application/pdf') {
-      cb(null, true);
-    } else {
-      cb(new Error('Only PDF files are allowed'), false);
+    storage: multer.memoryStorage(),
+    limits: {
+        fileSize: 20 * 1024 * 1024, // 20MB limit
+    },
+    fileFilter: (req, file, cb) => {
+        // Allow only PDF files
+        if (file.mimetype === 'application/pdf') {
+            cb(null, true);
+        } else {
+            cb(new Error('Only PDF files are allowed'), false);
+        }
     }
-  }
 });
 
 // Serve file from MinIO
 router.get('/files/:fileName', async (req, res) => {
     try {
         const fileName = req.params.fileName;
-        
+
         // Get file from MinIO
         const fileStream = await minioClient.getObject(bucketName, fileName);
-        
+
         // Get file metadata
         const stat = await minioClient.statObject(bucketName, fileName);
-        
+
         // Set headers
         res.setHeader('Content-Type', stat.metaData['content-type'] || 'application/octet-stream');
         res.setHeader('Content-Length', stat.size);
         res.setHeader('Content-Disposition', `inline; filename="${stat.metaData['original-name'] || fileName}"`);
-        
+
         // Pipe file stream to response
         fileStream.pipe(res);
-        
+
     } catch (error) {
         logMessage("ERR", `Error serving file ${req.params.fileName}: ${error.message}`);
         return res.status(404).json({ message: 'File not found' });
@@ -82,7 +87,7 @@ router.get('/conversations', authenticateToken, async (req, res) => {
         const userId = req.user.userId;
         const db = await getDb();
         const conversations = await db.all('SELECT * FROM conversations WHERE userId = ? ORDER BY createdAt DESC', [userId]);
-        
+
         logMessage("INF", `Loaded ${conversations.length} conversations for user ${userId}`);
         return res.status(200).json({ conversations });
     } catch (error) {
@@ -200,7 +205,7 @@ router.get('/conversations/:id/messages', authenticateToken, async (req, res) =>
         const conversationId = req.params.id;
 
         const db = await getDb();
-        
+
         // Verify conversation ownership
         const conversation = await db.get('SELECT * FROM conversations WHERE id = ? AND userId = ?', [conversationId, userId]);
         if (!conversation) {
@@ -210,7 +215,7 @@ router.get('/conversations/:id/messages', authenticateToken, async (req, res) =>
 
         // Get all messages for this conversation
         const messages = await db.all(
-            'SELECT * FROM messages WHERE conversationId = ? ORDER BY createdAt ASC', 
+            'SELECT * FROM messages WHERE conversationId = ? ORDER BY createdAt ASC',
             [conversationId]
         );
 
@@ -240,7 +245,7 @@ router.post('/conversations/:id/messages', authenticateToken, async (req, res) =
         }
 
         const db = await getDb();
-        
+
         // Verify conversation ownership
         const conversation = await db.get('SELECT * FROM conversations WHERE id = ? AND userId = ?', [conversationId, userId]);
         if (!conversation) {
@@ -269,8 +274,8 @@ router.post('/conversations/:id/messages', authenticateToken, async (req, res) =
         const savedMessage = await db.get('SELECT * FROM messages WHERE id = ?', [messageResult.lastID]);
 
         logMessage("INF", `Message saved to conversation ${conversationId} by user ${userId}`);
-        
-        return res.status(201).json({ 
+
+        return res.status(201).json({
             message: 'Message sent successfully',
             savedMessage: savedMessage
         });
@@ -296,7 +301,7 @@ router.post('/conversations/:id/upload', authenticateToken, upload.single('file'
         }
 
         const db = await getDb();
-        
+
         // Verify conversation ownership
         const conversation = await db.get('SELECT * FROM conversations WHERE id = ? AND userId = ?', [conversationId, userId]);
         if (!conversation) {
@@ -322,6 +327,23 @@ router.post('/conversations/:id/upload', authenticateToken, upload.single('file'
             }
         );
 
+        // Save to data folder for RAG processing (only for PDF files)
+        if (file.mimetype === 'application/pdf') {
+            // Create data directory if it doesn't exist
+            const dataDir = join(__dirname, "../", "../", '../chatbot/mcp-server/data');
+            try {
+                await fs.access(dataDir);
+            } catch (error) {
+                await fs.mkdir(dataDir, { recursive: true });
+                logMessage("INF", `Created data directory: ${dataDir}`);
+            }
+
+            // Save PDF file to data directory
+            const dataFilePath = join(dataDir, fileName);
+            await fs.writeFile(dataFilePath, file.buffer);
+            logMessage("INF", `PDF saved to data folder for RAG processing: ${dataFilePath}`);
+        }
+
         // Save file info to database
         const fileResult = await db.run(
             'INSERT INTO uploaded_files (conversationId, fileName, originalName, fileSize, mimeType, uploadedAt) VALUES (?, ?, ?, ?, ?, ?)',
@@ -337,7 +359,7 @@ router.post('/conversations/:id/upload', authenticateToken, upload.single('file'
         const savedFile = await db.get('SELECT * FROM uploaded_files WHERE id = ?', [fileResult.lastID]);
 
         logMessage("INF", `File uploaded successfully to conversation ${conversationId} by user ${userId}: ${originalName}`);
-        
+
         return res.status(201).json({
             message: 'File uploaded successfully',
             file: {
@@ -364,7 +386,7 @@ router.get('/conversations/:id/files', authenticateToken, async (req, res) => {
         const conversationId = req.params.id;
 
         const db = await getDb();
-        
+
         // Verify conversation ownership
         const conversation = await db.get('SELECT * FROM conversations WHERE id = ? AND userId = ?', [conversationId, userId]);
         if (!conversation) {
@@ -401,7 +423,7 @@ router.delete('/conversations/:id/files/:fileId', authenticateToken, async (req,
         const fileId = req.params.fileId;
 
         const db = await getDb();
-        
+
         // Verify conversation ownership
         const conversation = await db.get('SELECT * FROM conversations WHERE id = ? AND userId = ?', [conversationId, userId]);
         if (!conversation) {
@@ -418,6 +440,18 @@ router.delete('/conversations/:id/files/:fileId', authenticateToken, async (req,
 
         // Delete from MinIO
         await minioClient.removeObject(bucketName, file.fileName);
+
+        // Delete from data folder if it's a PDF
+        if (file.mimeType === 'application/pdf') {
+            try {
+                const dataDir = join(__dirname, "../", "../", '../chatbot/mcp-server/data');
+                const dataFilePath = join(dataDir, file.fileName);
+                await fs.unlink(dataFilePath);
+                logMessage("INF", `PDF deleted from data folder: ${dataFilePath}`);
+            } catch (error) {
+                logMessage("WRN", `Could not delete PDF from data folder: ${error.message}`);
+            }
+        }
 
         // Delete from database
         const result = await db.run('DELETE FROM uploaded_files WHERE id = ?', [fileId]);
