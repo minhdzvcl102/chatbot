@@ -65,6 +65,8 @@ async function initDb() {
                 FOREIGN KEY (conversationId) REFERENCES conversations(id) ON DELETE CASCADE
             );
         `);
+
+        // Create uploaded_files table with hash column
         await db.exec(`
             CREATE TABLE IF NOT EXISTS uploaded_files (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -73,16 +75,63 @@ async function initDb() {
                 originalName TEXT NOT NULL,
                 fileSize INTEGER NOT NULL,
                 mimeType TEXT NOT NULL,
+                hash TEXT,
                 uploadedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (conversationId) REFERENCES conversations(id) ON DELETE CASCADE
             );
         `);
+
+        // Migration: Add hash column if it doesn't exist (for existing databases)
+        await migrateDatabase();
+
+        // Create index for hash column for better performance
+        await db.exec('CREATE INDEX IF NOT EXISTS idx_uploaded_files_hash ON uploaded_files(hash)');
 
         logMessage("INF", "Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.");
         return db;
     } catch (error) {
         logMessage("ERR", `Error initializing database: ${error.message}`, error.stack);
         throw error; // Throw error to be caught by app.js
+    }
+}
+
+async function migrateDatabase() {
+    try {
+        // Check if hash column exists
+        const columns = await db.all("PRAGMA table_info(uploaded_files)");
+        const hasHashColumn = columns.some(col => col.name === 'hash');
+        
+        if (!hasHashColumn) {
+            // Add hash column to existing table
+            await db.exec('ALTER TABLE uploaded_files ADD COLUMN hash TEXT');
+            logMessage("INF", "Added hash column to existing uploaded_files table");
+            
+            // Optionally: Calculate hash for existing files if needed
+            await backfillHashForExistingFiles();
+        } else {
+            logMessage("INF", "Hash column already exists in uploaded_files table");
+        }
+        
+    } catch (error) {
+        logMessage("ERR", `Error during database migration: ${error.message}`, error.stack);
+        // Don't throw error here, let the app continue
+    }
+}
+
+async function backfillHashForExistingFiles() {
+    try {
+        // Get all files without hash
+        const filesWithoutHash = await db.all('SELECT * FROM uploaded_files WHERE hash IS NULL');
+        
+        if (filesWithoutHash.length === 0) {
+            logMessage("INF", "No files need hash backfill");
+            return;
+        }
+
+        logMessage("INF", `Found ${filesWithoutHash.length} existing files without hash - keeping them as NULL`);
+        
+    } catch (error) {
+        logMessage("ERR", `Error during hash backfill: ${error.message}`, error.stack);
     }
 }
 

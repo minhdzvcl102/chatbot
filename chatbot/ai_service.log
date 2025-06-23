@@ -38,3 +38,20 @@
 2025-06-22 18:24:52,736 - INFO - ✅ OpenAI response generated successfully
 2025-06-22 18:24:52,736 - INFO - 🤖 Generated AI response for conversation 5
 2025-06-22 18:24:57,226 - INFO - 👋 Client 127.0.0.1:58503 connection closed
+2025-06-23 13:55:49,000 - INFO - ✅ OpenAI client initialized with DashScope
+2025-06-23 13:55:49,001 - INFO - 🤖 AI Service initialized on localhost:8888
+2025-06-23 13:55:49,004 - INFO - 🚀 AI Service server started on localhost:8888
+2025-06-23 13:55:53,976 - INFO - 🔗 New connection from ('127.0.0.1', 52758)
+2025-06-23 13:55:53,977 - INFO - 📥 Processing chat request for conversation 6
+2025-06-23 13:55:54,478 - INFO - 🤖 Generating OpenAI response for user: demo
+2025-06-23 13:55:55,374 - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 13:55:55,376 - INFO - ✅ OpenAI response generated successfully
+2025-06-23 13:55:55,376 - INFO - 🤖 Generated AI response for conversation 6
+2025-06-23 13:56:23,978 - INFO - 👋 Client 127.0.0.1:52758 connection closed
+2025-06-23 13:58:35,125 - INFO - 🔗 New connection from ('127.0.0.1', 52821)
+2025-06-23 13:58:35,128 - INFO - 📥 Processing chat request for conversation 6
+2025-06-23 13:58:35,628 - INFO - 🤖 Generating OpenAI response for user: demo
+2025-06-23 13:58:36,387 - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 13:58:36,389 - INFO - ✅ OpenAI response generated successfully
+2025-06-23 13:58:36,390 - INFO - 🤖 Generated AI response for conversation 6
+2025-06-23 13:59:05,128 - INFO - 👋 Client 127.0.0.1:52821 connection closed

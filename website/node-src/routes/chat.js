@@ -7,6 +7,7 @@ import authenticateToken from '../middleware/auth.js';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { promises as fs } from 'fs';
+import crypto from "crypto";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -289,6 +290,10 @@ router.post('/conversations/:id/messages', authenticateToken, async (req, res) =
 // ================== FILE UPLOAD ROUTES ==================
 
 // Upload file to conversation
+function calculateBufferHash(buffer) {
+    return crypto.createHash('sha256').update(buffer).digest('hex');
+}
+
 router.post('/conversations/:id/upload', authenticateToken, upload.single('file'), async (req, res) => {
     try {
         const userId = req.user.userId;
@@ -309,6 +314,33 @@ router.post('/conversations/:id/upload', authenticateToken, upload.single('file'
             return res.status(404).json({ message: 'Conversation not found or unauthorized' });
         }
 
+        // Calculate file hash
+        const fileHash = calculateBufferHash(file.buffer);
+        logMessage("INF", `File hash calculated: ${fileHash.substring(0, 8)}... for ${file.originalname}`);
+
+        // Check if file with same hash already exists in this conversation
+        const existingFile = await db.get(
+            'SELECT * FROM uploaded_files WHERE conversationId = ? AND hash = ?',
+            [conversationId, fileHash]
+        );
+
+        if (existingFile) {
+            logMessage("INF", `File with same hash already exists in conversation ${conversationId}: ${existingFile.originalName}`);
+            return res.status(200).json({
+                message: 'File already exists in this conversation',
+                file: {
+                    id: existingFile.id,
+                    fileName: existingFile.fileName,
+                    originalName: existingFile.originalName,
+                    fileSize: existingFile.fileSize,
+                    mimeType: existingFile.mimeType,
+                    uploadedAt: existingFile.uploadedAt,
+                    fileUrl: `${req.protocol}://${req.get('host')}/files/${existingFile.fileName}`,
+                    isDuplicate: true
+                }
+            });
+        }
+
         // Generate unique filename
         const timestamp = Date.now();
         const originalName = file.originalname;
@@ -323,7 +355,8 @@ router.post('/conversations/:id/upload', authenticateToken, upload.single('file'
             file.size,
             {
                 'Content-Type': file.mimetype,
-                'Original-Name': originalName
+                'Original-Name': originalName,
+                'File-Hash': fileHash
             }
         );
 
@@ -346,8 +379,8 @@ router.post('/conversations/:id/upload', authenticateToken, upload.single('file'
 
         // Save file info to database
         const fileResult = await db.run(
-            'INSERT INTO uploaded_files (conversationId, fileName, originalName, fileSize, mimeType, uploadedAt) VALUES (?, ?, ?, ?, ?, ?)',
-            [conversationId, fileName, originalName, file.size, file.mimetype, new Date().toISOString()]
+            'INSERT INTO uploaded_files (conversationId, fileName, originalName, fileSize, mimeType, hash, uploadedAt) VALUES (?, ?, ?, ?, ?, ?, ?)',
+            [conversationId, fileName, originalName, file.size, file.mimetype, fileHash, new Date().toISOString()]
         );
 
         if (!fileResult.lastID) {

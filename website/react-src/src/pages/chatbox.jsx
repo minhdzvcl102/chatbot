@@ -12,6 +12,8 @@ import AppLayout from "../components/AppLayout";
 import SidebarWrapper from "../components/SidebarWrapper";
 import SidebarContent from "../components/SidebarContent";
 import ChatInput from "../components/ChatInput";
+import ResponsePanel from "../components/ResponsePanel";
+import ResponsePanelWrapper from "../components/ResponsePanelWrapper";
 import { APP_WEBSOCKET_URL } from "../config/config";
 import {
   conversationService,
@@ -44,6 +46,12 @@ const Chatbox = () => {
   const [uploadingFile, setUploadingFile] = useState(false);
   const [showFileUpload, setShowFileUpload] = useState(false);
   const [uploadError, setUploadError] = useState("");
+
+  // Response Panel states
+  const [responseCollapsed, setResponseCollapsed] = useState(false);
+  const [currentResponse, setCurrentResponse] = useState(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [lastUserMessage, setLastUserMessage] = useState("");
 
   // WebSocket initialization
   const serverUrl = APP_WEBSOCKET_URL || "ws://localhost:3000";
@@ -92,6 +100,7 @@ const Chatbox = () => {
     } else {
       setUploadedFiles([]);
       clearMessages();
+      setCurrentResponse(null);
     }
 
     return () => {
@@ -106,15 +115,37 @@ const Chatbox = () => {
     clearMessages,
   ]);
 
-  // Update messages from WebSocket
+  // Monitor messages for AI responses
   useEffect(() => {
-    scrollToBottom();
+    if (messages.length > 0) {
+      const lastMessage = messages[messages.length - 1];
+
+      // Check if the last message is from AI (assistant/bot)
+      if (lastMessage.role === "assistant" || lastMessage.role === "bot") {
+        setCurrentResponse(lastMessage);
+        setIsGenerating(false);
+      }
+
+      scrollToBottom();
+    }
   }, [messages]);
 
-  // Auto scroll to bottom when messages change
+  // Monitor typing users for AI response generation
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    const isAITyping = typingUsers.some(
+      (user) =>
+        user && // Kiểm tra user không null/undefined
+        (user.role === "assistant" ||
+          user.role === "bot" ||
+          user.username === "AI")
+    );
+
+    if (isAITyping && !isGenerating) {
+      setIsGenerating(true);
+    } else if (!isAITyping && isGenerating) {
+      setIsGenerating(false);
+    }
+  }, [typingUsers, isGenerating]);
 
   // Track selectedConversationId changes
   useEffect(() => {
@@ -127,6 +158,7 @@ const Chatbox = () => {
       console.log("   Title:", selectedConv?.user);
     } else {
       console.log("❌ No conversation selected");
+      setCurrentResponse(null);
     }
   }, [selectedConversationId, conversations]);
 
@@ -162,9 +194,21 @@ const Chatbox = () => {
         conversationId
       );
       setMessagesFromAPI(conversationMessages);
+
+      // Find the latest AI response
+      const latestAIResponse = conversationMessages
+        .filter((msg) => msg.role === "assistant" || msg.role === "bot")
+        .pop();
+
+      if (latestAIResponse) {
+        setCurrentResponse(latestAIResponse);
+      } else {
+        setCurrentResponse(null);
+      }
     } catch (error) {
       console.error("❌ Error loading messages:", error);
       clearMessages();
+      setCurrentResponse(null);
     } finally {
       setLoadingMessages(false);
     }
@@ -317,6 +361,48 @@ const Chatbox = () => {
     window.open(fileUrl, "_blank");
   };
 
+  // Response Panel handlers
+  const handleCopyResponse = async () => {
+    if (currentResponse?.content) {
+      try {
+        await navigator.clipboard.writeText(currentResponse.content);
+        // You might want to show a toast notification here
+        console.log("✅ Response copied to clipboard");
+      } catch (error) {
+        console.error("❌ Failed to copy response:", error);
+      }
+    }
+  };
+
+  const handleDownloadResponse = () => {
+    if (currentResponse?.content) {
+      const blob = new Blob([currentResponse.content], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `ai-response-${Date.now()}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  };
+
+  const handleRegenerateResponse = async () => {
+    if (lastUserMessage && selectedConversationId) {
+      try {
+        setIsGenerating(true);
+        setCurrentResponse(null);
+
+        // Resend the last user message
+        sendWebSocketMessage(selectedConversationId, lastUserMessage);
+      } catch (error) {
+        console.error("❌ Error regenerating response:", error);
+        setIsGenerating(false);
+      }
+    }
+  };
+
   // Event handlers
   const handleCreateNewChat = async () => {
     const title = newChatName.trim() || "Cuộc hội thoại mới";
@@ -339,27 +425,20 @@ const Chatbox = () => {
 
     try {
       setSendingMessage(true);
+      setIsGenerating(true);
+      setLastUserMessage(message); // Store the user message for regeneration
+
       console.log(
         "📤 Sending message in conversation ID:",
         selectedConversationId
       );
       console.log("📝 Message content:", message);
 
-      const tempMessage = {
-        id: `temp-${Date.now()}`,
-        conversationId: selectedConversationId,
-        role: "user",
-        content: message,
-        createdAt: new Date().toISOString(),
-        userId: authService.getCurrentUserId(),
-        username: "You",
-      };
-      // addMessage(tempMessage);
-
       sendWebSocketMessage(selectedConversationId, message);
       setMessage("");
     } catch (error) {
       console.error("❌ Error sending message:", error);
+      setIsGenerating(false);
     } finally {
       setSendingMessage(false);
     }
@@ -416,6 +495,9 @@ const Chatbox = () => {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
+
+  // Filter messages to show only user messages in main chat
+  const userMessages = messages.filter((msg) => msg.role === "user");
 
   if (loading) {
     return (
@@ -530,7 +612,7 @@ const Chatbox = () => {
             </div>
           ) : (
             <div className="w-full max-w-4xl mx-auto py-4">
-              {messages.length === 0 ? (
+              {userMessages.length === 0 ? (
                 <div className="w-full h-full flex flex-col flex-1 gap-4 justify-center items-center py-20">
                   <h1 className="text-3xl font-bold text-black mb-2 text-center">
                     ChatGPT 3.5
@@ -541,46 +623,21 @@ const Chatbox = () => {
                 </div>
               ) : (
                 <div className="space-y-6">
-                  {messages.map((msg) => (
-                    <div
-                      key={msg.id}
-                      className={`flex ${
-                        msg.role === "user" ? "justify-end" : "justify-start"
-                      }`}
-                    >
-                      <div
-                        className={`flex max-w-[80%] ${
-                          msg.role === "user" ? "flex-row-reverse" : "flex-row"
-                        } gap-3`}
-                      >
+                  {userMessages.map((msg) => (
+                    <div key={msg.id} className="flex justify-end">
+                      <div className="flex max-w-[80%] flex-row-reverse gap-3">
                         {/* Avatar */}
                         <div className="flex-shrink-0">
-                          {msg.role === "user" ? (
-                            <img
-                              src="https://randomuser.me/api/portraits/men/75.jpg"
-                              alt="User"
-                              className="w-8 h-8 rounded-full object-cover"
-                            />
-                          ) : (
-                            <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-semibold">
-                              AI
-                            </div>
-                          )}
+                          <img
+                            src="https://randomuser.me/api/portraits/men/75.jpg"
+                            alt="User"
+                            className="w-8 h-8 rounded-full object-cover"
+                          />
                         </div>
 
                         {/* Message content */}
-                        <div
-                          className={`flex flex-col ${
-                            msg.role === "user" ? "items-end" : "items-start"
-                          }`}
-                        >
-                          <div
-                            className={`px-4 py-3 rounded-2xl ${
-                              msg.role === "user"
-                                ? "bg-blue-600 text-white rounded-br-md"
-                                : "bg-gray-100 text-gray-800 rounded-bl-md"
-                            }`}
-                          >
+                        <div className="flex flex-col items-end">
+                          <div className="px-4 py-3 rounded-2xl bg-blue-600 text-white rounded-br-md">
                             <p className="text-sm leading-relaxed whitespace-pre-wrap">
                               {msg.content}
                             </p>
@@ -612,21 +669,6 @@ const Chatbox = () => {
                     </div>
                   )}
 
-                  {typingUsers.length > 0 && (
-                    <div className="flex justify-start">
-                      <div className="flex max-w-[80%] flex-row gap-3">
-                        <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-semibold">
-                          AI
-                        </div>
-                        <div className="flex flex-col items-start">
-                          <div className="px-4 py-3 rounded-2xl bg-gray-100 text-gray-800 rounded-bl-md">
-                            <p className="text-sm">Đang gõ...</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
                   <div ref={messagesEndRef} />
                 </div>
               )}
@@ -651,6 +693,20 @@ const Chatbox = () => {
           </div>
         )}
       </div>
+
+      {/* Response Panel */}
+      <ResponsePanelWrapper
+        isCollapsed={responseCollapsed}
+        onToggle={() => setResponseCollapsed((prev) => !prev)}
+      >
+        <ResponsePanel
+          currentResponse={currentResponse}
+          isGenerating={isGenerating}
+          onCopyResponse={handleCopyResponse}
+          onDownloadResponse={handleDownloadResponse}
+          onRegenerateResponse={handleRegenerateResponse}
+        />
+      </ResponsePanelWrapper>
 
       {/* File upload modal */}
       {showFileUpload && selectedFile && (

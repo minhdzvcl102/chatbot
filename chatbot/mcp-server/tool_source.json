@@ -1,0 +1,8 @@
+{
+  "databases": [
+    {
+      "name": "example_db",
+      "description": "Sample database for testing"
+    }
+  ]
+}
