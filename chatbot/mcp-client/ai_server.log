@@ -29,3 +29,321 @@
 2025-06-23 14:36:12,153 - __main__ - INFO - Sent response to ('127.0.0.1', 53627): success
 2025-06-23 14:36:14,038 - __main__ - INFO - Client ('127.0.0.1', 53627) closed connection
 2025-06-23 14:36:14,038 - __main__ - INFO - Client ('127.0.0.1', 53627) disconnected
+2025-06-23 14:52:19,674 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-23 14:52:31,065 - __main__ - INFO - New client connected from ('127.0.0.1', 53954)
+2025-06-23 14:52:31,066 - __main__ - INFO - Received request from ('127.0.0.1', 53954): chat
+2025-06-23 14:52:31,069 - __main__ - INFO - Processing message for conversation 6
+2025-06-23 14:52:31,069 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 14:52:37,041 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:52:42,619 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:52:42,620 - __main__ - INFO - Generated answer after tool call for conversation 6
+2025-06-23 14:52:42,621 - __main__ - INFO - Sent response to ('127.0.0.1', 53954): success
+2025-06-23 14:53:01,045 - __main__ - INFO - Client ('127.0.0.1', 53954) closed connection
+2025-06-23 14:53:01,046 - __main__ - INFO - Client ('127.0.0.1', 53954) disconnected
+2025-06-23 14:55:18,665 - __main__ - INFO - New client connected from ('127.0.0.1', 54018)
+2025-06-23 14:55:18,665 - __main__ - INFO - Received request from ('127.0.0.1', 54018): chat
+2025-06-23 14:55:18,666 - __main__ - INFO - Processing message for conversation 6
+2025-06-23 14:55:18,667 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 14:55:23,301 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:55:31,925 - __main__ - INFO - New client connected from ('127.0.0.1', 54029)
+2025-06-23 14:55:31,926 - __main__ - INFO - Received request from ('127.0.0.1', 54029): chat
+2025-06-23 14:55:31,927 - __main__ - INFO - Processing message for conversation 6
+2025-06-23 14:55:31,927 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 14:55:32,873 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:55:32,874 - __main__ - INFO - Generated answer after tool call for conversation 6
+2025-06-23 14:55:32,875 - __main__ - INFO - Sent response to ('127.0.0.1', 54018): success
+2025-06-23 14:55:36,569 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:55:47,299 - __main__ - INFO - New client connected from ('127.0.0.1', 54040)
+2025-06-23 14:55:47,300 - __main__ - INFO - Received request from ('127.0.0.1', 54040): chat
+2025-06-23 14:55:47,301 - __main__ - INFO - Processing message for conversation 6
+2025-06-23 14:55:47,301 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 14:55:48,673 - __main__ - INFO - Client ('127.0.0.1', 54018) closed connection
+2025-06-23 14:55:48,673 - __main__ - INFO - Client ('127.0.0.1', 54018) disconnected
+2025-06-23 14:55:58,999 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:55:59,000 - __main__ - INFO - Generated answer after tool call for conversation 6
+2025-06-23 14:55:59,001 - __main__ - INFO - Sent response to ('127.0.0.1', 54029): success
+2025-06-23 14:56:01,928 - __main__ - INFO - Client ('127.0.0.1', 54029) closed connection
+2025-06-23 14:56:01,929 - __main__ - INFO - Client ('127.0.0.1', 54029) disconnected
+2025-06-23 14:56:02,858 - __main__ - INFO - New client connected from ('127.0.0.1', 54052)
+2025-06-23 14:56:02,858 - __main__ - INFO - Received request from ('127.0.0.1', 54052): chat
+2025-06-23 14:56:02,859 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 14:56:02,859 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 14:56:02,863 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-23 14:56:02,877 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-23 14:56:07,268 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:56:10,872 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:56:10,873 - __main__ - INFO - Generated answer for conversation 6
+2025-06-23 14:56:10,873 - __main__ - INFO - Sent response to ('127.0.0.1', 54040): success
+2025-06-23 14:56:17,306 - __main__ - INFO - Client ('127.0.0.1', 54040) closed connection
+2025-06-23 14:56:17,306 - __main__ - INFO - Client ('127.0.0.1', 54040) disconnected
+2025-06-23 14:56:20,437 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:56:20,438 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-23 14:56:20,439 - __main__ - INFO - Sent response to ('127.0.0.1', 54052): success
+2025-06-23 14:56:32,866 - __main__ - INFO - Client ('127.0.0.1', 54052) closed connection
+2025-06-23 14:56:32,866 - __main__ - INFO - Client ('127.0.0.1', 54052) disconnected
+2025-06-23 14:57:19,260 - __main__ - INFO - New client connected from ('127.0.0.1', 54121)
+2025-06-23 14:57:19,261 - __main__ - INFO - Received request from ('127.0.0.1', 54121): chat
+2025-06-23 14:57:19,262 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 14:57:19,262 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 14:57:24,110 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:57:37,411 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:57:37,412 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-23 14:57:37,413 - __main__ - INFO - Sent response to ('127.0.0.1', 54121): success
+2025-06-23 14:57:49,265 - __main__ - INFO - Client ('127.0.0.1', 54121) closed connection
+2025-06-23 14:57:49,266 - __main__ - INFO - Client ('127.0.0.1', 54121) disconnected
+2025-06-23 14:59:27,754 - __main__ - INFO - New client connected from ('127.0.0.1', 54171)
+2025-06-23 14:59:27,755 - __main__ - INFO - Received request from ('127.0.0.1', 54171): chat
+2025-06-23 14:59:27,756 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 14:59:27,757 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 14:59:33,606 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:59:44,204 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 14:59:44,205 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-23 14:59:44,206 - __main__ - INFO - Sent response to ('127.0.0.1', 54171): success
+2025-06-23 14:59:57,751 - __main__ - INFO - Client ('127.0.0.1', 54171) closed connection
+2025-06-23 14:59:57,751 - __main__ - INFO - Client ('127.0.0.1', 54171) disconnected
+2025-06-23 15:00:18,958 - __main__ - INFO - New client connected from ('127.0.0.1', 54182)
+2025-06-23 15:00:18,961 - __main__ - INFO - Received request from ('127.0.0.1', 54182): chat
+2025-06-23 15:00:18,962 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 15:00:18,962 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 15:00:23,733 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 15:00:34,882 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 15:00:34,883 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-23 15:00:34,884 - __main__ - INFO - Sent response to ('127.0.0.1', 54182): success
+2025-06-23 15:00:48,958 - __main__ - INFO - Client ('127.0.0.1', 54182) closed connection
+2025-06-23 15:00:48,958 - __main__ - INFO - Client ('127.0.0.1', 54182) disconnected
+2025-06-23 15:01:53,236 - __main__ - INFO - New client connected from ('127.0.0.1', 54193)
+2025-06-23 15:01:53,237 - __main__ - INFO - Received request from ('127.0.0.1', 54193): chat
+2025-06-23 15:01:53,238 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 15:01:53,239 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 15:01:55,971 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-39' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-23 15:01:55,980 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-40' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-23 15:01:55,983 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-41' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-23 15:01:55,987 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-42' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-23 15:01:57,842 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 15:02:10,974 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 15:02:10,975 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-23 15:02:10,976 - __main__ - INFO - Sent response to ('127.0.0.1', 54193): success
+2025-06-23 15:02:23,249 - __main__ - INFO - Client ('127.0.0.1', 54193) closed connection
+2025-06-23 15:02:23,249 - __main__ - INFO - Client ('127.0.0.1', 54193) disconnected
