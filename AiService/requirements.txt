@@ -1,0 +1,8 @@
+Flask
+Flask-Cors
+openai
+langchain
+langchain-community
+chromadb
+python-dotenv
+openai

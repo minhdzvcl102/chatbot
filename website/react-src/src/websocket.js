@@ -18,6 +18,7 @@ const useWebSocket = (url, selectedChatId, setChats) => {
       try {
         const data = JSON.parse(event.data);
         // ... (logic xử lý tin nhắn)
+        // console.log("Received message from server:", data);
         setChats((prevChats) =>
           prevChats.map((chat) =>
             chat.id === selectedChatId
