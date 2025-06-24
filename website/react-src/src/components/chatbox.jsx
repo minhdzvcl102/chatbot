@@ -92,7 +92,9 @@ const Chatbox = () => {
 
     // Gửi tin nhắn qua WebSocket
     if (ws.current && ws.current.readyState === WebSocket.OPEN) {
-      ws.current.send(JSON.stringify({ type: "user_message", content: inputMessage }));
+      ws.current.send(
+        JSON.stringify({ type: "user_message", content: inputMessage })
+      );
     }
 
     // Cập nhật tin nhắn vào state của chat hiện tại
@@ -120,20 +122,24 @@ const Chatbox = () => {
   // Đính kèm file (demo)
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      if(ws.current && ws.current.readyState === WebSocket.OPEN) {
+      if (ws.current && ws.current.readyState === WebSocket.OPEN) {
         const file = e.target.files[0];
         const reader = new FileReader();
         reader.onload = (event) => {
-          ws.current.send(JSON.stringify({
-            type: "file_message",
-            file_content: event.target.result,
-            filename: file.name,
-          }));
+          // Lấy phần base64 sau dấu phẩy
+          const base64 = event.target.result.split(",")[1];
+          ws.current.send(
+            JSON.stringify({
+              type: "file_message",
+              file_content: base64,
+              filename: file.name,
+            })
+          );
         };
-        reader.readAsDataURL(file); 
+        reader.readAsDataURL(file);
       }
     }
-};
+  };
 
   const currentChat = chats.find((c) => c.id === selectedChatId);
 
