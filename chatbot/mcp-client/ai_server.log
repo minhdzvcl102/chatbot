@@ -347,3 +347,320 @@ RuntimeError: Event loop is closed
 2025-06-23 15:02:10,976 - __main__ - INFO - Sent response to ('127.0.0.1', 54193): success
 2025-06-23 15:02:23,249 - __main__ - INFO - Client ('127.0.0.1', 54193) closed connection
 2025-06-23 15:02:23,249 - __main__ - INFO - Client ('127.0.0.1', 54193) disconnected
+2025-06-23 16:18:05,129 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-23 16:19:32,380 - __main__ - INFO - New client connected from ('127.0.0.1', 55113)
+2025-06-23 16:19:32,380 - __main__ - INFO - Received request from ('127.0.0.1', 55113): chat
+2025-06-23 16:19:32,382 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 16:19:32,383 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 16:19:38,307 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:19:40,360 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:19:40,361 - __main__ - INFO - Sent response to ('127.0.0.1', 55113): error
+2025-06-23 16:20:02,390 - __main__ - INFO - Client ('127.0.0.1', 55113) closed connection
+2025-06-23 16:20:02,390 - __main__ - INFO - Client ('127.0.0.1', 55113) disconnected
+2025-06-23 16:21:50,133 - __main__ - INFO - New client connected from ('127.0.0.1', 55149)
+2025-06-23 16:21:50,134 - __main__ - INFO - Received request from ('127.0.0.1', 55149): chat
+2025-06-23 16:21:50,135 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 16:21:50,135 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 16:21:54,453 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:21:54,458 - __main__ - ERROR - Tool call error: {
+  "error": "'FunctionTool' object is not callable"
+}
+2025-06-23 16:21:54,458 - __main__ - INFO - Sent response to ('127.0.0.1', 55149): error
+2025-06-23 16:22:20,139 - __main__ - INFO - Client ('127.0.0.1', 55149) closed connection
+2025-06-23 16:22:20,139 - __main__ - INFO - Client ('127.0.0.1', 55149) disconnected
+2025-06-23 16:27:04,088 - __main__ - INFO - New client connected from ('127.0.0.1', 55218)
+2025-06-23 16:27:04,089 - __main__ - INFO - Received request from ('127.0.0.1', 55218): chat
+2025-06-23 16:27:04,089 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 16:27:04,090 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 16:27:10,517 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:27:10,520 - __main__ - ERROR - Tool call error: {
+  "error": "'FunctionTool' object is not callable"
+}
+2025-06-23 16:27:10,521 - __main__ - INFO - Sent response to ('127.0.0.1', 55218): error
+2025-06-23 16:27:28,476 - __main__ - INFO - Client ('127.0.0.1', 55218) reset connection
+2025-06-23 16:27:28,476 - __main__ - INFO - Client ('127.0.0.1', 55218) disconnected
+2025-06-23 16:27:38,357 - __main__ - INFO - Stopping server...
+2025-06-23 16:27:38,358 - __main__ - INFO - AI Socket Server stopped
+2025-06-23 16:27:38,358 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-23 16:27:38,358 - __main__ - INFO - Stopping server...
+2025-06-23 16:27:38,358 - __main__ - INFO - AI Socket Server stopped
+2025-06-23 16:27:43,655 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-23 16:27:47,047 - __main__ - INFO - New client connected from ('127.0.0.1', 55236)
+2025-06-23 16:27:47,047 - __main__ - INFO - Received request from ('127.0.0.1', 55236): chat
+2025-06-23 16:27:47,048 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 16:27:47,048 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 16:27:51,474 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:27:51,479 - __main__ - ERROR - Tool call error: {
+  "error": "'FunctionTool' object is not callable"
+}
+2025-06-23 16:27:51,480 - __main__ - INFO - Sent response to ('127.0.0.1', 55236): error
+2025-06-23 16:27:57,819 - __main__ - INFO - New client connected from ('127.0.0.1', 55258)
+2025-06-23 16:27:57,819 - __main__ - INFO - Received request from ('127.0.0.1', 55258): chat
+2025-06-23 16:27:57,820 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 16:27:57,821 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 16:28:01,811 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:28:01,814 - __main__ - ERROR - Tool call error: {
+  "error": "'FunctionTool' object is not callable"
+}
+2025-06-23 16:28:01,815 - __main__ - INFO - Sent response to ('127.0.0.1', 55258): error
+2025-06-23 16:28:17,046 - __main__ - INFO - Client ('127.0.0.1', 55236) closed connection
+2025-06-23 16:28:17,046 - __main__ - INFO - Client ('127.0.0.1', 55236) disconnected
+2025-06-23 16:28:27,818 - __main__ - INFO - Client ('127.0.0.1', 55258) closed connection
+2025-06-23 16:28:27,818 - __main__ - INFO - Client ('127.0.0.1', 55258) disconnected
+2025-06-23 16:29:47,965 - __main__ - INFO - New client connected from ('127.0.0.1', 55282)
+2025-06-23 16:29:47,966 - __main__ - INFO - Received request from ('127.0.0.1', 55282): chat
+2025-06-23 16:29:47,967 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 16:29:47,967 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-23 16:29:56,848 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:30:08,534 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 16:30:08,535 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-23 16:30:08,536 - __main__ - INFO - Sent response to ('127.0.0.1', 55282): success
+2025-06-23 16:30:17,968 - __main__ - INFO - Client ('127.0.0.1', 55282) closed connection
+2025-06-23 16:30:17,968 - __main__ - INFO - Client ('127.0.0.1', 55282) disconnected
+2025-06-23 16:48:03,525 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-23 16:48:31,914 - __main__ - INFO - New client connected from ('127.0.0.1', 55696)
+2025-06-23 16:48:31,915 - __main__ - INFO - Received request from ('127.0.0.1', 55696): chat
+2025-06-23 16:48:31,919 - __main__ - INFO - Processing message for conversation 7
+2025-06-23 16:48:31,919 - __main__ - ERROR - Error processing message for conversation 7: 'NoneType' object has no attribute 'list_resources'
+2025-06-23 16:48:31,920 - __main__ - INFO - Sent response to ('127.0.0.1', 55696): error
+2025-06-23 16:49:01,916 - __main__ - INFO - Client ('127.0.0.1', 55696) closed connection
+2025-06-23 16:49:01,917 - __main__ - INFO - Client ('127.0.0.1', 55696) disconnected
+2025-06-24 17:02:30,694 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-24 17:03:51,582 - __main__ - INFO - New client connected from ('127.0.0.1', 58883)
+2025-06-24 17:03:51,584 - __main__ - INFO - Received request from ('127.0.0.1', 58883): chat
+2025-06-24 17:03:51,588 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 17:03:51,588 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 17:03:57,563 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:04:02,436 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:04:02,437 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 17:04:02,438 - __main__ - INFO - Sent response to ('127.0.0.1', 58883): success
+2025-06-24 17:04:21,588 - __main__ - INFO - Client ('127.0.0.1', 58883) closed connection
+2025-06-24 17:04:21,589 - __main__ - INFO - Client ('127.0.0.1', 58883) disconnected
+2025-06-24 17:04:35,833 - __main__ - INFO - New client connected from ('127.0.0.1', 58895)
+2025-06-24 17:04:35,833 - __main__ - INFO - Received request from ('127.0.0.1', 58895): chat
+2025-06-24 17:04:35,834 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 17:04:35,835 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 17:04:40,058 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:04:40,062 - __main__ - ERROR - Tool call error: {
+  "error": "'FunctionTool' object is not callable"
+}
+2025-06-24 17:04:40,063 - __main__ - INFO - Sent response to ('127.0.0.1', 58895): error
+2025-06-24 17:05:05,843 - __main__ - INFO - Client ('127.0.0.1', 58895) closed connection
+2025-06-24 17:05:05,843 - __main__ - INFO - Client ('127.0.0.1', 58895) disconnected
+2025-06-24 17:07:51,797 - __main__ - INFO - New client connected from ('127.0.0.1', 58951)
+2025-06-24 17:07:51,801 - __main__ - INFO - Received request from ('127.0.0.1', 58951): chat
+2025-06-24 17:07:51,812 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 17:07:51,813 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 17:07:59,254 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:08:15,592 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:08:15,593 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 17:08:15,594 - __main__ - INFO - Sent response to ('127.0.0.1', 58951): success
+2025-06-24 17:08:21,781 - __main__ - INFO - Client ('127.0.0.1', 58951) closed connection
+2025-06-24 17:08:21,781 - __main__ - INFO - Client ('127.0.0.1', 58951) disconnected
+2025-06-24 17:08:52,083 - __main__ - INFO - New client connected from ('127.0.0.1', 58968)
+2025-06-24 17:08:52,083 - __main__ - INFO - Received request from ('127.0.0.1', 58968): chat
+2025-06-24 17:08:52,084 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 17:08:52,084 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 17:08:56,953 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:09:05,125 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:09:05,126 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 17:09:05,127 - __main__ - INFO - Sent response to ('127.0.0.1', 58968): success
+2025-06-24 17:09:22,090 - __main__ - INFO - Client ('127.0.0.1', 58968) closed connection
+2025-06-24 17:09:22,090 - __main__ - INFO - Client ('127.0.0.1', 58968) disconnected
+2025-06-24 17:32:01,194 - __main__ - INFO - New client connected from ('127.0.0.1', 59416)
+2025-06-24 17:32:01,212 - __main__ - INFO - Received request from ('127.0.0.1', 59416): chat
+2025-06-24 17:32:01,227 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 17:32:01,229 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 17:32:06,212 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    "tool_call_id": tool_call["id"]
+                   ~~~~~~~~~~^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-24 17:32:06,298 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    "tool_call_id": tool_call["id"]
+                   ~~~~~~~~~~^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-24 17:32:06,304 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-23' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\main.py", line 257, in handle_client
+    "tool_call_id": tool_call["id"]
+                   ~~~~~~~~~~^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-24 17:32:08,320 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:32:27,858 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:32:27,860 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 17:32:27,862 - __main__ - INFO - Sent response to ('127.0.0.1', 59416): success
+2025-06-24 17:32:31,134 - __main__ - INFO - Client ('127.0.0.1', 59416) closed connection
+2025-06-24 17:32:31,135 - __main__ - INFO - Client ('127.0.0.1', 59416) disconnected
+2025-06-24 17:48:50,942 - __main__ - INFO - New client connected from ('127.0.0.1', 59632)
+2025-06-24 17:48:50,961 - __main__ - INFO - Received request from ('127.0.0.1', 59632): chat
+2025-06-24 17:48:50,979 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 17:48:50,981 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 17:48:58,569 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:49:17,015 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:49:17,019 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 17:49:17,020 - __main__ - INFO - Sent response to ('127.0.0.1', 59632): success
+2025-06-24 17:49:20,867 - __main__ - INFO - Client ('127.0.0.1', 59632) closed connection
+2025-06-24 17:49:20,868 - __main__ - INFO - Client ('127.0.0.1', 59632) disconnected
+2025-06-24 17:49:36,492 - __main__ - INFO - New client connected from ('127.0.0.1', 59667)
+2025-06-24 17:49:36,492 - __main__ - INFO - Received request from ('127.0.0.1', 59667): chat
+2025-06-24 17:49:36,493 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 17:49:36,494 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 17:49:42,650 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:49:45,465 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 17:49:45,466 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 17:49:45,467 - __main__ - INFO - Sent response to ('127.0.0.1', 59667): success
+2025-06-24 17:50:06,505 - __main__ - INFO - Client ('127.0.0.1', 59667) closed connection
+2025-06-24 17:50:06,505 - __main__ - INFO - Client ('127.0.0.1', 59667) disconnected
+2025-06-24 18:12:40,183 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-24 18:23:15,801 - __main__ - INFO - New client connected from ('127.0.0.1', 50874)
+2025-06-24 18:23:15,807 - __main__ - INFO - Received request from ('127.0.0.1', 50874): chat
+2025-06-24 18:23:15,814 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 18:23:15,815 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 18:23:19,861 - __main__ - INFO - MCP client initialized successfully
+2025-06-24 18:23:19,873 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-24 18:23:23,302 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 18:23:23,306 - __main__ - INFO - Executing tool call 1/1: rag_query_for_chart
+2025-06-24 18:23:23,322 - __main__ - INFO - Tool rag_query_for_chart executed successfully
+2025-06-24 18:23:23,323 - __main__ - ERROR - Tool call error: Expected where to have exactly one operator, got {'chart_suitable': True, 'suggested_chart_type': 'line_chart'} in query.
+2025-06-24 18:23:23,324 - __main__ - INFO - Sent response to ('127.0.0.1', 50874): error
+2025-06-24 18:23:45,794 - __main__ - INFO - Client ('127.0.0.1', 50874) closed connection
+2025-06-24 18:23:45,794 - __main__ - INFO - Client ('127.0.0.1', 50874) disconnected
+2025-06-24 18:27:18,568 - __main__ - INFO - New client connected from ('127.0.0.1', 50980)
+2025-06-24 18:27:18,569 - __main__ - INFO - Received request from ('127.0.0.1', 50980): chat
+2025-06-24 18:27:18,570 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 18:27:18,570 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 18:27:21,697 - __main__ - INFO - MCP client initialized successfully
+2025-06-24 18:27:21,703 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-24 18:27:22,316 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-06-24 18:27:22,317 - __main__ - ERROR - Error processing message for conversation 7: Error code: 400 - {'error': {'code': 'invalid_parameter_error', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: An assistant message with "tool_calls" must be followed by tool messages responding to each "tool_call_id". The following tool_call_ids did not have response messages: message[3].role', 'type': 'invalid_request_error'}, 'id': 'chatcmpl-0f97311b-268a-9e55-9a1f-9ef6b6f99f37', 'request_id': '0f97311b-268a-9e55-9a1f-9ef6b6f99f37'}
+2025-06-24 18:27:22,318 - __main__ - INFO - Sent response to ('127.0.0.1', 50980): error
+2025-06-24 18:27:48,576 - __main__ - INFO - Client ('127.0.0.1', 50980) closed connection
+2025-06-24 18:27:48,576 - __main__ - INFO - Client ('127.0.0.1', 50980) disconnected
+2025-06-24 18:28:38,594 - __main__ - INFO - New client connected from ('127.0.0.1', 51014)
+2025-06-24 18:28:38,594 - __main__ - INFO - Received request from ('127.0.0.1', 51014): chat
+2025-06-24 18:28:38,595 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 18:28:38,595 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 18:28:41,276 - __main__ - INFO - MCP client initialized successfully
+2025-06-24 18:28:41,281 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-24 18:28:41,959 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-06-24 18:28:41,959 - __main__ - ERROR - Error processing message for conversation 7: Error code: 400 - {'error': {'code': 'invalid_parameter_error', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: An assistant message with "tool_calls" must be followed by tool messages responding to each "tool_call_id". The following tool_call_ids did not have response messages: message[3].role', 'type': 'invalid_request_error'}, 'id': 'chatcmpl-6a2b416e-b393-9865-af78-c1197c2c40ae', 'request_id': '6a2b416e-b393-9865-af78-c1197c2c40ae'}
+2025-06-24 18:28:41,960 - __main__ - INFO - Sent response to ('127.0.0.1', 51014): error
+2025-06-24 18:29:08,603 - __main__ - INFO - Client ('127.0.0.1', 51014) closed connection
+2025-06-24 18:29:08,603 - __main__ - INFO - Client ('127.0.0.1', 51014) disconnected
+2025-06-24 18:29:54,164 - __main__ - INFO - New client connected from ('127.0.0.1', 51100)
+2025-06-24 18:29:54,165 - __main__ - INFO - Received request from ('127.0.0.1', 51100): chat
+2025-06-24 18:29:54,166 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 18:29:54,166 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 18:29:57,040 - __main__ - INFO - MCP client initialized successfully
+2025-06-24 18:29:57,046 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-24 18:29:57,803 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-06-24 18:29:57,804 - __main__ - ERROR - Error processing message for conversation 7: Error code: 400 - {'error': {'code': 'invalid_parameter_error', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: An assistant message with "tool_calls" must be followed by tool messages responding to each "tool_call_id". The following tool_call_ids did not have response messages: message[3].role', 'type': 'invalid_request_error'}, 'id': 'chatcmpl-9ebf87b0-ea87-9c78-8eee-de142363422c', 'request_id': '9ebf87b0-ea87-9c78-8eee-de142363422c'}
+2025-06-24 18:29:57,805 - __main__ - INFO - Sent response to ('127.0.0.1', 51100): error
+2025-06-24 18:30:22,452 - __main__ - INFO - Stopping server...
+2025-06-24 18:30:22,453 - __main__ - INFO - AI Socket Server stopped
+2025-06-24 18:30:22,453 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-24 18:30:22,453 - __main__ - INFO - Stopping server...
+2025-06-24 18:30:22,453 - __main__ - INFO - AI Socket Server stopped

@@ -709,7 +709,7 @@ class WebSocketHandler {
       const timeout = setTimeout(() => {
         client.destroy();
         resolve(false);
-      }, 5000);
+      }, 8888);
 
       client.connect(this.pythonAI.port, this.pythonAI.host, () => {
         clearTimeout(timeout);

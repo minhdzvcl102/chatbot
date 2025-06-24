@@ -1,3 +1,4 @@
+// components/chatbox.jsx
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -24,7 +25,6 @@ import { uploadService } from "../services/uploadService";
 import { useWebSocket, useTypingIndicator } from "../hooks/useWebSocket";
 
 const Chatbox = () => {
-  // State management
   const [activeTab, setActiveTab] = useState("history");
   const [showNewChatForm, setShowNewChatForm] = useState(false);
   const [newChatName, setNewChatName] = useState("");
@@ -36,24 +36,18 @@ const Chatbox = () => {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-
   const [loadingMessages, setLoadingMessages] = useState(false);
   const [sendingMessage, setSendingMessage] = useState(false);
-
-  // File upload states
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [loadingFiles, setLoadingFiles] = useState(false);
   const [uploadingFile, setUploadingFile] = useState(false);
   const [showFileUpload, setShowFileUpload] = useState(false);
   const [uploadError, setUploadError] = useState("");
-
-  // Response Panel states
   const [responseCollapsed, setResponseCollapsed] = useState(false);
   const [currentResponse, setCurrentResponse] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [lastUserMessage, setLastUserMessage] = useState("");
 
-  // WebSocket initialization
   const serverUrl = APP_WEBSOCKET_URL || "ws://localhost:3000";
   const authToken = localStorage.getItem("authToken");
   const {
@@ -65,15 +59,14 @@ const Chatbox = () => {
     sendMessage: sendWebSocketMessage,
     sendTyping,
     notifyFileUploaded,
-    messages: wsMessages,
     onlineUsers,
     typingUsers,
+    chartUrl,
     addMessage,
     clearMessages,
     setMessagesFromAPI,
   } = useWebSocket(authToken, serverUrl);
 
-  // Typing indicator
   const { startTyping, stopTyping } = useTypingIndicator(
     selectedConversationId,
     1000
@@ -84,13 +77,11 @@ const Chatbox = () => {
   const messagesEndRef = useRef();
   const navigate = useNavigate();
 
-  // Load conversations on component mount
   useEffect(() => {
     console.log("🚀 Component mounted, loading conversations...");
     loadConversations();
   }, []);
 
-  // Handle WebSocket messages and conversation changes
   useEffect(() => {
     if (selectedConversationId) {
       console.log("🔗 Joining WebSocket conversation:", selectedConversationId);
@@ -115,31 +106,22 @@ const Chatbox = () => {
     clearMessages,
   ]);
 
-  // Monitor messages for AI responses
   useEffect(() => {
     if (messages.length > 0) {
       const lastMessage = messages[messages.length - 1];
-
-      // Check if the last message is from AI (assistant/bot)
       if (lastMessage.role === "assistant" || lastMessage.role === "bot") {
         setCurrentResponse(lastMessage);
         setIsGenerating(false);
       }
-
       scrollToBottom();
     }
   }, [messages]);
 
-  // Monitor typing users for AI response generation
   useEffect(() => {
     const isAITyping = typingUsers.some(
       (user) =>
-        user && // Kiểm tra user không null/undefined
-        (user.role === "assistant" ||
-          user.role === "bot" ||
-          user.username === "AI")
+        user && (user.role === "assistant" || user.role === "bot" || user.username === "AI")
     );
-
     if (isAITyping && !isGenerating) {
       setIsGenerating(true);
     } else if (!isAITyping && isGenerating) {
@@ -147,7 +129,6 @@ const Chatbox = () => {
     }
   }, [typingUsers, isGenerating]);
 
-  // Track selectedConversationId changes
   useEffect(() => {
     if (selectedConversationId) {
       const selectedConv = conversations.find(
@@ -166,13 +147,11 @@ const Chatbox = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // API handler functions
   const loadConversations = async () => {
     try {
       const formattedConversations =
         await conversationService.getConversations();
       setConversations(formattedConversations);
-
       if (formattedConversations.length > 0 && !selectedConversationId) {
         const firstId = formattedConversations[0].id;
         console.log("🎯 Auto-selecting first conversation ID:", firstId);
@@ -187,19 +166,15 @@ const Chatbox = () => {
 
   const loadMessages = async (conversationId) => {
     if (!conversationId) return;
-
     try {
       setLoadingMessages(true);
       const conversationMessages = await messageService.getMessages(
         conversationId
       );
       setMessagesFromAPI(conversationMessages);
-
-      // Find the latest AI response
       const latestAIResponse = conversationMessages
         .filter((msg) => msg.role === "assistant" || msg.role === "bot")
         .pop();
-
       if (latestAIResponse) {
         setCurrentResponse(latestAIResponse);
       } else {
@@ -216,7 +191,6 @@ const Chatbox = () => {
 
   const loadUploadedFiles = async (conversationId) => {
     if (!conversationId) return;
-
     try {
       setLoadingFiles(true);
       const files = await uploadService.getUploadedFiles(conversationId);
@@ -232,8 +206,7 @@ const Chatbox = () => {
   const createConversation = async (title) => {
     try {
       const newConvId = await conversationService.createConversation(title);
-      await loadConversations(); // Reload conversations
-
+      await loadConversations();
       console.log("🎯 Setting selected conversation ID to:", newConvId);
       setSelectedConversationId(newConvId);
     } catch (error) {
@@ -244,12 +217,9 @@ const Chatbox = () => {
   const updateConversationTitle = async (conversationId, newTitle) => {
     try {
       await conversationService.updateConversation(conversationId, newTitle);
-
-      // Update local state
       setConversations((prev) =>
         prev.map((conv) =>
-          conv.id === conversationId ? { ...conv, user: newTitle } : conv
-        )
+          conv.id === conversationId ? { ...conv, user: newTitle } : conv)
       );
     } catch (error) {
       console.error("❌ Error updating conversation:", error);
@@ -259,13 +229,9 @@ const Chatbox = () => {
   const deleteConversation = async (conversationId) => {
     try {
       await conversationService.deleteConversation(conversationId);
-
-      // Update local state
       setConversations((prev) =>
         prev.filter((conv) => conv.id !== conversationId)
       );
-
-      // If deleted conversation was selected, select another one
       if (selectedConversationId === conversationId) {
         const remaining = conversations.filter(
           (conv) => conv.id !== conversationId
@@ -293,41 +259,27 @@ const Chatbox = () => {
     }
   };
 
-  // File upload handlers
   const handleFileUpload = async (file) => {
     if (!file || !selectedConversationId) return;
-
-    // Validate file type
     if (file.type !== "application/pdf") {
       setUploadError("Chỉ hỗ trợ file PDF");
       return;
     }
-
-    // Validate file size (10MB limit)
     if (file.size > 20 * 1024 * 1024) {
       setUploadError("File không được vượt quá 20MB");
       return;
     }
-
     try {
       setUploadingFile(true);
       setUploadError("");
-
       console.log("📤 Uploading file:", file.name);
       const result = await uploadService.uploadFile(
         selectedConversationId,
         file
       );
-
       console.log("✅ File uploaded successfully:", result);
-
-      // Notify WebSocket about file upload
       notifyFileUploaded(selectedConversationId, result.file);
-
-      // Reload files list
       await loadUploadedFiles(selectedConversationId);
-
-      // Clear selected file
       setSelectedFile(null);
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
@@ -342,14 +294,10 @@ const Chatbox = () => {
 
   const handleDeleteFile = async (fileId) => {
     if (!selectedConversationId) return;
-
     try {
       console.log("🗑️ Deleting file:", fileId);
       await uploadService.deleteFile(selectedConversationId, fileId);
-
       console.log("✅ File deleted successfully");
-
-      // Reload files list
       await loadUploadedFiles(selectedConversationId);
     } catch (error) {
       console.error("❌ Delete file error:", error);
@@ -361,12 +309,10 @@ const Chatbox = () => {
     window.open(fileUrl, "_blank");
   };
 
-  // Response Panel handlers
   const handleCopyResponse = async () => {
     if (currentResponse?.content) {
       try {
         await navigator.clipboard.writeText(currentResponse.content);
-        // You might want to show a toast notification here
         console.log("✅ Response copied to clipboard");
       } catch (error) {
         console.error("❌ Failed to copy response:", error);
@@ -393,8 +339,6 @@ const Chatbox = () => {
       try {
         setIsGenerating(true);
         setCurrentResponse(null);
-
-        // Resend the last user message
         sendWebSocketMessage(selectedConversationId, lastUserMessage);
       } catch (error) {
         console.error("❌ Error regenerating response:", error);
@@ -403,7 +347,6 @@ const Chatbox = () => {
     }
   };
 
-  // Event handlers
   const handleCreateNewChat = async () => {
     const title = newChatName.trim() || "Cuộc hội thoại mới";
     console.log("🎬 Handling new chat creation with title:", title);
@@ -426,14 +369,12 @@ const Chatbox = () => {
     try {
       setSendingMessage(true);
       setIsGenerating(true);
-      setLastUserMessage(message); // Store the user message for regeneration
-
+      setLastUserMessage(message);
       console.log(
         "📤 Sending message in conversation ID:",
         selectedConversationId
       );
       console.log("📝 Message content:", message);
-
       sendWebSocketMessage(selectedConversationId, message);
       setMessage("");
     } catch (error) {
@@ -496,14 +437,13 @@ const Chatbox = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 
-  // Filter messages to show only user messages in main chat
   const userMessages = messages.filter((msg) => msg.role === "user");
 
   if (loading) {
     return (
       <AppLayout>
-        <div className="flex-1 flex items-center justify-center">
-          <div className="text-lg text-gray-500">Đang tải...</div>
+        <div className="flex flex-1 items-center items-center justify-center">
+          <div className="text-lg text-gray-500">Loading...</div>
         </div>
       </AppLayout>
     );
@@ -587,9 +527,7 @@ const Chatbox = () => {
         />
       </SidebarWrapper>
 
-      {/* Main content */}
       <div className="flex-1 flex flex-col h-full min-h-0">
-        {/* Chat display area */}
         <div className="flex-1 overflow-y-auto min-h-0 px-4">
           {conversations.length === 0 ? (
             <div className="w-full h-full flex flex-col flex-1 justify-center items-center">
@@ -599,7 +537,7 @@ const Chatbox = () => {
             </div>
           ) : !selectedConversationId ? (
             <div className="w-full h-full flex flex-col flex-1 gap-4 justify-center items-center">
-              <h1 className="text-3xl font-bold text-black mb-2 text-center">
+              <h1 className="text-3 font-bold text-black mb-2 text-center">
                 ChatGPT 3.5
               </h1>
               <p className="text-gray-500 text-center max-w-lg mx-auto">
@@ -626,7 +564,6 @@ const Chatbox = () => {
                   {userMessages.map((msg) => (
                     <div key={msg.id} className="flex justify-end">
                       <div className="flex max-w-[80%] flex-row-reverse gap-3">
-                        {/* Avatar */}
                         <div className="flex-shrink-0">
                           <img
                             src="https://randomuser.me/api/portraits/men/75.jpg"
@@ -634,8 +571,6 @@ const Chatbox = () => {
                             className="w-8 h-8 rounded-full object-cover"
                           />
                         </div>
-
-                        {/* Message content */}
                         <div className="flex flex-col items-end">
                           <div className="px-4 py-3 rounded-2xl bg-blue-600 text-white rounded-br-md">
                             <p className="text-sm leading-relaxed whitespace-pre-wrap">
@@ -676,7 +611,6 @@ const Chatbox = () => {
           )}
         </div>
 
-        {/* Chat input */}
         {conversations.length > 0 && selectedConversationId && (
           <div className="w-full">
             <ChatInput
@@ -694,7 +628,6 @@ const Chatbox = () => {
         )}
       </div>
 
-      {/* Response Panel */}
       <ResponsePanelWrapper
         isCollapsed={responseCollapsed}
         onToggle={() => setResponseCollapsed((prev) => !prev)}
@@ -702,13 +635,13 @@ const Chatbox = () => {
         <ResponsePanel
           currentResponse={currentResponse}
           isGenerating={isGenerating}
+          chartUrl={chartUrl}
           onCopyResponse={handleCopyResponse}
           onDownloadResponse={handleDownloadResponse}
           onRegenerateResponse={handleRegenerateResponse}
         />
       </ResponsePanelWrapper>
 
-      {/* File upload modal */}
       {showFileUpload && selectedFile && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-white rounded-xl shadow-lg p-8 min-w-[320px] max-w-xs flex flex-col items-center animate-fade-in">
@@ -790,7 +723,6 @@ const Chatbox = () => {
         </div>
       )}
 
-      {/* New chat modal */}
       {showNewChatForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-white rounded-xl shadow-lg p-8 min-w-[320px] max-w-xs flex flex-col items-center animate-fade-in">
@@ -819,7 +751,7 @@ const Chatbox = () => {
                   setNewChatName("");
                 }}
               >
-                Huỷ
+                Hủy
               </button>
             </div>
           </div>

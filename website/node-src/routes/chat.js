@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { promises as fs } from 'fs';
 import crypto from "crypto";
+import axios from 'axios';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -503,4 +504,4 @@ router.delete('/conversations/:id/files/:fileId', authenticateToken, async (req,
     }
 });
 
-export default router;
+export default router
