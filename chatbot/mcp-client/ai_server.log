@@ -664,3 +664,33 @@ RuntimeError: Event loop is closed
 2025-06-24 18:30:22,453 - __main__ - INFO - Received keyboard interrupt, stopping server...
 2025-06-24 18:30:22,453 - __main__ - INFO - Stopping server...
 2025-06-24 18:30:22,453 - __main__ - INFO - AI Socket Server stopped
+2025-06-24 18:30:28,423 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-24 18:30:36,268 - __main__ - INFO - New client connected from ('127.0.0.1', 51126)
+2025-06-24 18:30:36,268 - __main__ - INFO - Received request from ('127.0.0.1', 51126): chat
+2025-06-24 18:30:36,269 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 18:30:36,269 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 18:30:38,817 - __main__ - INFO - MCP client initialized successfully
+2025-06-24 18:30:38,821 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-24 18:30:41,462 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 18:30:41,464 - __main__ - INFO - Executing tool call 1/1: rag_query
+2025-06-24 18:30:42,119 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-24 18:31:05,970 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 18:31:05,971 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 18:31:05,972 - __main__ - INFO - Sent response to ('127.0.0.1', 51126): success
+2025-06-24 18:31:06,270 - __main__ - INFO - Client ('127.0.0.1', 51126) closed connection
+2025-06-24 18:31:06,270 - __main__ - INFO - Client ('127.0.0.1', 51126) disconnected
+2025-06-24 18:31:38,187 - __main__ - INFO - New client connected from ('127.0.0.1', 51144)
+2025-06-24 18:31:38,187 - __main__ - INFO - Received request from ('127.0.0.1', 51144): chat
+2025-06-24 18:31:38,188 - __main__ - INFO - Processing message for conversation 7
+2025-06-24 18:31:38,189 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-24 18:31:40,794 - __main__ - INFO - MCP client initialized successfully
+2025-06-24 18:31:40,799 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-24 18:31:42,291 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 18:31:42,292 - __main__ - INFO - Executing tool call 1/1: sql+db://sql/list_databases
+2025-06-24 18:31:42,293 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-24 18:31:42,400 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-24 18:31:51,545 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-24 18:31:51,546 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-24 18:31:51,546 - __main__ - INFO - Sent response to ('127.0.0.1', 51144): success
+2025-06-24 18:32:08,187 - __main__ - INFO - Client ('127.0.0.1', 51144) closed connection
+2025-06-24 18:32:08,188 - __main__ - INFO - Client ('127.0.0.1', 51144) disconnected
