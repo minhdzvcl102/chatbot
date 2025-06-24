@@ -3525,3 +3525,337 @@ http://localhost:3000
 [2025-06-24T11:32:08.187Z] [ERROR] ⏰ Python AI service timeout for conversation 7
 [2025-06-24T11:32:08.187Z] [ERROR] AI service error for conversation 7: AI service timeout
 [2025-06-24T11:32:08.188Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T11:33:18.169Z] [INFO] ✅ Socket nkfmyqroNIZUrra_AAAJ authenticated for user demo (ID: 1)
+[2025-06-24T11:33:18.169Z] [INFO] 🔗 User demo (1) connected with socket nkfmyqroNIZUrra_AAAJ
+[2025-06-24T11:33:18.205Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T11:33:18.208Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T11:33:18.217Z] [INFO] Loaded 39 messages for conversation 7 by user 1
+[2025-06-24T11:33:18.219Z] [INFO] Loaded 0 files for conversation 7 by user 1
+[2025-06-24T11:33:21.623Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-24T11:33:22.590Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-24T11:34:45.399Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T11:34:45.402Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T11:34:45.422Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T11:34:45.430Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-06-24T11:34:45.434Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T11:34:45.435Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T11:34:45.435Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T19:31:20.542Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T19:31:20.545Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T19:31:20.571Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T19:31:20.581Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-06-24T19:31:20.585Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T19:31:20.586Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T19:31:20.586Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T19:31:21.563Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-24T19:31:22.812Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-06-24T19:31:25.935Z] [INFO] User  logged out successfully
+[2025-06-24T19:31:31.269Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-24T19:31:31.309Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T19:31:31.314Z] [INFO] ✅ Socket ss_wTL8LvBw3EugOAAAH authenticated for user demo (ID: 1)
+[2025-06-24T19:31:31.316Z] [INFO] 🔗 User demo (1) connected with socket ss_wTL8LvBw3EugOAAAH
+[2025-06-24T19:31:31.317Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T19:31:31.339Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T19:31:31.342Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T19:31:31.343Z] [INFO] Loaded 39 messages for conversation 7 by user 1
+[2025-06-24T19:31:31.345Z] [INFO] Loaded 0 files for conversation 7 by user 1
+[2025-06-24T19:31:40.993Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T19:31:41.270Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T19:31:41.273Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T19:31:41.998Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T19:31:43.955Z] [ERROR] AI service error: 'required'
+[2025-06-24T19:31:43.955Z] [ERROR] AI service error for conversation 7: 'required'
+[2025-06-24T19:32:11.276Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T19:32:11.277Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T19:32:11.281Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T19:35:40.646Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T19:35:40.886Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T19:35:40.891Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T19:35:41.646Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T19:35:44.652Z] [ERROR] AI service error: 'required'
+[2025-06-24T19:35:44.653Z] [ERROR] AI service error for conversation 7: 'required'
+[2025-06-24T19:36:10.890Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T19:36:10.892Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T19:36:10.893Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T19:36:58.339Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T19:36:58.584Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T19:36:58.587Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T19:36:59.329Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T19:37:16.023Z] [INFO] 🤖 AI response sent to conversation 7
+[2025-06-24T19:37:28.586Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T19:37:28.588Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T19:37:28.588Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T19:40:05.667Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T19:40:11.011Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T19:40:11.014Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T19:40:11.205Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T19:40:32.811Z] [INFO] 🤖 AI response sent to conversation 7
+[2025-06-24T19:40:41.025Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T19:40:41.026Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T19:40:41.027Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T19:42:24.718Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T19:42:29.910Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T19:42:29.914Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T19:42:30.681Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T19:42:43.029Z] [INFO] 🤖 AI response sent to conversation 7
+[2025-06-24T19:42:48.599Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T19:42:51.394Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T19:42:51.396Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T19:42:51.762Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T19:42:59.925Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T19:42:59.924Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T19:42:59.925Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T19:43:06.221Z] [INFO] 🤖 AI response sent to conversation 7
+[2025-06-24T19:43:21.409Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T19:43:21.409Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T19:43:21.410Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T19:46:29.430Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T19:46:30.590Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T19:46:30.592Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T19:46:31.003Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T19:46:34.881Z] [INFO] 🤖 AI response sent to conversation 7
+[2025-06-24T19:47:00.597Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T19:47:00.598Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T19:47:00.598Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T19:48:44.525Z] [INFO] File hash calculated: 4f203765... for bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T19:48:44.558Z] [ERROR] Error uploading file to conversation 7: 
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1118:18)
+    at afterConnectMultiple (node:net:1685:7)
+[2025-06-24T19:49:16.442Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-24T19:49:16.829Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T19:49:16.842Z] [INFO] ✅ Socket 8amVEMSrDagy4Ir2AAAK authenticated for user demo (ID: 1)
+[2025-06-24T19:49:16.843Z] [INFO] 🔗 User demo (1) connected with socket 8amVEMSrDagy4Ir2AAAK
+[2025-06-24T19:49:16.843Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T19:49:16.892Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T19:49:16.893Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T19:49:16.900Z] [INFO] Loaded 51 messages for conversation 7 by user 1
+[2025-06-24T19:49:16.902Z] [INFO] Loaded 0 files for conversation 7 by user 1
+[2025-06-24T19:49:31.004Z] [INFO] File hash calculated: 4f203765... for bao-cao-thuong-nien-hpg-2024.pdf
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1118:18)
+    at afterConnectMultiple (node:net:1685:7)
+[2025-06-24T19:49:31.037Z] [ERROR] Error uploading file to conversation 7: 
+[2025-06-24T19:50:48.478Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T19:50:48.488Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-24T19:50:48.527Z] [INFO] Node.js Server is running on port 3000
+[2025-06-24T19:50:48.549Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-06-24T19:50:48.563Z] [INFO] ✅ Socket OoOAmN8OPfsoDhBoAAAB authenticated for user demo (ID: 1)
+[2025-06-24T19:50:48.564Z] [INFO] 🔗 User demo (1) connected with socket OoOAmN8OPfsoDhBoAAAB
+[2025-06-24T19:50:48.565Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T19:50:48.565Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T19:50:48.566Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:04:45.611Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:04:45.614Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:04:45.638Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:04:45.651Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:04:45.652Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:04:45.652Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:04:45.670Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:05:09.299Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:05:09.303Z] [INFO] ✅ Socket G-pcNBoTNe1kftJAAAAC authenticated for user demo (ID: 1)
+[2025-06-24T20:05:09.305Z] [INFO] 🔗 User demo (1) connected with socket G-pcNBoTNe1kftJAAAAC
+[2025-06-24T20:05:09.323Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:05:09.364Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:05:09.367Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:05:09.386Z] [INFO] Loaded 0 files for conversation 7 by user 1
+[2025-06-24T20:05:09.388Z] [INFO] Loaded 51 messages for conversation 7 by user 1
+[2025-06-24T20:05:17.560Z] [INFO] File hash calculated: 4f203765... for bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:05:17.752Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_7_1750795517562.pdf
+[2025-06-24T20:05:17.759Z] [INFO] File uploaded successfully to conversation 7 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:05:17.763Z] [INFO] 📁 File uploaded by demo to conversation 7: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:05:17.768Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:05:34.072Z] [INFO] Conversation 8 created for user 1
+[2025-06-24T20:05:34.077Z] [INFO] Loaded 2 conversations for user 1
+[2025-06-24T20:05:34.098Z] [INFO] 👋 User demo left conversation 7
+[2025-06-24T20:05:34.099Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-24T20:05:34.100Z] [INFO] 👥 User demo joined conversation 8
+[2025-06-24T20:05:34.101Z] [INFO] 👥 Sent online users list for conversation 8: 1 users
+[2025-06-24T20:05:34.124Z] [INFO] Loaded 0 messages for conversation 8 by user 1
+[2025-06-24T20:05:34.125Z] [INFO] Loaded 0 files for conversation 8 by user 1
+[2025-06-24T20:05:35.999Z] [INFO] 👋 User demo left conversation 8
+[2025-06-24T20:05:36.000Z] [INFO] 👥 Sent online users list for conversation 8: 0 users
+[2025-06-24T20:05:36.002Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:05:36.003Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:05:36.006Z] [INFO] Loaded 51 messages for conversation 7 by user 1
+[2025-06-24T20:05:36.007Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:05:37.840Z] [INFO] 👋 User demo left conversation 7
+[2025-06-24T20:05:37.841Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-24T20:05:37.844Z] [INFO] 👥 User demo joined conversation 8
+[2025-06-24T20:05:37.845Z] [INFO] 👥 Sent online users list for conversation 8: 1 users
+[2025-06-24T20:05:37.846Z] [INFO] Loaded 0 messages for conversation 8 by user 1
+[2025-06-24T20:05:37.847Z] [INFO] Loaded 0 files for conversation 8 by user 1
+[2025-06-24T20:05:39.482Z] [INFO] 👋 User demo left conversation 8
+[2025-06-24T20:05:39.482Z] [INFO] 👥 Sent online users list for conversation 8: 0 users
+[2025-06-24T20:05:39.484Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:05:39.485Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:05:39.487Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:05:39.488Z] [INFO] Loaded 51 messages for conversation 7 by user 1
+[2025-06-24T20:05:40.941Z] [INFO] 👋 User demo left conversation 7
+[2025-06-24T20:05:40.942Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-24T20:05:40.944Z] [INFO] 👥 User demo joined conversation 8
+[2025-06-24T20:05:40.945Z] [INFO] 👥 Sent online users list for conversation 8: 1 users
+[2025-06-24T20:05:40.954Z] [INFO] Loaded 0 messages for conversation 8 by user 1
+[2025-06-24T20:05:40.955Z] [INFO] Loaded 0 files for conversation 8 by user 1
+[2025-06-24T20:05:42.309Z] [INFO] Conversation 8 deleted by user 1
+[2025-06-24T20:05:42.316Z] [INFO] 👥 Sent online users list for conversation 8: 0 users
+[2025-06-24T20:05:42.315Z] [INFO] 👋 User demo left conversation 8
+[2025-06-24T20:05:42.318Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:05:42.318Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:05:42.322Z] [INFO] Loaded 51 messages for conversation 7 by user 1
+[2025-06-24T20:05:42.323Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:13:37.533Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:13:37.538Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-06-24T20:13:37.562Z] [INFO] Node.js Server is running on port 3000
+[2025-06-24T20:13:37.570Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:13:37.570Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:13:37.570Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:13:37.589Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:13:38.632Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:13:38.635Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:13:38.656Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:13:38.664Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:13:38.664Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:13:38.664Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:13:38.674Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:13:39.210Z] [INFO] ✅ Socket MMKWcenS_UCCNYQGAAAB authenticated for user demo (ID: 1)
+[2025-06-24T20:13:39.211Z] [INFO] 🔗 User demo (1) connected with socket MMKWcenS_UCCNYQGAAAB
+[2025-06-24T20:13:49.099Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:13:49.103Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:13:49.124Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:13:49.131Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:13:49.131Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:13:49.131Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:13:49.143Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:13:50.244Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:13:50.247Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:13:50.268Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:13:50.273Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:13:50.274Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:13:50.274Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:13:50.283Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:13:50.474Z] [INFO] ✅ Socket P55gzE-asQmRfYMGAAAB authenticated for user demo (ID: 1)
+[2025-06-24T20:13:50.475Z] [INFO] 🔗 User demo (1) connected with socket P55gzE-asQmRfYMGAAAB
+[2025-06-24T20:14:08.278Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:14:08.283Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:14:08.305Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:14:08.312Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:14:08.313Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:14:08.313Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:14:08.324Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:14:09.307Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:14:09.312Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:14:09.343Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:14:09.354Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:14:09.354Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:14:09.354Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:14:09.363Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:14:10.205Z] [INFO] ✅ Socket lSPt2J0okhfc2ZUSAAAB authenticated for user demo (ID: 1)
+[2025-06-24T20:14:10.206Z] [INFO] 🔗 User demo (1) connected with socket lSPt2J0okhfc2ZUSAAAB
+[2025-06-24T20:24:11.123Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:24:11.128Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:24:11.157Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:24:11.171Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:24:11.172Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:24:11.172Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:24:11.194Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:24:15.269Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:24:15.273Z] [INFO] ✅ Socket jjp4A65b9uNg53uQAAAC authenticated for user demo (ID: 1)
+[2025-06-24T20:24:15.275Z] [INFO] 🔗 User demo (1) connected with socket jjp4A65b9uNg53uQAAAC
+[2025-06-24T20:24:15.283Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:24:15.360Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:24:15.364Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:24:15.373Z] [INFO] Loaded 51 messages for conversation 7 by user 1
+[2025-06-24T20:24:15.375Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:24:23.214Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T20:24:24.166Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T20:24:24.170Z] [ERROR] Python AI service connection error: 
+[2025-06-24T20:24:24.171Z] [ERROR] AI service error for conversation 7: AI service connection error
+[2025-06-24T20:24:24.172Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T20:24:24.858Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T20:25:43.823Z] [INFO] 🔌 WebSocket server initialized
+[2025-06-24T20:25:43.820Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-06-24T20:25:43.843Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-06-24T20:25:43.850Z] [INFO] Hash column already exists in uploaded_files table
+[2025-06-24T20:25:43.850Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-06-24T20:25:43.851Z] [INFO] SQLite database initialized successfully.
+[2025-06-24T20:25:43.865Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-06-24T20:25:58.337Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:25:58.347Z] [INFO] ✅ Socket svws_dem3QiDYh1xAAAC authenticated for user demo (ID: 1)
+[2025-06-24T20:25:58.348Z] [INFO] 🔗 User demo (1) connected with socket svws_dem3QiDYh1xAAAC
+[2025-06-24T20:25:58.351Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:25:58.360Z] [INFO] Loaded 52 messages for conversation 7 by user 1
+[2025-06-24T20:25:58.362Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:26:04.496Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-24T20:26:04.798Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:26:04.805Z] [INFO] ✅ Socket k5HXh4N4tfYjqEXoAAAF authenticated for user demo (ID: 1)
+[2025-06-24T20:26:04.806Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:26:04.805Z] [INFO] 🔗 User demo (1) connected with socket k5HXh4N4tfYjqEXoAAAF
+[2025-06-24T20:26:04.860Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:26:04.862Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:26:04.867Z] [INFO] Loaded 52 messages for conversation 7 by user 1
+[2025-06-24T20:26:04.869Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:29:39.917Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-24T20:29:40.765Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:29:40.771Z] [INFO] ✅ Socket DGRh_9B1Wt2mqhKKAAAI authenticated for user demo (ID: 1)
+[2025-06-24T20:29:40.773Z] [INFO] 🔗 User demo (1) connected with socket DGRh_9B1Wt2mqhKKAAAI
+[2025-06-24T20:29:40.792Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:29:40.840Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:29:40.843Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:29:40.855Z] [INFO] Loaded 52 messages for conversation 7 by user 1
+[2025-06-24T20:29:40.859Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:31:33.647Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-24T20:31:33.885Z] [INFO] 📤 Message sent by demo to conversation 7
+[2025-06-24T20:31:33.893Z] [INFO] 🔗 Connected to Python AI service for conversation 7
+[2025-06-24T20:31:34.646Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-24T20:31:53.386Z] [INFO] 🤖 AI response sent to conversation 7
+[2025-06-24T20:32:03.889Z] [ERROR] ⏰ Python AI service timeout for conversation 7
+[2025-06-24T20:32:03.890Z] [ERROR] AI service error for conversation 7: AI service timeout
+[2025-06-24T20:32:03.890Z] [INFO] 🔌 Python AI service connection closed for conversation 7
+[2025-06-24T20:36:05.148Z] [INFO] User  logged out successfully
+[2025-06-24T20:36:05.210Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-24T20:36:10.591Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-24T20:36:10.622Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:36:10.625Z] [INFO] ✅ Socket oxNNaxstWaNuI4VnAAAL authenticated for user demo (ID: 1)
+[2025-06-24T20:36:10.626Z] [INFO] 🔗 User demo (1) connected with socket oxNNaxstWaNuI4VnAAAL
+[2025-06-24T20:36:10.627Z] [INFO] Loaded 1 conversations for user 1
+[2025-06-24T20:36:10.637Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-24T20:36:10.638Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-24T20:36:10.643Z] [INFO] Loaded 54 messages for conversation 7 by user 1
+[2025-06-24T20:36:10.646Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:36:12.850Z] [INFO] PDF deleted from data folder: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_7_1750795517562.pdf
+[2025-06-24T20:36:12.856Z] [INFO] File 22 deleted from conversation 7 by user 1
+[2025-06-24T20:36:12.862Z] [INFO] Loaded 0 files for conversation 7 by user 1
+[2025-06-24T20:36:21.053Z] [INFO] File hash calculated: 4f203765... for bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:36:21.306Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_7_1750797381053.pdf
+[2025-06-24T20:36:21.313Z] [INFO] File uploaded successfully to conversation 7 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:36:21.317Z] [INFO] 📁 File uploaded by demo to conversation 7: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:36:21.321Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:41:52.651Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\chatbot\chatbot\mcp-server\data\1_7_1750797381053.pdf'
+[2025-06-24T20:41:52.657Z] [INFO] File 23 deleted from conversation 7 by user 1
+[2025-06-24T20:41:52.665Z] [INFO] Loaded 0 files for conversation 7 by user 1
+[2025-06-24T20:41:57.586Z] [INFO] File hash calculated: 4f203765... for bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:41:57.744Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_7_1750797717587.pdf
+[2025-06-24T20:41:57.755Z] [INFO] File uploaded successfully to conversation 7 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:41:57.760Z] [INFO] 📁 File uploaded by demo to conversation 7: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:41:57.766Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-24T20:46:08.904Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'C:\laragon\www\chatbot\chatbot\mcp-server\data\1_7_1750797717587.pdf'
+[2025-06-24T20:46:08.909Z] [INFO] File 24 deleted from conversation 7 by user 1
+[2025-06-24T20:46:08.915Z] [INFO] Loaded 0 files for conversation 7 by user 1
+[2025-06-24T20:46:17.743Z] [INFO] File hash calculated: 4f203765... for bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:46:18.188Z] [INFO] PDF saved to data folder for RAG processing: C:\laragon\www\chatbot\chatbot\mcp-server\data\1_7_1750797977744.pdf
+[2025-06-24T20:46:18.252Z] [INFO] File uploaded successfully to conversation 7 by user 1: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:46:18.255Z] [INFO] 📁 File uploaded by demo to conversation 7: bao-cao-thuong-nien-hpg-2024.pdf
+[2025-06-24T20:46:18.260Z] [INFO] Loaded 1 files for conversation 7 by user 1

@@ -694,3 +694,98 @@ RuntimeError: Event loop is closed
 2025-06-24 18:31:51,546 - __main__ - INFO - Sent response to ('127.0.0.1', 51144): success
 2025-06-24 18:32:08,187 - __main__ - INFO - Client ('127.0.0.1', 51144) closed connection
 2025-06-24 18:32:08,188 - __main__ - INFO - Client ('127.0.0.1', 51144) disconnected
+2025-06-25 02:30:57,431 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-25 02:31:41,275 - __main__ - INFO - New client connected from ('127.0.0.1', 53921)
+2025-06-25 02:31:41,276 - __main__ - INFO - Received request from ('127.0.0.1', 53921): chat
+2025-06-25 02:31:41,278 - __main__ - INFO - Processing message for conversation 7
+2025-06-25 02:31:41,278 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-25 02:31:43,948 - __main__ - INFO - MCP client initialized successfully
+2025-06-25 02:31:43,954 - __main__ - ERROR - Error processing message for conversation 7: 'required'
+2025-06-25 02:31:43,955 - __main__ - INFO - Sent response to ('127.0.0.1', 53921): error
+2025-06-25 02:32:11,277 - __main__ - INFO - Client ('127.0.0.1', 53921) closed connection
+2025-06-25 02:32:11,277 - __main__ - INFO - Client ('127.0.0.1', 53921) disconnected
+2025-06-25 02:35:40,893 - __main__ - INFO - New client connected from ('127.0.0.1', 54011)
+2025-06-25 02:35:40,894 - __main__ - INFO - Received request from ('127.0.0.1', 54011): chat
+2025-06-25 02:35:40,896 - __main__ - INFO - Processing message for conversation 7
+2025-06-25 02:35:40,896 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-25 02:35:44,646 - __main__ - INFO - MCP client initialized successfully
+2025-06-25 02:35:44,652 - __main__ - ERROR - Error processing message for conversation 7: 'required'
+2025-06-25 02:35:44,653 - __main__ - INFO - Sent response to ('127.0.0.1', 54011): error
+2025-06-25 02:36:10,891 - __main__ - INFO - Client ('127.0.0.1', 54011) closed connection
+2025-06-25 02:36:10,892 - __main__ - INFO - Client ('127.0.0.1', 54011) disconnected
+2025-06-25 02:36:58,588 - __main__ - INFO - New client connected from ('127.0.0.1', 54049)
+2025-06-25 02:36:58,589 - __main__ - INFO - Received request from ('127.0.0.1', 54049): chat
+2025-06-25 02:36:58,591 - __main__ - INFO - Processing message for conversation 7
+2025-06-25 02:36:58,592 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-25 02:37:01,591 - __main__ - INFO - MCP client initialized successfully
+2025-06-25 02:37:01,597 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-25 02:37:04,015 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:37:04,021 - __main__ - INFO - Executing tool call 1/1: rag_query
+2025-06-25 02:37:04,720 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-25 02:37:16,008 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:37:16,010 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-25 02:37:16,011 - __main__ - INFO - Sent response to ('127.0.0.1', 54049): success
+2025-06-25 02:37:28,587 - __main__ - INFO - Client ('127.0.0.1', 54049) closed connection
+2025-06-25 02:37:28,588 - __main__ - INFO - Client ('127.0.0.1', 54049) disconnected
+2025-06-25 02:40:11,015 - __main__ - INFO - New client connected from ('127.0.0.1', 54131)
+2025-06-25 02:40:11,016 - __main__ - INFO - Received request from ('127.0.0.1', 54131): chat
+2025-06-25 02:40:11,017 - __main__ - INFO - Processing message for conversation 7
+2025-06-25 02:40:11,018 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-25 02:40:14,501 - __main__ - INFO - MCP client initialized successfully
+2025-06-25 02:40:14,506 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-25 02:40:16,375 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:40:16,376 - __main__ - INFO - Executing tool call 1/1: rag_query
+2025-06-25 02:40:17,060 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-25 02:40:32,768 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:40:32,769 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-25 02:40:32,770 - __main__ - INFO - Sent response to ('127.0.0.1', 54131): success
+2025-06-25 02:40:41,025 - __main__ - INFO - Client ('127.0.0.1', 54131) closed connection
+2025-06-25 02:40:41,026 - __main__ - INFO - Client ('127.0.0.1', 54131) disconnected
+2025-06-25 02:42:13,119 - __main__ - INFO - Stopping server...
+2025-06-25 02:42:13,119 - __main__ - INFO - AI Socket Server stopped
+2025-06-25 02:42:13,119 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-25 02:42:13,119 - __main__ - INFO - Stopping server...
+2025-06-25 02:42:13,120 - __main__ - INFO - AI Socket Server stopped
+2025-06-25 02:42:19,640 - __main__ - INFO - AI Socket Server started on localhost:8888
+2025-06-25 02:42:29,916 - __main__ - INFO - New client connected from ('127.0.0.1', 54201)
+2025-06-25 02:42:29,917 - __main__ - INFO - Received request from ('127.0.0.1', 54201): chat
+2025-06-25 02:42:29,919 - __main__ - INFO - Processing message for conversation 7
+2025-06-25 02:42:29,919 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-25 02:42:32,955 - __main__ - INFO - MCP client initialized successfully
+2025-06-25 02:42:32,961 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-25 02:42:34,945 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:42:34,948 - __main__ - INFO - Executing tool call 1/1: sql+db://sql/list_databases
+2025-06-25 02:42:34,948 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-25 02:42:35,106 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-25 02:42:43,014 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:42:43,016 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-25 02:42:43,017 - __main__ - INFO - Sent response to ('127.0.0.1', 54201): success
+2025-06-25 02:42:51,398 - __main__ - INFO - New client connected from ('127.0.0.1', 54218)
+2025-06-25 02:42:51,398 - __main__ - INFO - Received request from ('127.0.0.1', 54218): chat
+2025-06-25 02:42:51,399 - __main__ - INFO - Processing message for conversation 7
+2025-06-25 02:42:51,399 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-25 02:42:54,237 - __main__ - INFO - MCP client initialized successfully
+2025-06-25 02:42:54,242 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-25 02:42:56,045 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:42:56,046 - __main__ - INFO - Executing tool call 1/1: rag_query
+2025-06-25 02:42:56,046 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'hoaphat2024 doanh thu các nãm'}
+2025-06-25 02:42:56,687 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-25 02:42:59,925 - __main__ - INFO - Client ('127.0.0.1', 54201) closed connection
+2025-06-25 02:42:59,926 - __main__ - INFO - Client ('127.0.0.1', 54201) disconnected
+2025-06-25 02:43:06,206 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:43:06,207 - __main__ - INFO - Generated answer after tool call for conversation 7
+2025-06-25 02:43:06,208 - __main__ - INFO - Sent response to ('127.0.0.1', 54218): success
+2025-06-25 02:43:21,410 - __main__ - INFO - Client ('127.0.0.1', 54218) closed connection
+2025-06-25 02:43:21,410 - __main__ - INFO - Client ('127.0.0.1', 54218) disconnected
+2025-06-25 02:46:30,594 - __main__ - INFO - New client connected from ('127.0.0.1', 54278)
+2025-06-25 02:46:30,596 - __main__ - INFO - Received request from ('127.0.0.1', 54278): chat
+2025-06-25 02:46:30,598 - __main__ - INFO - Processing message for conversation 7
+2025-06-25 02:46:30,598 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-25 02:46:33,676 - __main__ - INFO - MCP client initialized successfully
+2025-06-25 02:46:33,682 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-25 02:46:34,865 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-25 02:46:34,866 - __main__ - INFO - Generated answer for conversation 7
+2025-06-25 02:46:34,867 - __main__ - INFO - Sent response to ('127.0.0.1', 54278): success
+2025-06-25 02:47:00,597 - __main__ - INFO - Client ('127.0.0.1', 54278) closed connection
+2025-06-25 02:47:00,598 - __main__ - INFO - Client ('127.0.0.1', 54278) disconnected
+2025-06-25 03:28:53,405 - socket_server - INFO - Socket Server started on localhost:8888
