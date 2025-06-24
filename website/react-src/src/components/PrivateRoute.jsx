@@ -8,7 +8,7 @@ const PrivateRoute = () => {
   if (authToken) {
     return <Outlet/>;
   }
-  return <Navigate to="/login" replace />;
+  return <Navigate to="/login" replace />;  
 };
 
 export default PrivateRoute;

@@ -11,7 +11,7 @@ const setupWebSocketChat = () => {
         console.log('A new client connected!');
 
         // Hàm xử lý tin nhắn đến từ client
-        ws.on('message', async function incoming(message) { // <-- Đảm bảo có 'async' ở đây
+        ws.on('message', async function incoming(message) {
             const receivedMessage = message.toString();
             console.log('Received from client: %s', receivedMessage);
 
@@ -37,7 +37,13 @@ const setupWebSocketChat = () => {
                     } else {
                         aiResponseContent = `Dịch vụ AI trả về định dạng không mong muốn: ${JSON.stringify(pythonResponse.data)}`;
                     }
-                } else {
+                } else if (parsedMessage.type === 'file_message' && parsedMessage.file_content) {
+                    const pythonResponse = await axios.post(`${process.env.PYTHON_SERVICE_URL}/file/process`, {
+                        file_content: parsedMessage.file_content // Giả sử file_content là base64 hoặc nội dung file
+                    });
+                    aiResponseContent = `Đã nhận file : ${JSON.stringify(pythonResponse.data)}`
+                }
+                else {
                     aiResponseContent = "Đã nhận được tin nhắn không đúng định dạng hoặc thiếu nội dung.";
                 }
 

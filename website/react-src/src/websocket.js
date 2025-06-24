@@ -16,6 +16,10 @@ const useWebSocket = (url, selectedChatId, setChats) => {
 
     ws.current.onmessage = (event) => {
       try {
+        if(event.data.type === "file_message"){
+          console.log("Received file message from server");
+          return; // Bỏ qua xử lý nếu là tin nhắn file
+        }
         const data = JSON.parse(event.data);
         // ... (logic xử lý tin nhắn)
         // console.log("Received message from server:", data);

@@ -120,9 +120,20 @@ const Chatbox = () => {
   // Đính kèm file (demo)
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setSelectedFile(e.target.files[0]);
+      if(ws.current && ws.current.readyState === WebSocket.OPEN) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          ws.current.send(JSON.stringify({
+            type: "file_message",
+            file_content: event.target.result,
+            filename: file.name,
+          }));
+        };
+        reader.readAsDataURL(file); 
+      }
     }
-  };
+};
 
   const currentChat = chats.find((c) => c.id === selectedChatId);
 
