@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+
 // Cài đặt thư viện icon: npm install lucide-react
 import {
   MessageSquare,
@@ -71,6 +72,10 @@ const Chatbox = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const avatarRef = useRef();
 
+  const [lastUploadedPdf, setLastUploadedPdf] = useState(null);
+  const [uploadedPdfs, setUploadedPdfs] = useState([]);
+  const [showPdfList, setShowPdfList] = useState(false);
+
   const logout = async () => {
     try {
       if (localStorage.getItem("authToken")) {
@@ -86,18 +91,86 @@ const Chatbox = () => {
     }
   };
 
-  // Gửi message (demo)
+  // Gửi message (hỏi AI hoặc hỏi về PDF)
   const handleSend = () => {
     if (!inputMessage.trim()) return;
 
-    // Gửi tin nhắn qua WebSocket
-    if (ws.current && ws.current.readyState === WebSocket.OPEN) {
-      ws.current.send(
-        JSON.stringify({ type: "user_message", content: inputMessage })
-      );
+    // Lấy lịch sử hội thoại hiện tại (user + assistant)
+    const currentChat = chats.find((c) => c.id === selectedChatId);
+    const messages = [];
+    if (currentChat && currentChat.messages.length > 0) {
+      currentChat.messages.forEach((msg) => {
+        messages.push({
+          role: msg.sender === "user" ? "user" : "assistant",
+          content: msg.text,
+        });
+      });
+    }
+    // Thêm message mới của user
+    messages.push({ role: "user", content: inputMessage });
+
+    // Nếu là hội thoại mới (chưa có system message), prepend system message
+    if (!messages.length || messages[0].role !== "system") {
+      messages.unshift({
+        role: "system",
+        content:
+          "Bạn là trợ lý AI, hãy trả lời bằng tiếng Việt, hiểu các tham chiếu như 'đoạn trên', 'ý trước', và chấp nhận viết tắt, sai chính tả của người dùng.",
+      });
     }
 
-    // Cập nhật tin nhắn vào state của chat hiện tại
+    if (lastUploadedPdf) {
+      // Gửi câu hỏi về PDF vừa upload, truyền messages thay vì chỉ question
+      fetch("http://localhost:5000/pdf/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          filename: lastUploadedPdf,
+          messages,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setChats((prevChats) =>
+            prevChats.map((chat) =>
+              chat.id === selectedChatId
+                ? {
+                    ...chat,
+                    messages: [
+                      ...chat.messages,
+                      {
+                        id: Date.now(),
+                        text: inputMessage,
+                        sender: "user",
+                        time: new Date().toLocaleTimeString(),
+                      },
+                      data.answer
+                        ? {
+                            id: Date.now() + 1,
+                            text: data.answer,
+                            sender: "ai",
+                            time: new Date().toLocaleTimeString(),
+                          }
+                        : null,
+                    ].filter(Boolean),
+                  }
+                : chat
+            )
+          );
+          if (data.error) {
+            alert("Lỗi: " + data.error);
+          }
+        })
+        .catch(() => {
+          alert("Lỗi kết nối tới AI Service!");
+        });
+      setInputMessage("");
+      return;
+    }
+
+    // Nếu không có file PDF, gửi như chat bình thường (truyền messages)
+    if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+      ws.current.send(JSON.stringify({ type: "user_message", messages }));
+    }
     setChats((prevChats) =>
       prevChats.map((chat) =>
         chat.id === selectedChatId
@@ -116,29 +189,43 @@ const Chatbox = () => {
           : chat
       )
     );
-    setInputMessage(""); // Xóa nội dung input sau khi gửi
+    setInputMessage("");
   };
 
-  // Đính kèm file (demo)
+  // Đính kèm file (upload PDF qua nút kẹp giấy)
   const handleFileChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      if (ws.current && ws.current.readyState === WebSocket.OPEN) {
-        const file = e.target.files[0];
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          // Lấy phần base64 sau dấu phẩy
-          const base64 = event.target.result.split(",")[1];
-          ws.current.send(
-            JSON.stringify({
-              type: "file_message",
-              file_content: base64,
-              filename: file.name,
-            })
-          );
-        };
-        reader.readAsDataURL(file);
-      }
-    }
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64 = reader.result.split(",")[1];
+      fetch("http://localhost:5000/file/process", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          file_content: base64,
+          filename: file.name, // Đúng tên file gốc
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.status === "success" && data.txt_file) {
+            setLastUploadedPdf(file.name);
+            setUploadedPdfs((prev) =>
+              prev.includes(file.name) ? prev : [...prev, file.name]
+            );
+            alert(
+              `Đã upload file PDF: ${file.name}. Bạn có thể hỏi về nội dung file này!`
+            );
+          } else {
+            alert("Đã nhận file : " + JSON.stringify(data));
+          }
+        })
+        .catch((err) => {
+          alert("Lỗi upload file PDF!");
+        });
+    };
+    reader.readAsDataURL(file);
   };
 
   const currentChat = chats.find((c) => c.id === selectedChatId);
@@ -225,6 +312,20 @@ const Chatbox = () => {
       {/* Main content */}
       <div className="flex-1 flex flex-col h-full min-h-0">
         <div className="flex-1 overflow-y-auto min-h-0 px-0">
+          {/* (Tùy chọn) Hiển thị thông báo nếu có file PDF vừa upload */}
+          {lastUploadedPdf && (
+            <div className="px-4 py-2 text-sm text-blue-700 bg-blue-50 rounded mx-4 my-2">
+              Bạn đang hỏi về file <b>{lastUploadedPdf}</b>. Hãy nhập câu hỏi để
+              hỏi AI về nội dung file này!
+              <button
+                className="ml-2 text-xs text-blue-500 underline"
+                onClick={() => setLastUploadedPdf(null)}
+              >
+                Hủy hỏi về file này
+              </button>
+            </div>
+          )}
+
           {chats.length === 0 || !selectedChatId ? (
             <div className="w-full h-full flex flex-col flex-1 justify-center items-center">
               <p className="text-lg text-gray-500 font-semibold">
@@ -270,6 +371,46 @@ const Chatbox = () => {
         </div>
         {chats.length > 0 && selectedChatId && (
           <div className="w-full">
+            {/* Nút mở danh sách file PDF đã upload */}
+            {uploadedPdfs.length > 0 && (
+              <div className="relative px-4 pb-2">
+                <button
+                  className="flex items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded text-sm border border-gray-300 text-gray-700"
+                  onClick={() => setShowPdfList((v) => !v)}
+                >
+                  <Paperclip size={16} /> Các file đã upload
+                </button>
+                {showPdfList && (
+                  <div className="absolute bottom-full left-4 mb-2 w-64 bg-white border border-gray-200 rounded shadow-lg z-50 animate-fade-in">
+                    <div className="p-2 font-semibold text-gray-700 border-b">
+                      Chọn file PDF để hỏi:
+                    </div>
+                    {uploadedPdfs.map((pdf) => (
+                      <button
+                        key={pdf}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-blue-100 ${
+                          lastUploadedPdf === pdf
+                            ? "bg-blue-50 text-blue-900 font-bold"
+                            : "text-gray-800"
+                        }`}
+                        onClick={() => {
+                          setLastUploadedPdf(pdf);
+                          setShowPdfList(false);
+                        }}
+                      >
+                        {pdf}
+                      </button>
+                    ))}
+                    <button
+                      className="w-full px-4 py-2 text-xs text-gray-500 hover:bg-gray-100 border-t"
+                      onClick={() => setShowPdfList(false)}
+                    >
+                      Đóng
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
             <ChatInput
               message={inputMessage}
               setMessage={setInputMessage}
