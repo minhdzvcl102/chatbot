@@ -63,8 +63,8 @@ const SidebarContent = ({
           className="w-9 h-9 rounded-full object-cover border"
         />
         <div>
-          <div className="font-semibold text-black">ChatGPT</div>
-          <div className="text-xs text-green-600">AI chat</div>
+          <div className="font-semibold text-black">INDA</div>
+          <div className="text-xs text-green-600">Data Analytic chat</div>
         </div>
         <button
           className="ml-auto bg-blue-100 text-blue-600 px-3 py-1 rounded-lg flex items-center gap-1 text-sm font-medium hover:bg-blue-200 transition"

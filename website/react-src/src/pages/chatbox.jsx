@@ -1,4 +1,3 @@
-// components/chatbox.jsx
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -46,7 +45,9 @@ const Chatbox = () => {
   const [uploadError, setUploadError] = useState("");
   const [responseCollapsed, setResponseCollapsed] = useState(false);
   const [currentResponse, setCurrentResponse] = useState(null);
-  const [isGenerating, setIsGenerating] = useState(false);
+
+  // Simplified AI processing state
+  const [isProcessing, setIsProcessing] = useState(false);
   const [lastUserMessage, setLastUserMessage] = useState("");
 
   const serverUrl = APP_WEBSOCKET_URL || "ws://localhost:3000";
@@ -112,26 +113,11 @@ const Chatbox = () => {
       const lastMessage = messages[messages.length - 1];
       if (lastMessage.role === "assistant" || lastMessage.role === "bot") {
         setCurrentResponse(lastMessage);
-        setIsGenerating(false);
+        setIsProcessing(false); // Dừng hiển thị "đang xử lý" khi có AI response
       }
       scrollToBottom();
     }
   }, [messages]);
-
-  useEffect(() => {
-    const isAITyping = typingUsers.some(
-      (user) =>
-        user &&
-        (user.role === "assistant" ||
-          user.role === "bot" ||
-          user.username === "AI")
-    );
-    if (isAITyping && !isGenerating) {
-      setIsGenerating(true);
-    } else if (!isAITyping && isGenerating) {
-      setIsGenerating(false);
-    }
-  }, [typingUsers, isGenerating]);
 
   useEffect(() => {
     if (selectedConversationId) {
@@ -342,12 +328,12 @@ const Chatbox = () => {
   const handleRegenerateResponse = async () => {
     if (lastUserMessage && selectedConversationId) {
       try {
-        setIsGenerating(true);
+        setIsProcessing(true); // Bắt đầu hiển thị "đang xử lý"
         setCurrentResponse(null);
         sendWebSocketMessage(selectedConversationId, lastUserMessage);
       } catch (error) {
         console.error("❌ Error regenerating response:", error);
-        setIsGenerating(false);
+        setIsProcessing(false);
       }
     }
   };
@@ -373,7 +359,7 @@ const Chatbox = () => {
 
     try {
       setSendingMessage(true);
-      setIsGenerating(true);
+      setIsProcessing(true); // Bắt đầu hiển thị "đang xử lý"
       setLastUserMessage(message);
       console.log(
         "📤 Sending message in conversation ID:",
@@ -384,7 +370,7 @@ const Chatbox = () => {
       setMessage("");
     } catch (error) {
       console.error("❌ Error sending message:", error);
-      setIsGenerating(false);
+      setIsProcessing(false);
     } finally {
       setSendingMessage(false);
     }
@@ -443,6 +429,18 @@ const Chatbox = () => {
   };
 
   const userMessages = messages.filter((msg) => msg.role === "user");
+
+  // Tạo danh sách messages để hiển thị (bao gồm cả message "đang xử lý")
+  const displayMessages = [...messages];
+  if (isProcessing) {
+    displayMessages.push({
+      id: "processing",
+      role: "assistant",
+      content: "Đang xử lý câu hỏi...",
+      createdAt: new Date().toISOString(),
+      isProcessing: true,
+    });
+  }
 
   if (loading) {
     return (
@@ -555,7 +553,7 @@ const Chatbox = () => {
             </div>
           ) : (
             <div className="w-full max-w-4xl mx-auto py-4">
-              {messages.length === 0 ? (
+              {displayMessages.length === 0 ? (
                 <div className="w-full h-full flex flex-col flex-1 gap-4 justify-center items-center py-20">
                   <h1 className="text-3xl font-bold text-black mb-2 text-center">
                     ChatGPT 3.5
@@ -566,8 +564,8 @@ const Chatbox = () => {
                 </div>
               ) : (
                 <div className="space-y-6">
-                  {/* Hiển thị TẤT CẢ tin nhắn theo thứ tự thời gian */}
-                  {messages
+                  {/* Hiển thị TẤT CẢ tin nhắn bao gồm message "đang xử lý" */}
+                  {displayMessages
                     .sort(
                       (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
                     )
@@ -600,7 +598,7 @@ const Chatbox = () => {
                             </div>
                           </div>
                         ) : (
-                          // Tin nhắn của AI/Bot
+                          // Tin nhắn của AI/Bot (bao gồm message "đang xử lý")
                           <div className="flex max-w-[80%] gap-3">
                             <div className="flex-shrink-0">
                               <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
@@ -608,72 +606,40 @@ const Chatbox = () => {
                               </div>
                             </div>
                             <div className="flex flex-col">
-                              <div className="px-4 py-3 rounded-2xl bg-gray-100 text-gray-800 rounded-bl-md">
-                                <div className="text-sm leading-relaxed whitespace-pre-wrap">
+                              <div
+                                className={`px-4 py-3 rounded-2xl rounded-bl-md ${
+                                  msg.isProcessing
+                                    ? "bg-gray-50 text-gray-600"
+                                    : "bg-gray-100 text-gray-800"
+                                }`}
+                              >
+                                <div className="text-sm leading-relaxed whitespace-pre-wrap flex items-center gap-2">
+                                  {msg.isProcessing && (
+                                    <div className="flex items-center gap-1">
+                                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+                                      <div
+                                        className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
+                                        style={{ animationDelay: "0.1s" }}
+                                      ></div>
+                                      <div
+                                        className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
+                                        style={{ animationDelay: "0.2s" }}
+                                      ></div>
+                                    </div>
+                                  )}
                                   {msg.content}
                                 </div>
                               </div>
-                              <span className="text-xs text-gray-500 mt-1 px-1">
-                                {formatMessageTime(msg.createdAt)}
-                              </span>
+                              {!msg.isProcessing && (
+                                <span className="text-xs text-gray-500 mt-1 px-1">
+                                  {formatMessageTime(msg.createdAt)}
+                                </span>
+                              )}
                             </div>
                           </div>
                         )}
                       </div>
                     ))}
-
-                  {/* Hiển thị tin nhắn đang gửi */}
-                  {sendingMessage && (
-                    <div className="flex justify-end">
-                      <div className="flex max-w-[80%] flex-row-reverse gap-3">
-                        <div className="flex-shrink-0">
-                          <img
-                            src="https://randomuser.me/api/portraits/men/75.jpg"
-                            alt="User"
-                            className="w-8 h-8 rounded-full object-cover"
-                          />
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <div className="px-4 py-3 rounded-2xl bg-blue-600 text-white rounded-br-md opacity-70">
-                            <p className="text-sm">Đang gửi...</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Hiển thị AI đang typing */}
-                  {isGenerating && (
-                    <div className="flex justify-start">
-                      <div className="flex max-w-[80%] gap-3">
-                        <div className="flex-shrink-0">
-                          <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
-                            <Bot size={16} className="text-white" />
-                          </div>
-                        </div>
-                        <div className="flex flex-col">
-                          <div className="px-4 py-3 rounded-2xl bg-gray-100 text-gray-800 rounded-bl-md">
-                            <div className="flex items-center gap-2">
-                              <div className="flex items-center gap-1">
-                                <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
-                                <div
-                                  className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"
-                                  style={{ animationDelay: "0.1s" }}
-                                ></div>
-                                <div
-                                  className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"
-                                  style={{ animationDelay: "0.2s" }}
-                                ></div>
-                              </div>
-                              <span className="text-sm text-gray-600">
-                                AI đang trả lời...
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
 
                   <div ref={messagesEndRef} />
                 </div>
@@ -692,6 +658,7 @@ const Chatbox = () => {
               fileInputRef={fileInputRef}
               selectedFile={selectedFile}
               disabled={sendingMessage}
+              isProcessing={isProcessing}
               onChange={handleTyping}
               onBlur={handleStopTyping}
             />
@@ -705,7 +672,7 @@ const Chatbox = () => {
       >
         <ResponsePanel
           currentResponse={currentResponse}
-          isGenerating={isGenerating}
+          isGenerating={isProcessing}
           chartUrl={chartUrl}
           onCopyResponse={handleCopyResponse}
           onDownloadResponse={handleDownloadResponse}

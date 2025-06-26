@@ -4773,3 +4773,708 @@ http://localhost:3000
 [2025-06-26T04:01:51.997Z] [ERROR] ⏰ Python AI service timeout for conversation 9
 [2025-06-26T04:01:51.997Z] [ERROR] AI service error for conversation 9: AI service timeout
 [2025-06-26T04:01:51.998Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T04:17:09.352Z] [INFO] Conversation 10 created for user 1
+[2025-06-26T04:17:09.384Z] [INFO] Loaded 3 conversations for user 1
+[2025-06-26T04:17:09.425Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:17:09.426Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:17:09.429Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:17:09.430Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:17:09.466Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:17:09.467Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:17:47.570Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:17:47.572Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:17:47.576Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:17:47.577Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:17:47.582Z] [INFO] Loaded 37 messages for conversation 9 by user 1
+[2025-06-26T04:17:47.583Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:18:21.500Z] [INFO] Conversation 11 created for user 1
+[2025-06-26T04:18:21.508Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:18:21.541Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:18:21.542Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:18:21.544Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:18:21.545Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:18:21.575Z] [INFO] Loaded 0 messages for conversation 11 by user 1
+[2025-06-26T04:18:21.576Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:18:23.792Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T04:18:29.279Z] [INFO] 📤 Message sent by demo to conversation 11
+[2025-06-26T04:18:29.287Z] [INFO] 🔗 Connected to Python AI service for conversation 11
+[2025-06-26T04:18:30.080Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T04:18:42.942Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:18:42.943Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:18:42.945Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:18:42.946Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:18:42.956Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:18:42.958Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:18:43.860Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:18:43.861Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:18:43.863Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:18:43.864Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:18:43.868Z] [INFO] Loaded 1 messages for conversation 11 by user 1
+[2025-06-26T04:18:43.869Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:18:48.214Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:18:48.213Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:18:48.215Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:18:48.215Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:18:48.223Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:18:48.224Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:18:55.670Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:18:55.671Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:18:55.672Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:18:55.672Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:18:55.679Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:18:55.680Z] [INFO] Loaded 1 messages for conversation 11 by user 1
+[2025-06-26T04:18:56.497Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:18:56.497Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:18:56.498Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:18:56.499Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:18:56.505Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:18:56.506Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:18:57.118Z] [INFO] 🤖 AI response sent to conversation 11
+[2025-06-26T04:18:57.673Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:18:57.672Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:18:57.678Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:18:57.679Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:18:57.685Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:18:57.686Z] [INFO] Loaded 37 messages for conversation 9 by user 1
+[2025-06-26T04:19:00.895Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:19:05.709Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T04:19:05.712Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T04:19:05.941Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:19:53.699Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T04:19:59.281Z] [ERROR] ⏰ Python AI service timeout for conversation 11
+[2025-06-26T04:19:59.282Z] [ERROR] AI service error for conversation 11: AI service timeout
+[2025-06-26T04:19:59.282Z] [INFO] 🔌 Python AI service connection closed for conversation 11
+[2025-06-26T04:20:15.678Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:20:15.679Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:20:15.698Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:20:15.699Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:20:16.932Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:20:16.933Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:20:16.934Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:20:16.934Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:20:17.776Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:20:17.777Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:20:17.779Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:20:17.779Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:20:18.488Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:20:18.489Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:20:18.491Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:20:18.490Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:20:18.973Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:20:18.974Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:20:18.974Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:20:18.975Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:20:29.914Z] [INFO] User  logged out successfully
+[2025-06-26T04:20:29.935Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-26T04:20:35.689Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-26T04:20:35.719Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T04:20:35.720Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T04:20:35.727Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T04:20:35.730Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:20:35.740Z] [INFO] ✅ Socket BPRgiuc_fqUYNQQWAAAK authenticated for user demo (ID: 1)
+[2025-06-26T04:20:35.741Z] [INFO] 🔗 User demo (1) connected with socket BPRgiuc_fqUYNQQWAAAK
+[2025-06-26T04:20:35.742Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:20:35.756Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:20:35.755Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:20:35.759Z] [INFO] Loaded 2 messages for conversation 11 by user 1
+[2025-06-26T04:20:35.760Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:20:37.060Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:20:37.060Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:20:37.061Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:20:37.062Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:20:37.069Z] [INFO] Loaded 39 messages for conversation 9 by user 1
+[2025-06-26T04:20:37.071Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:20:38.202Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:20:38.203Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:20:38.204Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:20:38.204Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:20:38.213Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T04:20:38.214Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T04:20:39.534Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:20:39.535Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:20:39.536Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:20:39.537Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:20:39.540Z] [INFO] Loaded 2 messages for conversation 11 by user 1
+[2025-06-26T04:20:39.541Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:20:40.239Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:20:40.240Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:20:40.241Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:20:40.242Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:20:40.247Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T04:20:40.248Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T04:20:45.738Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:20:45.739Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:20:45.741Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:20:45.741Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:20:45.749Z] [INFO] Loaded 2 messages for conversation 11 by user 1
+[2025-06-26T04:20:45.750Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:21:02.819Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:21:02.820Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:21:02.821Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:21:02.821Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:21:02.833Z] [INFO] Loaded 39 messages for conversation 9 by user 1
+[2025-06-26T04:21:02.836Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:21:28.451Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:21:28.452Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:21:28.453Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:21:28.454Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:21:28.461Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:21:28.460Z] [INFO] Loaded 2 messages for conversation 11 by user 1
+[2025-06-26T04:27:03.117Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T04:27:13.066Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T04:27:19.207Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T04:27:22.504Z] [INFO] 📤 Message sent by demo to conversation 11
+[2025-06-26T04:27:22.510Z] [INFO] 🔗 Connected to Python AI service for conversation 11
+[2025-06-26T04:27:23.352Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T04:27:44.610Z] [INFO] 🤖 AI response sent to conversation 11
+[2025-06-26T04:28:52.519Z] [ERROR] ⏰ Python AI service timeout for conversation 11
+[2025-06-26T04:28:52.520Z] [ERROR] AI service error for conversation 11: AI service timeout
+[2025-06-26T04:28:52.520Z] [INFO] 🔌 Python AI service connection closed for conversation 11
+[2025-06-26T04:29:27.198Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:29:27.199Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:29:27.200Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:29:27.201Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:29:27.207Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:29:27.207Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:29:27.944Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:29:27.944Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:29:27.946Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:29:27.947Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:29:27.962Z] [INFO] Loaded 39 messages for conversation 9 by user 1
+[2025-06-26T04:29:27.963Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:29:29.104Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:29:29.105Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:29:29.106Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:29:29.107Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:29:29.126Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T04:29:29.127Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T04:29:30.989Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:29:30.988Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:29:30.990Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:29:30.990Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:29:30.996Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:29:30.997Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:31:41.924Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:31:41.925Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:31:41.940Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:31:41.941Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:31:41.947Z] [INFO] Loaded 39 messages for conversation 9 by user 1
+[2025-06-26T04:31:41.949Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:37:23.512Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:37:23.518Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:37:23.540Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:37:23.540Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:37:23.542Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:37:23.543Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:41:54.034Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:41:54.041Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:41:54.055Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:41:54.072Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:41:54.100Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:41:54.102Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:42:06.023Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:42:06.023Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:42:06.025Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:42:06.025Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:42:06.030Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:42:06.031Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:42:17.481Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:42:17.482Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:42:17.537Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:42:17.537Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:42:17.565Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:42:17.566Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:42:18.289Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:42:18.290Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:42:18.342Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:42:18.343Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:42:18.401Z] [INFO] Loaded 39 messages for conversation 9 by user 1
+[2025-06-26T04:42:18.402Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:42:20.961Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:42:21.966Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T04:42:21.975Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T04:42:22.663Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:42:34.395Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T04:42:34.561Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-26T04:42:35.012Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:42:35.018Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:42:35.052Z] [INFO] ✅ Socket eqFYknreLn6j_6j3AAAN authenticated for user demo (ID: 1)
+[2025-06-26T04:42:35.056Z] [INFO] 🔗 User demo (1) connected with socket eqFYknreLn6j_6j3AAAN
+[2025-06-26T04:42:35.081Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:42:35.082Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:42:35.095Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:42:35.096Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:42:39.937Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:42:39.938Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:42:39.938Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:42:39.939Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:42:39.944Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:42:39.945Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:42:40.490Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:42:40.491Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:42:40.493Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:42:40.494Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:42:40.496Z] [INFO] Loaded 41 messages for conversation 9 by user 1
+[2025-06-26T04:42:40.500Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:42:43.144Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:42:43.542Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T04:42:43.544Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T04:42:44.273Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:42:50.165Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T04:43:51.975Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T04:43:51.976Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T04:43:51.977Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T04:44:13.557Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T04:44:13.557Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T04:44:13.558Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T04:45:19.054Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:45:19.057Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:45:19.068Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:45:19.068Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:45:19.085Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:45:19.087Z] [INFO] Loaded 43 messages for conversation 9 by user 1
+[2025-06-26T04:46:00.042Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:46:00.043Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:46:00.047Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:46:00.053Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:46:00.058Z] [INFO] Loaded 43 messages for conversation 9 by user 1
+[2025-06-26T04:46:00.059Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:46:01.044Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:46:01.044Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:46:01.050Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:46:01.050Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:46:01.052Z] [INFO] Loaded 43 messages for conversation 9 by user 1
+[2025-06-26T04:46:01.054Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:46:04.115Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:46:04.909Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T04:46:04.913Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T04:46:05.655Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:46:08.402Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:46:08.788Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T04:46:08.790Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T04:46:09.474Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:46:11.785Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T04:46:27.537Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T04:46:44.044Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:46:44.044Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:46:44.048Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:46:44.049Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:46:44.052Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:46:44.054Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:46:45.021Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:46:45.022Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:46:45.026Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:46:45.026Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:46:45.028Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:46:45.029Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:46:56.878Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:47:00.481Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:47:01.264Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:47:04.683Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:47:04.710Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:47:11.805Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:47:12.559Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:47:12.560Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:47:12.561Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:47:12.562Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:47:12.568Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:47:12.569Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:47:13.783Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:47:13.784Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:47:13.786Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:47:13.787Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:47:13.792Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T04:47:13.796Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T04:47:16.194Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:47:16.195Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:47:16.196Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:47:16.197Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:47:16.202Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:47:16.203Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:47:16.888Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:47:16.889Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:47:16.890Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:47:16.890Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:47:16.893Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:47:16.894Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:47:17.490Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:47:17.491Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:47:17.491Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:47:17.492Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:47:17.499Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:47:17.500Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:47:34.917Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T04:47:34.917Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T04:47:34.918Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T04:47:38.797Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T04:47:38.797Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T04:47:38.797Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T04:51:20.649Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T04:51:21.617Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T04:51:21.707Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:51:21.708Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:51:21.748Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:51:21.750Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:51:21.750Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:51:21.752Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:51:23.111Z] [INFO] ⌨️ User demo started typing in conversation 10
+[2025-06-26T04:51:24.253Z] [INFO] ⌨️ User demo stopped typing in conversation 10
+[2025-06-26T04:51:24.330Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:51:24.331Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:51:24.332Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:51:24.332Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:51:24.340Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:51:24.341Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:51:24.839Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:51:24.844Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:51:24.847Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:51:24.848Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:51:24.853Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T04:51:24.856Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T04:51:25.927Z] [INFO] ⌨️ User demo started typing in conversation 7
+[2025-06-26T04:51:26.930Z] [INFO] ⌨️ User demo stopped typing in conversation 7
+[2025-06-26T04:52:57.457Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:52:57.457Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:52:57.458Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:52:57.459Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:52:57.468Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:52:57.469Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:53:00.043Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:53:00.043Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:53:00.044Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:53:00.045Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:53:00.051Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:53:00.052Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:53:02.549Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:53:02.550Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:53:02.551Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:53:02.552Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:53:02.556Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:53:02.556Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:53:06.949Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:53:06.951Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:53:06.953Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:53:06.954Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:53:06.959Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T04:53:06.960Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T04:53:16.023Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:53:16.024Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:53:16.026Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:53:16.026Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:53:16.034Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:53:16.035Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:53:17.018Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:53:17.019Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:53:17.020Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:53:17.021Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:53:17.026Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:53:17.027Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:53:17.567Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:53:17.568Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:53:17.569Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:53:17.570Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:53:17.574Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:53:17.574Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:54:00.937Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:54:00.938Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:54:00.941Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T04:54:00.942Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T04:54:00.946Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T04:54:00.947Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T04:54:01.653Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T04:54:01.654Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T04:54:01.654Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:54:01.655Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:54:01.661Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:54:01.662Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:54:02.471Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:54:02.471Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:54:02.472Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:54:02.473Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:54:02.477Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:54:02.478Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T04:54:03.848Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T04:54:03.848Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T04:54:03.849Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T04:54:03.849Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T04:54:03.855Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T04:54:03.856Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T04:54:06.771Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T04:54:06.772Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T04:54:06.773Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:54:06.773Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:54:06.778Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:54:06.779Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:05.066Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:57:05.069Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:57:05.087Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:05.088Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:57:05.099Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:57:05.102Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:57:10.019Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-26T04:57:11.036Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:57:11.039Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:57:11.049Z] [INFO] ✅ Socket hdv_w4ywCGXDvoisAAAQ authenticated for user demo (ID: 1)
+[2025-06-26T04:57:11.049Z] [INFO] 🔗 User demo (1) connected with socket hdv_w4ywCGXDvoisAAAQ
+[2025-06-26T04:57:11.067Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:57:11.068Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:57:11.070Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:11.071Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:57:14.010Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:57:14.010Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:57:14.015Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:57:14.015Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:57:14.016Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:57:14.017Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:45.010Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:57:45.010Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:57:45.012Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:57:45.012Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:57:45.016Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:57:45.017Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:48.003Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:57:48.004Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:57:48.005Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:57:48.005Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:57:48.007Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:57:48.008Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:56.018Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:57:56.019Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:57:56.020Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:57:56.020Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:57:56.026Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:57:56.027Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:57.021Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:57:57.022Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:57:57.027Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:57:57.028Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:57:57.032Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:57:57.032Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:59:05.043Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:59:05.045Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:59:05.050Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:59:05.051Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:59:05.057Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:59:05.058Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:59:07.017Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:59:07.018Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:59:07.019Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:59:07.020Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:59:07.024Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:59:07.025Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:59:08.022Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:59:08.022Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:59:08.027Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:59:08.028Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:59:08.028Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:59:08.029Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:59:49.033Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-26T04:59:49.288Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:59:49.289Z] [INFO] ✅ Socket QNvr9pBvQrNau1NaAAAT authenticated for user demo (ID: 1)
+[2025-06-26T04:59:49.289Z] [INFO] 🔗 User demo (1) connected with socket QNvr9pBvQrNau1NaAAAT
+[2025-06-26T04:59:49.291Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T04:59:49.307Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T04:59:49.308Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T04:59:49.313Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T04:59:49.314Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T04:59:52.291Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T04:59:52.291Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T04:59:52.295Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T04:59:52.295Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T04:59:52.300Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T04:59:52.301Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:07.276Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:07.282Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:07.283Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:07.283Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:07.285Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:07.285Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:07.300Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:07.301Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:07.328Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:07.329Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:07.354Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:07.355Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:07.380Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:07.395Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:07.454Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:07.489Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:07.490Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:07.490Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:07.492Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:07.492Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:07.493Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:07.494Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:07.507Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:07.508Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:07.532Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:07.533Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:07.533Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:07.534Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:07.581Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:07.593Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:07.593Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:07.593Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:07.615Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:07.627Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:07.628Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:07.628Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:07.629Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:07.640Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:07.640Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:07.641Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:07.643Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:07.644Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:09.121Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:09.154Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:09.155Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:09.155Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:09.156Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:09.156Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:09.161Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:09.162Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:09.168Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:09.169Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:09.203Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:09.204Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:09.205Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:09.206Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:10.998Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:11.026Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:11.027Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:11.027Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:11.030Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:11.030Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:11.031Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:11.032Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:11.039Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:11.039Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:11.043Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:11.043Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:11.045Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:11.045Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:11.091Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:11.121Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:11.121Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:11.122Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:11.124Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:11.125Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:11.126Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:11.127Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:11.136Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:11.137Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:11.138Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:11.138Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:11.141Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:11.142Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:12.667Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:12.694Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:12.694Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:12.695Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:12.696Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:12.696Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:12.700Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:12.701Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:12.705Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:12.706Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:12.709Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:12.710Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:12.712Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:12.713Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:12.789Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:12.819Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:12.819Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:12.820Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:00:12.822Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:12.823Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:12.824Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:12.824Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:12.828Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:12.828Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:12.829Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:12.830Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:12.833Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:12.835Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:32.046Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:00:32.047Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:00:32.057Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:00:32.058Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:00:32.060Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:00:32.060Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:00:36.215Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T05:00:40.137Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T05:10:52.203Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-26T05:10:52.308Z] [INFO] Loaded 4 conversations for user 1
+[2025-06-26T05:10:52.310Z] [INFO] ✅ Socket r5BMzAUAmJjex_T3AAAV authenticated for user demo (ID: 1)
+[2025-06-26T05:10:52.313Z] [INFO] 🔗 User demo (1) connected with socket r5BMzAUAmJjex_T3AAAV
+[2025-06-26T05:10:52.385Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T05:10:52.386Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T05:10:52.394Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T05:10:52.396Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T05:11:02.034Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T05:11:02.035Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T05:11:02.044Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T05:11:02.045Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T05:11:02.049Z] [INFO] Loaded 4 messages for conversation 11 by user 1
+[2025-06-26T05:11:02.050Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T05:11:11.143Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T05:11:11.362Z] [INFO] 📤 Message sent by demo to conversation 11
+[2025-06-26T05:11:11.374Z] [INFO] 🔗 Connected to Python AI service for conversation 11
+[2025-06-26T05:11:12.148Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T05:11:27.577Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T05:11:30.277Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T05:11:40.531Z] [INFO] 🤖 AI response sent to conversation 11
+[2025-06-26T05:12:41.375Z] [ERROR] ⏰ Python AI service timeout for conversation 11
+[2025-06-26T05:12:41.376Z] [ERROR] AI service error for conversation 11: AI service timeout
+[2025-06-26T05:12:41.376Z] [INFO] 🔌 Python AI service connection closed for conversation 11
+[2025-06-26T05:13:02.011Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T05:13:02.012Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T05:13:02.017Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T05:13:02.018Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T05:13:02.022Z] [INFO] Loaded 6 messages for conversation 11 by user 1
+[2025-06-26T05:13:02.023Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T05:13:04.018Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T05:13:04.019Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T05:13:04.020Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T05:13:04.020Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T05:13:04.023Z] [INFO] Loaded 6 messages for conversation 11 by user 1
+[2025-06-26T05:13:04.024Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-06-26T05:13:12.763Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T05:13:15.567Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T05:13:15.880Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-06-26T05:13:18.419Z] [INFO] 📤 Message sent by demo to conversation 11
+[2025-06-26T05:13:18.421Z] [INFO] 🔗 Connected to Python AI service for conversation 11
+[2025-06-26T05:13:19.232Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-06-26T05:13:34.289Z] [INFO] 🤖 AI response sent to conversation 11
+[2025-06-26T05:13:35.546Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T05:13:35.547Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T05:13:35.550Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T05:13:35.552Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T05:13:35.557Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-06-26T05:13:35.558Z] [INFO] Loaded 0 messages for conversation 10 by user 1
+[2025-06-26T05:13:36.149Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T05:13:36.150Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T05:13:36.152Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T05:13:36.152Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T05:13:36.157Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T05:13:36.158Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T05:13:41.542Z] [INFO] Conversation 12 created for user 1
+[2025-06-26T05:13:41.547Z] [INFO] Loaded 5 conversations for user 1
+[2025-06-26T05:13:41.586Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T05:13:41.587Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T05:13:41.589Z] [INFO] 👥 User demo joined conversation 12
+[2025-06-26T05:13:41.590Z] [INFO] 👥 Sent online users list for conversation 12: 1 users
+[2025-06-26T05:13:41.615Z] [INFO] Loaded 0 messages for conversation 12 by user 1
+[2025-06-26T05:13:41.616Z] [INFO] Loaded 0 files for conversation 12 by user 1
+[2025-06-26T05:13:45.024Z] [INFO] ⌨️ User demo started typing in conversation 12
+[2025-06-26T05:13:54.626Z] [INFO] 📤 Message sent by demo to conversation 12
+[2025-06-26T05:13:54.644Z] [INFO] 🔗 Connected to Python AI service for conversation 12
+[2025-06-26T05:13:55.461Z] [INFO] ⌨️ User demo stopped typing in conversation 12
+[2025-06-26T05:14:19.167Z] [INFO] 🤖 AI response sent to conversation 12
+[2025-06-26T05:14:48.432Z] [ERROR] ⏰ Python AI service timeout for conversation 11
+[2025-06-26T05:14:48.432Z] [ERROR] AI service error for conversation 11: AI service timeout
+[2025-06-26T05:14:48.433Z] [INFO] 🔌 Python AI service connection closed for conversation 11
+[2025-06-26T05:14:59.792Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-26T05:15:01.431Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-06-26T05:15:01.432Z] [ERROR] AI service error for conversation 12: AI service connection error
+[2025-06-26T05:15:01.432Z] [INFO] 🔌 Python AI service connection closed for conversation 12
