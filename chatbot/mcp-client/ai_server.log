@@ -768,7 +768,7 @@ RuntimeError: Event loop is closed
 2025-06-25 02:42:54,242 - __main__ - INFO - Available tools: ['rag_query', 'rag_query_for_chart', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
 2025-06-25 02:42:56,045 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
 2025-06-25 02:42:56,046 - __main__ - INFO - Executing tool call 1/1: rag_query
-2025-06-25 02:42:56,046 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'hoaphat2024 doanh thu c�c n�m'}
+2025-06-25 02:42:56,046 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'hoaphat2024 doanh thu c�c n�m'}
 2025-06-25 02:42:56,687 - __main__ - INFO - Tool rag_query executed successfully
 2025-06-25 02:42:59,925 - __main__ - INFO - Client ('127.0.0.1', 54201) closed connection
 2025-06-25 02:42:59,926 - __main__ - INFO - Client ('127.0.0.1', 54201) disconnected
@@ -3097,3 +3097,1647 @@ RuntimeError: Event loop is closed
 2025-06-26 12:14:19,156 - socket_server - INFO - Sent response to ('127.0.0.1', 55028): success
 2025-06-26 12:14:48,432 - socket_server - INFO - Client ('127.0.0.1', 55013) closed connection
 2025-06-26 12:14:48,433 - socket_server - INFO - Client ('127.0.0.1', 55013) disconnected
+2025-06-26 13:19:27,424 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 13:21:13,829 - socket_server - INFO - New client connected from ('127.0.0.1', 55972)
+2025-06-26 13:21:13,848 - socket_server - INFO - Received request from ('127.0.0.1', 55972): chat
+2025-06-26 13:21:13,926 - __main__ - INFO - Processing message for conversation 7
+2025-06-26 13:21:13,931 - __main__ - INFO - New database context established: php3_wd19314
+2025-06-26 13:21:13,931 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:21:24,195 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:21:24,201 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:21:24,516 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:21:27,672 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:21:27,691 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:21:27,692 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:21:27,692 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 13:21:27,692 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 13:21:27,692 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 13:21:28,235 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 13:21:28,235 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:21:30,331 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:21:30,332 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:21:30,332 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:21:30,332 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 13:21:30,332 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 13:21:30,333 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/php3_wd19314
+2025-06-26 13:21:30,459 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 13:21:30,459 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 13:21:32,549 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:21:32,550 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:21:32,550 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:21:32,550 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:21:32,550 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products'}
+2025-06-26 13:21:32,569 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:21:32,569 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 13:22:10,718 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:22:10,719 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:22:10,720 - __main__ - INFO - Generated final answer for conversation 7
+2025-06-26 13:22:10,721 - socket_server - INFO - Sent response to ('127.0.0.1', 55972): success
+2025-06-26 13:22:36,405 - socket_server - INFO - New client connected from ('127.0.0.1', 55999)
+2025-06-26 13:22:36,405 - socket_server - INFO - Received request from ('127.0.0.1', 55999): chat
+2025-06-26 13:22:36,406 - __main__ - INFO - Processing message for conversation 10
+2025-06-26 13:22:36,406 - __main__ - INFO - New database context established: php3_wd1931
+2025-06-26 13:22:36,407 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:22:39,091 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:22:39,095 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:22:39,437 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:22:41,230 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:22:41,232 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:22:41,232 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:22:41,232 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 13:22:41,233 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd1931'}
+2025-06-26 13:22:41,233 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/php3_wd1931
+2025-06-26 13:22:41,237 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 13:22:41,237 - __main__ - WARNING - Tool call returned error: 1049 (42000): Unknown database 'php3_wd1931'
+2025-06-26 13:22:41,237 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:22:42,640 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:22:42,641 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:22:42,642 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:22:42,642 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 13:22:42,642 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 13:22:42,652 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 13:22:42,652 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 13:22:43,813 - socket_server - INFO - Client ('127.0.0.1', 55972) closed connection
+2025-06-26 13:22:43,813 - socket_server - INFO - Client ('127.0.0.1', 55972) disconnected
+2025-06-26 13:22:44,512 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:22:44,514 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:22:44,514 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:22:44,514 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 13:22:44,514 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 13:22:44,514 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/php3_wd19314
+2025-06-26 13:22:44,521 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 13:22:44,521 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 13:22:46,659 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:22:46,660 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:22:46,660 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:22:46,660 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:22:46,660 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products'}
+2025-06-26 13:22:46,664 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:22:46,664 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 13:23:24,491 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:23:24,492 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:23:24,492 - __main__ - INFO - Generated final answer for conversation 10
+2025-06-26 13:23:24,493 - socket_server - INFO - Sent response to ('127.0.0.1', 55999): success
+2025-06-26 13:24:06,413 - socket_server - INFO - Client ('127.0.0.1', 55999) closed connection
+2025-06-26 13:24:06,413 - socket_server - INFO - Client ('127.0.0.1', 55999) disconnected
+2025-06-26 13:27:14,287 - socket_server - INFO - New client connected from ('127.0.0.1', 56091)
+2025-06-26 13:27:14,289 - socket_server - INFO - Received request from ('127.0.0.1', 56091): chat
+2025-06-26 13:27:14,296 - __main__ - INFO - Processing message for conversation 13
+2025-06-26 13:27:14,298 - __main__ - INFO - New database context established: php3_wd1931
+2025-06-26 13:27:14,298 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:27:17,792 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:27:17,799 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:27:18,122 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:27:20,919 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:27:20,922 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:27:20,922 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:27:20,922 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 13:27:20,923 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd1931'}
+2025-06-26 13:27:20,923 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/php3_wd1931
+2025-06-26 13:27:20,963 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 13:27:20,963 - __main__ - WARNING - Tool call returned error: 1049 (42000): Unknown database 'php3_wd1931'
+2025-06-26 13:27:20,963 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:27:22,103 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:27:22,104 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:27:22,104 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:27:22,104 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 13:27:22,104 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 13:27:22,123 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 13:27:22,123 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 13:27:23,833 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:27:23,834 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:27:23,834 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:27:23,834 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 13:27:23,835 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 13:27:23,835 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 13:27:23,847 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 13:27:23,847 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 13:27:27,576 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:27:27,577 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:27:27,577 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:27:27,577 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 13:27:27,577 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 13:27:27,578 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/php3_wd19314
+2025-06-26 13:27:27,588 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 13:27:27,588 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 13:27:29,919 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:27:29,920 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:27:29,920 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:27:29,920 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:27:29,921 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products'}
+2025-06-26 13:27:29,926 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:27:29,927 - __main__ - INFO - LLM iteration 6/10
+2025-06-26 13:27:29,935 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\socket_server.py", line 54, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 13:28:33,461 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:28:33,462 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:28:33,462 - __main__ - INFO - Generated final answer for conversation 13
+2025-06-26 13:28:33,463 - socket_server - INFO - Sent response to ('127.0.0.1', 56091): success
+2025-06-26 13:28:44,293 - socket_server - INFO - Client ('127.0.0.1', 56091) closed connection
+2025-06-26 13:28:44,293 - socket_server - INFO - Client ('127.0.0.1', 56091) disconnected
+2025-06-26 13:31:12,385 - socket_server - INFO - Stopping server...
+2025-06-26 13:31:12,385 - socket_server - INFO - Socket Server stopped
+2025-06-26 13:31:12,386 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 13:31:12,386 - socket_server - INFO - Stopping server...
+2025-06-26 13:31:12,386 - socket_server - INFO - Socket Server stopped
+2025-06-26 13:31:17,296 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 13:31:45,479 - socket_server - INFO - New client connected from ('127.0.0.1', 56174)
+2025-06-26 13:31:45,480 - socket_server - INFO - Received request from ('127.0.0.1', 56174): chat
+2025-06-26 13:31:45,481 - __main__ - INFO - Processing message for conversation 14
+2025-06-26 13:31:45,481 - __main__ - INFO - New database context established: php3_wd19314
+2025-06-26 13:31:48,408 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:31:48,409 - __main__ - INFO - Refreshing tools cache
+2025-06-26 13:31:48,413 - __main__ - INFO - Tools cache updated. Available tools: 6
+2025-06-26 13:31:51,381 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:31:56,038 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:31:59,991 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:33:00,007 - __main__ - ERROR - LLM timeout
+2025-06-26 13:33:00,007 - socket_server - INFO - Sent response to ('127.0.0.1', 56174): error
+2025-06-26 13:33:15,408 - socket_server - INFO - Stopping server...
+2025-06-26 13:33:15,408 - socket_server - INFO - Socket Server stopped
+2025-06-26 13:33:15,408 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 13:33:15,410 - socket_server - INFO - Stopping server...
+2025-06-26 13:33:15,410 - socket_server - INFO - Socket Server stopped
+2025-06-26 13:33:15,457 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Client._session_runner() running at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py:316> wait_for=<Future finished result=True>>
+2025-06-26 13:33:29,397 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 13:35:31,245 - socket_server - INFO - New client connected from ('127.0.0.1', 56329)
+2025-06-26 13:35:31,246 - socket_server - INFO - Received request from ('127.0.0.1', 56329): chat
+2025-06-26 13:35:31,250 - __main__ - INFO - Processing message for conversation 11
+2025-06-26 13:35:31,251 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:35:34,610 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:35:34,615 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:35:34,902 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:35:44,761 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:35:44,764 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:35:44,764 - __main__ - INFO - Generated final answer for conversation 11
+2025-06-26 13:35:44,765 - socket_server - INFO - Sent response to ('127.0.0.1', 56329): success
+2025-06-26 13:36:39,223 - socket_server - INFO - New client connected from ('127.0.0.1', 56343)
+2025-06-26 13:36:39,224 - socket_server - INFO - Received request from ('127.0.0.1', 56343): chat
+2025-06-26 13:36:39,224 - __main__ - INFO - Processing message for conversation 11
+2025-06-26 13:36:39,225 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:36:41,842 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:36:41,846 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:36:42,112 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:36:43,310 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:36:43,312 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:36:43,312 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:36:43,312 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 13:36:43,948 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 13:36:43,948 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:37:01,244 - socket_server - INFO - Client ('127.0.0.1', 56329) closed connection
+2025-06-26 13:37:01,245 - socket_server - INFO - Client ('127.0.0.1', 56329) disconnected
+2025-06-26 13:37:03,477 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:37:03,478 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:37:03,478 - __main__ - INFO - Generated final answer for conversation 11
+2025-06-26 13:37:03,479 - socket_server - INFO - Sent response to ('127.0.0.1', 56343): success
+2025-06-26 13:38:09,227 - socket_server - INFO - Client ('127.0.0.1', 56343) closed connection
+2025-06-26 13:38:09,228 - socket_server - INFO - Client ('127.0.0.1', 56343) disconnected
+2025-06-26 13:40:24,308 - socket_server - INFO - Stopping server...
+2025-06-26 13:40:24,308 - socket_server - INFO - Socket Server stopped
+2025-06-26 13:40:24,308 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 13:40:24,308 - socket_server - INFO - Stopping server...
+2025-06-26 13:40:24,309 - socket_server - INFO - Socket Server stopped
+2025-06-26 13:40:28,317 - __main__ - ERROR - Unexpected error in main: 'SocketServer' object has no attribute 'start_server'
+2025-06-26 13:48:09,557 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 13:48:25,050 - socket_server - INFO - New client connected from ('127.0.0.1', 56529)
+2025-06-26 13:48:25,051 - socket_server - INFO - Received request from ('127.0.0.1', 56529): chat
+2025-06-26 13:48:25,052 - __main__ - INFO - Processing message for conversation 11
+2025-06-26 13:48:25,053 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:48:27,906 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:48:27,911 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:48:28,296 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:48:41,963 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:48:41,965 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:48:41,965 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:48:41,966 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 13:48:41,966 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 13:48:42,211 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 13:48:42,212 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:48:43,951 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:48:43,952 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:48:43,952 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:48:43,952 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 13:48:43,952 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 13:48:43,952 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/hoaphat2024
+2025-06-26 13:48:43,962 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 13:48:43,962 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 13:48:46,311 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:48:46,312 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:48:46,312 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:48:46,312 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:48:46,312 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Revenue FROM hoaphat2024.financial_performance WHERE Year = 2023 AND (Month BETWEEN 1 AND 3) LIMIT 1;'}
+2025-06-26 13:48:46,374 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:48:46,374 - __main__ - WARNING - Tool call returned error: 1054 (42S22): Unknown column 'Month' in 'where clause'
+2025-06-26 13:48:46,374 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 13:48:48,246 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:48:48,247 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:48:48,247 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:48:48,248 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:48:48,248 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Revenue FROM hoaphat2024.financial_performance WHERE Year = 2023 LIMIT 1;'}
+2025-06-26 13:48:48,254 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:48:48,254 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 13:48:52,678 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:48:52,679 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:48:52,680 - __main__ - INFO - Generated final answer for conversation 11
+2025-06-26 13:48:52,680 - socket_server - INFO - Sent response to ('127.0.0.1', 56529): success
+2025-06-26 13:49:22,986 - socket_server - INFO - New client connected from ('127.0.0.1', 56570)
+2025-06-26 13:49:22,986 - socket_server - INFO - Received request from ('127.0.0.1', 56570): chat
+2025-06-26 13:49:22,987 - __main__ - INFO - Processing message for conversation 15
+2025-06-26 13:49:22,987 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:49:25,685 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:49:25,689 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:49:25,950 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:49:37,820 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:49:37,821 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:49:37,821 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:49:37,821 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 13:49:37,821 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 13:49:37,835 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 13:49:37,835 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:49:39,376 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:49:39,378 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:49:39,378 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:49:39,378 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 13:49:39,378 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 13:49:39,378 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/hoaphat2024
+2025-06-26 13:49:39,386 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 13:49:39,386 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 13:49:43,287 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:49:43,288 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:49:43,288 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:49:43,288 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:49:43,288 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Revenue FROM hoaphat2024.financial_performance WHERE Year = 2024 AND (MONTH(QuarterStartDate) IN (1, 2, 3)) OR (MONTH(QuarterEndDate) IN (1, 2, 3));'}
+2025-06-26 13:49:43,296 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:49:43,296 - __main__ - WARNING - Tool call returned error: 1054 (42S22): Unknown column 'QuarterStartDate' in 'where clause'
+2025-06-26 13:49:43,297 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 13:49:48,366 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:49:48,368 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:49:48,368 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:49:48,368 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:49:48,368 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': "SELECT Revenue FROM hoaphat2024.financial_performance WHERE Year = 2024 AND Quarter IN ('Q1');"}
+2025-06-26 13:49:48,370 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:49:48,370 - __main__ - WARNING - Tool call returned error: 1054 (42S22): Unknown column 'Quarter' in 'where clause'
+2025-06-26 13:49:48,371 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 13:49:50,671 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:49:50,672 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:49:50,672 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:49:50,672 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:49:50,672 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': "SELECT Revenue FROM hoaphat2024.financial_performance WHERE Year = 2024 AND Quarter IN ('Q1');"}
+2025-06-26 13:49:50,675 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:49:50,675 - __main__ - WARNING - Tool call returned error: 1054 (42S22): Unknown column 'Quarter' in 'where clause'
+2025-06-26 13:49:50,675 - __main__ - INFO - LLM iteration 6/10
+2025-06-26 13:49:54,012 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:49:54,013 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:49:54,013 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:49:54,013 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:49:54,013 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Revenue FROM hoaphat2024.financial_performance WHERE Year = 2024;'}
+2025-06-26 13:49:54,016 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:49:54,016 - __main__ - INFO - LLM iteration 7/10
+2025-06-26 13:49:55,056 - socket_server - INFO - Client ('127.0.0.1', 56529) closed connection
+2025-06-26 13:49:55,057 - socket_server - INFO - Client ('127.0.0.1', 56529) disconnected
+2025-06-26 13:49:57,984 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:49:57,985 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:49:57,985 - __main__ - INFO - Generated final answer for conversation 15
+2025-06-26 13:49:57,986 - socket_server - INFO - Sent response to ('127.0.0.1', 56570): success
+2025-06-26 13:50:52,987 - socket_server - INFO - Client ('127.0.0.1', 56570) closed connection
+2025-06-26 13:50:52,987 - socket_server - INFO - Client ('127.0.0.1', 56570) disconnected
+2025-06-26 13:54:25,173 - socket_server - INFO - New client connected from ('127.0.0.1', 56656)
+2025-06-26 13:54:25,174 - socket_server - INFO - Received request from ('127.0.0.1', 56656): chat
+2025-06-26 13:54:25,175 - __main__ - INFO - Processing message for conversation 15
+2025-06-26 13:54:25,175 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:54:27,863 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:54:27,867 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:54:28,117 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:54:31,005 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:54:31,007 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:54:31,007 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:54:31,007 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 13:54:31,008 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Revenue FROM hoaphat2024.financial_performance WHERE Year = 2024;'}
+2025-06-26 13:54:31,014 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 13:54:31,014 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:54:39,762 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:54:39,763 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:54:39,764 - __main__ - INFO - Generated final answer for conversation 15
+2025-06-26 13:54:39,764 - socket_server - INFO - Sent response to ('127.0.0.1', 56656): success
+2025-06-26 13:55:55,185 - socket_server - INFO - Client ('127.0.0.1', 56656) closed connection
+2025-06-26 13:55:55,185 - socket_server - INFO - Client ('127.0.0.1', 56656) disconnected
+2025-06-26 13:59:42,116 - socket_server - INFO - New client connected from ('127.0.0.1', 56751)
+2025-06-26 13:59:42,116 - socket_server - INFO - Received request from ('127.0.0.1', 56751): chat
+2025-06-26 13:59:42,117 - __main__ - INFO - Processing message for conversation 15
+2025-06-26 13:59:42,117 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 13:59:45,194 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 13:59:45,199 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\socket_server.py", line 54, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 13:59:45,215 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\socket_server.py", line 54, in handle_client
+    loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 13:59:45,221 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 13:59:45,475 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 13:59:47,122 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:59:47,123 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:59:47,123 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:59:47,123 - __main__ - INFO - Executing tool call: rag_get_collection_info
+2025-06-26 13:59:47,123 - __main__ - INFO - Executing tool: rag_get_collection_info with args: {}
+2025-06-26 13:59:47,258 - __main__ - INFO - Tool rag_get_collection_info executed successfully
+2025-06-26 13:59:47,258 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 13:59:50,399 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:59:50,400 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 13:59:50,400 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 13:59:50,401 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 13:59:50,958 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 13:59:50,958 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 13:59:59,949 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:59:59,950 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 13:59:59,950 - __main__ - INFO - Generated final answer for conversation 15
+2025-06-26 13:59:59,951 - socket_server - INFO - Sent response to ('127.0.0.1', 56751): success
+2025-06-26 14:01:12,127 - socket_server - INFO - Client ('127.0.0.1', 56751) closed connection
+2025-06-26 14:01:12,127 - socket_server - INFO - Client ('127.0.0.1', 56751) disconnected
+2025-06-26 14:15:24,674 - socket_server - INFO - New client connected from ('127.0.0.1', 56901)
+2025-06-26 14:15:24,675 - socket_server - INFO - Received request from ('127.0.0.1', 56901): chat
+2025-06-26 14:15:24,680 - __main__ - INFO - Processing message for conversation 16
+2025-06-26 14:15:24,681 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:15:28,003 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:15:28,008 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:15:28,261 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:15:35,946 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:15:35,948 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:15:35,948 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:15:35,948 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 14:15:35,949 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 14:15:36,016 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 14:15:36,017 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:15:38,488 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:15:38,489 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:15:38,489 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:15:38,490 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 14:15:38,490 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:15:38,490 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/hoaphat2024
+2025-06-26 14:15:38,507 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 14:15:38,507 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 14:15:41,642 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:15:41,643 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:15:41,643 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:15:41,643 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 14:15:41,643 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Year, Revenue FROM hoaphat2024.financial_performance ORDER BY Year;'}
+2025-06-26 14:15:41,647 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 14:15:41,648 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 14:15:53,591 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:15:53,593 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:15:53,593 - __main__ - INFO - Generated final answer for conversation 16
+2025-06-26 14:15:53,594 - socket_server - INFO - Sent response to ('127.0.0.1', 56901): success
+2025-06-26 14:16:54,672 - socket_server - INFO - Client ('127.0.0.1', 56901) closed connection
+2025-06-26 14:16:54,672 - socket_server - INFO - Client ('127.0.0.1', 56901) disconnected
+2025-06-26 14:19:39,207 - socket_server - INFO - New client connected from ('127.0.0.1', 56986)
+2025-06-26 14:19:39,207 - socket_server - INFO - Received request from ('127.0.0.1', 56986): chat
+2025-06-26 14:19:39,209 - __main__ - INFO - Processing message for conversation 17
+2025-06-26 14:19:39,210 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:19:41,972 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:19:41,976 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:19:42,277 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:19:56,743 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:19:56,744 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:19:56,744 - __main__ - INFO - Generated final answer for conversation 17
+2025-06-26 14:19:56,746 - socket_server - INFO - Sent response to ('127.0.0.1', 56986): success
+2025-06-26 14:21:09,217 - socket_server - INFO - Client ('127.0.0.1', 56986) closed connection
+2025-06-26 14:21:09,217 - socket_server - INFO - Client ('127.0.0.1', 56986) disconnected
+2025-06-26 14:21:43,938 - socket_server - INFO - New client connected from ('127.0.0.1', 57032)
+2025-06-26 14:21:43,939 - socket_server - INFO - Received request from ('127.0.0.1', 57032): chat
+2025-06-26 14:21:43,940 - __main__ - INFO - Processing message for conversation 18
+2025-06-26 14:21:43,940 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:21:46,629 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:21:46,633 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:21:46,879 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:21:52,942 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:21:52,943 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:21:52,943 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:21:52,943 - __main__ - INFO - Executing tool call: rag_get_collection_info
+2025-06-26 14:21:52,944 - __main__ - INFO - Executing tool: rag_get_collection_info with args: {}
+2025-06-26 14:21:53,066 - __main__ - INFO - Tool rag_get_collection_info executed successfully
+2025-06-26 14:21:53,066 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:21:54,493 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:21:54,494 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:21:54,494 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:21:54,494 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 14:21:55,092 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 14:21:55,092 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 14:22:15,097 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:22:15,099 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:22:15,099 - __main__ - INFO - Generated final answer for conversation 18
+2025-06-26 14:22:15,099 - socket_server - INFO - Sent response to ('127.0.0.1', 57032): success
+2025-06-26 14:23:13,944 - socket_server - INFO - Client ('127.0.0.1', 57032) closed connection
+2025-06-26 14:23:13,944 - socket_server - INFO - Client ('127.0.0.1', 57032) disconnected
+2025-06-26 14:28:20,362 - socket_server - INFO - New client connected from ('127.0.0.1', 57146)
+2025-06-26 14:28:20,363 - socket_server - INFO - Received request from ('127.0.0.1', 57146): chat
+2025-06-26 14:28:20,364 - __main__ - INFO - Processing message for conversation 19
+2025-06-26 14:28:20,365 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:28:23,711 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:28:23,716 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:28:24,074 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:28:24,098 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-35' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\socket_server.py", line 54, in handle_client
+    username = request.get('username', 'User')
+                       ~~~^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 14:28:24,117 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-36' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\socket_server.py", line 54, in handle_client
+    username = request.get('username', 'User')
+                       ~~~^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 14:28:24,124 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-37' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\socket_server.py", line 54, in handle_client
+    username = request.get('username', 'User')
+                       ~~~^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 14:28:24,130 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-38' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\mcp-client\socket_server.py", line 54, in handle_client
+    username = request.get('username', 'User')
+                       ~~~^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 14:28:25,407 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:28:25,409 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:28:25,409 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:28:25,409 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 14:28:25,409 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 14:28:25,457 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 14:28:25,457 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:28:27,546 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:28:27,547 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:28:27,547 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:28:27,547 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 14:28:27,547 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:28:27,548 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/hoaphat2024
+2025-06-26 14:28:27,556 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 14:28:27,556 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 14:28:29,853 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:28:29,854 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:28:29,854 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:28:29,854 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 14:28:29,854 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM hoaphat2024.products ORDER BY Price DESC LIMIT 20;'}
+2025-06-26 14:28:29,876 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 14:28:29,877 - __main__ - WARNING - Tool call returned error: 1146 (42S02): Table 'hoaphat2024.products' doesn't exist
+2025-06-26 14:28:29,877 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 14:28:33,295 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:28:33,296 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:28:33,296 - __main__ - INFO - Generated final answer for conversation 19
+2025-06-26 14:28:33,297 - socket_server - INFO - Sent response to ('127.0.0.1', 57146): success
+2025-06-26 14:29:50,366 - socket_server - INFO - Client ('127.0.0.1', 57146) closed connection
+2025-06-26 14:29:50,366 - socket_server - INFO - Client ('127.0.0.1', 57146) disconnected
+2025-06-26 14:30:17,964 - socket_server - INFO - New client connected from ('127.0.0.1', 57196)
+2025-06-26 14:30:17,964 - socket_server - INFO - Received request from ('127.0.0.1', 57196): chat
+2025-06-26 14:30:17,965 - __main__ - INFO - Processing message for conversation 20
+2025-06-26 14:30:17,965 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:30:21,175 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:30:21,179 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:30:21,471 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:30:29,662 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:30:29,664 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:30:29,664 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:30:29,664 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 14:30:30,643 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 14:30:30,647 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:30:44,130 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:30:44,132 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:30:44,132 - __main__ - INFO - Generated final answer for conversation 20
+2025-06-26 14:30:44,132 - socket_server - INFO - Sent response to ('127.0.0.1', 57196): success
+2025-06-26 14:31:47,966 - socket_server - INFO - Client ('127.0.0.1', 57196) closed connection
+2025-06-26 14:31:47,966 - socket_server - INFO - Client ('127.0.0.1', 57196) disconnected
+2025-06-26 14:32:00,807 - socket_server - INFO - Stopping server...
+2025-06-26 14:32:00,809 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:32:00,809 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 14:32:00,809 - socket_server - INFO - Stopping server...
+2025-06-26 14:32:00,809 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:33:33,968 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 14:33:55,654 - socket_server - INFO - New client connected from ('127.0.0.1', 57272)
+2025-06-26 14:33:55,654 - socket_server - INFO - Received request from ('127.0.0.1', 57272): chat
+2025-06-26 14:33:55,658 - __main__ - INFO - Processing message for conversation 21
+2025-06-26 14:33:55,658 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:33:59,020 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:33:59,026 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:33:59,314 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 14:33:59,314 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 14:33:59,315 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:34:01,098 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:34:01,102 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:34:01,102 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:34:01,102 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 14:34:01,102 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 14:34:01,193 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 14:34:01,194 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:34:02,783 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:34:02,784 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:34:02,784 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:34:02,784 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 14:34:02,784 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:34:02,784 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/hoaphat2024
+2025-06-26 14:34:02,807 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 14:34:02,807 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 14:34:04,610 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:34:04,612 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:34:04,612 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:34:04,613 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 14:34:04,613 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:34:04,613 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/hoaphat2024
+2025-06-26 14:34:04,638 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 14:34:04,639 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 14:34:06,825 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:34:06,826 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:34:06,826 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:34:06,827 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 14:34:06,827 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Year, Revenue, NetRevenue, GrossProfit, NetProfit FROM hoaphat2024.financial_performance ORDER BY Year;'}
+2025-06-26 14:34:06,837 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 14:34:06,837 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 14:34:22,853 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:34:22,854 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:34:22,855 - __main__ - INFO - Generated final answer for conversation 21
+2025-06-26 14:34:22,859 - socket_server - INFO - Sent response to ('127.0.0.1', 57272): success
+2025-06-26 14:34:34,999 - socket_server - INFO - Stopping server...
+2025-06-26 14:34:34,999 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:34:35,000 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 14:34:35,000 - socket_server - INFO - Stopping server...
+2025-06-26 14:34:35,000 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:34:41,964 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 14:35:03,886 - socket_server - INFO - New client connected from ('127.0.0.1', 57312)
+2025-06-26 14:35:03,886 - socket_server - INFO - Received request from ('127.0.0.1', 57312): chat
+2025-06-26 14:35:03,888 - __main__ - INFO - Processing message for conversation 22
+2025-06-26 14:35:03,888 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:35:06,838 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:35:06,843 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:35:07,263 - __main__ - INFO - User message: phân tích doanh thu hòa phát qua các năm
+2025-06-26 14:35:07,263 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 14:35:07,264 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:35:09,138 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:35:09,140 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:35:09,141 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:35:09,141 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 14:35:09,141 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 14:35:09,148 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 14:35:09,148 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:35:11,089 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:35:11,090 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:35:11,090 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:35:11,090 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 14:35:11,090 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:35:11,091 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/hoaphat2024
+2025-06-26 14:35:11,097 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 14:35:11,097 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 14:35:13,354 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:35:13,355 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:35:13,355 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:35:13,355 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 14:35:13,355 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:35:13,355 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/hoaphat2024
+2025-06-26 14:35:13,363 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 14:35:13,363 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 14:35:15,336 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:35:15,337 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:35:15,338 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:35:15,338 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 14:35:15,338 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT Year, Revenue FROM hoaphat2024.financial_performance ORDER BY Year'}
+2025-06-26 14:35:15,343 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 14:35:15,344 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 14:35:31,752 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:35:31,753 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:35:31,753 - __main__ - INFO - Generated final answer for conversation 22
+2025-06-26 14:35:31,757 - socket_server - INFO - Sent response to ('127.0.0.1', 57312): success
+2025-06-26 14:36:33,886 - socket_server - INFO - Client ('127.0.0.1', 57312) closed connection
+2025-06-26 14:36:33,887 - socket_server - INFO - Client ('127.0.0.1', 57312) disconnected
+2025-06-26 14:38:12,305 - socket_server - INFO - Stopping server...
+2025-06-26 14:38:12,306 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:38:12,306 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 14:38:12,306 - socket_server - INFO - Stopping server...
+2025-06-26 14:38:12,306 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:39:13,599 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 14:39:25,291 - socket_server - INFO - New client connected from ('127.0.0.1', 57408)
+2025-06-26 14:39:25,292 - socket_server - INFO - Received request from ('127.0.0.1', 57408): chat
+2025-06-26 14:39:25,293 - __main__ - INFO - Processing message for conversation 23
+2025-06-26 14:39:25,294 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:39:28,048 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:39:28,054 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:39:28,333 - __main__ - INFO - User message: phân tích doanh thu hòa phát năm 2023
+2025-06-26 14:39:28,334 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 14:39:28,334 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:39:31,280 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:39:31,284 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:39:31,284 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:39:31,284 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 14:39:31,284 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 14:39:31,297 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 14:39:31,297 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:39:33,465 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:39:33,466 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:39:33,466 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:39:33,466 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 14:39:33,466 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:39:33,467 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/hoaphat2024
+2025-06-26 14:39:33,473 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 14:39:33,473 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 14:39:35,478 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:39:35,479 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:39:35,480 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:39:35,480 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 14:39:35,480 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'hoaphat2024'}
+2025-06-26 14:39:35,480 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/hoaphat2024
+2025-06-26 14:39:35,489 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 14:39:35,489 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 14:39:37,610 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:39:37,611 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:39:37,612 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:39:37,612 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 14:39:37,612 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM hoaphat2024.financial_performance WHERE Year = 2023'}
+2025-06-26 14:39:37,620 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 14:39:37,620 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 14:39:55,748 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:39:55,749 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:39:55,749 - __main__ - INFO - Generated final answer for conversation 23
+2025-06-26 14:39:55,754 - socket_server - INFO - Sent response to ('127.0.0.1', 57408): success
+2025-06-26 14:40:55,292 - socket_server - INFO - Client ('127.0.0.1', 57408) closed connection
+2025-06-26 14:40:55,293 - socket_server - INFO - Client ('127.0.0.1', 57408) disconnected
+2025-06-26 14:56:06,123 - socket_server - INFO - Stopping server...
+2025-06-26 14:56:06,125 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:56:06,126 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 14:56:06,127 - socket_server - INFO - Stopping server...
+2025-06-26 14:56:06,127 - socket_server - INFO - Socket Server stopped
+2025-06-26 14:56:11,726 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 14:56:21,097 - socket_server - INFO - New client connected from ('127.0.0.1', 57597)
+2025-06-26 14:56:21,098 - socket_server - INFO - Received request from ('127.0.0.1', 57597): chat
+2025-06-26 14:56:21,099 - __main__ - INFO - Processing message for conversation 24
+2025-06-26 14:56:21,099 - __main__ - INFO - New context established: rag:general
+2025-06-26 14:56:21,100 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:56:24,461 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:56:24,466 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:56:24,772 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 14:56:24,772 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 14:56:24,772 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:56:26,965 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:56:26,967 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:56:26,967 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:56:26,968 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 14:56:26,968 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu hòa phát các năm'}
+2025-06-26 14:56:27,609 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 14:56:27,609 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:56:41,485 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:56:41,486 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:56:41,487 - __main__ - INFO - Generated final answer for conversation 24
+2025-06-26 14:56:41,490 - socket_server - INFO - Sent response to ('127.0.0.1', 57597): success
+2025-06-26 14:57:20,736 - socket_server - INFO - New client connected from ('127.0.0.1', 57608)
+2025-06-26 14:57:20,736 - socket_server - INFO - Received request from ('127.0.0.1', 57608): chat
+2025-06-26 14:57:20,737 - __main__ - INFO - Processing message for conversation 24
+2025-06-26 14:57:20,738 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:57:23,437 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:57:23,441 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:57:23,689 - __main__ - INFO - User message: liệt kê 20 sản phẩm trong php3_wd19314
+2025-06-26 14:57:23,689 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 14:57:23,689 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 14:57:28,050 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:57:28,051 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:57:28,051 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:57:28,051 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 14:57:28,051 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 14:57:28,052 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 14:57:28,069 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 14:57:28,069 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 14:57:29,798 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:57:29,799 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:57:29,799 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:57:29,799 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 14:57:29,799 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 14:57:29,799 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/php3_wd19314
+2025-06-26 14:57:29,808 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 14:57:29,808 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 14:57:32,397 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:57:32,398 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 14:57:32,398 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 14:57:32,398 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 14:57:32,398 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM `php3_wd19314`.`products` LIMIT 20;'}
+2025-06-26 14:57:32,407 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 14:57:32,407 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 14:57:51,094 - socket_server - INFO - Client ('127.0.0.1', 57597) closed connection
+2025-06-26 14:57:51,094 - socket_server - INFO - Client ('127.0.0.1', 57597) disconnected
+2025-06-26 14:58:58,253 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 14:58:58,254 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 14:58:58,254 - __main__ - INFO - Generated final answer for conversation 24
+2025-06-26 14:58:58,258 - socket_server - INFO - Sent response to ('127.0.0.1', 57608): success
+2025-06-26 14:58:58,258 - socket_server - ERROR - Error handling client ('127.0.0.1', 57608): [WinError 10053] An established connection was aborted by the software in your host machine
+2025-06-26 14:58:58,259 - socket_server - INFO - Client ('127.0.0.1', 57608) disconnected
+2025-06-26 14:59:54,824 - socket_server - INFO - New client connected from ('127.0.0.1', 57648)
+2025-06-26 14:59:54,825 - socket_server - INFO - Received request from ('127.0.0.1', 57648): chat
+2025-06-26 14:59:54,826 - __main__ - INFO - Processing message for conversation 24
+2025-06-26 14:59:54,826 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 14:59:57,804 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 14:59:57,810 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 14:59:58,079 - __main__ - INFO - User message: liệt kê 20 sản phẩm trong php3_wd19314
+2025-06-26 14:59:58,079 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 14:59:58,079 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:00:35,172 - socket_server - INFO - Stopping server...
+2025-06-26 15:00:35,172 - socket_server - INFO - Socket Server stopped
+2025-06-26 15:00:35,173 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 15:00:35,173 - socket_server - INFO - Stopping server...
+2025-06-26 15:00:35,173 - socket_server - INFO - Socket Server stopped
+2025-06-26 15:01:26,741 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 15:01:44,739 - socket_server - INFO - New client connected from ('127.0.0.1', 57697)
+2025-06-26 15:01:44,740 - socket_server - INFO - Received request from ('127.0.0.1', 57697): chat
+2025-06-26 15:01:44,741 - __main__ - INFO - Processing message for conversation 25
+2025-06-26 15:01:44,741 - __main__ - INFO - New context established: rag:general
+2025-06-26 15:01:44,741 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:01:47,473 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 15:01:47,477 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:01:47,772 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 15:01:47,772 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:01:47,772 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:01:49,842 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:01:49,844 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:01:49,844 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:01:49,845 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 15:01:49,845 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu hòa phát các năm'}
+2025-06-26 15:01:50,359 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 15:01:50,359 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:02:06,823 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:02:06,824 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:02:06,824 - __main__ - INFO - Generated final answer for conversation 25
+2025-06-26 15:02:06,829 - socket_server - INFO - Sent response to ('127.0.0.1', 57697): success
+2025-06-26 15:02:57,238 - socket_server - INFO - New client connected from ('127.0.0.1', 57714)
+2025-06-26 15:02:57,238 - socket_server - INFO - Received request from ('127.0.0.1', 57714): chat
+2025-06-26 15:02:57,239 - __main__ - INFO - Processing message for conversation 25
+2025-06-26 15:02:57,239 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:02:59,868 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 15:02:59,873 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:03:00,129 - __main__ - INFO - User message: liệt kê 20 sản phẩm trong php3_wd19314
+2025-06-26 15:03:00,129 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:03:00,129 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:03:02,167 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:02,167 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:02,168 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:02,168 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:03:02,168 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:03:03,818 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:03,819 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:03,819 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:03,819 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 15:03:03,819 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 15:03:03,820 - __main__ - ERROR - Error in mcpCall for tool sql+db://sql/list_tables/{db_name*}: name 're' is not defined
+2025-06-26 15:03:03,820 - __main__ - WARNING - Tool call returned error: name 're' is not defined
+2025-06-26 15:03:03,820 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 15:03:05,117 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:05,118 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:05,118 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:05,119 - __main__ - ERROR - Unknown tool name: list_databases
+2025-06-26 15:03:05,119 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 15:03:06,262 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:06,263 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:06,263 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:06,263 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 15:03:06,264 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 15:03:06,278 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 15:03:06,279 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 15:03:09,366 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:09,367 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:09,367 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:09,367 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:03:09,367 - __main__ - INFO - LLM iteration 6/10
+2025-06-26 15:03:11,211 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:11,212 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:11,212 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:11,212 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 15:03:11,212 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 15:03:11,212 - __main__ - ERROR - Error in mcpCall for tool sql+db://sql/list_tables/{db_name*}: name 're' is not defined
+2025-06-26 15:03:11,212 - __main__ - WARNING - Tool call returned error: name 're' is not defined
+2025-06-26 15:03:11,212 - __main__ - INFO - LLM iteration 7/10
+2025-06-26 15:03:13,023 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:13,024 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:13,025 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:13,025 - __main__ - ERROR - Unknown tool name: sql+db://sql/schema/php3_wd19314
+2025-06-26 15:03:13,025 - __main__ - INFO - LLM iteration 8/10
+2025-06-26 15:03:14,744 - socket_server - INFO - Client ('127.0.0.1', 57697) closed connection
+2025-06-26 15:03:14,745 - socket_server - INFO - Client ('127.0.0.1', 57697) disconnected
+2025-06-26 15:03:14,846 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:14,847 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:14,847 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:14,847 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 15:03:14,848 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 15:03:14,848 - __main__ - ERROR - Error in mcpCall for tool sql+db://sql/schema/{db_name*}: name 're' is not defined
+2025-06-26 15:03:14,848 - __main__ - WARNING - Tool call returned error: name 're' is not defined
+2025-06-26 15:03:14,848 - __main__ - INFO - LLM iteration 9/10
+2025-06-26 15:03:16,563 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:03:16,564 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:03:16,564 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:03:16,564 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 15:03:16,565 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products LIMIT 20;'}
+2025-06-26 15:03:16,571 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 15:03:16,571 - __main__ - INFO - LLM iteration 10/10
+2025-06-26 15:04:14,014 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:04:14,015 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:04:14,015 - __main__ - INFO - Generated final answer for conversation 25
+2025-06-26 15:04:14,018 - socket_server - INFO - Sent response to ('127.0.0.1', 57714): success
+2025-06-26 15:04:27,248 - socket_server - INFO - Client ('127.0.0.1', 57714) closed connection
+2025-06-26 15:04:27,249 - socket_server - INFO - Client ('127.0.0.1', 57714) disconnected
+2025-06-26 15:05:10,354 - socket_server - INFO - New client connected from ('127.0.0.1', 57747)
+2025-06-26 15:05:10,354 - socket_server - INFO - Received request from ('127.0.0.1', 57747): chat
+2025-06-26 15:05:10,355 - __main__ - INFO - Processing message for conversation 25
+2025-06-26 15:05:10,355 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:05:13,118 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 15:05:13,122 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:05:13,380 - __main__ - INFO - User message: doanh thu quý 1 là bao nhiêu
+2025-06-26 15:05:13,380 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:05:13,380 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:05:13,448 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 15:05:15,441 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:05:15,442 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:05:15,442 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:05:15,442 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 15:05:15,443 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'doanh thu quý 1 là bao nhiêu'}
+2025-06-26 15:05:16,086 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 15:05:16,086 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:05:24,738 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:05:24,739 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:05:24,739 - __main__ - INFO - Generated final answer for conversation 25
+2025-06-26 15:05:24,743 - socket_server - INFO - Sent response to ('127.0.0.1', 57747): success
+2025-06-26 15:06:40,366 - socket_server - INFO - Client ('127.0.0.1', 57747) closed connection
+2025-06-26 15:06:40,367 - socket_server - INFO - Client ('127.0.0.1', 57747) disconnected
+2025-06-26 15:20:18,507 - socket_server - INFO - New client connected from ('127.0.0.1', 57938)
+2025-06-26 15:20:18,509 - socket_server - INFO - Received request from ('127.0.0.1', 57938): chat
+2025-06-26 15:20:18,514 - __main__ - INFO - Processing message for conversation 25
+2025-06-26 15:20:18,515 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:20:22,389 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 15:20:22,399 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:20:22,701 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 15:20:22,701 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:20:22,701 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:21:13,505 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:21:13,508 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:21:13,508 - __main__ - INFO - Generated final answer for conversation 25
+2025-06-26 15:21:13,512 - socket_server - INFO - Sent response to ('127.0.0.1', 57938): success
+2025-06-26 15:21:48,512 - socket_server - INFO - Client ('127.0.0.1', 57938) closed connection
+2025-06-26 15:21:48,512 - socket_server - INFO - Client ('127.0.0.1', 57938) disconnected
+2025-06-26 15:23:13,368 - socket_server - INFO - New client connected from ('127.0.0.1', 58018)
+2025-06-26 15:23:13,368 - socket_server - INFO - Received request from ('127.0.0.1', 58018): chat
+2025-06-26 15:23:13,369 - __main__ - INFO - Processing message for conversation 26
+2025-06-26 15:23:13,369 - __main__ - INFO - New context established: rag:general
+2025-06-26 15:23:13,370 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:23:16,060 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 15:23:16,065 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:23:16,314 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 15:23:16,314 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:23:16,314 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:23:18,015 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:23:18,017 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:23:18,017 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:23:18,017 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 15:23:18,018 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu hòa phát các năm'}
+2025-06-26 15:23:18,734 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 15:23:18,734 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:23:34,750 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:23:34,752 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:23:34,752 - __main__ - INFO - Generated final answer for conversation 26
+2025-06-26 15:23:34,755 - socket_server - INFO - Sent response to ('127.0.0.1', 58018): success
+2025-06-26 15:24:03,667 - socket_server - INFO - New client connected from ('127.0.0.1', 58042)
+2025-06-26 15:24:03,667 - socket_server - INFO - Received request from ('127.0.0.1', 58042): chat
+2025-06-26 15:24:03,668 - __main__ - INFO - Processing message for conversation 26
+2025-06-26 15:24:03,668 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:24:06,328 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 15:24:06,332 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:24:06,581 - __main__ - INFO - User message: liệt kê 20 sản phẩm trong php3_wd19314
+2025-06-26 15:24:06,581 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:24:06,581 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:24:08,513 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:24:08,514 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:24:08,515 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:24:08,515 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:24:08,515 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:24:10,023 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:24:10,024 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:24:10,024 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:24:10,024 - __main__ - ERROR - Unknown tool name: list_databases
+2025-06-26 15:24:10,024 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 15:24:12,405 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:24:12,406 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:24:12,406 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:24:12,406 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:24:12,406 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 15:24:20,282 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:24:20,283 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:24:20,284 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:24:20,284 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:24:20,284 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 15:24:26,800 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:24:26,801 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:24:26,801 - __main__ - INFO - Generated final answer for conversation 26
+2025-06-26 15:24:26,804 - socket_server - INFO - Sent response to ('127.0.0.1', 58042): success
+2025-06-26 15:24:43,369 - socket_server - INFO - Client ('127.0.0.1', 58018) closed connection
+2025-06-26 15:24:43,370 - socket_server - INFO - Client ('127.0.0.1', 58018) disconnected
+2025-06-26 15:25:33,675 - socket_server - INFO - Client ('127.0.0.1', 58042) closed connection
+2025-06-26 15:25:33,676 - socket_server - INFO - Client ('127.0.0.1', 58042) disconnected
+2025-06-26 15:27:12,641 - socket_server - INFO - New client connected from ('127.0.0.1', 58088)
+2025-06-26 15:27:12,641 - socket_server - INFO - Received request from ('127.0.0.1', 58088): chat
+2025-06-26 15:27:12,642 - __main__ - INFO - Processing message for conversation 26
+2025-06-26 15:27:12,642 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:27:15,318 - __main__ - INFO - MCP client initialized successfully
+2025-06-26 15:27:15,322 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:27:15,579 - __main__ - INFO - User message: liệt kê 20 sản phẩm trong php3_wd19314
+2025-06-26 15:27:15,579 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:27:15,580 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:27:15,589 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 15:27:15,593 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-31' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 15:27:15,597 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-32' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 15:27:17,710 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:27:17,711 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:27:17,711 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:27:17,711 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:27:17,711 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:27:19,843 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:27:19,843 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:27:19,843 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:27:19,844 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 15:27:19,844 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': "SELECT table_name FROM information_schema.tables WHERE table_schema = 'php3_wd19314' LIMIT 20;"}
+2025-06-26 15:27:19,896 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 15:27:19,896 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 15:27:21,813 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:27:21,814 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:27:21,814 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:27:21,815 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 15:27:21,815 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products LIMIT 20;'}
+2025-06-26 15:27:21,821 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 15:27:21,822 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 15:28:01,194 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:28:01,195 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:28:01,196 - __main__ - INFO - Generated final answer for conversation 26
+2025-06-26 15:28:01,199 - socket_server - INFO - Sent response to ('127.0.0.1', 58088): success
+2025-06-26 15:28:42,653 - socket_server - INFO - Client ('127.0.0.1', 58088) closed connection
+2025-06-26 15:28:42,654 - socket_server - INFO - Client ('127.0.0.1', 58088) disconnected
+2025-06-26 15:30:51,820 - socket_server - INFO - Stopping server...
+2025-06-26 15:30:51,821 - socket_server - INFO - Socket Server stopped
+2025-06-26 15:30:51,821 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 15:30:51,821 - socket_server - INFO - Stopping server...
+2025-06-26 15:30:51,821 - socket_server - INFO - Socket Server stopped
+2025-06-26 15:30:58,081 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 15:31:11,817 - socket_server - INFO - New client connected from ('127.0.0.1', 58148)
+2025-06-26 15:31:11,817 - socket_server - INFO - Received request from ('127.0.0.1', 58148): chat
+2025-06-26 15:31:11,818 - __main__ - INFO - Processing message for conversation 27
+2025-06-26 15:31:11,818 - __main__ - INFO - New context established: rag:general
+2025-06-26 15:31:11,819 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:31:14,419 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 15:31:14,422 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:31:14,716 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 15:31:14,716 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:31:14,716 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:31:17,139 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:31:17,141 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:31:17,141 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:31:17,141 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 15:31:17,141 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu hòa phát các năm'}
+2025-06-26 15:31:17,704 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 15:31:17,704 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:31:39,126 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:31:39,127 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:31:39,127 - __main__ - INFO - Generated final answer for conversation 27
+2025-06-26 15:31:39,131 - socket_server - INFO - Sent response to ('127.0.0.1', 58148): success
+2025-06-26 15:31:46,904 - socket_server - INFO - New client connected from ('127.0.0.1', 58160)
+2025-06-26 15:31:46,905 - socket_server - INFO - Received request from ('127.0.0.1', 58160): chat
+2025-06-26 15:31:46,906 - __main__ - INFO - Processing message for conversation 27
+2025-06-26 15:31:46,907 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:31:49,567 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 15:31:49,570 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:31:49,827 - __main__ - INFO - User message: liệt kê 20 sản phẩm trong php3_wd19314
+2025-06-26 15:31:49,827 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:31:49,827 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:31:53,308 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:31:53,309 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:31:53,309 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:31:53,309 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:31:53,309 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:31:58,634 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:31:58,635 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:31:58,635 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:31:58,635 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 15:31:58,635 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 15:31:58,635 - __main__ - ERROR - Error in mcpCall for tool sql+db://sql/list_tables/{db_name*}: name 're' is not defined
+2025-06-26 15:31:58,635 - __main__ - WARNING - Tool call returned error: name 're' is not defined
+2025-06-26 15:31:58,636 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 15:32:00,519 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:32:00,520 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:32:00,520 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:32:00,521 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 15:32:00,521 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 15:32:00,521 - __main__ - ERROR - Error in mcpCall for tool sql+db://sql/list_tables/{db_name*}: name 're' is not defined
+2025-06-26 15:32:00,521 - __main__ - WARNING - Tool call returned error: name 're' is not defined
+2025-06-26 15:32:00,521 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 15:32:07,670 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:32:07,671 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:32:07,671 - __main__ - INFO - Generated final answer for conversation 27
+2025-06-26 15:32:07,675 - socket_server - INFO - Sent response to ('127.0.0.1', 58160): success
+2025-06-26 15:32:35,299 - socket_server - INFO - Stopping server...
+2025-06-26 15:32:35,299 - socket_server - INFO - Socket Server stopped
+2025-06-26 15:32:35,300 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 15:32:35,300 - socket_server - INFO - Stopping server...
+2025-06-26 15:32:35,300 - socket_server - INFO - Socket Server stopped
+2025-06-26 15:32:41,742 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 15:32:58,180 - socket_server - INFO - New client connected from ('127.0.0.1', 58183)
+2025-06-26 15:32:58,181 - socket_server - INFO - Received request from ('127.0.0.1', 58183): chat
+2025-06-26 15:32:58,182 - __main__ - INFO - Processing message for conversation 28
+2025-06-26 15:32:58,182 - __main__ - INFO - New context established: rag:general
+2025-06-26 15:32:58,182 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:33:00,778 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 15:33:00,782 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:33:01,131 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 15:33:01,131 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:33:01,131 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:33:02,955 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:33:02,957 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:33:02,958 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:33:02,958 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 15:33:02,958 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu hòa phát các năm'}
+2025-06-26 15:33:03,454 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 15:33:03,454 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:33:23,948 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:33:23,949 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:33:23,949 - __main__ - INFO - Generated final answer for conversation 28
+2025-06-26 15:33:23,953 - socket_server - INFO - Sent response to ('127.0.0.1', 58183): success
+2025-06-26 15:33:36,457 - socket_server - INFO - New client connected from ('127.0.0.1', 58213)
+2025-06-26 15:33:36,457 - socket_server - INFO - Received request from ('127.0.0.1', 58213): chat
+2025-06-26 15:33:36,458 - __main__ - INFO - Processing message for conversation 28
+2025-06-26 15:33:36,458 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:33:39,086 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 15:33:39,090 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:33:39,340 - __main__ - INFO - User message: liệt kê 20 sản phẩm của php3_wd19314
+2025-06-26 15:33:39,340 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:33:39,340 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:33:41,756 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:33:41,757 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:33:41,757 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:33:41,757 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:33:41,757 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:33:48,432 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:33:48,433 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:33:48,433 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:33:48,433 - __main__ - INFO - Executing tool call: sql+db://sql/list_databases
+2025-06-26 15:33:48,434 - __main__ - INFO - Executing tool: sql+db://sql/list_databases with args: {}
+2025-06-26 15:33:48,456 - __main__ - INFO - Tool sql+db://sql/list_databases executed successfully
+2025-06-26 15:33:48,457 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 15:33:50,605 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:33:50,606 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:33:50,606 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:33:50,606 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:33:50,606 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 15:33:52,983 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:33:52,984 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:33:52,984 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:33:52,984 - __main__ - ERROR - Unknown tool name: sql+db://sql/schema/php3_wd19314
+2025-06-26 15:33:52,985 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 15:33:54,785 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:33:54,785 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:33:54,786 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:33:54,786 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 15:33:54,786 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products LIMIT 20;'}
+2025-06-26 15:33:54,790 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 15:33:54,790 - __main__ - INFO - LLM iteration 6/10
+2025-06-26 15:34:28,178 - socket_server - INFO - Client ('127.0.0.1', 58183) closed connection
+2025-06-26 15:34:28,179 - socket_server - INFO - Client ('127.0.0.1', 58183) disconnected
+2025-06-26 15:35:06,372 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:35:06,373 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:35:06,373 - __main__ - INFO - Generated final answer for conversation 28
+2025-06-26 15:35:06,376 - socket_server - INFO - Sent response to ('127.0.0.1', 58213): success
+2025-06-26 15:35:06,468 - socket_server - INFO - Client ('127.0.0.1', 58213) closed connection
+2025-06-26 15:35:06,469 - socket_server - INFO - Client ('127.0.0.1', 58213) disconnected
+2025-06-26 15:39:20,856 - socket_server - INFO - New client connected from ('127.0.0.1', 58309)
+2025-06-26 15:39:20,857 - socket_server - INFO - Received request from ('127.0.0.1', 58309): chat
+2025-06-26 15:39:20,858 - __main__ - INFO - Processing message for conversation 29
+2025-06-26 15:39:20,858 - __main__ - INFO - New context established: rag:general
+2025-06-26 15:39:20,858 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:39:23,531 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 15:39:23,534 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:39:23,789 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 15:39:23,789 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:39:23,789 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:39:25,549 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:39:25,550 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:39:25,550 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:39:25,550 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 15:39:25,551 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu hòa phát các năm'}
+2025-06-26 15:39:26,130 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 15:39:26,131 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:39:38,348 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:39:38,350 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:39:38,350 - __main__ - INFO - Generated final answer for conversation 29
+2025-06-26 15:39:38,354 - socket_server - INFO - Sent response to ('127.0.0.1', 58309): success
+2025-06-26 15:40:25,314 - socket_server - INFO - New client connected from ('127.0.0.1', 58349)
+2025-06-26 15:40:25,315 - socket_server - INFO - Received request from ('127.0.0.1', 58349): chat
+2025-06-26 15:40:25,315 - __main__ - INFO - Processing message for conversation 30
+2025-06-26 15:40:25,315 - __main__ - INFO - New context established: rag:general
+2025-06-26 15:40:25,316 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:40:28,019 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 15:40:28,022 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:40:28,266 - __main__ - INFO - User message: phân tích doanh thu hòa phát các năm
+2025-06-26 15:40:28,266 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT:40:52,033 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:40:52,033 - __main__ - ERROR - Unknown tool name: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 15:40:52,033 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:40:54,385 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:40:54,386 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:40:54,386 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:40:54,386 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 15:40:54,386 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products LIMIT 20;'}
+2025-06-26 15:40:54,392 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 15:40:54,392 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 15:41:55,321 - socket_server - INFO - Client ('127.0.0.1', 58349) closed connection
+2025-06-26 15:41:55,322 - socket_server - INFO - Client ('127.0.0.1', 58349) disconnected
+2025-06-26 15:42:07,581 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:42:07,583 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:42:07,583 - __main__ - INFO - Generated final answer for conversation 30
+2025-06-26 15:42:07,586 - socket_server - INFO - Sent response to ('127.0.0.1', 58361): success
+2025-06-26 15:42:17,040 - socket_server - INFO - Client ('127.0.0.1', 58361) closed connection
+2025-06-26 15:42:17,041 - socket_server - INFO - Client ('127.0.0.1', 58361) disconnected You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:40:28,267 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:40:28,269 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 15:40:28,279 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<AsyncClient.aclose() done, defined at C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\streams\tls.py", line 216, in aclose
+    await self.transport_stream.aclose()
+  File "C:\laragon\www\chatbot\chatbot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1314, in aclose
+    self._transport.close()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 827, in call_soon
+    self._check_closed()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\84862\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 550, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2025-06-26 15:40:30,015 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:40:30,017 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:40:30,017 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 15:40:30,017 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 15:40:30,017 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu hòa phát các năm'}
+2025-06-26 15:40:30,571 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 15:40:30,571 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 15:40:43,467 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:40:43,468 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 15:40:43,468 - __main__ - INFO - Generated final answer for conversation 30
+2025-06-26 15:40:43,472 - socket_server - INFO - Sent response to ('127.0.0.1', 58349): success
+2025-06-26 15:40:47,029 - socket_server - INFO - New client connected from ('127.0.0.1', 58361)
+2025-06-26 15:40:47,029 - socket_server - INFO - Received request from ('127.0.0.1', 58361): chat
+2025-06-26 15:40:47,030 - __main__ - INFO - Processing message for conversation 30
+2025-06-26 15:40:47,030 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 15:40:49,719 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 15:40:49,722 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 15:40:49,966 - __main__ - INFO - User message: liệt kê 20 sản phẩm của php3_wd19314
+2025-06-26 15:40:49,966 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 15:40:49,966 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 15:40:50,864 - socket_server - INFO - Client ('127.0.0.1', 58309) closed connection
+2025-06-26 15:40:50,864 - socket_server - INFO - Client ('127.0.0.1', 58309) disconnected
+2025-06-26 15:40:52,032 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 15:40:52,033 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 15:
+2025-06-26 15:52:33,691 - socket_server - INFO - Stopping server...
+2025-06-26 15:52:33,693 - socket_server - INFO - Socket Server stopped
+2025-06-26 15:52:33,694 - __main__ - INFO - Received keyboard interrupt, stopping server...
+2025-06-26 15:52:33,694 - socket_server - INFO - Stopping server...
+2025-06-26 15:52:33,694 - socket_server - INFO - Socket Server stopped

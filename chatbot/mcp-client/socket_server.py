@@ -4,12 +4,19 @@ import json
 import asyncio
 import logging
 import time
+import sys
+
+# Fix Unicode encoding issues for Windows
+if sys.platform.startswith('win'):
+    import codecs
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
 
 logging.basicConfig(
     level=logging.INFO, 
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('ai_server.log'),
+        logging.FileHandler('ai_server.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -22,7 +29,7 @@ class SocketServer:
         self.server_socket = None
         self.clients = {}
         self.running = False
-        self.connection_timeout = 310
+        self.connection_timeout = 60
         self.process_message_callback = process_message_callback
 
     def handle_client(self, client_socket, address):
@@ -50,31 +57,17 @@ class SocketServer:
                                 response = {"status": "error", "error": "Missing conversationId or message"}
                             else:
                                 try:
-                                    try:
-                                        loop = asyncio.get_running_loop()
-                                        import concurrent.futures
-                                        with concurrent.futures.ThreadPoolExecutor() as executor:
-                                            future = executor.submit(
-                                                self._run_async_processing, 
-                                                conversation_id, 
-                                                user_message, 
-                                                username
-                                            )
-                                            response = future.result(timeout=300)
-                                    except RuntimeError:
-                                        loop = asyncio.new_event_loop()
-                                        asyncio.set_event_loop(loop)
-                                        try:
-                                            response = loop.run_until_complete(
-                                                self.process_message_callback(conversation_id, user_message, username)
-                                            )
-                                        finally:
-                                            loop.close()
+                                    # Run async function in new event loop
+                                    response = self._run_async_processing(
+                                        conversation_id, 
+                                        user_message, 
+                                        username
+                                    )
                                 except Exception as e:
                                     logger.error(f"Error in async processing: {str(e)}")
                                     response = {"status": "error", "error": f"Processing failed: {str(e)}"}
                             
-                            response_json = json.dumps(response) + '\n'
+                            response_json = json.dumps(response, ensure_ascii=False) + '\n'
                             client_socket.send(response_json.encode('utf-8'))
                             logger.info(f"Sent response to {address}: {response.get('status', 'unknown')}")
                             
@@ -96,6 +89,13 @@ class SocketServer:
                 except BrokenPipeError:
                     logger.info(f"Broken pipe for client {address}")
                     break
+                except UnicodeDecodeError as e:
+                    logger.error(f"Unicode decode error from {address}: {e}")
+                    error_response = {"status": "error", "error": "Invalid character encoding"}
+                    try:
+                        client_socket.send((json.dumps(error_response) + '\n').encode('utf-8'))
+                    except:
+                        break
                 
         except Exception as e:
             logger.error(f"Error handling client {address}: {e}")
@@ -107,14 +107,32 @@ class SocketServer:
             logger.info(f"Client {address} disconnected")
 
     def _run_async_processing(self, conversation_id, user_message, username):
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
+        """Run async processing in a new event loop"""
         try:
-            return loop.run_until_complete(
-                self.process_message_callback(conversation_id, user_message, username)
-            )
-        finally:
-            loop.close()
+            # Create new event loop for this thread
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            try:
+                return loop.run_until_complete(
+                    self.process_message_callback(conversation_id, user_message, username)
+                )
+            finally:
+                # Clean up the loop
+                try:
+                    # Cancel all pending tasks
+                    pending = asyncio.all_tasks(loop)
+                    for task in pending:
+                        task.cancel()
+                    # Wait for all tasks to be cancelled
+                    if pending:
+                        loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+                except Exception as cleanup_error:
+                    logger.warning(f"Error during loop cleanup: {cleanup_error}")
+                finally:
+                    loop.close()
+        except Exception as e:
+            logger.error(f"Error in _run_async_processing: {str(e)}")
+            return {"status": "error", "error": f"Async processing failed: {str(e)}"}
 
     def start_server(self):
         try:

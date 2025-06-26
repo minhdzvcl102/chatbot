@@ -9,7 +9,7 @@ const ChatInput = ({
   fileInputRef,
   selectedFile,
   disabled,
-  isProcessing, // Add this new prop
+  isProcessing,
   onChange,
   onBlur,
 }) => {
@@ -62,26 +62,6 @@ const ChatInput = ({
           <Send size={20} />
         </button>
       </div>
-      
-      {/* Optional: Show processing indicator */}
-      {isProcessing && (
-        <div className="flex items-center justify-center mt-2 text-sm text-gray-600">
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
-              <div
-                className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
-                style={{ animationDelay: "0.1s" }}
-              ></div>
-              <div
-                className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
-                style={{ animationDelay: "0.2s" }}
-              ></div>
-            </div>
-            <span>AI đang xử lý câu hỏi của bạn...</span>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

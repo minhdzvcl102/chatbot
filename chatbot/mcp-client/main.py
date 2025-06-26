@@ -3,6 +3,7 @@ import json
 import os
 import re
 import time
+import sys
 from dotenv import load_dotenv
 from fastmcp.client import Client
 from fastmcp.client.transports import PythonStdioTransport
@@ -11,88 +12,138 @@ import helper_functions
 import logging
 from socket_server import SocketServer
 
+# Fix Unicode encoding issues for Windows
+if sys.platform.startswith("win"):
+    import codecs
+
+    if hasattr(sys.stdout, "buffer"):
+        sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+    if hasattr(sys.stderr, "buffer"):
+        sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "strict")
+
+# Configure logging with UTF-8 encoding
 logging.basicConfig(
-    level=logging.INFO, 
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler('ai_server.log'),
-        logging.StreamHandler()
-    ]
+        logging.FileHandler("ai_server.log", encoding="utf-8"),
+        logging.StreamHandler(),
+    ],
 )
 logger = logging.getLogger(__name__)
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", ".env"))
 
 message_history = {}
-conversation_db_context = {}  # Track database context per conversation
+conversation_context = {}  # Track general context (db or rag) per conversation
 
-def get_dynamic_sys_prompt(current_db=None):
-    """Generate system prompt based on current database context"""
-    base_prompt = """You are a helpful assistant. Your job is to assist the user by all means possible.
-    Make sure to format your message like utilizing newlines, lists and tables.
-    For chart-related requests, use the query_for_chart tool to retrieve chart metadata.
-    
-    When working with SQL databases:
-    - Always use fully qualified table names with database prefix (e.g., `database_name.table_name`)
-    - If you get "No database selected" error, retry with proper database prefix"""
-    
-    if current_db:
-        base_prompt += f"\n    - Current database context: {current_db}. Use format: `{current_db}.table_name`"
-    
-    return {"role": "system", "content": base_prompt}
-
-def extract_database_from_message(message):
-    """Extract database name from user message"""
-    # Pattern to match database references
-    db_patterns = [
-        r'database\s+(\w+)',
-        r'db\s+(\w+)',
-        r'(\w+)\.(\w+)',  # table.column format
-        r'trong\s+(\w+)',  # Vietnamese: "trong database_name"
-        r'từ\s+(\w+)',     # Vietnamese: "từ database_name"
-    ]
-    
-    message_lower = message.lower()
-    for pattern in db_patterns:
-        matches = re.findall(pattern, message_lower)
-        if matches:
-            # Return the first non-empty match
-            for match in matches:
-                if isinstance(match, tuple):
-                    # For patterns like (\w+)\.(\w+), return the first part (database name)
-                    db_name = match[0]
-                else:
-                    db_name = match
-                
-                # Filter out common words that aren't database names
-                if db_name not in ['select', 'from', 'where', 'and', 'or', 'table', 'column']:
-                    return db_name
-    
-    return None
 
 def should_reset_context(conversation_id, user_message):
     """Determine if we should reset the conversation context"""
-    # Extract database from current message
-    current_db = extract_database_from_message(user_message)
+    previous_context = conversation_context.get(conversation_id, {})
+    previous_type = previous_context.get("type")
+    previous_name = previous_context.get("name")
+
+    # Let LLM decide context in system prompt; reset if no prior context
+    if not previous_type:
+        logger.info(f"New context established: rag:general")
+        conversation_context[conversation_id] = {"type": "rag", "name": "general"}
+        return False, "rag", "general"
+    return False, previous_type, previous_name
+
+
+def get_dynamic_sys_prompt(context_type=None, context_name=None):
+    """Generate system prompt to guide LLM in intelligently selecting tools"""
+    base_prompt = """You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT answer from general knowledge unless no relevant tool results are found. Your goal is to intelligently select the appropriate tool based on the question's intent and context, prioritizing rag_query for general or ambiguous questions.
+
+    Your expertise includes:
+    - Data interpretation and business insights
+    - Statistical analysis and trend identification
+    - Performance metrics and KPI analysis
+    - Data visualization recommendations
+    - Business intelligence and reporting
+    - SQL query execution and database analysis
+    - Document and knowledge base querying
+
+    TOOL SELECTION GUIDELINES:
+    1. By default, use rag_query for general, ambiguous, or knowledge-based questions (e.g., 'explain', 'define', 'what is', 'giải thích', 'là gì', 'phân tích doanh thu') to search for relevant information in documents.
+    2. Only use sql_query_db, list_databases, list_tables, or get_schema when:
+       - The question explicitly mentions database-related terms (e.g., 'database', 'table', 'sql', 'cơ sở dữ liệu', 'bảng') or names that appear to be database identifiers (e.g., 'php3_wd19314').
+       - The user explicitly requests to use SQL (e.g., 'dùng SQL', 'use SQL').
+       - rag_query returns no relevant results, and the question implies structured data (e.g., 'list products', 'sales data').
+    3. For chart/visualization requests:
+       - If the question implies document-based data (e.g., 'summary from report'), use rag_query.
+       - If the question implies structured data (e.g., 'sales data from table'), use sql_query_db.
+       - Explain visualization options after retrieving data.
+    4. Use conversation history to infer context if the current question is ambiguous. For example:
+       - If previous questions were about documents, prioritize rag_query.
+       - If previous questions mentioned a specific database (e.g., 'php3_wd19314'), consider sql_query_db.
+    5. If rag_query returns no relevant results, try sql_query_db as a fallback for data-related questions.
+    6. Always provide the business meaning of findings in your response.
+    7. If no relevant data is found, inform the user and suggest rephrasing the question or checking other sources.
+
+    Examples:
+    - Question: "Phân tích doanh thu hòa phát các năm" → Use rag_query to find information in documents, as it is a general analysis request.
+    - Question: "Liệt kê 20 sản phẩm trong php3_wd19314" → Use sql_query_db with database 'php3_wd19314', as it mentions a likely database name and implies structured data.
+    - Question: "Dùng SQL để lấy doanh thu từ bảng sales" → Use sql_query_db, as the user explicitly requests SQL.
+    - Question: "Doanh thu là gì?" → Use rag_query to find definitions in documents.
+
+    Available tools:
+    - sql_query_db: Execute SQL queries on databases
+    - list_databases: List available databases
+    - list_tables: List tables in a specific database
+    - get_schema: Get schema of a specific database
+    - rag_query: Query document knowledge base
+    - rag_get_collection_info: Get information about document collections
+    + 
+    + TOOL CALL NAMES (for LLM):
+    + - sql_query_db
+    + - sql+db://sql/list_databases
+    + - sql+db://sql/list_tables/{db_name}
+    + - sql+db://sql/schema/{db_name}
+    + - rag_query
+    + - rag_get_collection_info
     
-    if not current_db:
-        return False, None
-    
-    # Check if this is a different database than before
-    previous_db = conversation_db_context.get(conversation_id)
-    
-    if previous_db and previous_db != current_db:
-        logger.info(f"Database context change detected: {previous_db} -> {current_db}")
-        return True, current_db
-    elif not previous_db:
-        logger.info(f"New database context established: {current_db}")
-        conversation_db_context[conversation_id] = current_db
-        return False, current_db
-    
-    return False, current_db
+    Valid tool call names (exact match only):
+    - sql_query_db
+    - sql+db://sql/list_databases
+    - sql+db://sql/list_tables/{db_name}
+    - sql+db://sql/schema/{db_name}
+    - rag_query
+    - rag_get_collection_info
+
+    WORKFLOW:
+    1. Analyze the question and conversation history to infer the user's intent.
+    2. Select the appropriate tool based on the intent:
+       - Use rag_query by default for general, ambiguous, or document-related questions.
+       - Use SQL tools (sql_query_db, list_databases, list_tables, get_schema) only for explicit database-related questions or when explicitly requested (e.g., 'dùng SQL').
+       - If rag_query returns no results, try sql_query_db for data-related questions.
+    3. Execute the selected tool and verify the results.
+    4. Provide a clear answer with business context, citing the source (database or document).
+    5. If no data is found, inform the user and suggest alternative approaches.
+
+    When working with SQL databases:
+    - Always use fully qualified table names with database prefix (e.g., `database_name.table_name`).
+    - If you get 'No database selected' error, use list_databases or list_tables to explore available data.
+    - Start with list_databases or list_tables if unsure about available data.
+
+    When working with documents:
+    - Use rag_query to search for relevant information in the document knowledge base.
+    - If rag_query returns no results, consider using sql_query_db as a fallback for data-related questions.
+    - Use rag_get_collection_info to understand available document collections if needed."""
+
+    if context_type == "db" and context_name:
+        base_prompt += f"\n\nCurrent database context: {context_name}. Use format: `{context_name}.table_name` in SQL queries. Prioritize sql_query_db for this question unless it clearly indicates a document-based query."
+    else:
+        base_prompt += "\n\nNo specific database context provided. Use rag_query by default for this question, unless it explicitly mentions database-related terms or requests to use SQL."
+
+    return {"role": "system", "content": base_prompt}
+
 
 class AISocketServer:
-    def __init__(self, host='localhost', port=8888):
+    def __init__(self, host="localhost", port=8888):
         self.host = host
         self.port = port
         self.max_retries = 3
@@ -102,9 +153,9 @@ class AISocketServer:
         try:
             tool_name = tool_call["function"]["name"]
             tool_args = tool_call["function"]["arguments"]
-            
+
             logger.info(f"Executing tool: {tool_name} with args: {tool_args}")
-            
+
             if tool_call["type"] == "tool":
                 if tool_args and len(tool_args) > 0:
                     result = await client.call_tool(tool_name, tool_args)
@@ -124,36 +175,74 @@ class AISocketServer:
                 result = await client.read_resource(uri)
             else:
                 raise ValueError(f"Unknown tool type: {tool_call['type']}")
-            
+
             logger.info(f"Tool {tool_name} executed successfully")
             return result
-            
+
         except Exception as e:
-            logger.error(f"Error in mcpCall for tool {tool_call.get('function', {}).get('name', 'unknown')}: {str(e)}")
+            logger.error(
+                f"Error in mcpCall for tool {tool_call.get('function', {}).get('name', 'unknown')}: {str(e)}"
+            )
+
             class ErrorResult:
                 def __init__(self, error_msg):
                     self.text = json.dumps({"error": error_msg})
-            
+
             return [ErrorResult(str(e))]
 
     async def initialize_mcp_client(self):
-        server_path = os.path.join(os.path.dirname(__file__), "..", "mcp-server", "server.py")
-        python_cmd = os.path.join(os.path.dirname(__file__), "..", ".venv", "Scripts", "python.exe")
-        
+        server_path = os.path.join(
+            os.path.dirname(__file__), "..", "mcp-server", "server.py"
+        )
+        python_cmd = os.path.join(
+            os.path.dirname(__file__), "..", ".venv", "Scripts", "python.exe"
+        )
+
         if not os.path.exists(server_path):
             raise FileNotFoundError(f"MCP server script not found: {server_path}")
         if not os.path.exists(python_cmd):
             raise FileNotFoundError(f"Python executable not found: {python_cmd}")
-        
+
         for attempt in range(self.max_retries):
             try:
-                logger.info(f"Attempting to initialize MCP client (attempt {attempt + 1}/{self.max_retries})")
-                client = Client(PythonStdioTransport(script_path=server_path, python_cmd=python_cmd))
-                await client.__aenter__()
-                logger.info("MCP client initialized successfully")
-                return client
+                logger.info(
+                    f"Attempting to initialize MCP client (attempt {attempt + 1}/{self.max_retries})"
+                )
+
+                transport = PythonStdioTransport(
+                    script_path=server_path, python_cmd=python_cmd
+                )
+                client = Client(transport)
+
+                await client.__aenter__()  # ✅ Sử dụng nếu KHÔNG dùng `async with`
+                self._client_cleanup = (
+                    client.__aexit__
+                )  # Ghi nhớ hàm exit để sau gọi khi cần
+                self.client = client
+
+                # Đợi cho đến khi tool list có dữ liệu
+                for wait_attempt in range(5):  # thử 5 lần, mỗi lần cách nhau 1 giây
+                    tool_list = await client.list_tools()
+                    resource_list = await client.list_resources()
+                    resource_template_list = await client.list_resource_templates()
+
+                    if tool_list or resource_list or resource_template_list:
+                        logger.info(f"Tool ready after {wait_attempt + 1} attempt(s)")
+                        return client
+
+                    logger.info("Tool list empty, retrying...")
+                    await asyncio.sleep(1)
+
+                # Nếu không thành công
+                await client.__aexit__(None, None, None)  # cleanup
+                raise RuntimeError(
+                    "Tool/resource/resource_template list still empty after retries"
+                )
+
             except Exception as e:
-                logger.warning(f"MCP client initialization attempt {attempt + 1} failed: {str(e)}")
+                logger.warning(
+                    f"MCP client initialization attempt {attempt + 1} failed: {str(e)}"
+                )
                 if attempt == self.max_retries - 1:
                     raise
                 await asyncio.sleep(1)
@@ -162,26 +251,27 @@ class AISocketServer:
         client = None
         try:
             logger.info(f"Processing message for conversation {conversation_id}")
-            
-            # Check if we need to reset context due to database change
-            should_reset, current_db = should_reset_context(conversation_id, user_message)
-            
+
+            # Check if we need to reset context
+            should_reset, context_type, context_name = should_reset_context(
+                conversation_id, user_message
+            )
+
             if should_reset:
-                # Reset message history for this conversation
                 logger.info(f"Resetting conversation context for {conversation_id}")
                 message_history[conversation_id] = []
-                conversation_db_context[conversation_id] = current_db
-            elif current_db:
-                # Update database context
-                conversation_db_context[conversation_id] = current_db
-            
+                conversation_context[conversation_id] = {
+                    "type": context_type,
+                    "name": context_name,
+                }
+
             client = await self.initialize_mcp_client()
-            
+
             async with asyncio.timeout(120):
                 tool_list = await client.list_tools()
                 resource_list = await client.list_resources()
                 resource_template_list = await client.list_resource_templates()
-            
+
             tools = []
             for tool in tool_list:
                 try:
@@ -189,7 +279,7 @@ class AISocketServer:
                     tools.append(tool_dict)
                 except Exception as e:
                     logger.warning(f"Failed to serialize tool: {e}")
-            
+
             resources = []
             for resource in resource_list:
                 try:
@@ -197,7 +287,7 @@ class AISocketServer:
                     resources.append(resource_dict)
                 except Exception as e:
                     logger.warning(f"Failed to serialize resource: {e}")
-            
+
             resource_templates = []
             for resource_template in resource_template_list:
                 try:
@@ -208,196 +298,230 @@ class AISocketServer:
 
             tools = helper_functions.mcp_tools_to_tool_list(tools)
             resources = helper_functions.mcp_resources_to_tool_list(resources)
-            resource_templates = helper_functions.mcp_resource_templates_to_tool_list(resource_templates)
+            resource_templates = helper_functions.mcp_resource_templates_to_tool_list(
+                resource_templates
+            )
 
             tool_list_names = [tool["function"]["name"] for tool in tools]
-            resource_list_names = [resource["function"]["name"] for resource in resources]
-            resource_template_list_names = [resource_template["function"]["name"] for resource_template in resource_templates]
-            
+            resource_list_names = [
+                resource["function"]["name"] for resource in resources
+            ]
+            resource_template_list_names = [
+                resource_template["function"]["name"]
+                for resource_template in resource_templates
+            ]
+
             tool_lookup = {tool: "tool" for tool in tool_list_names}
-            tool_lookup.update({resource: "resource" for resource in resource_list_names})
-            tool_lookup.update({resource_template: "resource_template" for resource_template in resource_template_list_names})
-            list_of_tools = tools + resources + resource_templates
+            tool_lookup.update(
+                {resource: "resource" for resource in resource_list_names}
+            )
+            tool_lookup.update(
+                {
+                    resource_template: "resource_template"
+                    for resource_template in resource_template_list_names
+                }
+            )
+
+            list_of_tools = resources + resource_templates + tools
 
             logger.info(f"Available tools: {list(tool_lookup.keys())}")
 
             llm = AsyncOpenAI(
                 base_url=os.getenv("BASE_API_URL"),
                 api_key=os.getenv("ALIBABA_API_KEY"),
-                timeout=90.0
+                timeout=90.0,
             )
 
             if conversation_id not in message_history:
                 message_history[conversation_id] = []
 
-            message_history[conversation_id].append({"role": "user", "content": user_message})
+            message_history[conversation_id].append(
+                {"role": "user", "content": user_message}
+            )
 
-            chart_keywords = ['vẽ biểu đồ', 'chart', 'graph', 'biểu đồ']
-            is_chart_request = any(keyword in user_message.lower() for keyword in chart_keywords)
+            # Generate dynamic system prompt based on current context
+            sys_prompt = get_dynamic_sys_prompt(context_type, context_name)
 
-            if is_chart_request:
+            logger.info(f"User message: {user_message}")
+            logger.info(
+                f"System prompt: {sys_prompt['content'][:200]}..."
+            )  # Log first 200 chars
+
+            # Main conversation loop with consecutive tool calls
+            max_iterations = 10  # Prevent infinite loops
+            iteration = 0
+
+            while iteration < max_iterations:
+                iteration += 1
+                logger.info(f"LLM iteration {iteration}/{max_iterations}")
+
                 try:
-                    async with asyncio.timeout(15):
-                        result = await client.call_tool('query_for_chart', {'query': user_message})
-                    
-                    if result and len(result) > 0:
-                        result_text = result[0].text
-                        try:
-                            result_json = json.loads(result_text)
-                            if result_json and result_json[0].get('metadata'):
-                                return {
-                                    "status": "success",
-                                    "content": "Preparing chart data...",
-                                    "metadata": result_json[0]['metadata']
-                                }
-                            else:
-                                return {"status": "error", "error": "No chart data found"}
-                        except json.JSONDecodeError:
-                            return {"status": "error", "error": "Invalid chart data format"}
-                    else:
-                        return {"status": "error", "error": "No result from query_for_chart"}
+                    async with asyncio.timeout(90):
+                        response = await llm.chat.completions.create(
+                            model="qwen-plus",
+                            messages=[sys_prompt] + message_history[conversation_id],
+                            tools=list_of_tools,
+                        )
                 except asyncio.TimeoutError:
-                    logger.error("Timeout calling query_for_chart")
-                    return {"status": "error", "error": "Chart query timeout"}
-                except Exception as e:
-                    logger.error(f"Error calling query_for_chart: {str(e)}")
-                    return {"status": "error", "error": f"Chart query failed: {str(e)}"}
-            else:
-                # Generate dynamic system prompt based on current database context
-                current_db_context = conversation_db_context.get(conversation_id)
-                sys_prompt = get_dynamic_sys_prompt(current_db_context)
-                
-                # Main conversation loop with consecutive tool calls
-                max_iterations = 10  # Prevent infinite loops
-                iteration = 0
-                
-                while iteration < max_iterations:
-                    iteration += 1
-                    logger.info(f"LLM iteration {iteration}/{max_iterations}")
-                    
-                    try:
-                        async with asyncio.timeout(90):
-                            response = await llm.chat.completions.create(
-                                model="qwen-plus",
-                                messages=[sys_prompt] + message_history[conversation_id],
-                                tools=list_of_tools
-                            )
-                    except asyncio.TimeoutError:
-                        logger.error("LLM timeout")
-                        return {"status": "error", "error": "LLM response timeout"}
-                    
-                    if not response.choices or len(response.choices) == 0:
-                        logger.error("Empty choices in LLM response")
-                        return {"status": "error", "error": "No response from LLM"}
-                    
-                    choice = response.choices[0]
-                    logger.info(f"LLM finish_reason: {choice.finish_reason}")
-                    
-                    if choice.finish_reason == "stop":
-                        answer = choice.message.content
-                        message_history[conversation_id].append({"role": "assistant", "content": answer})
-                        logger.info(f"Generated final answer for conversation {conversation_id}")
-                        return {"status": "success", "content": answer}
-                    
-                    elif choice.finish_reason == "tool_calls":
-                        logger.info(f"LLM requested {len(choice.message.tool_calls)} tool calls")
-                        
-                        # Add assistant message with tool calls to history
-                        message_history[conversation_id].append({
-                            "role": "assistant", 
-                            "content": None, 
-                            "tool_calls": choice.message.tool_calls
-                        })
-                        
-                        # Execute all tool calls
-                        for tool_call in choice.message.tool_calls:
-                            tool_name = tool_call.function.name
-                            arguments = tool_call.function.arguments
-                            
-                            try:
-                                if isinstance(arguments, str):
-                                    arguments = json.loads(arguments)
-                            except json.JSONDecodeError as e:
-                                logger.error(f"Failed to parse tool arguments: {e}")
-                                return {"status": "error", "error": f"Invalid tool arguments: {str(e)}"}
-                            
-                            if tool_name not in tool_lookup:
-                                logger.error(f"Unknown tool name: {tool_name}")
-                                message_history[conversation_id].append({
-                                    "role": "tool",
-                                    "content": json.dumps({"error": f"Unknown tool: {tool_name}"}),
-                                    "tool_call_id": tool_call.id
-                                })
-                                continue
-                            
-                            tool_type = tool_lookup[tool_name]
-                            tool_dict = {
-                                "id": tool_call.id,
-                                "type": tool_type,
-                                "function": {
-                                    "name": tool_name,
-                                    "arguments": arguments
-                                }
+                    logger.error("LLM timeout")
+                    return {"status": "error", "error": "LLM response timeout"}
+
+                if not response.choices or len(response.choices) == 0:
+                    logger.error("Empty choices in LLM response")
+                    return {"status": "error", "error": "No response from LLM"}
+
+                choice = response.choices[0]
+                logger.info(f"LLM finish_reason: {choice.finish_reason}")
+
+                if choice.finish_reason == "stop":
+                    answer = choice.message.content
+                    message_history[conversation_id].append(
+                        {"role": "assistant", "content": answer}
+                    )
+                    logger.info(
+                        f"Generated final answer for conversation {conversation_id}"
+                    )
+                    return {"status": "success", "content": answer}
+
+                elif choice.finish_reason == "tool_calls":
+                    logger.info(
+                        f"LLM requested {len(choice.message.tool_calls)} tool calls"
+                    )
+
+                    # Add assistant message with tool calls to history
+                    message_history[conversation_id].append(
+                        {
+                            "role": "assistant",
+                            "content": None,
+                            "tool_calls": choice.message.tool_calls,
+                        }
+                    )
+
+                    # Execute all tool calls
+                    for tool_call in choice.message.tool_calls:
+                        tool_name = tool_call.function.name
+                        arguments = tool_call.function.arguments
+
+                        try:
+                            if isinstance(arguments, str):
+                                arguments = json.loads(arguments)
+                        except json.JSONDecodeError as e:
+                            logger.error(f"Failed to parse tool arguments: {e}")
+                            return {
+                                "status": "error",
+                                "error": f"Invalid tool arguments: {str(e)}",
                             }
-                            
+
+                        if tool_name not in tool_lookup:
+                            logger.error(f"Unknown tool name: {tool_name}")
+                            message_history[conversation_id].append(
+                                {
+                                    "role": "tool",
+                                    "content": json.dumps(
+                                        {"error": f"Unknown tool: {tool_name}"}
+                                    ),
+                                    "tool_call_id": tool_call.id,
+                                }
+                            )
+                            continue
+
+                        tool_type = tool_lookup[tool_name]
+                        tool_dict = {
+                            "id": tool_call.id,
+                            "type": tool_type,
+                            "function": {"name": tool_name, "arguments": arguments},
+                        }
+
+                        try:
+                            logger.info(f"Executing tool call: {tool_name}")
+                            async with asyncio.timeout(15):
+                                result = await self.mcpCall(tool_dict, client)
+
+                            result_text = (
+                                result[0].text
+                                if result and len(result) > 0
+                                else "No result returned"
+                            )
+
+                            # Check for tool call errors but don't stop execution
                             try:
-                                logger.info(f"Executing tool call: {tool_name}")
-                                async with asyncio.timeout(15):
-                                    result = await self.mcpCall(tool_dict, client)
-                                
-                                result_text = result[0].text if result and len(result) > 0 else "No result returned"
-                                
-                                # Check for tool call errors but don't stop execution
-                                try:
-                                    result_json = json.loads(result_text)
-                                    if isinstance(result_json, dict) and "error" in result_json:
-                                        logger.warning(f"Tool call returned error: {result_json['error']}")
-                                        # Let LLM handle the error and potentially retry with different approach
-                                except json.JSONDecodeError:
-                                    pass
-                                
-                                message_history[conversation_id].append({
+                                result_json = json.loads(result_text)
+                                if (
+                                    isinstance(result_json, dict)
+                                    and "error" in result_json
+                                ):
+                                    logger.warning(
+                                        f"Tool call returned error: {result_json['error']}"
+                                    )
+                            except json.JSONDecodeError:
+                                pass
+
+                            message_history[conversation_id].append(
+                                {
                                     "role": "tool",
                                     "content": result_text,
-                                    "tool_call_id": tool_call.id
-                                })
-                                
-                            except asyncio.TimeoutError:
-                                logger.error(f"Tool call timeout for tool: {tool_name}")
-                                error_result = json.dumps({"error": f"Tool call timeout for {tool_name}"})
-                                message_history[conversation_id].append({
+                                    "tool_call_id": tool_call.id,
+                                }
+                            )
+
+                        except asyncio.TimeoutError:
+                            logger.error(f"Tool call timeout for tool: {tool_name}")
+                            error_result = json.dumps(
+                                {"error": f"Tool call timeout for {tool_name}"}
+                            )
+                            message_history[conversation_id].append(
+                                {
                                     "role": "tool",
                                     "content": error_result,
-                                    "tool_call_id": tool_call.id
-                                })
-                            except Exception as e:
-                                logger.error(f"Tool call failed: {str(e)}")
-                                error_result = json.dumps({"error": f"Tool call failed: {str(e)}"})
-                                message_history[conversation_id].append({
+                                    "tool_call_id": tool_call.id,
+                                }
+                            )
+                        except Exception as e:
+                            logger.error(f"Tool call failed: {str(e)}")
+                            error_result = json.dumps(
+                                {"error": f"Tool call failed: {str(e)}"}
+                            )
+                            message_history[conversation_id].append(
+                                {
                                     "role": "tool",
                                     "content": error_result,
-                                    "tool_call_id": tool_call.id
-                                })
-                        
-                        # Continue the loop to call LLM again with tool results
-                        continue
-                    
-                    else:
-                        logger.warning(f"Unexpected finish reason: {choice.finish_reason}")
-                        return {"status": "error", "error": f"Unexpected finish reason: {choice.finish_reason}"}
-                
-                # If we reach here, we've hit the max iterations
-                logger.warning(f"Reached maximum iterations ({max_iterations}) without final answer")
-                return {"status": "error", "error": "Maximum conversation iterations reached"}
+                                    "tool_call_id": tool_call.id,
+                                }
+                            )
+
+                    # Continue the loop to call LLM again with tool results
+                    continue
+
+                else:
+                    logger.warning(f"Unexpected finish reason: {choice.finish_reason}")
+                    return {
+                        "status": "error",
+                        "error": f"Unexpected finish reason: {choice.finish_reason}",
+                    }
+
+            # If we reach here, we've hit the max iterations
+            logger.warning(
+                f"Reached maximum iterations ({max_iterations}) without final answer"
+            )
+            return {
+                "status": "error",
+                "error": "Maximum conversation iterations reached",
+            }
 
         except asyncio.TimeoutError:
-            logger.error(f"Timeout processing message for conversation {conversation_id}")
+            logger.error(
+                f"Timeout processing message for conversation {conversation_id}"
+            )
             return {"status": "error", "error": "Processing timeout"}
         except ConnectionError as e:
-            logger.error(f"Connection error for conversation {conversation_id}: {str(e)}")
+            logger.error(
+                f"Connection error for conversation {conversation_id}: {str(e)}"
+            )
             return {"status": "error", "error": f"Connection error: {str(e)}"}
         except Exception as e:
-            logger.error(f"Error processing message for conversation {conversation_id}: {str(e)}")
+            logger.error(
+                f"Error processing message for conversation {conversation_id}: {str(e)}"
+            )
             return {"status": "error", "error": str(e)}
         finally:
             if client:
@@ -414,18 +538,19 @@ class AISocketServer:
     def stop_server(self):
         self.server.stop_server()
 
+
 def main():
-    host = os.getenv('PYTHON_AI_HOST', 'localhost')
-    port = int(os.getenv('PYTHON_AI_PORT', 8888))
-    
-    required_env_vars = ['BASE_API_URL', 'ALIBABA_API_KEY']
+    host = os.getenv("PYTHON_AI_HOST", "localhost")
+    port = int(os.getenv("PYTHON_AI_PORT", 8888))
+
+    required_env_vars = ["BASE_API_URL", "ALIBABA_API_KEY"]
     missing_vars = [var for var in required_env_vars if not os.getenv(var)]
     if missing_vars:
         logger.error(f"Missing required environment variables: {missing_vars}")
         return
-    
+
     server = AISocketServer(host, port)
-    
+
     try:
         server.start_server()
     except KeyboardInterrupt:
@@ -434,6 +559,7 @@ def main():
     except Exception as e:
         logger.error(f"Unexpected error in main: {e}")
         server.stop_server()
+
 
 if __name__ == "__main__":
     main()
