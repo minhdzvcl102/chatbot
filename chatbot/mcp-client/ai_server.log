@@ -5366,3 +5366,87 @@ RuntimeError: Event loop is closed
 2025-06-26 16:29:58,016 - __main__ - INFO - Received keyboard interrupt, stopping server...
 2025-06-26 16:29:58,016 - socket_server - INFO - Stopping server...
 2025-06-26 16:29:58,016 - socket_server - INFO - Socket Server stopped
+2025-06-26 16:30:05,748 - socket_server - INFO - Socket Server started on localhost:8888
+2025-06-26 16:30:47,989 - socket_server - INFO - New client connected from ('127.0.0.1', 59438)
+2025-06-26 16:30:47,990 - socket_server - INFO - Received request from ('127.0.0.1', 59438): chat
+2025-06-26 16:30:47,993 - __main__ - INFO - Processing message for conversation 36
+2025-06-26 16:30:47,994 - __main__ - INFO - New context established: rag:general
+2025-06-26 16:30:47,994 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 16:30:50,922 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 16:30:50,926 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 16:30:51,209 - __main__ - INFO - User message: phân tích doanh thu các năm của hòa phát
+2025-06-26 16:30:51,209 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 16:30:51,209 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 16:30:53,276 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 16:30:53,279 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 16:30:53,279 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 16:30:53,279 - __main__ - INFO - Starting parallel execution of 1 tool calls
+2025-06-26 16:30:53,280 - __main__ - INFO - Executing tool call: rag_query
+2025-06-26 16:30:53,280 - __main__ - INFO - Executing tool: rag_query with args: {'query': 'phân tích doanh thu các năm của hòa phát'}
+2025-06-26 16:30:53,998 - __main__ - INFO - Tool rag_query executed successfully
+2025-06-26 16:30:53,998 - __main__ - INFO - Parallel tool execution completed in 0.72 seconds
+2025-06-26 16:30:53,999 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 16:31:07,168 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 16:31:07,169 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 16:31:07,169 - __main__ - INFO - Generated final answer for conversation 36
+2025-06-26 16:31:07,172 - socket_server - INFO - Sent response to ('127.0.0.1', 59438): success
+2025-06-26 16:31:14,194 - socket_server - INFO - New client connected from ('127.0.0.1', 59457)
+2025-06-26 16:31:14,194 - socket_server - INFO - Received request from ('127.0.0.1', 59457): chat
+2025-06-26 16:31:14,195 - __main__ - INFO - Processing message for conversation 36
+2025-06-26 16:31:14,195 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-06-26 16:31:16,821 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-06-26 16:31:16,824 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-06-26 16:31:17,084 - __main__ - INFO - User message: cho tôi xem 20 sản phẩm có giá cao nhất database php3_wd19314
+2025-06-26 16:31:17,084 - __main__ - INFO - System prompt: You are a data analytics chatbot specialized in business intelligence and data interpretation.
+
+    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT a...
+2025-06-26 16:31:17,084 - __main__ - INFO - LLM iteration 1/10
+2025-06-26 16:31:19,382 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 16:31:19,383 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 16:31:19,383 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 16:31:19,383 - __main__ - INFO - Starting parallel execution of 1 tool calls
+2025-06-26 16:31:19,383 - __main__ - INFO - Executing tool call: sql+db://sql/list_tables/{db_name*}
+2025-06-26 16:31:19,383 - __main__ - INFO - Executing tool: sql+db://sql/list_tables/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 16:31:19,383 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/list_tables/php3_wd19314
+2025-06-26 16:31:19,393 - __main__ - INFO - Tool sql+db://sql/list_tables/{db_name*} executed successfully
+2025-06-26 16:31:19,394 - __main__ - INFO - Parallel tool execution completed in 0.01 seconds
+2025-06-26 16:31:19,394 - __main__ - INFO - LLM iteration 2/10
+2025-06-26 16:31:21,696 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 16:31:21,697 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 16:31:21,697 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 16:31:21,697 - __main__ - INFO - Starting parallel execution of 1 tool calls
+2025-06-26 16:31:21,698 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 16:31:21,698 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products ORDER BY price DESC LIMIT 20;'}
+2025-06-26 16:31:21,701 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 16:31:21,701 - __main__ - WARNING - Tool call returned error: 1054 (42S22): Unknown column 'price' in 'order clause'
+2025-06-26 16:31:21,701 - __main__ - INFO - Parallel tool execution completed in 0.00 seconds
+2025-06-26 16:31:21,701 - __main__ - INFO - LLM iteration 3/10
+2025-06-26 16:31:23,832 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 16:31:23,833 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 16:31:23,833 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 16:31:23,834 - __main__ - INFO - Starting parallel execution of 1 tool calls
+2025-06-26 16:31:23,834 - __main__ - INFO - Executing tool call: sql+db://sql/schema/{db_name*}
+2025-06-26 16:31:23,834 - __main__ - INFO - Executing tool: sql+db://sql/schema/{db_name*} with args: {'db_name': 'php3_wd19314'}
+2025-06-26 16:31:23,834 - __main__ - INFO - Constructed URI for resource template: sql+db://sql/schema/php3_wd19314
+2025-06-26 16:31:23,842 - __main__ - INFO - Tool sql+db://sql/schema/{db_name*} executed successfully
+2025-06-26 16:31:23,842 - __main__ - INFO - Parallel tool execution completed in 0.01 seconds
+2025-06-26 16:31:23,842 - __main__ - INFO - LLM iteration 4/10
+2025-06-26 16:31:26,290 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 16:31:26,291 - __main__ - INFO - LLM finish_reason: tool_calls
+2025-06-26 16:31:26,291 - __main__ - INFO - LLM requested 1 tool calls
+2025-06-26 16:31:26,291 - __main__ - INFO - Starting parallel execution of 1 tool calls
+2025-06-26 16:31:26,292 - __main__ - INFO - Executing tool call: sql_query_db
+2025-06-26 16:31:26,292 - __main__ - INFO - Executing tool: sql_query_db with args: {'query': 'SELECT * FROM php3_wd19314.products ORDER BY gia DESC LIMIT 20;'}
+2025-06-26 16:31:26,296 - __main__ - INFO - Tool sql_query_db executed successfully
+2025-06-26 16:31:26,296 - __main__ - INFO - Parallel tool execution completed in 0.00 seconds
+2025-06-26 16:31:26,296 - __main__ - INFO - LLM iteration 5/10
+2025-06-26 16:32:17,997 - socket_server - INFO - Client ('127.0.0.1', 59438) closed connection
+2025-06-26 16:32:17,997 - socket_server - INFO - Client ('127.0.0.1', 59438) disconnected
+2025-06-26 16:32:29,013 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 16:32:29,014 - __main__ - INFO - LLM finish_reason: stop
+2025-06-26 16:32:29,014 - __main__ - INFO - Generated final answer for conversation 36
+2025-06-26 16:32:29,018 - socket_server - INFO - Sent response to ('127.0.0.1', 59457): success
+2025-06-26 16:32:44,199 - socket_server - INFO - Client ('127.0.0.1', 59457) closed connection
+2025-06-26 16:32:44,200 - socket_server - INFO - Client ('127.0.0.1', 59457) disconnected
