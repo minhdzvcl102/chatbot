@@ -29,7 +29,7 @@ class SocketServer:
         self.server_socket = None
         self.clients = {}
         self.running = False
-        self.connection_timeout = 60
+        self.connection_timeout = 300
         self.process_message_callback = process_message_callback
 
     def handle_client(self, client_socket, address):

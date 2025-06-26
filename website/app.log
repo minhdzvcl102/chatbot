@@ -6494,3 +6494,209 @@ http://localhost:3000
 [2025-06-26T09:03:11.717Z] [ERROR] ⏰ Python AI service timeout for conversation 32
 [2025-06-26T09:03:11.717Z] [ERROR] AI service error for conversation 32: AI service timeout
 [2025-06-26T09:03:11.717Z] [INFO] 🔌 Python AI service connection closed for conversation 32
+[2025-06-26T09:09:50.824Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-26T09:14:06.431Z] [INFO] Loaded 5 conversations for user 1
+[2025-06-26T09:14:06.433Z] [INFO] ✅ Socket poVdV4KtzmMaI6taAAAs authenticated for user demo (ID: 1)
+[2025-06-26T09:14:06.435Z] [INFO] 🔗 User demo (1) connected with socket poVdV4KtzmMaI6taAAAs
+[2025-06-26T09:14:06.438Z] [INFO] Loaded 5 conversations for user 1
+[2025-06-26T09:14:06.469Z] [INFO] 👥 User demo joined conversation 32
+[2025-06-26T09:14:06.470Z] [INFO] 👥 Sent online users list for conversation 32: 1 users
+[2025-06-26T09:14:06.490Z] [INFO] Loaded 4 messages for conversation 32 by user 1
+[2025-06-26T09:14:06.491Z] [INFO] Loaded 0 files for conversation 32 by user 1
+[2025-06-26T09:14:10.995Z] [INFO] Conversation 33 created for user 1
+[2025-06-26T09:14:11.000Z] [INFO] Loaded 6 conversations for user 1
+[2025-06-26T09:14:11.014Z] [INFO] 👋 User demo left conversation 32
+[2025-06-26T09:14:11.015Z] [INFO] 👥 Sent online users list for conversation 32: 0 users
+[2025-06-26T09:14:11.016Z] [INFO] 👥 Sent online users list for conversation 33: 1 users
+[2025-06-26T09:14:11.016Z] [INFO] 👥 User demo joined conversation 33
+[2025-06-26T09:14:11.053Z] [INFO] Loaded 0 messages for conversation 33 by user 1
+[2025-06-26T09:14:11.054Z] [INFO] Loaded 0 files for conversation 33 by user 1
+[2025-06-26T09:14:12.691Z] [INFO] ⌨️ User demo started typing in conversation 33
+[2025-06-26T09:14:13.549Z] [INFO] 📤 Message sent by demo to conversation 33
+[2025-06-26T09:14:13.553Z] [INFO] 🔗 Connected to Python AI service for conversation 33
+[2025-06-26T09:14:14.276Z] [INFO] ⌨️ User demo stopped typing in conversation 33
+[2025-06-26T09:14:20.983Z] [INFO] 🤖 AI response sent to conversation 33
+[2025-06-26T09:14:26.641Z] [INFO] ⌨️ User demo started typing in conversation 33
+[2025-06-26T09:14:30.875Z] [INFO] 📤 Message sent by demo to conversation 33
+[2025-06-26T09:14:30.877Z] [INFO] 🔗 Connected to Python AI service for conversation 33
+[2025-06-26T09:14:32.479Z] [INFO] ⌨️ User demo stopped typing in conversation 33
+[2025-06-26T09:14:42.147Z] [INFO] 🤖 AI response sent to conversation 33
+[2025-06-26T09:14:52.141Z] [INFO] ⌨️ User demo started typing in conversation 33
+[2025-06-26T09:15:03.778Z] [INFO] ⌨️ User demo stopped typing in conversation 33
+[2025-06-26T09:15:03.861Z] [INFO] ⌨️ User demo started typing in conversation 33
+[2025-06-26T09:15:05.631Z] [INFO] ⌨️ User demo stopped typing in conversation 33
+[2025-06-26T09:15:05.732Z] [INFO] ⌨️ User demo started typing in conversation 33
+[2025-06-26T09:15:08.253Z] [INFO] 📤 Message sent by demo to conversation 33
+[2025-06-26T09:15:08.256Z] [INFO] 🔗 Connected to Python AI service for conversation 33
+[2025-06-26T09:15:09.474Z] [INFO] ⌨️ User demo stopped typing in conversation 33
+[2025-06-26T09:15:20.979Z] [INFO] 🔌 Python AI service connection closed for conversation 33
+[2025-06-26T09:15:42.146Z] [INFO] 🔌 Python AI service connection closed for conversation 33
+[2025-06-26T09:15:43.311Z] [INFO] 🤖 AI response sent to conversation 33
+[2025-06-26T09:15:55.408Z] [INFO] ⌨️ User demo started typing in conversation 33
+[2025-06-26T09:16:02.611Z] [INFO] ⌨️ User demo stopped typing in conversation 33
+[2025-06-26T09:16:02.778Z] [INFO] ⌨️ User demo started typing in conversation 33
+[2025-06-26T09:16:08.746Z] [INFO] 📤 Message sent by demo to conversation 33
+[2025-06-26T09:16:08.748Z] [INFO] 🔗 Connected to Python AI service for conversation 33
+[2025-06-26T09:16:09.421Z] [INFO] ⌨️ User demo stopped typing in conversation 33
+[2025-06-26T09:16:38.260Z] [ERROR] ⏰ Python AI service timeout for conversation 33
+[2025-06-26T09:16:38.260Z] [ERROR] AI service error for conversation 33: AI service timeout
+[2025-06-26T09:16:38.261Z] [INFO] 🔌 Python AI service connection closed for conversation 33
+[2025-06-26T09:16:46.298Z] [INFO] 🤖 AI response sent to conversation 33
+[2025-06-26T09:17:38.759Z] [ERROR] ⏰ Python AI service timeout for conversation 33
+[2025-06-26T09:17:38.759Z] [ERROR] AI service error for conversation 33: AI service timeout
+[2025-06-26T09:17:38.760Z] [INFO] 🔌 Python AI service connection closed for conversation 33
+[2025-06-26T09:18:41.529Z] [INFO] Conversation 34 created for user 1
+[2025-06-26T09:18:41.534Z] [INFO] Loaded 7 conversations for user 1
+[2025-06-26T09:18:41.547Z] [INFO] 👋 User demo left conversation 33
+[2025-06-26T09:18:41.548Z] [INFO] 👥 Sent online users list for conversation 33: 0 users
+[2025-06-26T09:18:41.548Z] [INFO] 👥 User demo joined conversation 34
+[2025-06-26T09:18:41.549Z] [INFO] 👥 Sent online users list for conversation 34: 1 users
+[2025-06-26T09:18:41.579Z] [INFO] Loaded 0 messages for conversation 34 by user 1
+[2025-06-26T09:18:41.581Z] [INFO] Loaded 0 files for conversation 34 by user 1
+[2025-06-26T09:18:42.646Z] [INFO] ⌨️ User demo started typing in conversation 34
+[2025-06-26T09:18:49.731Z] [INFO] 📤 Message sent by demo to conversation 34
+[2025-06-26T09:18:49.733Z] [INFO] 🔗 Connected to Python AI service for conversation 34
+[2025-06-26T09:18:50.453Z] [INFO] ⌨️ User demo stopped typing in conversation 34
+[2025-06-26T09:19:09.966Z] [INFO] 🤖 AI response sent to conversation 34
+[2025-06-26T09:19:11.720Z] [INFO] ⌨️ User demo started typing in conversation 34
+[2025-06-26T09:19:12.212Z] [INFO] 📤 Message sent by demo to conversation 34
+[2025-06-26T09:19:12.213Z] [INFO] 🔗 Connected to Python AI service for conversation 34
+[2025-06-26T09:19:12.721Z] [INFO] ⌨️ User demo stopped typing in conversation 34
+[2025-06-26T09:19:28.004Z] [INFO] 🤖 AI response sent to conversation 34
+[2025-06-26T09:20:09.819Z] [INFO] 🔌 Python AI service connection closed for conversation 34
+[2025-06-26T09:20:18.396Z] [INFO] ⌨️ User demo started typing in conversation 34
+[2025-06-26T09:20:19.200Z] [INFO] 📤 Message sent by demo to conversation 34
+[2025-06-26T09:20:19.202Z] [INFO] 🔗 Connected to Python AI service for conversation 34
+[2025-06-26T09:20:19.694Z] [INFO] ⌨️ User demo stopped typing in conversation 34
+[2025-06-26T09:20:27.997Z] [INFO] 🔌 Python AI service connection closed for conversation 34
+[2025-06-26T09:21:13.141Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-06-26T09:21:13.282Z] [INFO] Loaded 7 conversations for user 1
+[2025-06-26T09:21:13.288Z] [INFO] ✅ Socket 5TSLdNyHRE6a9ILtAAAv authenticated for user demo (ID: 1)
+[2025-06-26T09:21:13.289Z] [INFO] Loaded 7 conversations for user 1
+[2025-06-26T09:21:13.289Z] [INFO] 🔗 User demo (1) connected with socket 5TSLdNyHRE6a9ILtAAAv
+[2025-06-26T09:21:13.309Z] [INFO] 👥 User demo joined conversation 34
+[2025-06-26T09:21:13.310Z] [INFO] 👥 Sent online users list for conversation 34: 1 users
+[2025-06-26T09:21:13.314Z] [INFO] Loaded 5 messages for conversation 34 by user 1
+[2025-06-26T09:21:13.316Z] [INFO] Loaded 0 files for conversation 34 by user 1
+[2025-06-26T09:21:16.157Z] [INFO] 🤖 AI response sent to conversation 34
+[2025-06-26T09:21:49.207Z] [ERROR] ⏰ Python AI service timeout for conversation 34
+[2025-06-26T09:21:49.207Z] [ERROR] AI service error for conversation 34: AI service timeout
+[2025-06-26T09:21:49.207Z] [INFO] 🔌 Python AI service connection closed for conversation 34
+[2025-06-26T09:23:24.684Z] [INFO] 👋 User demo left conversation 34
+[2025-06-26T09:23:24.685Z] [INFO] 👥 Sent online users list for conversation 34: 0 users
+[2025-06-26T09:23:24.686Z] [INFO] 👥 User demo joined conversation 33
+[2025-06-26T09:23:24.686Z] [INFO] 👥 Sent online users list for conversation 33: 1 users
+[2025-06-26T09:23:25.676Z] [INFO] 👋 User demo left conversation 33
+[2025-06-26T09:23:25.677Z] [INFO] 👥 Sent online users list for conversation 33: 0 users
+[2025-06-26T09:23:25.679Z] [INFO] 👥 User demo joined conversation 32
+[2025-06-26T09:23:25.679Z] [INFO] 👥 Sent online users list for conversation 32: 1 users
+[2025-06-26T09:23:26.686Z] [INFO] 👋 User demo left conversation 32
+[2025-06-26T09:23:26.687Z] [INFO] 👥 Sent online users list for conversation 32: 0 users
+[2025-06-26T09:23:26.688Z] [INFO] 👥 User demo joined conversation 11
+[2025-06-26T09:23:26.688Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-06-26T09:23:27.273Z] [INFO] 👋 User demo left conversation 11
+[2025-06-26T09:23:27.273Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-06-26T09:23:27.275Z] [INFO] 👥 User demo joined conversation 10
+[2025-06-26T09:23:27.275Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-06-26T09:23:27.814Z] [INFO] 👋 User demo left conversation 10
+[2025-06-26T09:23:27.814Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-06-26T09:23:27.815Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T09:23:27.815Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T09:23:28.782Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T09:23:28.784Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T09:23:28.785Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T09:23:28.786Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T09:23:31.481Z] [INFO] User  logged out successfully
+[2025-06-26T09:23:31.497Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-06-26T09:23:36.694Z] [INFO] User demo@demo.com logged in successfully
+[2025-06-26T09:23:36.721Z] [INFO] Loaded 7 conversations for user 1
+[2025-06-26T09:23:36.722Z] [INFO] ✅ Socket AWM5oft-01e7VCjWAAAy authenticated for user demo (ID: 1)
+[2025-06-26T09:23:36.722Z] [INFO] 🔗 User demo (1) connected with socket AWM5oft-01e7VCjWAAAy
+[2025-06-26T09:23:36.724Z] [INFO] Loaded 7 conversations for user 1
+[2025-06-26T09:23:36.734Z] [INFO] 👥 User demo joined conversation 34
+[2025-06-26T09:23:36.735Z] [INFO] 👥 Sent online users list for conversation 34: 1 users
+[2025-06-26T09:23:36.743Z] [INFO] Loaded 6 messages for conversation 34 by user 1
+[2025-06-26T09:23:36.744Z] [INFO] Loaded 0 files for conversation 34 by user 1
+[2025-06-26T09:23:38.263Z] [INFO] 👋 User demo left conversation 34
+[2025-06-26T09:23:38.264Z] [INFO] 👥 Sent online users list for conversation 34: 0 users
+[2025-06-26T09:23:38.265Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T09:23:38.265Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T09:23:38.270Z] [INFO] Loaded 107 messages for conversation 7 by user 1
+[2025-06-26T09:23:38.272Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T09:23:48.121Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T09:23:48.122Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T09:23:48.122Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T09:23:48.123Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T09:23:48.128Z] [INFO] Loaded 47 messages for conversation 9 by user 1
+[2025-06-26T09:23:48.129Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T09:25:43.517Z] [INFO] Conversation 35 created for user 1
+[2025-06-26T09:25:43.522Z] [INFO] Loaded 8 conversations for user 1
+[2025-06-26T09:25:43.554Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T09:25:43.555Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T09:25:43.556Z] [INFO] 👥 User demo joined conversation 35
+[2025-06-26T09:25:43.556Z] [INFO] 👥 Sent online users list for conversation 35: 1 users
+[2025-06-26T09:25:43.585Z] [INFO] Loaded 0 files for conversation 35 by user 1
+[2025-06-26T09:25:43.586Z] [INFO] Loaded 0 messages for conversation 35 by user 1
+[2025-06-26T09:25:46.234Z] [INFO] ⌨️ User demo started typing in conversation 35
+[2025-06-26T09:25:46.577Z] [INFO] 📤 Message sent by demo to conversation 35
+[2025-06-26T09:25:46.579Z] [INFO] 🔗 Connected to Python AI service for conversation 35
+[2025-06-26T09:25:47.234Z] [INFO] ⌨️ User demo stopped typing in conversation 35
+[2025-06-26T09:26:41.655Z] [INFO] 🤖 AI response sent to conversation 35
+[2025-06-26T09:27:16.586Z] [ERROR] ⏰ Python AI service timeout for conversation 35
+[2025-06-26T09:27:16.587Z] [ERROR] AI service error for conversation 35: AI service timeout
+[2025-06-26T09:27:16.587Z] [INFO] 🔌 Python AI service connection closed for conversation 35
+[2025-06-26T09:30:11.197Z] [INFO] Conversation 36 created for user 1
+[2025-06-26T09:30:11.206Z] [INFO] Loaded 9 conversations for user 1
+[2025-06-26T09:30:11.218Z] [INFO] 👋 User demo left conversation 35
+[2025-06-26T09:30:11.218Z] [INFO] 👥 Sent online users list for conversation 35: 0 users
+[2025-06-26T09:30:11.219Z] [INFO] 👥 User demo joined conversation 36
+[2025-06-26T09:30:11.219Z] [INFO] 👥 Sent online users list for conversation 36: 1 users
+[2025-06-26T09:30:11.246Z] [INFO] Loaded 0 messages for conversation 36 by user 1
+[2025-06-26T09:30:11.247Z] [INFO] Loaded 0 files for conversation 36 by user 1
+[2025-06-26T09:30:12.131Z] [INFO] 👋 User demo left conversation 36
+[2025-06-26T09:30:12.132Z] [INFO] 👥 Sent online users list for conversation 36: 0 users
+[2025-06-26T09:30:12.134Z] [INFO] 👥 User demo joined conversation 35
+[2025-06-26T09:30:12.134Z] [INFO] 👥 Sent online users list for conversation 35: 1 users
+[2025-06-26T09:30:12.142Z] [INFO] Loaded 2 messages for conversation 35 by user 1
+[2025-06-26T09:30:12.143Z] [INFO] Loaded 0 files for conversation 35 by user 1
+[2025-06-26T09:30:17.385Z] [INFO] 👋 User demo left conversation 35
+[2025-06-26T09:30:17.386Z] [INFO] 👥 Sent online users list for conversation 35: 0 users
+[2025-06-26T09:30:17.387Z] [INFO] 👥 User demo joined conversation 34
+[2025-06-26T09:30:17.388Z] [INFO] 👥 Sent online users list for conversation 34: 1 users
+[2025-06-26T09:30:17.395Z] [INFO] Loaded 6 messages for conversation 34 by user 1
+[2025-06-26T09:30:17.396Z] [INFO] Loaded 0 files for conversation 34 by user 1
+[2025-06-26T09:30:33.062Z] [INFO] 👋 User demo left conversation 34
+[2025-06-26T09:30:33.063Z] [INFO] 👥 Sent online users list for conversation 34: 0 users
+[2025-06-26T09:30:33.064Z] [INFO] 👥 User demo joined conversation 36
+[2025-06-26T09:30:33.064Z] [INFO] 👥 Sent online users list for conversation 36: 1 users
+[2025-06-26T09:30:33.068Z] [INFO] Loaded 0 files for conversation 36 by user 1
+[2025-06-26T09:30:33.069Z] [INFO] Loaded 0 messages for conversation 36 by user 1
+[2025-06-26T09:30:33.931Z] [INFO] 👋 User demo left conversation 36
+[2025-06-26T09:30:33.932Z] [INFO] 👥 Sent online users list for conversation 36: 0 users
+[2025-06-26T09:30:33.933Z] [INFO] 👥 User demo joined conversation 35
+[2025-06-26T09:30:33.934Z] [INFO] 👥 Sent online users list for conversation 35: 1 users
+[2025-06-26T09:30:33.940Z] [INFO] Loaded 2 messages for conversation 35 by user 1
+[2025-06-26T09:30:33.940Z] [INFO] Loaded 0 files for conversation 35 by user 1
+[2025-06-26T09:30:42.587Z] [INFO] 👋 User demo left conversation 35
+[2025-06-26T09:30:42.587Z] [INFO] 👥 Sent online users list for conversation 35: 0 users
+[2025-06-26T09:30:42.588Z] [INFO] 👥 User demo joined conversation 36
+[2025-06-26T09:30:42.588Z] [INFO] 👥 Sent online users list for conversation 36: 1 users
+[2025-06-26T09:30:42.593Z] [INFO] Loaded 0 files for conversation 36 by user 1
+[2025-06-26T09:30:42.594Z] [INFO] Loaded 0 messages for conversation 36 by user 1
+[2025-06-26T09:30:47.763Z] [INFO] ⌨️ User demo started typing in conversation 36
+[2025-06-26T09:30:47.985Z] [INFO] 📤 Message sent by demo to conversation 36
+[2025-06-26T09:30:47.987Z] [INFO] 🔗 Connected to Python AI service for conversation 36
+[2025-06-26T09:30:48.769Z] [INFO] ⌨️ User demo stopped typing in conversation 36
+[2025-06-26T09:31:07.189Z] [INFO] 🤖 AI response sent to conversation 36
+[2025-06-26T09:31:12.730Z] [INFO] ⌨️ User demo started typing in conversation 36
+[2025-06-26T09:31:13.737Z] [INFO] ⌨️ User demo stopped typing in conversation 36
+[2025-06-26T09:31:14.192Z] [INFO] 📤 Message sent by demo to conversation 36
+[2025-06-26T09:31:14.193Z] [INFO] 🔗 Connected to Python AI service for conversation 36
+[2025-06-26T09:32:17.997Z] [ERROR] ⏰ Python AI service timeout for conversation 36
+[2025-06-26T09:32:17.997Z] [ERROR] AI service error for conversation 36: AI service timeout
+[2025-06-26T09:32:17.998Z] [INFO] 🔌 Python AI service connection closed for conversation 36
+[2025-06-26T09:32:29.030Z] [INFO] 🤖 AI response sent to conversation 36
+[2025-06-26T09:32:44.199Z] [ERROR] ⏰ Python AI service timeout for conversation 36
+[2025-06-26T09:32:44.199Z] [ERROR] AI service error for conversation 36: AI service timeout
+[2025-06-26T09:32:44.200Z] [INFO] 🔌 Python AI service connection closed for conversation 36
+[2025-06-26T09:33:09.869Z] [INFO] 🔌 User demo (1) disconnected: transport close

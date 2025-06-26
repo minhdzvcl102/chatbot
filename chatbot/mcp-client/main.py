@@ -190,6 +190,105 @@ class AISocketServer:
 
             return [ErrorResult(str(e))]
 
+    async def execute_tool_calls_parallel(self, tool_calls, client, tool_lookup):
+        """Execute multiple tool calls in parallel for better performance"""
+        async def execute_single_tool_call(tool_call):
+            tool_name = tool_call.function.name
+            arguments = tool_call.function.arguments
+            
+            try:
+                if isinstance(arguments, str):
+                    arguments = json.loads(arguments)
+            except json.JSONDecodeError as e:
+                logger.error(f"Failed to parse tool arguments for {tool_name}: {e}")
+                return {
+                    "role": "tool",
+                    "content": json.dumps({"error": f"Invalid tool arguments: {str(e)}"}),
+                    "tool_call_id": tool_call.id,
+                }
+
+            if tool_name not in tool_lookup:
+                logger.error(f"Unknown tool name: {tool_name}")
+                return {
+                    "role": "tool",
+                    "content": json.dumps({"error": f"Unknown tool: {tool_name}"}),
+                    "tool_call_id": tool_call.id,
+                }
+
+            tool_type = tool_lookup[tool_name]
+            tool_dict = {
+                "id": tool_call.id,
+                "type": tool_type,
+                "function": {"name": tool_name, "arguments": arguments},
+            }
+
+            try:
+                logger.info(f"Executing tool call: {tool_name}")
+                async with asyncio.timeout(15):
+                    result = await self.mcpCall(tool_dict, client)
+
+                result_text = (
+                    result[0].text
+                    if result and len(result) > 0
+                    else "No result returned"
+                )
+
+                # Check for tool call errors but don't stop execution
+                try:
+                    result_json = json.loads(result_text)
+                    if isinstance(result_json, dict) and "error" in result_json:
+                        logger.warning(f"Tool call returned error: {result_json['error']}")
+                except json.JSONDecodeError:
+                    pass
+
+                return {
+                    "role": "tool",
+                    "content": result_text,
+                    "tool_call_id": tool_call.id,
+                }
+
+            except asyncio.TimeoutError:
+                logger.error(f"Tool call timeout for tool: {tool_name}")
+                return {
+                    "role": "tool",
+                    "content": json.dumps({"error": f"Tool call timeout for {tool_name}"}),
+                    "tool_call_id": tool_call.id,
+                }
+            except Exception as e:
+                logger.error(f"Tool call failed for {tool_name}: {str(e)}")
+                return {
+                    "role": "tool",
+                    "content": json.dumps({"error": f"Tool call failed: {str(e)}"}),
+                    "tool_call_id": tool_call.id,
+                }
+
+        # Create tasks for all tool calls
+        start_time = time.time()
+        logger.info(f"Starting parallel execution of {len(tool_calls)} tool calls")
+        
+        tasks = [execute_single_tool_call(tool_call) for tool_call in tool_calls]
+        
+        # Execute all tool calls in parallel
+        tool_results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        execution_time = time.time() - start_time
+        logger.info(f"Parallel tool execution completed in {execution_time:.2f} seconds")
+        
+        # Process results and handle any exceptions
+        processed_results = []
+        for i, result in enumerate(tool_results):
+            if isinstance(result, Exception):
+                logger.error(f"Tool call {i} failed with exception: {result}")
+                processed_results.append({
+                    "role": "tool",
+                    "content": json.dumps({"error": f"Tool execution failed: {str(result)}"}),
+                    "tool_call_id": tool_calls[i].id,
+                })
+            else:
+                processed_results.append(result)
+        
+        return processed_results
+
     async def initialize_mcp_client(self):
         server_path = os.path.join(
             os.path.dirname(__file__), "..", "mcp-server", "server.py"
@@ -397,97 +496,13 @@ class AISocketServer:
                         }
                     )
 
-                    # Execute all tool calls
-                    for tool_call in choice.message.tool_calls:
-                        tool_name = tool_call.function.name
-                        arguments = tool_call.function.arguments
-
-                        try:
-                            if isinstance(arguments, str):
-                                arguments = json.loads(arguments)
-                        except json.JSONDecodeError as e:
-                            logger.error(f"Failed to parse tool arguments: {e}")
-                            return {
-                                "status": "error",
-                                "error": f"Invalid tool arguments: {str(e)}",
-                            }
-
-                        if tool_name not in tool_lookup:
-                            logger.error(f"Unknown tool name: {tool_name}")
-                            message_history[conversation_id].append(
-                                {
-                                    "role": "tool",
-                                    "content": json.dumps(
-                                        {"error": f"Unknown tool: {tool_name}"}
-                                    ),
-                                    "tool_call_id": tool_call.id,
-                                }
-                            )
-                            continue
-
-                        tool_type = tool_lookup[tool_name]
-                        tool_dict = {
-                            "id": tool_call.id,
-                            "type": tool_type,
-                            "function": {"name": tool_name, "arguments": arguments},
-                        }
-
-                        try:
-                            logger.info(f"Executing tool call: {tool_name}")
-                            async with asyncio.timeout(15):
-                                result = await self.mcpCall(tool_dict, client)
-
-                            result_text = (
-                                result[0].text
-                                if result and len(result) > 0
-                                else "No result returned"
-                            )
-
-                            # Check for tool call errors but don't stop execution
-                            try:
-                                result_json = json.loads(result_text)
-                                if (
-                                    isinstance(result_json, dict)
-                                    and "error" in result_json
-                                ):
-                                    logger.warning(
-                                        f"Tool call returned error: {result_json['error']}"
-                                    )
-                            except json.JSONDecodeError:
-                                pass
-
-                            message_history[conversation_id].append(
-                                {
-                                    "role": "tool",
-                                    "content": result_text,
-                                    "tool_call_id": tool_call.id,
-                                }
-                            )
-
-                        except asyncio.TimeoutError:
-                            logger.error(f"Tool call timeout for tool: {tool_name}")
-                            error_result = json.dumps(
-                                {"error": f"Tool call timeout for {tool_name}"}
-                            )
-                            message_history[conversation_id].append(
-                                {
-                                    "role": "tool",
-                                    "content": error_result,
-                                    "tool_call_id": tool_call.id,
-                                }
-                            )
-                        except Exception as e:
-                            logger.error(f"Tool call failed: {str(e)}")
-                            error_result = json.dumps(
-                                {"error": f"Tool call failed: {str(e)}"}
-                            )
-                            message_history[conversation_id].append(
-                                {
-                                    "role": "tool",
-                                    "content": error_result,
-                                    "tool_call_id": tool_call.id,
-                                }
-                            )
+                    # Execute all tool calls in parallel
+                    tool_results = await self.execute_tool_calls_parallel(
+                        choice.message.tool_calls, client, tool_lookup
+                    )
+                    
+                    # Add all tool results to message history
+                    message_history[conversation_id].extend(tool_results)
 
                     # Continue the loop to call LLM again with tool results
                     continue
