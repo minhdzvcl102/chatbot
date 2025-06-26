@@ -24,17 +24,72 @@ logger = logging.getLogger(__name__)
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", ".env"))
 
 message_history = {}
-SYS_PROMPT = {
-    "role": "system",
-    "content": """You are a helpful assistant. Your job is to assist the user by all means possible.
+conversation_db_context = {}  # Track database context per conversation
+
+def get_dynamic_sys_prompt(current_db=None):
+    """Generate system prompt based on current database context"""
+    base_prompt = """You are a helpful assistant. Your job is to assist the user by all means possible.
     Make sure to format your message like utilizing newlines, lists and tables.
     For chart-related requests, use the query_for_chart tool to retrieve chart metadata.
     
     When working with SQL databases:
     - Always use fully qualified table names with database prefix (e.g., `database_name.table_name`)
-    - If you get "No database selected" error, retry with proper database prefix
-    - For database php3_wd19314, use format: `php3_wd19314.table_name`"""
-}
+    - If you get "No database selected" error, retry with proper database prefix"""
+    
+    if current_db:
+        base_prompt += f"\n    - Current database context: {current_db}. Use format: `{current_db}.table_name`"
+    
+    return {"role": "system", "content": base_prompt}
+
+def extract_database_from_message(message):
+    """Extract database name from user message"""
+    # Pattern to match database references
+    db_patterns = [
+        r'database\s+(\w+)',
+        r'db\s+(\w+)',
+        r'(\w+)\.(\w+)',  # table.column format
+        r'trong\s+(\w+)',  # Vietnamese: "trong database_name"
+        r'từ\s+(\w+)',     # Vietnamese: "từ database_name"
+    ]
+    
+    message_lower = message.lower()
+    for pattern in db_patterns:
+        matches = re.findall(pattern, message_lower)
+        if matches:
+            # Return the first non-empty match
+            for match in matches:
+                if isinstance(match, tuple):
+                    # For patterns like (\w+)\.(\w+), return the first part (database name)
+                    db_name = match[0]
+                else:
+                    db_name = match
+                
+                # Filter out common words that aren't database names
+                if db_name not in ['select', 'from', 'where', 'and', 'or', 'table', 'column']:
+                    return db_name
+    
+    return None
+
+def should_reset_context(conversation_id, user_message):
+    """Determine if we should reset the conversation context"""
+    # Extract database from current message
+    current_db = extract_database_from_message(user_message)
+    
+    if not current_db:
+        return False, None
+    
+    # Check if this is a different database than before
+    previous_db = conversation_db_context.get(conversation_id)
+    
+    if previous_db and previous_db != current_db:
+        logger.info(f"Database context change detected: {previous_db} -> {current_db}")
+        return True, current_db
+    elif not previous_db:
+        logger.info(f"New database context established: {current_db}")
+        conversation_db_context[conversation_id] = current_db
+        return False, current_db
+    
+    return False, current_db
 
 class AISocketServer:
     def __init__(self, host='localhost', port=8888):
@@ -107,6 +162,18 @@ class AISocketServer:
         client = None
         try:
             logger.info(f"Processing message for conversation {conversation_id}")
+            
+            # Check if we need to reset context due to database change
+            should_reset, current_db = should_reset_context(conversation_id, user_message)
+            
+            if should_reset:
+                # Reset message history for this conversation
+                logger.info(f"Resetting conversation context for {conversation_id}")
+                message_history[conversation_id] = []
+                conversation_db_context[conversation_id] = current_db
+            elif current_db:
+                # Update database context
+                conversation_db_context[conversation_id] = current_db
             
             client = await self.initialize_mcp_client()
             
@@ -196,6 +263,10 @@ class AISocketServer:
                     logger.error(f"Error calling query_for_chart: {str(e)}")
                     return {"status": "error", "error": f"Chart query failed: {str(e)}"}
             else:
+                # Generate dynamic system prompt based on current database context
+                current_db_context = conversation_db_context.get(conversation_id)
+                sys_prompt = get_dynamic_sys_prompt(current_db_context)
+                
                 # Main conversation loop with consecutive tool calls
                 max_iterations = 10  # Prevent infinite loops
                 iteration = 0
@@ -208,7 +279,7 @@ class AISocketServer:
                         async with asyncio.timeout(90):
                             response = await llm.chat.completions.create(
                                 model="qwen-plus",
-                                messages=[SYS_PROMPT] + message_history[conversation_id],
+                                messages=[sys_prompt] + message_history[conversation_id],
                                 tools=list_of_tools
                             )
                     except asyncio.TimeoutError:

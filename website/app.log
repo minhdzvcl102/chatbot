@@ -4681,3 +4681,95 @@ http://localhost:3000
 [2025-06-26T03:44:11.291Z] [ERROR] ⏰ Python AI service timeout for conversation 9
 [2025-06-26T03:44:11.292Z] [ERROR] AI service error for conversation 9: AI service timeout
 [2025-06-26T03:44:11.292Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T03:46:04.214Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:46:09.355Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:46:44.208Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:46:49.430Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:46:49.889Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T03:46:49.898Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T03:47:23.406Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T03:48:19.893Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T03:48:19.894Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T03:48:19.895Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T03:52:39.722Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:52:44.882Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:52:44.943Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:52:47.022Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:52:47.199Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:52:52.504Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:52:52.572Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T03:52:52.583Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T03:53:10.037Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T03:53:22.398Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T03:53:22.402Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T03:53:22.424Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T03:53:22.425Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T03:53:22.462Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T03:53:22.464Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T03:53:32.014Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T03:53:32.015Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T03:53:32.018Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T03:53:32.020Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T03:53:32.026Z] [INFO] Loaded 29 messages for conversation 9 by user 1
+[2025-06-26T03:53:32.027Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T03:53:34.504Z] [INFO] 👋 User demo left conversation 9
+[2025-06-26T03:53:34.505Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-06-26T03:53:34.506Z] [INFO] 👥 User demo joined conversation 7
+[2025-06-26T03:53:34.506Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-06-26T03:53:34.513Z] [INFO] Loaded 105 messages for conversation 7 by user 1
+[2025-06-26T03:53:34.514Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-06-26T03:53:35.764Z] [INFO] 👋 User demo left conversation 7
+[2025-06-26T03:53:35.764Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-06-26T03:53:35.765Z] [INFO] 👥 User demo joined conversation 9
+[2025-06-26T03:53:35.766Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-06-26T03:53:35.770Z] [INFO] Loaded 29 messages for conversation 9 by user 1
+[2025-06-26T03:53:35.771Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-06-26T03:54:18.386Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:54:20.540Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:54:22.576Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T03:54:22.577Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T03:54:22.578Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T03:54:24.815Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:54:25.816Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:54:25.892Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:54:29.346Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:54:32.593Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:54:34.189Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T03:54:34.191Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T03:54:34.379Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:54:53.024Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T03:55:01.758Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:55:03.333Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:55:03.399Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:55:07.059Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T03:55:07.061Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T03:55:07.852Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:55:40.581Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T03:56:04.202Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T03:56:04.203Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T03:56:04.203Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T03:56:37.062Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T03:56:37.063Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T03:56:37.063Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T03:59:10.954Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:59:13.219Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:59:15.392Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:59:23.187Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:59:32.872Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:59:34.541Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T03:59:35.059Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T03:59:36.323Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T03:59:36.327Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T03:59:37.085Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:00:00.379Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T04:00:13.137Z] [INFO] ⌨️ User demo started typing in conversation 9
+[2025-06-26T04:00:21.988Z] [INFO] 📤 Message sent by demo to conversation 9
+[2025-06-26T04:00:21.990Z] [INFO] 🔗 Connected to Python AI service for conversation 9
+[2025-06-26T04:00:22.753Z] [INFO] ⌨️ User demo stopped typing in conversation 9
+[2025-06-26T04:00:45.845Z] [INFO] 🤖 AI response sent to conversation 9
+[2025-06-26T04:01:06.338Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T04:01:06.338Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T04:01:06.339Z] [INFO] 🔌 Python AI service connection closed for conversation 9
+[2025-06-26T04:01:51.997Z] [ERROR] ⏰ Python AI service timeout for conversation 9
+[2025-06-26T04:01:51.997Z] [ERROR] AI service error for conversation 9: AI service timeout
+[2025-06-26T04:01:51.998Z] [INFO] 🔌 Python AI service connection closed for conversation 9
