@@ -9,7 +9,7 @@ class AIHandler {
     this.pythonAI = {
       host: process.env.PYTHON_AI_HOST || 'localhost',
       port: process.env.PYTHON_AI_PORT || 8888,
-      timeout: process.env.PYTHON_AI_TIMEOUT || 30000
+      timeout: process.env.PYTHON_AI_TIMEOUT || 90000
     };
   }
 

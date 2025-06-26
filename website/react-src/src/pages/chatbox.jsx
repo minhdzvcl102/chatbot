@@ -6,6 +6,7 @@ import {
   Download,
   Trash2,
   X,
+  Bot,
   Upload,
   AlertCircle,
 } from "lucide-react";
@@ -120,7 +121,10 @@ const Chatbox = () => {
   useEffect(() => {
     const isAITyping = typingUsers.some(
       (user) =>
-        user && (user.role === "assistant" || user.role === "bot" || user.username === "AI")
+        user &&
+        (user.role === "assistant" ||
+          user.role === "bot" ||
+          user.username === "AI")
     );
     if (isAITyping && !isGenerating) {
       setIsGenerating(true);
@@ -219,7 +223,8 @@ const Chatbox = () => {
       await conversationService.updateConversation(conversationId, newTitle);
       setConversations((prev) =>
         prev.map((conv) =>
-          conv.id === conversationId ? { ...conv, user: newTitle } : conv)
+          conv.id === conversationId ? { ...conv, user: newTitle } : conv
+        )
       );
     } catch (error) {
       console.error("❌ Error updating conversation:", error);
@@ -550,7 +555,7 @@ const Chatbox = () => {
             </div>
           ) : (
             <div className="w-full max-w-4xl mx-auto py-4">
-              {userMessages.length === 0 ? (
+              {messages.length === 0 ? (
                 <div className="w-full h-full flex flex-col flex-1 gap-4 justify-center items-center py-20">
                   <h1 className="text-3xl font-bold text-black mb-2 text-center">
                     ChatGPT 3.5
@@ -561,30 +566,63 @@ const Chatbox = () => {
                 </div>
               ) : (
                 <div className="space-y-6">
-                  {userMessages.map((msg) => (
-                    <div key={msg.id} className="flex justify-end">
-                      <div className="flex max-w-[80%] flex-row-reverse gap-3">
-                        <div className="flex-shrink-0">
-                          <img
-                            src="https://randomuser.me/api/portraits/men/75.jpg"
-                            alt="User"
-                            className="w-8 h-8 rounded-full object-cover"
-                          />
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <div className="px-4 py-3 rounded-2xl bg-blue-600 text-white rounded-br-md">
-                            <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                              {msg.content}
-                            </p>
+                  {/* Hiển thị TẤT CẢ tin nhắn theo thứ tự thời gian */}
+                  {messages
+                    .sort(
+                      (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
+                    )
+                    .map((msg, index) => (
+                      <div
+                        key={msg.id || index}
+                        className={`flex ${
+                          msg.role === "user" ? "justify-end" : "justify-start"
+                        }`}
+                      >
+                        {msg.role === "user" ? (
+                          // Tin nhắn của User
+                          <div className="flex max-w-[80%] flex-row-reverse gap-3">
+                            <div className="flex-shrink-0">
+                              <img
+                                src="https://randomuser.me/api/portraits/men/75.jpg"
+                                alt="User"
+                                className="w-8 h-8 rounded-full object-cover"
+                              />
+                            </div>
+                            <div className="flex flex-col items-end">
+                              <div className="px-4 py-3 rounded-2xl bg-blue-600 text-white rounded-br-md">
+                                <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                                  {msg.content}
+                                </p>
+                              </div>
+                              <span className="text-xs text-gray-500 mt-1 px-1">
+                                {formatMessageTime(msg.createdAt)}
+                              </span>
+                            </div>
                           </div>
-                          <span className="text-xs text-gray-500 mt-1 px-1">
-                            {formatMessageTime(msg.createdAt)}
-                          </span>
-                        </div>
+                        ) : (
+                          // Tin nhắn của AI/Bot
+                          <div className="flex max-w-[80%] gap-3">
+                            <div className="flex-shrink-0">
+                              <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
+                                <Bot size={16} className="text-white" />
+                              </div>
+                            </div>
+                            <div className="flex flex-col">
+                              <div className="px-4 py-3 rounded-2xl bg-gray-100 text-gray-800 rounded-bl-md">
+                                <div className="text-sm leading-relaxed whitespace-pre-wrap">
+                                  {msg.content}
+                                </div>
+                              </div>
+                              <span className="text-xs text-gray-500 mt-1 px-1">
+                                {formatMessageTime(msg.createdAt)}
+                              </span>
+                            </div>
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    ))}
 
+                  {/* Hiển thị tin nhắn đang gửi */}
                   {sendingMessage && (
                     <div className="flex justify-end">
                       <div className="flex max-w-[80%] flex-row-reverse gap-3">
@@ -598,6 +636,39 @@ const Chatbox = () => {
                         <div className="flex flex-col items-end">
                           <div className="px-4 py-3 rounded-2xl bg-blue-600 text-white rounded-br-md opacity-70">
                             <p className="text-sm">Đang gửi...</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Hiển thị AI đang typing */}
+                  {isGenerating && (
+                    <div className="flex justify-start">
+                      <div className="flex max-w-[80%] gap-3">
+                        <div className="flex-shrink-0">
+                          <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
+                            <Bot size={16} className="text-white" />
+                          </div>
+                        </div>
+                        <div className="flex flex-col">
+                          <div className="px-4 py-3 rounded-2xl bg-gray-100 text-gray-800 rounded-bl-md">
+                            <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-1">
+                                <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
+                                <div
+                                  className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"
+                                  style={{ animationDelay: "0.1s" }}
+                                ></div>
+                                <div
+                                  className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"
+                                  style={{ animationDelay: "0.2s" }}
+                                ></div>
+                              </div>
+                              <span className="text-sm text-gray-600">
+                                AI đang trả lời...
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>

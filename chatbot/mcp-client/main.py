@@ -28,7 +28,12 @@ SYS_PROMPT = {
     "role": "system",
     "content": """You are a helpful assistant. Your job is to assist the user by all means possible.
     Make sure to format your message like utilizing newlines, lists and tables.
-    For chart-related requests, use the query_for_chart tool to retrieve chart metadata."""
+    For chart-related requests, use the query_for_chart tool to retrieve chart metadata.
+    
+    When working with SQL databases:
+    - Always use fully qualified table names with database prefix (e.g., `database_name.table_name`)
+    - If you get "No database selected" error, retry with proper database prefix
+    - For database php3_wd19314, use format: `php3_wd19314.table_name`"""
 }
 
 class AISocketServer:
@@ -105,7 +110,7 @@ class AISocketServer:
             
             client = await self.initialize_mcp_client()
             
-            async with asyncio.timeout(10):
+            async with asyncio.timeout(120):
                 tool_list = await client.list_tools()
                 resource_list = await client.list_resources()
                 resource_template_list = await client.list_resource_templates()
@@ -152,7 +157,7 @@ class AISocketServer:
             llm = AsyncOpenAI(
                 base_url=os.getenv("BASE_API_URL"),
                 api_key=os.getenv("ALIBABA_API_KEY"),
-                timeout=30.0
+                timeout=90.0
             )
 
             if conversation_id not in message_history:
@@ -191,109 +196,128 @@ class AISocketServer:
                     logger.error(f"Error calling query_for_chart: {str(e)}")
                     return {"status": "error", "error": f"Chart query failed: {str(e)}"}
             else:
-                async with asyncio.timeout(30):
-                    response = await llm.chat.completions.create(
-                        model="qwen-plus",
-                        messages=[SYS_PROMPT] + message_history[conversation_id],
-                        tools=list_of_tools
-                    )
-
-                if not response.choices or len(response.choices) == 0:
-                    logger.error("Empty choices in LLM response")
-                    return {"status": "error", "error": "No response from LLM"}
-
-                if response.choices[0].finish_reason == "stop":
-                    answer = response.choices[0].message.content
-                    message_history[conversation_id].append({"role": "assistant", "content": answer})
-                    logger.info(f"Generated answer for conversation {conversation_id}")
-                    return {"status": "success", "content": answer}
-
-                elif response.choices[0].finish_reason == "tool_calls":
-                    tool_calls = []
-                    for tool in response.choices[0].message.tool_calls:
-                        tool_dict = {
-                            "id": tool.id,
-                            "type": "function",
-                            "function": {
-                                "name": tool.function.name,
-                                "arguments": tool.function.arguments
-                            }
-                        }
-                        tool_calls.append(tool_dict)
+                # Main conversation loop with consecutive tool calls
+                max_iterations = 10  # Prevent infinite loops
+                iteration = 0
+                
+                while iteration < max_iterations:
+                    iteration += 1
+                    logger.info(f"LLM iteration {iteration}/{max_iterations}")
                     
-                    message_history[conversation_id].append({
-                        "role": "assistant", 
-                        "content": None, 
-                        "tool_calls": response.choices[0].message.tool_calls
-                    })
+                    try:
+                        async with asyncio.timeout(90):
+                            response = await llm.chat.completions.create(
+                                model="qwen-plus",
+                                messages=[SYS_PROMPT] + message_history[conversation_id],
+                                tools=list_of_tools
+                            )
+                    except asyncio.TimeoutError:
+                        logger.error("LLM timeout")
+                        return {"status": "error", "error": "LLM response timeout"}
                     
-                    for i, tool_call in enumerate(tool_calls):
-                        try:
-                            if isinstance(tool_call["function"]["arguments"], str):
-                                tool_call["function"]["arguments"] = json.loads(tool_call["function"]["arguments"])
+                    if not response.choices or len(response.choices) == 0:
+                        logger.error("Empty choices in LLM response")
+                        return {"status": "error", "error": "No response from LLM"}
+                    
+                    choice = response.choices[0]
+                    logger.info(f"LLM finish_reason: {choice.finish_reason}")
+                    
+                    if choice.finish_reason == "stop":
+                        answer = choice.message.content
+                        message_history[conversation_id].append({"role": "assistant", "content": answer})
+                        logger.info(f"Generated final answer for conversation {conversation_id}")
+                        return {"status": "success", "content": answer}
+                    
+                    elif choice.finish_reason == "tool_calls":
+                        logger.info(f"LLM requested {len(choice.message.tool_calls)} tool calls")
+                        
+                        # Add assistant message with tool calls to history
+                        message_history[conversation_id].append({
+                            "role": "assistant", 
+                            "content": None, 
+                            "tool_calls": choice.message.tool_calls
+                        })
+                        
+                        # Execute all tool calls
+                        for tool_call in choice.message.tool_calls:
+                            tool_name = tool_call.function.name
+                            arguments = tool_call.function.arguments
                             
-                            tool_name = tool_call["function"]["name"]
-                            if tool_name in tool_lookup:
-                                tool_call["type"] = tool_lookup[tool_name]
-                            else:
-                                logger.error(f"Unknown tool: {tool_name}")
+                            try:
+                                if isinstance(arguments, str):
+                                    arguments = json.loads(arguments)
+                            except json.JSONDecodeError as e:
+                                logger.error(f"Failed to parse tool arguments: {e}")
+                                return {"status": "error", "error": f"Invalid tool arguments: {str(e)}"}
+                            
+                            if tool_name not in tool_lookup:
+                                logger.error(f"Unknown tool name: {tool_name}")
+                                message_history[conversation_id].append({
+                                    "role": "tool",
+                                    "content": json.dumps({"error": f"Unknown tool: {tool_name}"}),
+                                    "tool_call_id": tool_call.id
+                                })
                                 continue
                             
-                            logger.info(f"Executing tool call {i+1}/{len(tool_calls)}: {tool_name}")
+                            tool_type = tool_lookup[tool_name]
+                            tool_dict = {
+                                "id": tool_call.id,
+                                "type": tool_type,
+                                "function": {
+                                    "name": tool_name,
+                                    "arguments": arguments
+                                }
+                            }
                             
-                            async with asyncio.timeout(15):
-                                result = await self.mcpCall(tool_call, client)
-                            
-                            if result and len(result) > 0:
-                                result_text = result[0].text
+                            try:
+                                logger.info(f"Executing tool call: {tool_name}")
+                                async with asyncio.timeout(15):
+                                    result = await self.mcpCall(tool_dict, client)
                                 
+                                result_text = result[0].text if result and len(result) > 0 else "No result returned"
+                                
+                                # Check for tool call errors but don't stop execution
                                 try:
                                     result_json = json.loads(result_text)
-                                    if "error" in result_json:
-                                        logger.error(f"Tool call error: {result_json['error']}")
-                                        return {"status": "error", "error": result_json["error"]}
+                                    if isinstance(result_json, dict) and "error" in result_json:
+                                        logger.warning(f"Tool call returned error: {result_json['error']}")
+                                        # Let LLM handle the error and potentially retry with different approach
                                 except json.JSONDecodeError:
                                     pass
                                 
                                 message_history[conversation_id].append({
                                     "role": "tool",
                                     "content": result_text,
-                                    "tool_call_id": tool_call["id"]
+                                    "tool_call_id": tool_call.id
                                 })
-                            else:
-                                logger.warning(f"Empty result from tool call: {tool_name}")
+                                
+                            except asyncio.TimeoutError:
+                                logger.error(f"Tool call timeout for tool: {tool_name}")
+                                error_result = json.dumps({"error": f"Tool call timeout for {tool_name}"})
                                 message_history[conversation_id].append({
                                     "role": "tool",
-                                    "content": "No result returned",
-                                    "tool_call_id": tool_call["id"]
+                                    "content": error_result,
+                                    "tool_call_id": tool_call.id
                                 })
-                            
-                        except asyncio.TimeoutError:
-                            logger.error(f"Tool call timeout for tool: {tool_call['function']['name']}")
-                            return {"status": "error", "error": "Tool call timeout"}
-                        except Exception as e:
-                            logger.error(f"Error in tool call {i}: {str(e)}")
-                            return {"status": "error", "error": f"Tool call failed: {str(e)}"}
-
-                    try:
-                        async with asyncio.timeout(30):
-                            response = await llm.chat.completions.create(
-                                model="qwen-plus",
-                                messages=[SYS_PROMPT] + message_history[conversation_id],
-                                tools=list_of_tools
-                            )
+                            except Exception as e:
+                                logger.error(f"Tool call failed: {str(e)}")
+                                error_result = json.dumps({"error": f"Tool call failed: {str(e)}"})
+                                message_history[conversation_id].append({
+                                    "role": "tool",
+                                    "content": error_result,
+                                    "tool_call_id": tool_call.id
+                                })
                         
-                        if response.choices[0].finish_reason == "stop":
-                            answer = response.choices[0].message.content
-                            message_history[conversation_id].append({"role": "assistant", "content": answer})
-                            logger.info(f"Generated answer after tool call for conversation {conversation_id}")
-                            return {"status": "success", "content": answer}
-                            
-                    except asyncio.TimeoutError:
-                        logger.error("LLM timeout after tool calls")
-                        return {"status": "error", "error": "LLM response timeout"}
-
-                return {"status": "error", "error": "Unexpected error in processing"}
+                        # Continue the loop to call LLM again with tool results
+                        continue
+                    
+                    else:
+                        logger.warning(f"Unexpected finish reason: {choice.finish_reason}")
+                        return {"status": "error", "error": f"Unexpected finish reason: {choice.finish_reason}"}
+                
+                # If we reach here, we've hit the max iterations
+                logger.warning(f"Reached maximum iterations ({max_iterations}) without final answer")
+                return {"status": "error", "error": "Maximum conversation iterations reached"}
 
         except asyncio.TimeoutError:
             logger.error(f"Timeout processing message for conversation {conversation_id}")
@@ -307,7 +331,9 @@ class AISocketServer:
         finally:
             if client:
                 try:
-                    await client.__aexit__(None, None, None)
+                    loop = asyncio.get_event_loop()
+                    if not loop.is_closed():
+                        await client.__aexit__(None, None, None)
                 except Exception as e:
                     logger.warning(f"Error closing MCP client: {str(e)}")
 

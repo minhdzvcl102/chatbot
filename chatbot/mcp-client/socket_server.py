@@ -3,6 +3,7 @@ import threading
 import json
 import asyncio
 import logging
+import time
 
 logging.basicConfig(
     level=logging.INFO, 
@@ -21,7 +22,7 @@ class SocketServer:
         self.server_socket = None
         self.clients = {}
         self.running = False
-        self.connection_timeout = 30
+        self.connection_timeout = 310
         self.process_message_callback = process_message_callback
 
     def handle_client(self, client_socket, address):
@@ -59,7 +60,7 @@ class SocketServer:
                                                 user_message, 
                                                 username
                                             )
-                                            response = future.result(timeout=60)
+                                            response = future.result(timeout=300)
                                     except RuntimeError:
                                         loop = asyncio.new_event_loop()
                                         asyncio.set_event_loop(loop)
