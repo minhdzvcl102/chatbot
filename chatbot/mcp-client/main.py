@@ -56,7 +56,7 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
     """Generate system prompt to guide LLM in intelligently selecting tools"""
     base_prompt = """You are a data analytics chatbot specialized in business intelligence and data interpretation.
 
-    IMPORTANT: You MUST use tools to answer user questions about data, databases, or analytics. Do NOT answer from general knowledge unless no relevant tool results are found. Your goal is to intelligently select the appropriate tool based on the question's intent and context, prioritizing rag_query for general or ambiguous questions.
+    IMPORTANT: You MUST use tools to answer questions about data, databases, or analytics. Do NOT answer from general knowledge unless no relevant tool results are found. Prioritize rag_query for general or ambiguous questions.
 
     Your expertise includes:
     - Data interpretation and business insights
@@ -68,76 +68,56 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
     - Document and knowledge base querying
 
     TOOL SELECTION GUIDELINES:
-    1. By default, use rag_query for general, ambiguous, or knowledge-based questions (e.g., 'explain', 'define', 'what is', 'giải thích', 'là gì', 'phân tích doanh thu') to search for relevant information in documents.
-    2. Only use sql_query_db, list_databases, list_tables, or get_schema when:
-       - The question explicitly mentions database-related terms (e.g., 'database', 'table', 'sql', 'cơ sở dữ liệu', 'bảng') or names that appear to be database identifiers (e.g., 'php3_wd19314').
-       - The user explicitly requests to use SQL (e.g., 'dùng SQL', 'use SQL').
+    1. Use rag_query by default for general, ambiguous, or knowledge-based questions (e.g., 'explain', 'define', 'what is', 'giải thích', 'là gì', 'phân tích doanh thu').
+    2. Use SQL tools (sql_query_db, sql+db://sql/list_databases, sql+db://sql/list_tables/{db_name*}, sql+db://sql/schema/{db_name*}) only when:
+       - The question explicitly mentions database-related terms (e.g., 'database', 'table', 'sql', 'cơ sở dữ liệu', 'bảng') or names like 'php3_wd19314'.
+       - The user explicitly requests SQL (e.g., 'dùng SQL', 'use SQL').
        - rag_query returns no relevant results, and the question implies structured data (e.g., 'list products', 'sales data').
     3. For chart/visualization requests:
-       - If the question implies document-based data (e.g., 'summary from report'), use rag_query.
-       - If the question implies structured data (e.g., 'sales data from table'), use sql_query_db.
+       - Use rag_query for document-based data (e.g., 'summary from report').
+       - Use sql_query_db for structured data (e.g., 'sales data from table').
        - Explain visualization options after retrieving data.
-    4. Use conversation history to infer context if the current question is ambiguous. For example:
-       - If previous questions were about documents, prioritize rag_query.
-       - If previous questions mentioned a specific database (e.g., 'php3_wd19314'), consider sql_query_db.
-    5. If rag_query returns no relevant results, try sql_query_db as a fallback for data-related questions.
+    4. Use conversation history to infer context if the question is ambiguous.
+    5. If rag_query returns no results, try sql_query_db for data-related questions.
     6. Always provide the business meaning of findings in your response.
-    7. If no relevant data is found, inform the user and suggest rephrasing the question or checking other sources.
+    7. If no data is found, inform the user and suggest rephrasing or checking other sources.
 
     Examples:
-    - Question: "Phân tích doanh thu hòa phát các năm" → Use rag_query to find information in documents, as it is a general analysis request.
-    - Question: "Liệt kê 20 sản phẩm trong php3_wd19314" → Use sql_query_db with database 'php3_wd19314', as it mentions a likely database name and implies structured data.
-    - Question: "Dùng SQL để lấy doanh thu từ bảng sales" → Use sql_query_db, as the user explicitly requests SQL.
-    - Question: "Doanh thu là gì?" → Use rag_query to find definitions in documents.
+    - "Phân tích doanh thu hòa phát các năm" → Use rag_query for document search.
+    - "Liệt kê 20 sản phẩm trong php3_wd19314" → Use sql_query_db with database 'php3_wd19314'.
+    - "Dùng SQL để lấy doanh thu từ bảng sales" → Use sql_query_db.
+    - "Doanh thu là gì?" → Use rag_query for definitions.
 
-    Available tools:
-    - sql_query_db: Execute SQL queries on databases
-    - list_databases: List available databases
-    - list_tables: List tables in a specific database
-    - get_schema: Get schema of a specific database
-    - rag_query: Query document knowledge base
-    - rag_get_collection_info: Get information about document collections
-    + 
-    + TOOL CALL NAMES (for LLM):
-    + - sql_query_db
-    + - sql+db://sql/list_databases
-    + - sql+db://sql/list_tables/{db_name}
-    + - sql+db://sql/schema/{db_name}
-    + - rag_query
-    + - rag_get_collection_info
-    
-    Valid tool call names (exact match only):
-    - sql_query_db
-    - sql+db://sql/list_databases
-    - sql+db://sql/list_tables/{db_name}
-    - sql+db://sql/schema/{db_name}
-    - rag_query
-    - rag_get_collection_info
+    Available tools and their exact call names:
+    - sql_query_db: Execute SQL queries on databases.
+    - sql+db://sql/list_databases: List available databases.
+    - sql+db://sql/list_tables/{db_name*}: List tables in a specific database. Replace {db_name*} with the actual database name (e.g., 'php3_wd19314') in the arguments, not the tool name.
+    - sql+db://sql/schema/{db_name*}: Get schema of a specific database. Replace {db_name*} with the actual database name in the arguments.
+    - rag_query: Query document knowledge base.
+    - rag_get_collection_info: Get information about document collections.
+
+    IMPORTANT TOOL CALL INSTRUCTIONS:
+    - Use exact tool names as listed above.
+    - For tools with {db_name*}, pass the database name (e.g., 'php3_wd19314') as a parameter in the tool call arguments, not in the tool name itself. Example:
+      - Correct: {"name": "sql+db://sql/list_tables/{db_name*}", "arguments": {"db_name": "php3_wd19314"}}
+      - Incorrect: {"name": "sql+db://sql/list_tables/php3_wd19314"}
+    - Always use fully qualified table names (e.g., `php3_wd19314.table_name`) in SQL queries.
 
     WORKFLOW:
-    1. Analyze the question and conversation history to infer the user's intent.
-    2. Select the appropriate tool based on the intent:
-       - Use rag_query by default for general, ambiguous, or document-related questions.
-       - Use SQL tools (sql_query_db, list_databases, list_tables, get_schema) only for explicit database-related questions or when explicitly requested (e.g., 'dùng SQL').
-       - If rag_query returns no results, try sql_query_db for data-related questions.
-    3. Execute the selected tool and verify the results.
+    1. Analyze the question and conversation history to infer intent.
+    2. Select the appropriate tool based on intent:
+       - rag_query for general or document-related questions.
+       - SQL tools for explicit database-related questions or when SQL is requested.
+       - sql_query_db as a fallback for data-related questions if rag_query fails.
+    3. Execute the tool and verify results.
     4. Provide a clear answer with business context, citing the source (database or document).
-    5. If no data is found, inform the user and suggest alternative approaches.
-
-    When working with SQL databases:
-    - Always use fully qualified table names with database prefix (e.g., `database_name.table_name`).
-    - If you get 'No database selected' error, use list_databases or list_tables to explore available data.
-    - Start with list_databases or list_tables if unsure about available data.
-
-    When working with documents:
-    - Use rag_query to search for relevant information in the document knowledge base.
-    - If rag_query returns no results, consider using sql_query_db as a fallback for data-related questions.
-    - Use rag_get_collection_info to understand available document collections if needed."""
+    5. If no data is found, suggest rephrasing or checking other sources.
+"""
 
     if context_type == "db" and context_name:
-        base_prompt += f"\n\nCurrent database context: {context_name}. Use format: `{context_name}.table_name` in SQL queries. Prioritize sql_query_db for this question unless it clearly indicates a document-based query."
+        base_prompt += f"\n\nCurrent database context: {context_name}. Use format: `{context_name}.table_name` in SQL queries. Prioritize sql_query_db unless the question clearly indicates a document-based query."
     else:
-        base_prompt += "\n\nNo specific database context provided. Use rag_query by default for this question, unless it explicitly mentions database-related terms or requests to use SQL."
+        base_prompt += "\n\nNo specific database context provided. Use rag_query by default unless the question explicitly mentions database-related terms or requests SQL."
 
     return {"role": "system", "content": base_prompt}
 
@@ -192,10 +172,11 @@ class AISocketServer:
 
     async def execute_tool_calls_parallel(self, tool_calls, client, tool_lookup):
         """Execute multiple tool calls in parallel for better performance"""
+
         async def execute_single_tool_call(tool_call):
             tool_name = tool_call.function.name
             arguments = tool_call.function.arguments
-            
+
             try:
                 if isinstance(arguments, str):
                     arguments = json.loads(arguments)
@@ -203,7 +184,9 @@ class AISocketServer:
                 logger.error(f"Failed to parse tool arguments for {tool_name}: {e}")
                 return {
                     "role": "tool",
-                    "content": json.dumps({"error": f"Invalid tool arguments: {str(e)}"}),
+                    "content": json.dumps(
+                        {"error": f"Invalid tool arguments: {str(e)}"}
+                    ),
                     "tool_call_id": tool_call.id,
                 }
 
@@ -237,7 +220,9 @@ class AISocketServer:
                 try:
                     result_json = json.loads(result_text)
                     if isinstance(result_json, dict) and "error" in result_json:
-                        logger.warning(f"Tool call returned error: {result_json['error']}")
+                        logger.warning(
+                            f"Tool call returned error: {result_json['error']}"
+                        )
                 except json.JSONDecodeError:
                     pass
 
@@ -251,7 +236,9 @@ class AISocketServer:
                 logger.error(f"Tool call timeout for tool: {tool_name}")
                 return {
                     "role": "tool",
-                    "content": json.dumps({"error": f"Tool call timeout for {tool_name}"}),
+                    "content": json.dumps(
+                        {"error": f"Tool call timeout for {tool_name}"}
+                    ),
                     "tool_call_id": tool_call.id,
                 }
             except Exception as e:
@@ -265,28 +252,34 @@ class AISocketServer:
         # Create tasks for all tool calls
         start_time = time.time()
         logger.info(f"Starting parallel execution of {len(tool_calls)} tool calls")
-        
+
         tasks = [execute_single_tool_call(tool_call) for tool_call in tool_calls]
-        
+
         # Execute all tool calls in parallel
         tool_results = await asyncio.gather(*tasks, return_exceptions=True)
-        
+
         execution_time = time.time() - start_time
-        logger.info(f"Parallel tool execution completed in {execution_time:.2f} seconds")
-        
+        logger.info(
+            f"Parallel tool execution completed in {execution_time:.2f} seconds"
+        )
+
         # Process results and handle any exceptions
         processed_results = []
         for i, result in enumerate(tool_results):
             if isinstance(result, Exception):
                 logger.error(f"Tool call {i} failed with exception: {result}")
-                processed_results.append({
-                    "role": "tool",
-                    "content": json.dumps({"error": f"Tool execution failed: {str(result)}"}),
-                    "tool_call_id": tool_calls[i].id,
-                })
+                processed_results.append(
+                    {
+                        "role": "tool",
+                        "content": json.dumps(
+                            {"error": f"Tool execution failed: {str(result)}"}
+                        ),
+                        "tool_call_id": tool_calls[i].id,
+                    }
+                )
             else:
                 processed_results.append(result)
-        
+
         return processed_results
 
     async def initialize_mcp_client(self):
@@ -500,7 +493,7 @@ class AISocketServer:
                     tool_results = await self.execute_tool_calls_parallel(
                         choice.message.tool_calls, client, tool_lookup
                     )
-                    
+
                     # Add all tool results to message history
                     message_history[conversation_id].extend(tool_results)
 
@@ -577,4 +570,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
