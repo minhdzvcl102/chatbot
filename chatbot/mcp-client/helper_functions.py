@@ -70,7 +70,8 @@ TOOL_CODE_LOOKUP = {
   "sql+db://list_tables/{db_name*}": "002",
   "sql+db://list_databases": "003",
   "rag_query": "004",
-  "sql_query_db": "005"
+  "sql_query_db": "005",
+  
 }
 def lookup_tool_code(name):
   return TOOL_CODE_LOOKUP[name];

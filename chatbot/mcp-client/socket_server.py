@@ -1,10 +1,12 @@
+# socket_server.py
 import socket
 import threading
 import json
-import asyncio
+import asyncio # New: For Future/Event
 import logging
 import time
 import sys
+from concurrent.futures import Future # New: For managing results across threads
 
 # Fix Unicode encoding issues for Windows
 if sys.platform.startswith('win'):
@@ -27,14 +29,15 @@ class SocketServer:
         self.host = host
         self.port = port
         self.server_socket = None
-        self.clients = {}
+        self.clients = {} # Keep track of client sockets if needed for direct response
         self.running = False
         self.connection_timeout = 300
-        self.process_message_callback = process_message_callback
+        # This callback will now take (conversation_id, user_message, username, response_future)
+        self.process_message_callback = process_message_callback 
 
     def handle_client(self, client_socket, address):
         logger.info(f"New client connected from {address}")
-        client_socket.settimeout(self.connection_timeout)
+        client_socket.settimeout(self.connection_timeout - 10 )
         
         try:
             while self.running:
@@ -56,15 +59,26 @@ class SocketServer:
                             if not conversation_id or not user_message:
                                 response = {"status": "error", "error": "Missing conversationId or message"}
                             else:
+                                # Create a Future to hold the result from the async processing
+                                response_future = Future() 
                                 try:
-                                    # Run async function in new event loop
-                                    response = self._run_async_processing(
+                                    # Call the callback, passing the Future.
+                                    # The callback (enqueue_message_callback) will then enqueue
+                                    # the actual message processing along with this Future.
+                                    # The async processor (_process_message_async) will set the result on this Future.
+                                    self.process_message_callback(
                                         conversation_id, 
                                         user_message, 
-                                        username
+                                        username,
+                                        response_future # Pass the Future here
                                     )
+                                    logger.info(f"Waiting for async processing result for {conversation_id}...")
+                                    # Wait for the result from the Future (blocking for this thread)
+                                    response = response_future.result(timeout=self.connection_timeout - 10) # Wait for result, with a sub-timeout
+                                    logger.info(f"Received result for {conversation_id}.")
+
                                 except Exception as e:
-                                    logger.error(f"Error in async processing: {str(e)}")
+                                    logger.error(f"Error during async processing result retrieval: {str(e)}")
                                     response = {"status": "error", "error": f"Processing failed: {str(e)}"}
                             
                             response_json = json.dumps(response, ensure_ascii=False) + '\n'
@@ -106,33 +120,7 @@ class SocketServer:
                 pass
             logger.info(f"Client {address} disconnected")
 
-    def _run_async_processing(self, conversation_id, user_message, username):
-        """Run async processing in a new event loop"""
-        try:
-            # Create new event loop for this thread
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            try:
-                return loop.run_until_complete(
-                    self.process_message_callback(conversation_id, user_message, username)
-                )
-            finally:
-                # Clean up the loop
-                try:
-                    # Cancel all pending tasks
-                    pending = asyncio.all_tasks(loop)
-                    for task in pending:
-                        task.cancel()
-                    # Wait for all tasks to be cancelled
-                    if pending:
-                        loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
-                except Exception as cleanup_error:
-                    logger.warning(f"Error during loop cleanup: {cleanup_error}")
-                finally:
-                    loop.close()
-        except Exception as e:
-            logger.error(f"Error in _run_async_processing: {str(e)}")
-            return {"status": "error", "error": f"Async processing failed: {str(e)}"}
+    # Removed _run_async_processing as it's no longer needed with the queue/Future approach
 
     def start_server(self):
         try:
