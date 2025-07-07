@@ -9523,3 +9523,261 @@ RuntimeError: Server session was closed unexpectedly
 2025-07-02 10:35:35,065 - socket_server - INFO - Socket Server stopped
 2025-07-02 10:35:35,065 - socket_server - INFO - Socket Server stopped
 2025-07-02 10:35:35,065 - __main__ - WARNING - Main event loop not available or closed for processor task cancellation.
+2025-07-04 08:45:31,422 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-07-04 08:45:41,558 - __main__ - WARNING - MCP client initialization attempt 1 failed: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 08:45:41,559 - __main__ - WARNING - Error during failed client setup cleanup: Connection closed
+2025-07-04 08:45:42,562 - __main__ - INFO - Attempting to initialize MCP client (attempt 2/3)
+2025-07-04 08:45:42,562 - __main__ - WARNING - MCP client initialization attempt 2 failed: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 08:45:42,563 - __main__ - WARNING - Error during failed client setup cleanup: Server session was closed unexpectedly
+2025-07-04 08:45:43,566 - __main__ - INFO - Attempting to initialize MCP client (attempt 3/3)
+2025-07-04 08:45:43,567 - __main__ - WARNING - MCP client initialization attempt 3 failed: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 08:45:43,567 - __main__ - ERROR - Error during server startup in start_and_serve: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 08:45:43,568 - __main__ - INFO - Stopping server...
+2025-07-04 08:45:43,568 - __main__ - WARNING - Error closing MCP client during server shutdown: This event loop is already running
+2025-07-04 08:45:43,603 - __main__ - INFO - Stopping server...
+2025-07-04 08:45:43,648 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Client._session_runner() done, defined at D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py:310> exception=RuntimeError('Server session was closed unexpectedly')>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\exceptiongroup\_catch.py", line 63, in handle_exception
+  |     raise matched
+  | ExceptionGroup:  (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 313, in _session_runner
+    |     await stack.enter_async_context(self._context_manager())
+    |   File "C:\Python313\Lib\contextlib.py", line 668, in enter_async_context
+    |     result = await _enter(cm)
+    |              ^^^^^^^^^^^^^^^^
+    |   File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    |     return await anext(self.gen)
+    |            ^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\exceptiongroup\_catch.py", line 65, in handle_exception
+    |     result = handler(matched)
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\utilities\exceptions.py", line 29, in _exception_handler
+    |     raise leaf
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 252, in _context_manager
+    |     raise RuntimeError("Server session was closed unexpectedly")
+    | RuntimeError: Server session was closed unexpectedly
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 313, in _session_runner
+    await stack.enter_async_context(self._context_manager())
+  File "C:\Python313\Lib\contextlib.py", line 668, in enter_async_context
+    result = await _enter(cm)
+             ^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\exceptiongroup\_catch.py", line 65, in handle_exception
+    result = handler(matched)
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\utilities\exceptions.py", line 29, in _exception_handler
+    raise leaf
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 252, in _context_manager
+    raise RuntimeError("Server session was closed unexpectedly")
+RuntimeError: Server session was closed unexpectedly
+2025-07-04 09:03:01,013 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-07-04 09:03:07,704 - __main__ - WARNING - MCP client initialization attempt 1 failed: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 09:03:07,705 - __main__ - WARNING - Error during failed client setup cleanup: Connection closed
+2025-07-04 09:03:08,711 - __main__ - INFO - Attempting to initialize MCP client (attempt 2/3)
+2025-07-04 09:03:08,712 - __main__ - WARNING - MCP client initialization attempt 2 failed: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 09:03:08,712 - __main__ - WARNING - Error during failed client setup cleanup: Server session was closed unexpectedly
+2025-07-04 09:03:09,719 - __main__ - INFO - Attempting to initialize MCP client (attempt 3/3)
+2025-07-04 09:03:09,720 - __main__ - WARNING - MCP client initialization attempt 3 failed: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 09:03:09,720 - __main__ - ERROR - Error during server startup in start_and_serve: Client is not connected. Use the 'async with client:' context manager first.
+2025-07-04 09:03:09,720 - __main__ - INFO - Stopping server...
+2025-07-04 09:03:09,720 - __main__ - WARNING - Error closing MCP client during server shutdown: This event loop is already running
+2025-07-04 09:03:09,742 - __main__ - INFO - Stopping server...
+2025-07-04 09:03:09,774 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Client._session_runner() done, defined at D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py:310> exception=RuntimeError('Server session was closed unexpectedly')>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\exceptiongroup\_catch.py", line 63, in handle_exception
+  |     raise matched
+  | ExceptionGroup:  (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 313, in _session_runner
+    |     await stack.enter_async_context(self._context_manager())
+    |   File "C:\Python313\Lib\contextlib.py", line 668, in enter_async_context
+    |     result = await _enter(cm)
+    |              ^^^^^^^^^^^^^^^^
+    |   File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    |     return await anext(self.gen)
+    |            ^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\exceptiongroup\_catch.py", line 65, in handle_exception
+    |     result = handler(matched)
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\utilities\exceptions.py", line 29, in _exception_handler
+    |     raise leaf
+    |   File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 252, in _context_manager
+    |     raise RuntimeError("Server session was closed unexpectedly")
+    | RuntimeError: Server session was closed unexpectedly
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 313, in _session_runner
+    await stack.enter_async_context(self._context_manager())
+  File "C:\Python313\Lib\contextlib.py", line 668, in enter_async_context
+    result = await _enter(cm)
+             ^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\exceptiongroup\_catch.py", line 65, in handle_exception
+    result = handler(matched)
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\utilities\exceptions.py", line 29, in _exception_handler
+    raise leaf
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 252, in _context_manager
+    raise RuntimeError("Server session was closed unexpectedly")
+RuntimeError: Server session was closed unexpectedly
+2025-07-04 09:09:28,334 - __main__ - INFO - Waiting for MCP client tools to be available...
+2025-07-04 09:09:28,334 - __main__ - ERROR - Error during server startup in start_and_serve: Connection closed
+Traceback (most recent call last):
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-client\main.py", line 632, in start_and_serve
+    tool_list = await self.mcp_client.list_tools()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 631, in list_tools
+    result = await self.list_tools_mcp()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 619, in list_tools_mcp
+    result = await self.session.list_tools()
+                   ^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 210, in session
+    raise RuntimeError(
+        "Client is not connected. Use the 'async with client:' context manager first."
+    )
+RuntimeError: Client is not connected. Use the 'async with client:' context manager first.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-client\main.py", line 626, in start_and_serve
+    async with client_to_manage as active_mcp_client:
+               ^^^^^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 264, in __aexit__
+    await self._disconnect()
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 302, in _disconnect
+    await runner_task
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 313, in _session_runner
+    await stack.enter_async_context(self._context_manager())
+  File "C:\Python313\Lib\contextlib.py", line 668, in enter_async_context
+    result = await _enter(cm)
+             ^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\exceptiongroup\_catch.py", line 65, in handle_exception
+    result = handler(matched)
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\utilities\exceptions.py", line 29, in _exception_handler
+    raise leaf
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\fastmcp\client\client.py", line 249, in _context_manager
+    self._initialize_result = await self._session.initialize()
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\mcp\client\session.py", line 123, in initialize
+    result = await self.send_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+    )
+    ^
+  File "D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\.venv\Lib\site-packages\mcp\shared\session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Connection closed
+2025-07-04 09:09:28,356 - __main__ - INFO - Server's main async block finishing, initiating final cleanup.
+2025-07-04 09:09:28,357 - __main__ - INFO - Stopping server components...
+2025-07-04 09:09:28,357 - __main__ - INFO - Stopping server components...
+2025-07-04 09:09:28,358 - __main__ - INFO - Server shutdown complete.
+2025-07-04 09:11:19,906 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-07-04 09:11:24,236 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-07-04 09:11:24,236 - __main__ - INFO - SocketServer started in a separate thread.
+2025-07-04 09:11:24,237 - __main__ - INFO - Message processor task started.
+2025-07-04 09:11:24,239 - socket_server - INFO - Socket Server started on localhost:8888
+2025-07-04 09:11:36,945 - socket_server - INFO - New client connected from ('127.0.0.1', 53412)
+2025-07-04 09:11:36,946 - socket_server - INFO - Received request from ('127.0.0.1', 53412): chat
+2025-07-04 09:11:36,946 - __main__ - INFO - Enqueuing message for conversation 11
+2025-07-04 09:11:36,946 - socket_server - INFO - Waiting for async processing result for 11...
+2025-07-04 09:11:36,946 - __main__ - INFO - Dequeued message for conversation 11
+2025-07-04 09:11:36,946 - __main__ - INFO - Processing message for conversation 11
+2025-07-04 09:11:36,946 - __main__ - INFO - New context established: rag:general
+2025-07-04 09:11:36,951 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'chart_create_chart', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-07-04 09:11:37,149 - __main__ - INFO - User message: xin chaof
+2025-07-04 09:11:37,149 - __main__ - INFO - System prompt: Bạn là một chatbot phân tích dữ liệu chuyên về business intelligence và diễn giải dữ liệu.
+
+    QUAN TRỌNG NHẤT: Bạn BẮT BUỘC phải sử dụng các công cụ để trả lời các câu hỏi của người dùng về dữ liệu,...
+2025-07-04 09:11:37,150 - __main__ - INFO - LLM iteration 1/10
+2025-07-04 09:11:38,402 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-07-04 09:11:38,406 - __main__ - ERROR - Error processing message for conversation 11: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-f7609382-16dc-94d0-b8be-5a5886364911', 'request_id': 'f7609382-16dc-94d0-b8be-5a5886364911'}
+2025-07-04 09:11:38,406 - __main__ - INFO - Processing complete for 11. Status: error
+2025-07-04 09:11:38,406 - socket_server - INFO - Received result for 11.
+2025-07-04 09:11:38,407 - socket_server - INFO - Sent response to ('127.0.0.1', 53412): error
+2025-07-04 09:12:22,836 - __main__ - INFO - Server tasks cancelled.
+2025-07-04 09:12:22,842 - __main__ - INFO - Stopping server...
+2025-07-04 09:12:22,842 - socket_server - INFO - Stopping server...
+2025-07-04 09:12:22,843 - socket_server - INFO - Socket Server stopped
+2025-07-04 09:12:22,843 - __main__ - WARNING - Main event loop not available or closed for processor task cancellation.
+2025-07-04 09:12:22,843 - socket_server - INFO - Stopping server...
+2025-07-04 09:12:22,843 - socket_server - INFO - Socket Server stopped
+2025-07-04 09:27:01,501 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-07-04 09:27:04,881 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-07-04 09:27:04,882 - __main__ - INFO - SocketServer started in a separate thread.
+2025-07-04 09:27:04,882 - __main__ - INFO - Message processor task started.
+2025-07-04 09:27:04,884 - socket_server - INFO - Socket Server started on localhost:8888
+2025-07-04 09:28:03,184 - __main__ - INFO - Server tasks cancelled.
+2025-07-04 09:28:03,189 - __main__ - INFO - Stopping server...
+2025-07-04 09:28:03,189 - socket_server - INFO - Stopping server...
+2025-07-04 09:28:03,189 - socket_server - INFO - Stopping server...
+2025-07-04 09:28:03,189 - socket_server - INFO - Socket Server stopped
+2025-07-04 09:28:03,190 - socket_server - INFO - Socket Server stopped
+2025-07-04 09:28:03,190 - __main__ - WARNING - Main event loop not available or closed for processor task cancellation.
+2025-07-07 08:50:29,394 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-07-07 08:50:36,283 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-07-07 08:50:36,284 - __main__ - INFO - SocketServer started in a separate thread.
+2025-07-07 08:50:36,284 - __main__ - INFO - Message processor task started.
+2025-07-07 08:50:36,287 - socket_server - INFO - Socket Server started on localhost:8888
+2025-07-07 08:52:46,045 - socket_server - INFO - New client connected from ('127.0.0.1', 54613)
+2025-07-07 08:52:46,046 - socket_server - INFO - Received request from ('127.0.0.1', 54613): chat
+2025-07-07 08:52:46,046 - __main__ - INFO - Enqueuing message for conversation 11
+2025-07-07 08:52:46,047 - socket_server - INFO - Waiting for async processing result for 11...
+2025-07-07 08:52:46,047 - __main__ - INFO - Dequeued message for conversation 11
+2025-07-07 08:52:46,048 - __main__ - INFO - Processing message for conversation 11
+2025-07-07 08:52:46,048 - __main__ - INFO - New context established: rag:general
+2025-07-07 08:52:46,062 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'chart_create_chart', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-07-07 08:52:46,539 - __main__ - INFO - User message: alooo
+2025-07-07 08:52:46,540 - __main__ - INFO - System prompt: Bạn là một chatbot phân tích dữ liệu chuyên về business intelligence và diễn giải dữ liệu.
+
+    QUAN TRỌNG NHẤT: Bạn BẮT BUỘC phải sử dụng các công cụ để trả lời các câu hỏi của người dùng về dữ liệu,...
+2025-07-07 08:52:46,540 - __main__ - INFO - LLM iteration 1/10
+2025-07-07 08:52:48,411 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-07-07 08:52:48,415 - __main__ - ERROR - Error processing message for conversation 11: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-f80da19e-8db8-9ca8-a254-6a38c6a5d41d', 'request_id': 'f80da19e-8db8-9ca8-a254-6a38c6a5d41d'}
+2025-07-07 08:52:48,416 - __main__ - INFO - Processing complete for 11. Status: error
+2025-07-07 08:52:48,416 - socket_server - INFO - Received result for 11.
+2025-07-07 08:52:48,418 - socket_server - INFO - Sent response to ('127.0.0.1', 54613): error
+2025-07-07 08:54:16,046 - socket_server - INFO - Client ('127.0.0.1', 54613) closed connection
+2025-07-07 08:54:16,047 - socket_server - INFO - Client ('127.0.0.1', 54613) disconnected
+2025-07-07 10:34:33,785 - __main__ - INFO - Attempting to initialize MCP client (attempt 1/3)
+2025-07-07 10:34:36,912 - __main__ - INFO - Tool ready after 1 attempt(s)
+2025-07-07 10:34:36,913 - __main__ - INFO - SocketServer started in a separate thread.
+2025-07-07 10:34:36,913 - __main__ - INFO - Message processor task started.
+2025-07-07 10:34:36,916 - socket_server - INFO - Socket Server started on localhost:8888
+2025-07-07 10:39:02,420 - socket_server - INFO - New client connected from ('127.0.0.1', 55476)
+2025-07-07 10:39:02,420 - socket_server - INFO - Received request from ('127.0.0.1', 55476): chat
+2025-07-07 10:39:02,420 - __main__ - INFO - Enqueuing message for conversation 10
+2025-07-07 10:39:02,421 - socket_server - INFO - Waiting for async processing result for 10...
+2025-07-07 10:39:02,421 - __main__ - INFO - Dequeued message for conversation 10
+2025-07-07 10:39:02,421 - __main__ - INFO - Processing message for conversation 10
+2025-07-07 10:39:02,421 - __main__ - INFO - New context established: rag:general
+2025-07-07 10:39:02,427 - __main__ - INFO - Available tools: ['rag_query', 'rag_get_collection_info', 'sql_query_db', 'chart_create_chart', 'sql+db://sql/list_databases', 'sql+db://sql/schema/{db_name*}', 'sql+db://sql/list_tables/{db_name*}']
+2025-07-07 10:39:02,613 - __main__ - INFO - User message: asdfsadf
+2025-07-07 10:39:02,614 - __main__ - INFO - System prompt: Bạn là một chatbot phân tích dữ liệu chuyên về business intelligence và diễn giải dữ liệu.
+
+    QUAN TRỌNG NHẤT: Bạn BẮT BUỘC phải sử dụng các công cụ để trả lời các câu hỏi của người dùng về dữ liệu,...
+2025-07-07 10:39:02,614 - __main__ - INFO - LLM iteration 1/10
+2025-07-07 10:39:04,014 - httpx - INFO - HTTP Request: POST https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-07-07 10:39:04,018 - __main__ - ERROR - Error processing message for conversation 10: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-2dc3752e-0b67-9d5e-b754-e8337dc1990a', 'request_id': '2dc3752e-0b67-9d5e-b754-e8337dc1990a'}
+2025-07-07 10:39:04,019 - __main__ - INFO - Processing complete for 10. Status: error
+2025-07-07 10:39:04,019 - socket_server - INFO - Received result for 10.
+2025-07-07 10:39:04,021 - socket_server - INFO - Sent response to ('127.0.0.1', 55476): error
+2025-07-07 10:40:32,420 - socket_server - INFO - Client ('127.0.0.1', 55476) closed connection
+2025-07-07 10:40:32,421 - socket_server - INFO - Client ('127.0.0.1', 55476) disconnected

@@ -9137,3 +9137,139 @@ http://localhost:3000
 [2025-07-02T03:20:32.136Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
 [2025-07-02T03:20:32.137Z] [INFO] SQLite database initialized successfully.
 [2025-07-02T03:20:32.153Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-04T01:43:38.133Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-04T01:43:38.137Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-04T01:43:38.163Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-04T01:43:38.175Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-07-04T01:43:38.180Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-04T01:43:38.181Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-04T01:43:38.181Z] [INFO] SQLite database initialized successfully.
+[2025-07-04T01:45:59.395Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-04T01:45:59.398Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-04T01:45:59.421Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-04T01:45:59.430Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-04T01:45:59.430Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-04T01:45:59.431Z] [INFO] SQLite database initialized successfully.
+[2025-07-04T01:45:59.576Z] [INFO] ✅ Created MinIO bucket: chat-files
+[2025-07-04T02:02:42.028Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-04T02:02:49.505Z] [INFO] User  logged out successfully
+[2025-07-04T02:02:51.000Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-04T02:02:51.020Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-04T02:02:51.023Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-04T02:02:51.037Z] [INFO] ✅ Socket 5pTK8UM9jM71SQ1MAAAF authenticated for user demo (ID: 1)
+[2025-07-04T02:02:51.037Z] [INFO] 🔗 User demo (1) connected with socket 5pTK8UM9jM71SQ1MAAAF
+[2025-07-04T02:02:51.054Z] [INFO] 👥 User demo joined conversation 11
+[2025-07-04T02:02:51.055Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-07-04T02:02:51.063Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-07-04T02:02:51.064Z] [INFO] Loaded 35 messages for conversation 11 by user 1
+[2025-07-04T02:11:35.550Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-07-04T02:11:36.942Z] [INFO] 📤 Message sent by demo to conversation 11
+[2025-07-04T02:11:36.944Z] [INFO] Connected to Python AI service for conversation 11
+[2025-07-04T02:11:37.774Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-07-04T02:11:38.406Z] [ERROR] AI service error: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-f7609382-16dc-94d0-b8be-5a5886364911', 'request_id': 'f7609382-16dc-94d0-b8be-5a5886364911'}
+[2025-07-04T02:11:38.407Z] [ERROR] AI service error for conversation 11: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-f7609382-16dc-94d0-b8be-5a5886364911', 'request_id': 'f7609382-16dc-94d0-b8be-5a5886364911'}
+[2025-07-04T02:12:23.013Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-07-04T02:12:23.014Z] [ERROR] AI service error for conversation 11: AI service connection error
+[2025-07-04T02:12:23.014Z] [INFO] Python AI service connection closed for conversation 11
+[2025-07-07T01:51:27.209Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-07T01:51:27.212Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-07T01:51:27.238Z] [INFO] Node.js Server is running on port 3000
+[2025-07-07T01:51:27.244Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-07-07T01:51:27.249Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-07T01:51:27.249Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-07T01:51:27.249Z] [INFO] SQLite database initialized successfully.
+[2025-07-07T01:52:25.143Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-07T01:52:25.145Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-07T01:52:25.166Z] [INFO] Node.js Server is running on port 3000
+[2025-07-07T01:52:25.174Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-07T01:52:25.175Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-07T01:52:25.175Z] [INFO] SQLite database initialized successfully.
+[2025-07-07T01:52:25.217Z] [INFO] ✅ Created MinIO bucket: chat-files
+[2025-07-07T01:52:34.592Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-07T01:52:39.220Z] [INFO] User  logged out successfully
+[2025-07-07T01:52:40.827Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-07T01:52:40.852Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-07T01:52:40.856Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-07T01:52:40.865Z] [INFO] ✅ Socket -U8LwjuUABQFGvbhAAAF authenticated for user demo (ID: 1)
+[2025-07-07T01:52:40.867Z] [INFO] 🔗 User demo (1) connected with socket -U8LwjuUABQFGvbhAAAF
+[2025-07-07T01:52:40.887Z] [INFO] 👥 User demo joined conversation 11
+[2025-07-07T01:52:40.889Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-07-07T01:52:40.898Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-07-07T01:52:40.900Z] [INFO] Loaded 36 messages for conversation 11 by user 1
+[2025-07-07T01:52:44.373Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-07-07T01:52:46.038Z] [INFO] 📤 Message sent by demo to conversation 11
+[2025-07-07T01:52:46.042Z] [INFO] Connected to Python AI service for conversation 11
+[2025-07-07T01:52:46.898Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-07-07T01:52:48.418Z] [ERROR] AI service error: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-f80da19e-8db8-9ca8-a254-6a38c6a5d41d', 'request_id': 'f80da19e-8db8-9ca8-a254-6a38c6a5d41d'}
+[2025-07-07T01:52:48.419Z] [ERROR] AI service error for conversation 11: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-f80da19e-8db8-9ca8-a254-6a38c6a5d41d', 'request_id': 'f80da19e-8db8-9ca8-a254-6a38c6a5d41d'}
+[2025-07-07T01:54:16.045Z] [ERROR] Python AI service timeout for conversation 11
+[2025-07-07T01:54:16.048Z] [ERROR] AI service error for conversation 11: AI service timeout
+[2025-07-07T01:54:16.050Z] [INFO] Python AI service connection closed for conversation 11
+[2025-07-07T02:01:25.506Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-07T02:02:09.433Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-07T02:02:09.435Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-07T02:02:09.454Z] [INFO] Node.js Server is running on port 3000
+[2025-07-07T02:02:09.457Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-07-07T02:02:09.458Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-07T02:02:09.459Z] [INFO] SQLite database initialized successfully.
+[2025-07-07T02:02:09.458Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-07T03:34:48.701Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-07T03:34:48.703Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-07T03:34:48.722Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-07T03:34:48.728Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-07-07T03:34:48.729Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-07T03:34:48.730Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-07T03:34:48.730Z] [INFO] SQLite database initialized successfully.
+[2025-07-07T03:35:56.356Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-07T03:35:59.942Z] [INFO] User  logged out successfully
+[2025-07-07T03:36:01.305Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-07T03:36:01.331Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-07T03:36:01.342Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-07T03:36:01.344Z] [INFO] ✅ Socket YVMZH5UZxb-8CXP6AAAF authenticated for user demo (ID: 1)
+[2025-07-07T03:36:01.346Z] [INFO] 🔗 User demo (1) connected with socket YVMZH5UZxb-8CXP6AAAF
+[2025-07-07T03:36:01.365Z] [INFO] 👥 User demo joined conversation 11
+[2025-07-07T03:36:01.367Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-07-07T03:36:01.380Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-07-07T03:36:01.376Z] [INFO] Loaded 37 messages for conversation 11 by user 1
+[2025-07-07T03:38:51.666Z] [INFO] 👋 User demo left conversation 11
+[2025-07-07T03:38:51.666Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-07-07T03:38:51.667Z] [INFO] 👥 User demo joined conversation 10
+[2025-07-07T03:38:51.668Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-07-07T03:38:51.675Z] [INFO] Loaded 27 messages for conversation 10 by user 1
+[2025-07-07T03:38:51.676Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-07-07T03:38:52.706Z] [INFO] 👋 User demo left conversation 10
+[2025-07-07T03:38:52.706Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-07-07T03:38:52.708Z] [INFO] 👥 User demo joined conversation 9
+[2025-07-07T03:38:52.709Z] [INFO] 👥 Sent online users list for conversation 9: 1 users
+[2025-07-07T03:38:52.712Z] [INFO] Loaded 61 messages for conversation 9 by user 1
+[2025-07-07T03:38:52.713Z] [INFO] Loaded 0 files for conversation 9 by user 1
+[2025-07-07T03:38:53.900Z] [INFO] 👋 User demo left conversation 9
+[2025-07-07T03:38:53.901Z] [INFO] 👥 Sent online users list for conversation 9: 0 users
+[2025-07-07T03:38:53.902Z] [INFO] 👥 User demo joined conversation 10
+[2025-07-07T03:38:53.903Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-07-07T03:38:53.906Z] [INFO] Loaded 27 messages for conversation 10 by user 1
+[2025-07-07T03:38:53.907Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-07-07T03:39:01.776Z] [INFO] ⌨️ User demo started typing in conversation 10
+[2025-07-07T03:39:02.417Z] [INFO] 📤 Message sent by demo to conversation 10
+[2025-07-07T03:39:02.419Z] [INFO] Connected to Python AI service for conversation 10
+[2025-07-07T03:39:03.171Z] [INFO] ⌨️ User demo stopped typing in conversation 10
+[2025-07-07T03:39:04.021Z] [ERROR] AI service error: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-2dc3752e-0b67-9d5e-b754-e8337dc1990a', 'request_id': '2dc3752e-0b67-9d5e-b754-e8337dc1990a'}
+[2025-07-07T03:39:04.022Z] [ERROR] AI service error for conversation 10: Error code: 400 - {'error': {'code': 'Arrearage', 'param': None, 'message': 'Access denied, please make sure your account is in good standing.', 'type': 'Arrearage'}, 'id': 'chatcmpl-2dc3752e-0b67-9d5e-b754-e8337dc1990a', 'request_id': '2dc3752e-0b67-9d5e-b754-e8337dc1990a'}
+[2025-07-07T03:40:32.420Z] [ERROR] Python AI service timeout for conversation 10
+[2025-07-07T03:40:32.422Z] [ERROR] AI service error for conversation 10: AI service timeout
+[2025-07-07T03:40:32.422Z] [INFO] Python AI service connection closed for conversation 10
+[2025-07-07T03:48:12.132Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-07T03:48:15.602Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-07T03:48:15.605Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-07T03:48:15.623Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-07T03:48:15.628Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-07-07T03:48:15.630Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-07T03:48:15.630Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-07T03:48:15.631Z] [INFO] SQLite database initialized successfully.
