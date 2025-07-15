@@ -3,8 +3,8 @@ import logging
 import json
 import matplotlib.pyplot as plt
 import pandas as pd
-import io # Vẫn cần cho các trường hợp khác hoặc có thể bỏ nếu chỉ muốn lưu file
-import base64 # Không còn cần thiết nếu chỉ trả về link, nhưng vẫn giữ nếu có các chức năng khác dùng base64
+import io
+import base64
 
 from fastmcp import FastMCP
 from typing import Annotated, Literal
@@ -16,10 +16,8 @@ logger = logging.getLogger(__name__)
 chart_mcp = FastMCP("CHART")
 
 # Định nghĩa thư mục để lưu ảnh biểu đồ
-# Đảm bảo thư mục này tồn tại hoặc tạo nó nếu cần.
-# Ví dụ: 'charts_output' trong cùng thư mục với script
 CHART_OUTPUT_DIR = "charts_output"
-os.makedirs(CHART_OUTPUT_DIR, exist_ok=True) # Tạo thư mục nếu nó chưa tồn tại
+os.makedirs(CHART_OUTPUT_DIR, exist_ok=True)
 
 @chart_mcp.tool()
 def create_chart(
@@ -33,7 +31,7 @@ def create_chart(
 ) -> dict:
     """
     Creates a chart (line, bar, or scatter) from provided data and saves it as a PNG image file.
-    Returns the file path of the generated image.
+    Returns both the file path and base64 encoded image data.
     The data should be provided as a JSON string representing a list of dictionaries.
     """
     try:
@@ -61,18 +59,28 @@ def create_chart(
         plt.tight_layout()
 
         # Tạo tên tệp duy nhất cho biểu đồ
-        # Có thể dùng uuid.uuid4() để đảm bảo tên tệp là duy nhất hơn
         file_name = f"{title.replace(' ', '_').replace('/', '-')}_{chart_type}_{pd.Timestamp.now().strftime('%Y%m%d%H%M%S')}.png"
         file_path = os.path.join(CHART_OUTPUT_DIR, file_name)
 
         # Lưu biểu đồ vào tệp
-        plt.savefig(file_path, format='png')
-        plt.close() # Đóng biểu đồ để giải phóng bộ nhớ
+        plt.savefig(file_path, format='png', dpi=150, bbox_inches='tight')
+        
+        # Tạo base64 encoded image data
+        img_buffer = io.BytesIO()
+        plt.savefig(img_buffer, format='png', dpi=150, bbox_inches='tight')
+        img_buffer.seek(0)
+        img_base64 = base64.b64encode(img_buffer.getvalue()).decode('utf-8')
+        
+        plt.close()  # Đóng biểu đồ để giải phóng bộ nhớ
         
         logger.info(f"Chart of type '{chart_type}' created successfully and saved to '{file_path}'.")
 
-        # Trả về đường dẫn của tệp ảnh
-        return {"chart_image_path": file_path, "message": "Chart successfully generated."}
+        # Trả về cả đường dẫn file và base64 data
+        return {
+            "chart_image_path": file_path,
+            "chart_image_base64": img_base64,
+            "message": "Chart successfully generated."
+        }
 
     except json.JSONDecodeError:
         logger.error(f"Invalid JSON data provided: {data_json}")
@@ -80,4 +88,3 @@ def create_chart(
     except Exception as e:
         logger.error(f"Error creating chart: {str(e)}")
         return {"error": f"Failed to create chart: {str(e)}"}
-

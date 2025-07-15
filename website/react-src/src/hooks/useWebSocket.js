@@ -1,263 +1,344 @@
 // useWebSocket.js
-import { useEffect, useRef, useState, useCallback } from 'react'; //
-import websocketService from '../services/websocketService'; //
+import { useEffect, useRef, useState, useCallback } from 'react';
+import websocketService from '../services/websocketService';
 
-export const useWebSocket = (authToken, serverUrl) => { //
-  const [isConnected, setIsConnected] = useState(false); //
-  const [connectionError, setConnectionError] = useState(null); //
-  const [currentConversation, setCurrentConversation] = useState(null); //
-  const [onlineUsers, setOnlineUsers] = useState([]); //
-  const [messages, setMessages] = useState([]); //
-  const [typingUsers, setTypingUsers] = useState(new Set()); //
+export const useWebSocket = (authToken, serverUrl) => {
+    const [isConnected, setIsConnected] = useState(false);
+    const [connectionError, setConnectionError] = useState(null);
+    const [currentConversation, setCurrentConversation] = useState(null);
+    const [onlineUsers, setOnlineUsers] = useState([]);
+    const [messages, setMessages] = useState([]);
+    const [typingUsers, setTypingUsers] = useState(() => new Set());
 
-  const unsubscribeRefs = useRef([]); //
+    const unsubscribeRefs = useRef([]);
 
-  // Kết nối WebSocket
-  useEffect(() => { //
-    if (!authToken) return; //
+    // Hàm update message để cập nhật tin nhắn hiện có
+    const updateMessage = useCallback((messageId, updates) => {
+        setMessages(prevMessages =>
+            prevMessages.map(msg =>
+                msg.id === messageId ? { ...msg, ...updates } : msg
+            )
+        );
+    }, []);
 
-    // Set token và kết nối
-    websocketService.setAuthToken(authToken); //
-    websocketService.connect(serverUrl); //
+    // Hàm kiểm tra và xử lý message duplicate
+    const addMessageSafely = useCallback((newMessage) => {
+        setMessages(prevMessages => {
+            // Kiểm tra duplicate theo ID
+            const isDuplicate = prevMessages.some(msg => msg.id === newMessage.id);
+            if (isDuplicate) {
+                console.warn('Duplicate message detected, ignoring:', newMessage);
+                return prevMessages;
+            }
 
-    // Setup event listeners
-    const unsubscribes = [ //
-      websocketService.on('connected', () => { //
-        setIsConnected(true); //
-        setConnectionError(null); //
-      }), //
+            // Kiểm tra duplicate theo content và timestamp gần nhau (trong vòng 1 giây)
+            const similarMessage = prevMessages.find(msg => 
+                msg.role === newMessage.role && 
+                msg.content === newMessage.content &&
+                Math.abs(new Date(msg.createdAt) - new Date(newMessage.createdAt)) < 1000
+            );
 
-      websocketService.on('disconnected', () => { //
-        setIsConnected(false); //
-      }), //
+            if (similarMessage) {
+                console.warn('Similar message detected, updating existing:', similarMessage.id);
+                // Cập nhật message hiện có với dữ liệu mới (có thể có chart)
+                return prevMessages.map(msg =>
+                    msg.id === similarMessage.id ? { ...msg, ...newMessage } : msg
+                );
+            }
 
-      websocketService.on('connection_error', (data) => { //
-        setConnectionError(data.error); //
-        setIsConnected(false); //
-      }), //
+            // Thêm message mới
+            console.log('Adding new message:', newMessage);
+            return [...prevMessages, newMessage];
+        });
+    }, []);
 
-      websocketService.on('authenticated', (data) => { //
-        console.log('✅ WebSocket authenticated:', data); //
-      }), //
+    // Kết nối WebSocket
+    useEffect(() => {
+        if (!authToken) return;
 
-      websocketService.on('joined_conversation', (data) => { //
-        setCurrentConversation(data.conversationId); //
-      }), //
+        // Set token và kết nối
+        websocketService.setAuthToken(authToken);
+        websocketService.connect(serverUrl);
 
-      websocketService.on('left_conversation', (data) => { //
-        if (currentConversation === data.conversationId) { //
-          setCurrentConversation(null); //
-          setOnlineUsers([]); //
-          setTypingUsers(new Set()); //
+        // Setup event listeners
+        const unsubscribes = [
+            websocketService.on('connected', () => {
+                console.log('✅ WebSocket connected');
+                setIsConnected(true);
+                setConnectionError(null);
+            }),
+
+            websocketService.on('disconnected', () => {
+                console.log('❌ WebSocket disconnected');
+                setIsConnected(false);
+            }),
+
+            websocketService.on('connection_error', (data) => {
+                console.error('❌ WebSocket connection error:', data);
+                setConnectionError(data.error);
+                setIsConnected(false);
+            }),
+
+            websocketService.on('authenticated', (data) => {
+                console.log('✅ WebSocket authenticated:', data);
+            }),
+
+            websocketService.on('joined_conversation', (data) => {
+                console.log('🏠 Joined conversation:', data.conversationId);
+                setCurrentConversation(data.conversationId);
+            }),
+
+            websocketService.on('left_conversation', (data) => {
+                console.log('🚪 Left conversation:', data.conversationId);
+                if (currentConversation === data.conversationId) {
+                    setCurrentConversation(null);
+                    setOnlineUsers([]);
+                    setTypingUsers(new Set());
+                }
+            }),
+
+            websocketService.on('new_message', (data) => {
+                console.log('📨 New message received:', data);
+                console.log('📊 Chart data present:', !!data.url_chart);
+                
+                // Đảm bảo message có đầy đủ thông tin
+                const messageWithDefaults = {
+                    ...data,
+                    id: data.id || Date.now(), // Fallback ID nếu không có
+                    createdAt: data.createdAt || new Date().toISOString(),
+                    role: data.role || 'assistant',
+                    username: data.username || 'AI Assistant'
+                };
+
+                addMessageSafely(messageWithDefaults);
+            }),
+
+            websocketService.on('ai_response', (data) => {
+                console.log('🤖 AI response received:', data);
+                console.log('📊 Chart data present:', !!data.url_chart);
+                
+                const messageWithDefaults = {
+                    ...data,
+                    id: data.id || Date.now(),
+                    createdAt: data.createdAt || new Date().toISOString(),
+                    role: data.role || 'assistant',
+                    username: data.username || 'AI Assistant'
+                };
+
+                addMessageSafely(messageWithDefaults);
+            }),
+
+            websocketService.on('online_users', (data) => {
+                console.log('👥 Online users updated:', data.onlineUsers);
+                setOnlineUsers(data.onlineUsers || []);
+            }),
+
+            websocketService.on('typing', (data) => {
+                setTypingUsers(prev => {
+                    const newSet = new Set(prev);
+                    if (data.isTyping) {
+                        newSet.add(data.userId);
+                    } else {
+                        newSet.delete(data.userId);
+                    }
+                    return newSet;
+                });
+            }),
+
+            websocketService.on('user_joined', (data) => {
+                console.log('👋 User joined:', data);
+            }),
+
+            websocketService.on('user_left', (data) => {
+                console.log('🚶 User left:', data);
+                setTypingUsers(prev => {
+                    const newSet = new Set(prev);
+                    newSet.delete(data.userId);
+                    return newSet;
+                });
+            }),
+
+            websocketService.on('error', (data) => {
+                console.error('❌ WebSocket error:', data);
+                setConnectionError(data.message);
+            }),
+
+            websocketService.on('ai_error', (data) => {
+                console.error('🤖❌ AI error:', data);
+                setConnectionError(data.error);
+            })
+        ];
+
+        // Lưu references để cleanup
+        unsubscribeRefs.current = unsubscribes;
+
+        return () => {
+            // Cleanup
+            unsubscribes.forEach(unsubscribe => unsubscribe());
+            websocketService.cleanup();
+        };
+    }, [authToken, serverUrl, addMessageSafely]);
+
+    // Debug: Log messages khi thay đổi
+    useEffect(() => {
+        console.log('📝 Messages updated, total:', messages.length);
+        const messagesWithChart = messages.filter(msg => msg.url_chart);
+        console.log('📊 Messages with chart:', messagesWithChart.length);
+    }, [messages]);
+
+    // Join conversation
+    const joinConversation = useCallback((conversationId) => {
+        if (!conversationId) return false;
+
+        console.log('🏠 Joining conversation:', conversationId);
+        
+        // Clear previous conversation data
+        setOnlineUsers([]);
+        setTypingUsers(new Set());
+
+        return websocketService.joinConversation(conversationId);
+    }, []);
+
+    // Leave conversation
+    const leaveConversation = useCallback((conversationId) => {
+        console.log('🚪 Leaving conversation:', conversationId);
+        
+        const result = websocketService.leaveConversation(conversationId);
+        if (result) {
+            setCurrentConversation(null);
+            setMessages([]);
+            setOnlineUsers([]);
+            setTypingUsers(new Set());
         }
-      }), //
+        return result;
+    }, []);
 
-    websocketService.on('new_message', (data) => { //
-      console.log('New message received:', data); //
-      setMessages((prev) => { //
-        console.log('Current messages:', prev); //
-        if (prev.some((msg) => msg.id === data.id)) { //
-          console.warn('Duplicate message detected:', data); //
-          return prev; //
-        }
-        // SỬA ĐỔI: Thêm type cho tin nhắn để dễ dàng render biểu đồ
-        // data đã chứa content và chart_image_path từ socket.js
-        return [...prev, data]; //
-      }); //
-    }), //
+    // Send message
+    const sendMessage = useCallback((conversationId, content, role = 'user') => {
+        console.log('📤 Sending message:', { conversationId, content, role });
+        return websocketService.sendMessage(conversationId, content, role);
+    }, []);
 
-    websocketService.on('ai_response', (data) => { //
-      // Có thể loại bỏ sự kiện này nếu 'new_message' đã xử lý tốt tất cả các tin nhắn AI
-      // Hoặc hợp nhất logic nếu bạn muốn xử lý riêng biệt.
-      // Hiện tại, giữ nguyên để không phá vỡ luồng hiện có nếu nó được sử dụng ở nơi khác.
-      setMessages(prev => [...prev, data]); //
-    }), //
+    // Send typing indicator
+    const sendTyping = useCallback((conversationId, isTyping) => {
+        return websocketService.sendTyping(conversationId, isTyping);
+    }, []);
 
-      websocketService.on('online_users', (data) => { //
-        setOnlineUsers(data.onlineUsers || []); //
-      }), //
+    // Notify file uploaded
+    const notifyFileUploaded = useCallback((conversationId, fileInfo) => {
+        console.log('📎 File uploaded notification:', fileInfo);
+        return websocketService.notifyFileUploaded(conversationId, fileInfo);
+    }, []);
 
-      websocketService.on('typing', (data) => { //
-        setTypingUsers(prev => { //
-          const newSet = new Set(prev); //
-          if (data.isTyping) { //
-            newSet.add(data.userId); //
-          } else { //
-            newSet.delete(data.userId); //
-          }
-          return newSet; //
-        }); //
-      }), //
+    // Get online users
+    const getOnlineUsers = useCallback((conversationId) => {
+        return websocketService.getOnlineUsers(conversationId);
+    }, []);
 
-      websocketService.on('user_joined', (data) => { //
-        console.log('👋 User joined:', data); //
-      }), //
+    // Manual retry connection
+    const retryConnection = useCallback(() => {
+        console.log('🔄 Retrying connection...');
+        websocketService.retryConnection();
+    }, []);
 
-      websocketService.on('user_left', (data) => { //
-        console.log('🚶 User left:', data); //
-        setTypingUsers(prev => { //
-          const newSet = new Set(prev); //
-          newSet.delete(data.userId); //
-          return newSet; //
-        }); //
-      }), //
+    // Add message to local state (for optimistic updates)
+    const addMessage = useCallback((message) => {
+        console.log('➕ Adding message manually:', message);
+        addMessageSafely(message);
+    }, [addMessageSafely]);
 
-      websocketService.on('error', (data) => { //
-        console.error('❌ WebSocket error:', data); //
-        setConnectionError(data.message); //
-      }) //
-    ]; //
+    // Clear messages
+    const clearMessages = useCallback(() => {
+        console.log('🧹 Clearing messages');
+        setMessages([]);
+    }, []);
 
-// Lưu references để cleanup
-unsubscribeRefs.current = unsubscribes; //
+    // Set messages từ API
+    const setMessagesFromAPI = useCallback((msgs) => {
+        console.log('📥 Setting messages from API:', msgs.length);
+        console.log('📊 Messages with chart from API:', msgs.filter(m => m.url_chart).length);
+        setMessages(msgs);
+    }, []);
 
-return () => { //
-  // Cleanup
-  unsubscribes.forEach(unsubscribe => unsubscribe()); //
-  websocketService.cleanup(); //
-}; //
-  }, [authToken, serverUrl]); //
+    return {
+        // Connection state
+        isConnected,
+        connectionError,
+        currentConversation,
 
-// Join conversation
-const joinConversation = useCallback((conversationId) => { //
-  if (!conversationId) return false; //
+        // Data
+        messages,
+        onlineUsers,
+        typingUsers: Array.from(typingUsers),
 
-  // Clear previous conversation data
-  setOnlineUsers([]); //
-  setTypingUsers(new Set()); //
+        // Actions
+        setMessagesFromAPI,
+        joinConversation,
+        leaveConversation,
+        sendMessage,
+        sendTyping,
+        notifyFileUploaded,
+        getOnlineUsers,
+        retryConnection,
+        addMessage,
+        clearMessages,
+        updateMessage,
 
-  return websocketService.joinConversation(conversationId); //
-}, []); //
-
-// Leave conversation
-const leaveConversation = useCallback((conversationId) => { //
-  const result = websocketService.leaveConversation(conversationId); //
-  if (result) { //
-    setCurrentConversation(null); //
-    setMessages([]); //
-    setOnlineUsers([]); //
-    setTypingUsers(new Set()); //
-  }
-  return result; //
-}, []); //
-
-// Send message
-const sendMessage = useCallback((conversationId, content, role = 'user') => { //
-  return websocketService.sendMessage(conversationId, content, role); //
-}, []); //
-
-// Send typing indicator
-const sendTyping = useCallback((conversationId, isTyping) => { //
-  return websocketService.sendTyping(conversationId, isTyping); //
-}, []); //
-
-// Notify file uploaded
-const notifyFileUploaded = useCallback((conversationId, fileInfo) => { //
-  return websocketService.notifyFileUploaded(conversationId, fileInfo); //
-}, []); //
-
-// Get online users
-const getOnlineUsers = useCallback((conversationId) => { //
-  return websocketService.getOnlineUsers(conversationId); //
-}, []); //
-
-// Manual retry connection
-const retryConnection = useCallback(() => { //
-  websocketService.retryConnection(); //
-}, []); //
-
-// Add message to local state (for optimistic updates)
-const addMessage = useCallback((message) => { //
-  setMessages(prev => [...prev, message]); //
-}, []); //
-
-// Clear messages
-const clearMessages = useCallback(() => { //
-  setMessages([]); //
-}, []); //
-
- const setMessagesFromAPI = useCallback((msgs) => { //
-  setMessages(msgs); //
-}, []); //
-
-return { //
-  // Connection state
-  isConnected, //
-  connectionError, //
-  currentConversation, //
-
-  // Data
-  messages, //
-  onlineUsers, //
-  typingUsers: Array.from(typingUsers), //
-
-  // Actions
-  setMessagesFromAPI, //
-  joinConversation, //
-  leaveConversation, //
-  sendMessage, //
-  sendTyping, //
-  notifyFileUploaded, //
-  getOnlineUsers, //
-  retryConnection, //
-  addMessage, //
-  clearMessages, //
-
-  // Utils
-  socketInfo: websocketService.getSocketInfo(), //
-  isSocketConnected: websocketService.isSocketConnected() //
-}; //
-}; //
+        // Utils
+        socketInfo: websocketService.getSocketInfo(),
+        isSocketConnected: websocketService.isSocketConnected()
+    };
+};
 
 // Hook for typing indicator with debounce
-export const useTypingIndicator = (conversationId, delay = 1000) => { //
-  const [isTyping, setIsTyping] = useState(false); //
-  const timeoutRef = useRef(null); //
+export const useTypingIndicator = (conversationId, delay = 1000) => {
+    const [isTyping, setIsTyping] = useState(false);
+    const timeoutRef = useRef(null);
 
-  const startTyping = useCallback(() => { //
-    if (!isTyping) { //
-      setIsTyping(true); //
-      websocketService.sendTyping(conversationId, true); //
-    } //
+    const startTyping = useCallback(() => {
+        if (!isTyping) {
+            setIsTyping(true);
+            websocketService.sendTyping(conversationId, true);
+        }
 
-    // Clear existing timeout
-    if (timeoutRef.current) { //
-      clearTimeout(timeoutRef.current); //
-    } //
+        // Clear existing timeout
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
 
-    // Set new timeout to stop typing
-    timeoutRef.current = setTimeout(() => { //
-      setIsTyping(false); //
-      websocketService.sendTyping(conversationId, false); //
-    }, delay); //
-  }, [conversationId, isTyping, delay]); //
+        // Set new timeout to stop typing
+        timeoutRef.current = setTimeout(() => {
+            setIsTyping(false);
+            websocketService.sendTyping(conversationId, false);
+        }, delay);
+    }, [conversationId, isTyping, delay]);
 
-  const stopTyping = useCallback(() => { //
-    if (timeoutRef.current) { //
-      clearTimeout(timeoutRef.current); //
-      timeoutRef.current = null; //
-    } //
+    const stopTyping = useCallback(() => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
 
-    if (isTyping) { //
-      setIsTyping(false); //
-      websocketService.sendTyping(conversationId, false); //
-    } //
-  }, [conversationId, isTyping]); //
+        if (isTyping) {
+            setIsTyping(false);
+            websocketService.sendTyping(conversationId, false);
+        }
+    }, [conversationId, isTyping]);
 
-  // Cleanup on unmount
-  useEffect(() => { //
-    return () => { //
-      if (timeoutRef.current) { //
-        clearTimeout(timeoutRef.current); //
-      } //
-    }; //
-  }, []); //
+    // Cleanup on unmount
+    useEffect(() => {
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, []);
 
-  return { //
-    isTyping, //
-    startTyping, //
-    stopTyping //
-  }; //
-}; //
+    return {
+        isTyping,
+        startTyping,
+        stopTyping
+    };
+};
 
-export default useWebSocket; //
+export default useWebSocket;

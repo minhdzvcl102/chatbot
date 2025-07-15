@@ -2,6 +2,7 @@ import threading
 import os
 import time
 import logging
+import json
 from fastmcp import FastMCP
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -10,6 +11,8 @@ import chromadb
 from typing import Annotated
 from dotenv import load_dotenv
 from pydantic import Field
+import boto3
+from botocore.exceptions import ClientError
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -29,13 +32,39 @@ rag_mcp = FastMCP("RAG")
 
 client = chromadb.PersistentClient(path=VECTOR_STORE_PATH)
 
-openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-    api_key_env_var="ALIBABA_API_KEY",
-    api_base=os.getenv("BASE_API_URL"),
-    model_name="text-embedding-v3"
-)
+class BedrockEmbeddingFunction(embedding_functions.EmbeddingFunction):
+    def __init__(self, region_name: str = "us-east-1"):
+        self.bedrock_client = boto3.client(
+            service_name='bedrock-runtime',
+            region_name=region_name
+        )
+        self.model_id = "amazon.titan-embed-text-v1"
 
-collection = client.get_or_create_collection("main", embedding_function=openai_ef)
+    def __call__(self, input):
+        try:
+            embeddings = []
+            for text in input:
+                body = json.dumps({"inputText": text})
+                response = self.bedrock_client.invoke_model(
+                    body=body,
+                    modelId=self.model_id,
+                    accept="application/json",
+                    contentType="application/json"
+                )
+                response_body = json.loads(response.get('body').read())
+                embedding = response_body.get('embedding', [])
+                embeddings.append(embedding)
+            return embeddings
+        except ClientError as e:
+            logger.error(f"Bedrock embedding error: {e.response['Error']['Message']}")
+            raise
+        except Exception as e:
+            logger.error(f"Error generating embeddings: {str(e)}")
+            raise
+
+bedrock_ef = BedrockEmbeddingFunction(region_name=os.getenv("AWS_REGION", "us-east-1"))
+
+collection = client.get_or_create_collection("main", embedding_function=bedrock_ef)
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 
 PDF_FOLDER = os.path.join(os.path.dirname(__file__), "data")

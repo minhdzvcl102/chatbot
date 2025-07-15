@@ -1,5 +1,6 @@
 // src/App.jsx
 import LoginPage from './pages/loginPage';
+import RegisterPage from './pages/register';
 import Chatbox from './pages/chatbox';
 // 1. Import Routes và Route từ 'react-router-dom'
 import { Routes, Route } from 'react-router-dom';
@@ -8,6 +9,7 @@ function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
 
       {/* Routes được bảo vệ */}
       <Route element={<PrivateRoute />}>

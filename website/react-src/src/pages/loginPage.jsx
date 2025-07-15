@@ -44,6 +44,10 @@ const LoginPage = () => {
       if (response.status === 200) {
         console.log("Đăng nhập thành công:", response.data);
         localStorage.setItem('authToken', response.data.token);
+        localStorage.setItem('user', JSON.stringify({
+          id: response.data.userId,
+          username: response.data.username
+        }));
         navigate('/'); // Chuyển hướng đến trang chủ
       }
 
@@ -137,8 +141,8 @@ const LoginPage = () => {
             </a>
             <span className="text-sm text-gray-500">
               New to SecureChat?{" "}
-              <a href="#" className="text-blue-600 hover:underline font-medium">
-                Sign up
+              <a href="/register" className="text-blue-600 hover:underline font-medium">
+                Register
               </a>
             </span>
           </div>

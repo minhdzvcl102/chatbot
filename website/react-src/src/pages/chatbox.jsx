@@ -49,6 +49,9 @@ const Chatbox = () => {
   // Simplified AI processing state
   const [isProcessing, setIsProcessing] = useState(false);
   const [lastUserMessage, setLastUserMessage] = useState("");
+  
+  // NEW: State để theo dõi AI response realtime
+  const [currentAIResponse, setCurrentAIResponse] = useState(null);
 
   const serverUrl = APP_WEBSOCKET_URL || "ws://localhost:3000";
   const authToken = localStorage.getItem("authToken");
@@ -94,6 +97,7 @@ const Chatbox = () => {
       setUploadedFiles([]);
       clearMessages();
       setCurrentResponse(null);
+      setCurrentAIResponse(null); // NEW: Clear current AI response
     }
 
     return () => {
@@ -113,11 +117,65 @@ const Chatbox = () => {
       const lastMessage = messages[messages.length - 1];
       if (lastMessage.role === "assistant" || lastMessage.role === "bot") {
         setCurrentResponse(lastMessage);
-        setIsProcessing(false); // Dừng hiển thị "đang xử lý" khi có AI response
+        setCurrentAIResponse(null); // NEW: Clear realtime response khi đã có message final
+        setIsProcessing(false);
       }
       scrollToBottom();
     }
   }, [messages]);
+
+  // NEW: Effect để xử lý AI response events
+  useEffect(() => {
+    if (!selectedConversationId) return;
+
+    const handleAIResponse = (data) => {
+      console.log('🤖 Real-time AI response received:', data);
+      console.log('📊 Chart data present:', !!data.url_chart);
+      
+      // Cập nhật current AI response ngay lập tức
+      setCurrentAIResponse({
+        id: `ai_response_${Date.now()}`,
+        role: 'assistant',
+        content: data.content || 'Đang tạo phản hồi...',
+        url_chart: data.url_chart || null,
+        createdAt: new Date().toISOString(),
+        username: 'AI Assistant',
+        isRealtime: true
+      });
+      
+      // Nếu có chart, cập nhật response panel ngay lập tức
+      if (data.url_chart) {
+        setCurrentResponse({
+          id: `ai_response_${Date.now()}`,
+          role: 'assistant',
+          content: data.content || 'Đang tạo phản hồi...',
+          url_chart: data.url_chart,
+          createdAt: new Date().toISOString(),
+          username: 'AI Assistant'
+        });
+      }
+      
+      setIsProcessing(false);
+    };
+
+    const handleAIError = (data) => {
+      console.error('🤖❌ AI error:', data);
+      setCurrentAIResponse(null);
+      setIsProcessing(false);
+    };
+
+    // Subscribe to AI response events
+    const wsService = window.websocketService || {};
+    if (wsService.on) {
+      const unsubscribeAIResponse = wsService.on('ai_response', handleAIResponse);
+      const unsubscribeAIError = wsService.on('ai_error', handleAIError);
+
+      return () => {
+        if (unsubscribeAIResponse) unsubscribeAIResponse();
+        if (unsubscribeAIError) unsubscribeAIError();
+      };
+    }
+  }, [selectedConversationId]);
 
   useEffect(() => {
     if (selectedConversationId) {
@@ -130,6 +188,7 @@ const Chatbox = () => {
     } else {
       console.log("❌ No conversation selected");
       setCurrentResponse(null);
+      setCurrentAIResponse(null); // NEW: Clear current AI response
     }
   }, [selectedConversationId, conversations]);
 
@@ -328,8 +387,9 @@ const Chatbox = () => {
   const handleRegenerateResponse = async () => {
     if (lastUserMessage && selectedConversationId) {
       try {
-        setIsProcessing(true); // Bắt đầu hiển thị "đang xử lý"
+        setIsProcessing(true);
         setCurrentResponse(null);
+        setCurrentAIResponse(null); // NEW: Clear realtime response
         sendWebSocketMessage(selectedConversationId, lastUserMessage);
       } catch (error) {
         console.error("❌ Error regenerating response:", error);
@@ -359,7 +419,8 @@ const Chatbox = () => {
 
     try {
       setSendingMessage(true);
-      setIsProcessing(true); // Bắt đầu hiển thị "đang xử lý"
+      setIsProcessing(true);
+      setCurrentAIResponse(null); // NEW: Clear previous realtime response
       setLastUserMessage(message);
       console.log(
         "📤 Sending message in conversation ID:",
@@ -429,10 +490,14 @@ const Chatbox = () => {
   };
 
   const userMessages = messages.filter((msg) => msg.role === "user");
-
-  // Tạo danh sách messages để hiển thị (bao gồm cả message "đang xử lý")
+  // NEW: Tạo danh sách messages để hiển thị (bao gồm cả AI response realtime)
   const displayMessages = [...messages];
-  if (isProcessing) {
+  
+  // Nếu có AI response realtime, thêm vào cuối danh sách
+  if (currentAIResponse) {
+    displayMessages.push(currentAIResponse);
+  } else if (isProcessing) {
+    // Chỉ hiển thị "đang xử lý" khi không có AI response realtime
     displayMessages.push({
       id: "processing",
       role: "assistant",
@@ -564,7 +629,6 @@ const Chatbox = () => {
                 </div>
               ) : (
                 <div className="space-y-6">
-                  {/* Hiển thị TẤT CẢ tin nhắn bao gồm message "đang xử lý" */}
                   {displayMessages
                     .sort(
                       (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
@@ -572,9 +636,8 @@ const Chatbox = () => {
                     .map((msg, index) => (
                       <div
                         key={msg.id || index}
-                        className={`flex ${
-                          msg.role === "user" ? "justify-end" : "justify-start"
-                        }`}
+                        className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"
+                          }`}
                       >
                         {msg.role === "user" ? (
                           // Tin nhắn của User
@@ -598,7 +661,7 @@ const Chatbox = () => {
                             </div>
                           </div>
                         ) : (
-                          // Tin nhắn của AI/Bot (bao gồm message "đang xử lý")
+                          // Tin nhắn của AI/Bot
                           <div className="flex max-w-[80%] gap-3">
                             <div className="flex-shrink-0">
                               <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
@@ -607,11 +670,10 @@ const Chatbox = () => {
                             </div>
                             <div className="flex flex-col">
                               <div
-                                className={`px-4 py-3 rounded-2xl rounded-bl-md ${
-                                  msg.isProcessing
-                                    ? "bg-gray-50 text-gray-600"
-                                    : "bg-gray-100 text-gray-800"
-                                }`}
+                                className={`px-4 py-3 rounded-2xl rounded-bl-md ${msg.isProcessing || msg.isRealtime
+                                  ? "bg-gray-50 text-gray-600"
+                                  : "bg-gray-100 text-gray-800"
+                                  }`}
                               >
                                 <div className="text-sm leading-relaxed whitespace-pre-wrap flex items-center gap-2">
                                   {msg.isProcessing && (
@@ -629,8 +691,18 @@ const Chatbox = () => {
                                   )}
                                   {msg.content}
                                 </div>
+                                {/* NEW: Hiển thị biểu đồ ngay lập tức cho cả realtime và final message */}
+                                {msg.url_chart && (
+                                  <div className="mt-3">
+                                    <img
+                                      src={'data:image/png;base64,' + msg.url_chart}
+                                      alt="Biểu đồ"
+                                      className="rounded-lg border border-gray-200 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+                                    />
+                                  </div>
+                                )}
                               </div>
-                              {!msg.isProcessing && (
+                              {!msg.isProcessing && !msg.isRealtime && (
                                 <span className="text-xs text-gray-500 mt-1 px-1">
                                   {formatMessageTime(msg.createdAt)}
                                 </span>
