@@ -1,21 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  // Sử dụng state để quản lý giá trị của các ô input
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({}); // State để quản lý lỗi
+  const [errors, setErrors] = useState({});
+
+  // Kiểm tra nếu đã đăng nhập, tự động chuyển hướng
+  useEffect(() => {
+    const authToken = localStorage.getItem('authToken');
+    if (authToken) {
+      const user = localStorage.getItem('user');
+      if (user) {
+        try {
+          const userData = JSON.parse(user);
+          if (userData.role == '0') {
+            navigate('/admin');
+          } else {
+            navigate('/');
+          }
+        } catch (error) {
+          console.error('Error parsing user data:', error);
+          // Nếu có lỗi, xóa token và ở lại trang login
+          localStorage.removeItem('authToken');
+          localStorage.removeItem('user');
+        }
+      }
+    }
+  }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    setErrors({}); // Đặt lại tất cả lỗi về rỗng trước mỗi lần submit
+    setErrors({});
 
-    let newErrors = {}; // Tạo một đối tượng tạm thời để thu thập lỗi client-side
+    let newErrors = {};
 
     if (!email.trim()) {
       newErrors.email = "Email is required";
@@ -43,22 +65,44 @@ const LoginPage = () => {
 
       if (response.status === 200) {
         console.log("Đăng nhập thành công:", response.data);
+        console.log("Full server response:", response.data);
+        console.log("User role from server:", response.data.userRole, "Type:", typeof response.data.userRole);
+        // Lưu token
         localStorage.setItem('authToken', response.data.token);
-        localStorage.setItem('user', JSON.stringify({
+
+        // Lưu thông tin user với role
+        const userData = {
           id: response.data.userId,
-          username: response.data.username
-        }));
-        navigate('/'); // Chuyển hướng đến trang chủ
+          username: response.data.username,
+          role: response.data.userRole.toString()  // Chuyển thành string
+        };
+        localStorage.setItem('user', JSON.stringify(userData));
+        localStorage.setItem('user.id', response.data.userId);
+
+        // Điều hướng dựa trên role
+        if (response.data.userRole === '0') {
+          navigate('/admin');
+        } else {
+          navigate('/');
+        }
       }
 
     } catch (error) {
-      // Cập nhật state `errors` với thông báo lỗi từ server
-      setErrors(prevErrors => ({
-        ...prevErrors, // Giữ lại các lỗi client-side nếu có (tùy thuộc vào UX mong muốn)
-        server: error.response?.data?.message || "Đăng nhập thất bại. Vui lòng thử lại.",
-      }));
+      console.error('Login error:', error);
 
-      navigate('/login');
+      // Xử lý lỗi từ server
+      let errorMessage = "Đăng nhập thất bại. Vui lòng thử lại.";
+
+      if (error.response?.data?.message) {
+        errorMessage = error.response.data.message;
+      } else if (error.message) {
+        errorMessage = error.message;
+      }
+
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        server: errorMessage,
+      }));
     }
   };
 

@@ -8,21 +8,29 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '1h';
 
 const authenticateToken = (req, res, next) => {
+    console.log('Headers:', req.headers); // Debug log
+    
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
 
+    console.log('Auth Header:', authHeader); // Debug log
+    console.log('Extracted Token:', token); // Debug log
+
     if (!token) {
+        console.log('No token provided'); // Debug log
         return res.status(401).json({ message: 'Access token required' });
     }
 
     jwt.verify(token, JWT_SECRET, (err, user) => {
         if (err) {
             console.log('JWT Verify Error:', err.message);
+            logMessage("ERR", `JWT Verify Error: ${err.message}`);
             return res.status(403).json({ 
                 message: 'Invalid or expired token',
                 error: err.message 
             });
         }
+        console.log('JWT Verified User:', user); // Debug log
         req.user = user;
         next();
     });

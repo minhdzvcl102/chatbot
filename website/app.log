@@ -12173,3 +12173,2236 @@ S3Error: The request signature we calculated does not match the signature you pr
 [2025-07-15T15:33:27.260Z] [ERROR] Python AI service connection error: read ECONNRESET
 [2025-07-15T15:33:27.260Z] [ERROR] AI service error for conversation 46: AI service connection error
 [2025-07-15T15:33:27.260Z] [INFO] Python AI service connection closed for conversation 46
+[2025-07-16T15:56:03.890Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-16T15:56:03.895Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-16T15:56:03.928Z] [INFO] Node.js Server is running on port 3000
+[2025-07-16T15:56:03.935Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-07-16T15:56:03.945Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-16T15:56:03.946Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-16T15:56:03.947Z] [INFO] SQLite database initialized successfully.
+[2025-07-16T15:56:18.513Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-16T15:56:18.509Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-16T15:56:18.542Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-16T15:56:18.549Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-16T15:56:18.552Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-16T15:56:18.553Z] [INFO] SQLite database initialized successfully.
+[2025-07-16T15:56:18.569Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-16T15:56:56.995Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-16T15:57:00.203Z] [INFO] User  logged out successfully
+[2025-07-16T15:57:02.038Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-16T15:57:02.085Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-16T15:57:02.090Z] [INFO] ✅ Socket g5Aun8k2f-fcA1cYAAAF authenticated for user demo (ID: 1)
+[2025-07-16T15:57:02.107Z] [INFO] 🔗 User demo (1) connected with socket g5Aun8k2f-fcA1cYAAAF
+[2025-07-16T15:57:02.155Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-16T15:57:02.174Z] [INFO] Loaded 22 messages for conversation 46 by user 1
+[2025-07-16T15:57:02.265Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-16T15:58:49.720Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-16T15:58:49.911Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-16T15:58:49.921Z] [INFO] ✅ Socket 7CKuzJVYa2WX-EL9AAAI authenticated for user demo (ID: 1)
+[2025-07-16T15:58:49.922Z] [INFO] 🔗 User demo (1) connected with socket 7CKuzJVYa2WX-EL9AAAI
+[2025-07-16T15:58:49.923Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-16T15:58:49.950Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-16T15:58:49.953Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-16T15:58:49.964Z] [INFO] Loaded 22 messages for conversation 46 by user 1
+[2025-07-16T15:58:49.966Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-16T15:59:01.202Z] [INFO] ⌨️ User demo started typing in conversation 46
+[2025-07-16T15:59:02.035Z] [INFO] 📤 Message sent by demo to conversation 46
+[2025-07-16T15:59:02.041Z] [INFO] Connected to Python AI service for conversation 46
+[2025-07-16T15:59:02.666Z] [INFO] ⌨️ User demo stopped typing in conversation 46
+[2025-07-16T15:59:18.238Z] [INFO] Processing AI response for conversation 46
+[2025-07-16T15:59:18.238Z] [INFO] Chart data: None
+[2025-07-16T15:59:18.238Z] [INFO] Content length: 249
+[2025-07-16T15:59:18.248Z] [INFO] AI response text only sent to conversation 46
+[2025-07-16T15:59:18.249Z] [INFO] Message ID: 664
+[2025-07-16T15:59:37.672Z] [INFO] 👋 User demo left conversation 46
+[2025-07-16T15:59:37.678Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-16T15:59:37.684Z] [INFO] 👥 User demo joined conversation 11
+[2025-07-16T15:59:37.687Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-07-16T15:59:37.717Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-07-16T15:59:37.728Z] [INFO] Loaded 95 messages for conversation 11 by user 1
+[2025-07-16T15:59:41.476Z] [INFO] 👋 User demo left conversation 11
+[2025-07-16T15:59:41.480Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-07-16T15:59:41.488Z] [INFO] 👥 User demo joined conversation 10
+[2025-07-16T15:59:41.505Z] [INFO] 👥 Sent online users list for conversation 10: 1 users
+[2025-07-16T15:59:41.516Z] [INFO] Loaded 0 files for conversation 10 by user 1
+[2025-07-16T15:59:41.519Z] [INFO] Loaded 28 messages for conversation 10 by user 1
+[2025-07-16T15:59:45.865Z] [INFO] 👋 User demo left conversation 10
+[2025-07-16T15:59:45.868Z] [INFO] 👥 Sent online users list for conversation 10: 0 users
+[2025-07-16T15:59:45.871Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-16T15:59:45.872Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-16T15:59:45.889Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-16T15:59:45.893Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-16T15:59:58.196Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-16T15:59:58.468Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-16T15:59:58.471Z] [INFO] Loaded 4 conversations for user 1
+[2025-07-16T15:59:58.483Z] [INFO] ✅ Socket BqsyRSwjs1V9CJoZAAAL authenticated for user demo (ID: 1)
+[2025-07-16T15:59:58.484Z] [INFO] 🔗 User demo (1) connected with socket BqsyRSwjs1V9CJoZAAAL
+[2025-07-16T15:59:58.503Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-16T15:59:58.504Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-16T15:59:58.509Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-16T15:59:58.511Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-16T16:00:05.846Z] [INFO] Conversation 47 created for user 1
+[2025-07-16T16:00:05.857Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:00:05.881Z] [INFO] 👋 User demo left conversation 46
+[2025-07-16T16:00:05.889Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-16T16:00:05.895Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-16T16:00:05.903Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-16T16:00:05.913Z] [INFO] Loaded 0 messages for conversation 47 by user 1
+[2025-07-16T16:00:05.915Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-16T16:00:32.038Z] [ERROR] Python AI service timeout for conversation 46
+[2025-07-16T16:00:32.039Z] [ERROR] AI service error for conversation 46: AI service timeout
+[2025-07-16T16:00:32.040Z] [INFO] Python AI service connection closed for conversation 46
+[2025-07-16T16:00:51.790Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-07-16T16:00:56.789Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:00:56.807Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:00:56.822Z] [INFO] ✅ Socket rKIHAp86nhVyiePNAAAO authenticated for user demo (ID: 1)
+[2025-07-16T16:00:56.823Z] [INFO] 🔗 User demo (1) connected with socket rKIHAp86nhVyiePNAAAO
+[2025-07-16T16:00:56.909Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-16T16:00:56.912Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-16T16:00:56.923Z] [INFO] Loaded 0 messages for conversation 47 by user 1
+[2025-07-16T16:00:56.932Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-16T16:01:52.433Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-16T16:01:52.791Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:01:52.794Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:01:52.813Z] [INFO] ✅ Socket KEjnSLgTPLjvRZPeAAAR authenticated for user demo (ID: 1)
+[2025-07-16T16:01:52.813Z] [INFO] 🔗 User demo (1) connected with socket KEjnSLgTPLjvRZPeAAAR
+[2025-07-16T16:01:52.862Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-16T16:01:52.863Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-16T16:01:52.872Z] [INFO] Loaded 0 messages for conversation 47 by user 1
+[2025-07-16T16:01:52.873Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-16T16:02:12.446Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-16T16:02:12.652Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:02:12.657Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:02:12.667Z] [INFO] ✅ Socket svjhEWxwjc5PNJ4EAAAU authenticated for user demo (ID: 1)
+[2025-07-16T16:02:12.668Z] [INFO] 🔗 User demo (1) connected with socket svjhEWxwjc5PNJ4EAAAU
+[2025-07-16T16:02:12.690Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-16T16:02:12.691Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-16T16:02:12.703Z] [INFO] Loaded 0 messages for conversation 47 by user 1
+[2025-07-16T16:02:12.705Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-16T16:03:02.245Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-16T16:03:02.459Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:03:02.467Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:03:02.468Z] [INFO] ✅ Socket 5UznbGXz8i3y9Lq8AAAX authenticated for user demo (ID: 1)
+[2025-07-16T16:03:02.470Z] [INFO] 🔗 User demo (1) connected with socket 5UznbGXz8i3y9Lq8AAAX
+[2025-07-16T16:03:02.491Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-16T16:03:02.491Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-16T16:03:02.501Z] [INFO] Loaded 0 messages for conversation 47 by user 1
+[2025-07-16T16:03:02.502Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-16T16:03:15.711Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-16T16:03:15.863Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:03:15.870Z] [INFO] ✅ Socket k-oHmlSjek3sU1avAAAa authenticated for user demo (ID: 1)
+[2025-07-16T16:03:15.871Z] [INFO] 🔗 User demo (1) connected with socket k-oHmlSjek3sU1avAAAa
+[2025-07-16T16:03:15.874Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:03:15.895Z] [INFO] Loaded 0 messages for conversation 47 by user 1
+[2025-07-16T16:03:15.896Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-16T16:03:15.902Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-16T16:03:15.902Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-16T16:06:31.788Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-16T16:06:32.016Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:06:32.022Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-16T16:06:32.030Z] [INFO] ✅ Socket wBmDpFiKiP32xlW7AAAd authenticated for user demo (ID: 1)
+[2025-07-16T16:06:32.030Z] [INFO] 🔗 User demo (1) connected with socket wBmDpFiKiP32xlW7AAAd
+[2025-07-16T16:06:32.054Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-16T16:06:32.055Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-16T16:06:32.059Z] [INFO] Loaded 0 messages for conversation 47 by user 1
+[2025-07-16T16:06:32.060Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-16T16:06:39.312Z] [INFO] ⌨️ User demo started typing in conversation 47
+[2025-07-16T16:06:42.179Z] [INFO] 📤 Message sent by demo to conversation 47
+[2025-07-16T16:06:42.183Z] [INFO] Connected to Python AI service for conversation 47
+[2025-07-16T16:06:42.844Z] [INFO] ⌨️ User demo stopped typing in conversation 47
+[2025-07-16T16:06:46.786Z] [INFO] Processing AI response for conversation 47
+[2025-07-16T16:06:46.787Z] [INFO] Content length: 215
+[2025-07-16T16:06:46.788Z] [INFO] Chart data: None
+[2025-07-16T16:06:46.848Z] [INFO] AI response text only sent to conversation 47
+[2025-07-16T16:06:46.848Z] [INFO] Message ID: 666
+[2025-07-16T16:08:12.182Z] [ERROR] Python AI service timeout for conversation 47
+[2025-07-16T16:08:12.184Z] [ERROR] AI service error for conversation 47: AI service timeout
+[2025-07-16T16:08:12.185Z] [INFO] Python AI service connection closed for conversation 47
+[2025-07-16T16:12:27.060Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T01:53:14.716Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-17T01:53:14.719Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-17T01:53:14.736Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-17T01:53:14.743Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-17T01:53:14.743Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-17T01:53:14.744Z] [INFO] SQLite database initialized successfully.
+[2025-07-17T01:53:14.753Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-17T01:53:56.725Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-17T01:53:59.404Z] [INFO] User  logged out successfully
+[2025-07-17T01:54:01.072Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-17T01:54:01.096Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T01:54:01.100Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T01:54:01.107Z] [INFO] ✅ Socket 5Idbq5HT1ASqhPhcAAAF authenticated for user demo (ID: 1)
+[2025-07-17T01:54:01.109Z] [INFO] 🔗 User demo (1) connected with socket 5Idbq5HT1ASqhPhcAAAF
+[2025-07-17T01:54:01.137Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-17T01:54:01.139Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-17T01:54:01.149Z] [INFO] Loaded 2 messages for conversation 47 by user 1
+[2025-07-17T01:54:01.151Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-17T01:54:07.704Z] [INFO] 👋 User demo left conversation 47
+[2025-07-17T01:54:07.705Z] [INFO] 👥 Sent online users list for conversation 47: 0 users
+[2025-07-17T01:54:07.707Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T01:54:07.709Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T01:54:07.723Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T01:54:07.726Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T01:54:12.385Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T01:54:12.385Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T01:54:12.389Z] [INFO] 👥 User demo joined conversation 11
+[2025-07-17T01:54:12.389Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-07-17T01:54:12.407Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-07-17T01:54:12.413Z] [INFO] Loaded 95 messages for conversation 11 by user 1
+[2025-07-17T01:54:13.659Z] [INFO] 👋 User demo left conversation 11
+[2025-07-17T01:54:13.661Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-07-17T01:54:13.664Z] [INFO] 👥 User demo joined conversation 7
+[2025-07-17T01:54:13.668Z] [INFO] 👥 Sent online users list for conversation 7: 1 users
+[2025-07-17T01:54:13.677Z] [INFO] Loaded 107 messages for conversation 7 by user 1
+[2025-07-17T01:54:13.680Z] [INFO] Loaded 1 files for conversation 7 by user 1
+[2025-07-17T01:54:21.474Z] [INFO] 👋 User demo left conversation 7
+[2025-07-17T01:54:21.479Z] [INFO] 👥 Sent online users list for conversation 7: 0 users
+[2025-07-17T01:54:21.482Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-17T01:54:21.483Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-17T01:54:21.488Z] [INFO] Loaded 2 messages for conversation 47 by user 1
+[2025-07-17T01:54:21.491Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-17T01:54:24.036Z] [INFO] ⌨️ User demo started typing in conversation 47
+[2025-07-17T01:54:25.591Z] [INFO] ⌨️ User demo stopped typing in conversation 47
+[2025-07-17T01:54:25.879Z] [INFO] ⌨️ User demo started typing in conversation 47
+[2025-07-17T01:54:32.298Z] [INFO] 📤 Message sent by demo to conversation 47
+[2025-07-17T01:54:32.302Z] [INFO] Connected to Python AI service for conversation 47
+[2025-07-17T01:54:33.152Z] [INFO] ⌨️ User demo stopped typing in conversation 47
+[2025-07-17T01:54:41.189Z] [INFO] Processing AI response for conversation 47
+[2025-07-17T01:54:41.193Z] [INFO] Content length: 132
+[2025-07-17T01:54:41.195Z] [INFO] Chart data: None
+[2025-07-17T01:54:41.204Z] [INFO] AI response text only sent to conversation 47
+[2025-07-17T01:54:41.204Z] [INFO] Message ID: 668
+[2025-07-17T01:54:44.453Z] [INFO] ⌨️ User demo started typing in conversation 47
+[2025-07-17T01:54:51.359Z] [INFO] ⌨️ User demo stopped typing in conversation 47
+[2025-07-17T01:54:51.808Z] [INFO] 📤 Message sent by demo to conversation 47
+[2025-07-17T01:54:51.811Z] [INFO] Connected to Python AI service for conversation 47
+[2025-07-17T01:55:01.681Z] [INFO] 👋 User demo left conversation 47
+[2025-07-17T01:55:01.682Z] [INFO] 👥 Sent online users list for conversation 47: 0 users
+[2025-07-17T01:55:01.683Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T01:55:01.684Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T01:55:01.691Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T01:55:01.693Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T01:55:13.533Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T01:55:13.534Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T01:55:13.534Z] [INFO] 👥 User demo joined conversation 47
+[2025-07-17T01:55:13.535Z] [INFO] 👥 Sent online users list for conversation 47: 1 users
+[2025-07-17T01:55:13.542Z] [INFO] Loaded 5 messages for conversation 47 by user 1
+[2025-07-17T01:55:13.543Z] [INFO] Loaded 0 files for conversation 47 by user 1
+[2025-07-17T01:55:14.840Z] [INFO] Processing AI response for conversation 47
+[2025-07-17T01:55:14.847Z] [INFO] Content length: 919
+[2025-07-17T01:55:14.848Z] [INFO] Chart data: None
+[2025-07-17T01:55:14.858Z] [INFO] AI response text only sent to conversation 47
+[2025-07-17T01:55:14.858Z] [INFO] Message ID: 670
+[2025-07-17T01:55:28.902Z] [INFO] ⌨️ User demo started typing in conversation 47
+[2025-07-17T01:55:31.306Z] [INFO] ⌨️ User demo stopped typing in conversation 47
+[2025-07-17T01:55:32.800Z] [INFO] ⌨️ User demo started typing in conversation 47
+[2025-07-17T01:55:40.312Z] [INFO] 📤 Message sent by demo to conversation 47
+[2025-07-17T01:55:40.314Z] [INFO] Connected to Python AI service for conversation 47
+[2025-07-17T01:55:41.014Z] [INFO] ⌨️ User demo stopped typing in conversation 47
+[2025-07-17T01:56:02.305Z] [ERROR] Python AI service timeout for conversation 47
+[2025-07-17T01:56:02.306Z] [ERROR] AI service error for conversation 47: AI service timeout
+[2025-07-17T01:56:02.306Z] [INFO] Python AI service connection closed for conversation 47
+[2025-07-17T01:56:21.811Z] [ERROR] Python AI service timeout for conversation 47
+[2025-07-17T01:56:21.813Z] [ERROR] AI service error for conversation 47: AI service timeout
+[2025-07-17T01:56:21.813Z] [INFO] Python AI service connection closed for conversation 47
+[2025-07-17T01:56:48.905Z] [INFO] Processing AI response for conversation 47
+[2025-07-17T01:56:48.905Z] [INFO] Content length: 535
+[2025-07-17T01:56:48.906Z] [INFO] Chart data: Present
+[2025-07-17T01:56:48.918Z] [INFO] AI response with chart sent to conversation 47
+[2025-07-17T01:56:48.918Z] [INFO] Message ID: 672
+[2025-07-17T01:57:10.319Z] [ERROR] Python AI service timeout for conversation 47
+[2025-07-17T01:57:10.320Z] [ERROR] AI service error for conversation 47: AI service timeout
+[2025-07-17T01:57:10.322Z] [INFO] Python AI service connection closed for conversation 47
+[2025-07-17T01:57:13.135Z] [INFO] Conversation 47 deleted by user 1
+[2025-07-17T01:57:13.148Z] [INFO] 👋 User demo left conversation 47
+[2025-07-17T01:57:13.149Z] [INFO] 👥 Sent online users list for conversation 47: 0 users
+[2025-07-17T01:57:13.160Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T01:57:13.161Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T01:57:13.164Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T01:57:13.167Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T01:57:21.947Z] [INFO] Conversation 48 created for user 1
+[2025-07-17T01:57:21.956Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T01:57:21.980Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T01:57:21.981Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T01:57:21.983Z] [INFO] 👥 User demo joined conversation 48
+[2025-07-17T01:57:21.984Z] [INFO] 👥 Sent online users list for conversation 48: 1 users
+[2025-07-17T01:57:21.989Z] [INFO] Loaded 0 messages for conversation 48 by user 1
+[2025-07-17T01:57:21.990Z] [INFO] Loaded 0 files for conversation 48 by user 1
+[2025-07-17T01:57:23.804Z] [INFO] ⌨️ User demo started typing in conversation 48
+[2025-07-17T01:57:25.463Z] [INFO] 📤 Message sent by demo to conversation 48
+[2025-07-17T01:57:25.466Z] [INFO] Connected to Python AI service for conversation 48
+[2025-07-17T01:57:26.250Z] [INFO] ⌨️ User demo stopped typing in conversation 48
+[2025-07-17T01:57:27.912Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T01:57:27.913Z] [ERROR] AI service error for conversation 48: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T01:58:04.388Z] [INFO] Conversation 48 deleted by user 1
+[2025-07-17T01:58:04.396Z] [INFO] 👋 User demo left conversation 48
+[2025-07-17T01:58:04.397Z] [INFO] 👥 Sent online users list for conversation 48: 0 users
+[2025-07-17T01:58:04.399Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T01:58:04.399Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T01:58:04.403Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T01:58:04.404Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T01:58:11.889Z] [INFO] Conversation 49 created for user 1
+[2025-07-17T01:58:11.896Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T01:58:11.917Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T01:58:11.919Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T01:58:11.922Z] [INFO] 👥 User demo joined conversation 49
+[2025-07-17T01:58:11.922Z] [INFO] 👥 Sent online users list for conversation 49: 1 users
+[2025-07-17T01:58:11.929Z] [INFO] Loaded 0 messages for conversation 49 by user 1
+[2025-07-17T01:58:11.931Z] [INFO] Loaded 0 files for conversation 49 by user 1
+[2025-07-17T01:58:17.182Z] [ERROR] AI service error for conversation 48: AI service connection error
+[2025-07-17T01:58:17.182Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-07-17T01:58:17.183Z] [INFO] Python AI service connection closed for conversation 48
+[2025-07-17T01:58:28.629Z] [INFO] ⌨️ User demo started typing in conversation 49
+[2025-07-17T01:58:35.405Z] [INFO] 📤 Message sent by demo to conversation 49
+[2025-07-17T01:58:35.407Z] [INFO] Connected to Python AI service for conversation 49
+[2025-07-17T01:58:36.220Z] [INFO] ⌨️ User demo stopped typing in conversation 49
+[2025-07-17T01:58:39.389Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T01:58:39.390Z] [ERROR] AI service error for conversation 49: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:00:05.416Z] [ERROR] Python AI service timeout for conversation 49
+[2025-07-17T02:00:05.417Z] [ERROR] AI service error for conversation 49: AI service timeout
+[2025-07-17T02:00:05.417Z] [INFO] Python AI service connection closed for conversation 49
+[2025-07-17T02:00:58.518Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:00:58.687Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:00:58.689Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:00:58.692Z] [INFO] ✅ Socket yxB6GzC48eswb1NPAAAI authenticated for user demo (ID: 1)
+[2025-07-17T02:00:58.693Z] [INFO] 🔗 User demo (1) connected with socket yxB6GzC48eswb1NPAAAI
+[2025-07-17T02:00:58.714Z] [INFO] 👥 User demo joined conversation 49
+[2025-07-17T02:00:58.714Z] [INFO] 👥 Sent online users list for conversation 49: 1 users
+[2025-07-17T02:00:58.718Z] [INFO] Loaded 1 messages for conversation 49 by user 1
+[2025-07-17T02:00:58.720Z] [INFO] Loaded 0 files for conversation 49 by user 1
+[2025-07-17T02:00:59.848Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:00:59.958Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:00:59.959Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:00:59.961Z] [INFO] ✅ Socket N2H9XdoH8jfzdL1SAAAL authenticated for user demo (ID: 1)
+[2025-07-17T02:00:59.962Z] [INFO] 🔗 User demo (1) connected with socket N2H9XdoH8jfzdL1SAAAL
+[2025-07-17T02:00:59.976Z] [INFO] 👥 User demo joined conversation 49
+[2025-07-17T02:00:59.977Z] [INFO] 👥 Sent online users list for conversation 49: 1 users
+[2025-07-17T02:00:59.979Z] [INFO] Loaded 0 files for conversation 49 by user 1
+[2025-07-17T02:00:59.980Z] [INFO] Loaded 1 messages for conversation 49 by user 1
+[2025-07-17T02:01:04.150Z] [INFO] Conversation 49 deleted by user 1
+[2025-07-17T02:01:04.158Z] [INFO] 👋 User demo left conversation 49
+[2025-07-17T02:01:04.158Z] [INFO] 👥 Sent online users list for conversation 49: 0 users
+[2025-07-17T02:01:04.159Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T02:01:04.160Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T02:01:04.166Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T02:01:04.168Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T02:01:10.719Z] [INFO] Conversation 50 created for user 1
+[2025-07-17T02:01:10.723Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:01:10.741Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T02:01:10.742Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T02:01:10.745Z] [INFO] 👥 User demo joined conversation 50
+[2025-07-17T02:01:10.746Z] [INFO] 👥 Sent online users list for conversation 50: 1 users
+[2025-07-17T02:01:10.750Z] [INFO] Loaded 0 messages for conversation 50 by user 1
+[2025-07-17T02:01:10.750Z] [INFO] Loaded 0 files for conversation 50 by user 1
+[2025-07-17T02:01:12.246Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:01:13.824Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:01:13.999Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:01:17.176Z] [INFO] 📤 Message sent by demo to conversation 50
+[2025-07-17T02:01:17.179Z] [INFO] Connected to Python AI service for conversation 50
+[2025-07-17T02:01:17.998Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:01:19.579Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:01:19.580Z] [ERROR] AI service error for conversation 50: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:02:47.179Z] [ERROR] Python AI service timeout for conversation 50
+[2025-07-17T02:02:47.180Z] [ERROR] AI service error for conversation 50: AI service timeout
+[2025-07-17T02:02:47.180Z] [INFO] Python AI service connection closed for conversation 50
+[2025-07-17T02:11:53.603Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:11:53.791Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:11:53.793Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:11:53.797Z] [INFO] ✅ Socket UmHQvFljRA59WoRoAAAO authenticated for user demo (ID: 1)
+[2025-07-17T02:11:53.798Z] [INFO] 🔗 User demo (1) connected with socket UmHQvFljRA59WoRoAAAO
+[2025-07-17T02:11:53.816Z] [INFO] 👥 User demo joined conversation 50
+[2025-07-17T02:11:53.816Z] [INFO] 👥 Sent online users list for conversation 50: 1 users
+[2025-07-17T02:11:53.821Z] [INFO] Loaded 1 messages for conversation 50 by user 1
+[2025-07-17T02:11:53.822Z] [INFO] Loaded 0 files for conversation 50 by user 1
+[2025-07-17T02:11:56.166Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:11:57.934Z] [INFO] 📤 Message sent by demo to conversation 50
+[2025-07-17T02:11:57.937Z] [INFO] Connected to Python AI service for conversation 50
+[2025-07-17T02:11:58.753Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:12:04.915Z] [INFO] Processing AI response for conversation 50
+[2025-07-17T02:12:04.922Z] [INFO] Content length: 148
+[2025-07-17T02:12:04.922Z] [INFO] Chart data: None
+[2025-07-17T02:12:04.943Z] [INFO] AI response text only sent to conversation 50
+[2025-07-17T02:12:04.943Z] [INFO] Message ID: 677
+[2025-07-17T02:12:20.029Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:12:25.571Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:12:26.048Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:12:28.422Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:12:30.518Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:12:33.563Z] [INFO] 📤 Message sent by demo to conversation 50
+[2025-07-17T02:12:33.565Z] [INFO] Connected to Python AI service for conversation 50
+[2025-07-17T02:12:34.150Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:12:46.289Z] [INFO] Processing AI response for conversation 50
+[2025-07-17T02:12:46.289Z] [INFO] Content length: 211
+[2025-07-17T02:12:46.290Z] [INFO] Chart data: None
+[2025-07-17T02:12:46.302Z] [INFO] AI response text only sent to conversation 50
+[2025-07-17T02:12:46.303Z] [INFO] Message ID: 679
+[2025-07-17T02:12:50.663Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:12:53.808Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:12:54.662Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:13:02.298Z] [INFO] 📤 Message sent by demo to conversation 50
+[2025-07-17T02:13:02.301Z] [INFO] Connected to Python AI service for conversation 50
+[2025-07-17T02:13:03.036Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:13:27.943Z] [ERROR] Python AI service timeout for conversation 50
+[2025-07-17T02:13:27.945Z] [ERROR] AI service error for conversation 50: AI service timeout
+[2025-07-17T02:13:27.946Z] [INFO] Python AI service connection closed for conversation 50
+[2025-07-17T02:13:32.025Z] [INFO] Processing AI response for conversation 50
+[2025-07-17T02:13:32.025Z] [INFO] Content length: 434
+[2025-07-17T02:13:32.026Z] [INFO] Chart data: None
+[2025-07-17T02:13:32.036Z] [INFO] AI response text only sent to conversation 50
+[2025-07-17T02:13:32.037Z] [INFO] Message ID: 681
+[2025-07-17T02:14:01.164Z] [INFO] ⌨️ User demo started typing in conversation 50
+[2025-07-17T02:14:03.355Z] [INFO] ⌨️ User demo stopped typing in conversation 50
+[2025-07-17T02:14:03.575Z] [ERROR] Python AI service timeout for conversation 50
+[2025-07-17T02:14:03.577Z] [ERROR] AI service error for conversation 50: AI service timeout
+[2025-07-17T02:14:03.578Z] [INFO] Python AI service connection closed for conversation 50
+[2025-07-17T02:14:11.413Z] [INFO] Conversation 50 deleted by user 1
+[2025-07-17T02:14:11.428Z] [INFO] 👋 User demo left conversation 50
+[2025-07-17T02:14:11.428Z] [INFO] 👥 Sent online users list for conversation 50: 0 users
+[2025-07-17T02:14:11.431Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T02:14:11.432Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T02:14:11.437Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T02:14:11.438Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T02:14:25.098Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T02:14:25.101Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T02:14:25.103Z] [INFO] 👥 User demo joined conversation 11
+[2025-07-17T02:14:25.103Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-07-17T02:14:25.106Z] [INFO] Loaded 95 messages for conversation 11 by user 1
+[2025-07-17T02:14:25.110Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-07-17T02:14:28.081Z] [INFO] ⌨️ User demo started typing in conversation 11
+[2025-07-17T02:14:31.825Z] [INFO] ⌨️ User demo stopped typing in conversation 11
+[2025-07-17T02:14:32.311Z] [ERROR] Python AI service timeout for conversation 50
+[2025-07-17T02:14:32.312Z] [ERROR] AI service error for conversation 50: AI service timeout
+[2025-07-17T02:14:32.312Z] [INFO] Python AI service connection closed for conversation 50
+[2025-07-17T02:17:51.295Z] [INFO] Conversation 51 created for user 1
+[2025-07-17T02:17:51.305Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:17:51.351Z] [INFO] 👋 User demo left conversation 11
+[2025-07-17T02:17:51.354Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-07-17T02:17:51.362Z] [INFO] 👥 User demo joined conversation 51
+[2025-07-17T02:17:51.363Z] [INFO] 👥 Sent online users list for conversation 51: 1 users
+[2025-07-17T02:17:51.365Z] [INFO] Loaded 0 messages for conversation 51 by user 1
+[2025-07-17T02:17:51.367Z] [INFO] Loaded 0 files for conversation 51 by user 1
+[2025-07-17T02:17:52.700Z] [INFO] ⌨️ User demo started typing in conversation 51
+[2025-07-17T02:17:55.062Z] [INFO] ⌨️ User demo stopped typing in conversation 51
+[2025-07-17T02:17:55.424Z] [INFO] ⌨️ User demo started typing in conversation 51
+[2025-07-17T02:17:59.125Z] [INFO] ⌨️ User demo stopped typing in conversation 51
+[2025-07-17T02:17:59.147Z] [INFO] 📤 Message sent by demo to conversation 51
+[2025-07-17T02:17:59.149Z] [INFO] Connected to Python AI service for conversation 51
+[2025-07-17T02:18:01.241Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:18:01.245Z] [ERROR] AI service error for conversation 51: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:18:14.045Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-07-17T02:18:14.045Z] [ERROR] AI service error for conversation 51: AI service connection error
+[2025-07-17T02:18:14.046Z] [INFO] Python AI service connection closed for conversation 51
+[2025-07-17T02:18:19.584Z] [INFO] Conversation 51 deleted by user 1
+[2025-07-17T02:18:19.592Z] [INFO] 👋 User demo left conversation 51
+[2025-07-17T02:18:19.592Z] [INFO] 👥 Sent online users list for conversation 51: 0 users
+[2025-07-17T02:18:19.594Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T02:18:19.594Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T02:18:19.599Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T02:18:19.600Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T02:18:25.717Z] [INFO] Conversation 52 created for user 1
+[2025-07-17T02:18:25.726Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:18:25.750Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T02:18:25.751Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T02:18:25.753Z] [INFO] 👥 User demo joined conversation 52
+[2025-07-17T02:18:25.754Z] [INFO] 👥 Sent online users list for conversation 52: 1 users
+[2025-07-17T02:18:25.758Z] [INFO] Loaded 0 messages for conversation 52 by user 1
+[2025-07-17T02:18:25.759Z] [INFO] Loaded 0 files for conversation 52 by user 1
+[2025-07-17T02:18:28.886Z] [INFO] ⌨️ User demo started typing in conversation 52
+[2025-07-17T02:18:31.093Z] [INFO] 📤 Message sent by demo to conversation 52
+[2025-07-17T02:18:31.096Z] [INFO] Connected to Python AI service for conversation 52
+[2025-07-17T02:18:31.609Z] [INFO] ⌨️ User demo stopped typing in conversation 52
+[2025-07-17T02:18:34.534Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:18:34.535Z] [ERROR] AI service error for conversation 52: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:19:02.799Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:19:02.990Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:19:02.991Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:19:02.996Z] [INFO] ✅ Socket SVLTzzxJF-MqNUnEAAAR authenticated for user demo (ID: 1)
+[2025-07-17T02:19:02.997Z] [INFO] 🔗 User demo (1) connected with socket SVLTzzxJF-MqNUnEAAAR
+[2025-07-17T02:19:03.013Z] [INFO] 👥 User demo joined conversation 52
+[2025-07-17T02:19:03.013Z] [INFO] 👥 Sent online users list for conversation 52: 1 users
+[2025-07-17T02:19:03.017Z] [INFO] Loaded 1 messages for conversation 52 by user 1
+[2025-07-17T02:19:03.018Z] [INFO] Loaded 0 files for conversation 52 by user 1
+[2025-07-17T02:19:50.435Z] [INFO] ⌨️ User demo started typing in conversation 52
+[2025-07-17T02:19:52.995Z] [INFO] 📤 Message sent by demo to conversation 52
+[2025-07-17T02:19:52.998Z] [INFO] Connected to Python AI service for conversation 52
+[2025-07-17T02:19:53.488Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:19:53.489Z] [ERROR] AI service error for conversation 52: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:19:53.698Z] [INFO] ⌨️ User demo stopped typing in conversation 52
+[2025-07-17T02:20:01.095Z] [ERROR] Python AI service timeout for conversation 52
+[2025-07-17T02:20:01.096Z] [ERROR] AI service error for conversation 52: AI service timeout
+[2025-07-17T02:20:01.096Z] [INFO] Python AI service connection closed for conversation 52
+[2025-07-17T02:20:08.304Z] [INFO] Conversation 52 deleted by user 1
+[2025-07-17T02:20:08.313Z] [INFO] 👋 User demo left conversation 52
+[2025-07-17T02:20:08.313Z] [INFO] 👥 Sent online users list for conversation 52: 0 users
+[2025-07-17T02:20:08.317Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T02:20:08.318Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T02:20:08.322Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T02:20:08.323Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T02:20:18.063Z] [INFO] Conversation 53 created for user 1
+[2025-07-17T02:20:18.068Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:20:18.087Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T02:20:18.088Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T02:20:18.090Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:20:18.090Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:20:18.093Z] [INFO] Loaded 0 messages for conversation 53 by user 1
+[2025-07-17T02:20:18.095Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:20:23.800Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:20:25.156Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:20:25.180Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:20:27.541Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:20:30.866Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:20:31.015Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:20:31.018Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:20:31.872Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:20:33.061Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:20:33.061Z] [ERROR] AI service error for conversation 53: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:21:23.005Z] [ERROR] Python AI service timeout for conversation 52
+[2025-07-17T02:21:23.006Z] [ERROR] AI service error for conversation 52: AI service timeout
+[2025-07-17T02:21:23.006Z] [INFO] Python AI service connection closed for conversation 52
+[2025-07-17T02:22:01.025Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:22:01.026Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:22:01.027Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:24:19.047Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:24:19.247Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:24:19.248Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:24:19.252Z] [INFO] ✅ Socket jCJUq2VD060ciatlAAAU authenticated for user demo (ID: 1)
+[2025-07-17T02:24:19.253Z] [INFO] 🔗 User demo (1) connected with socket jCJUq2VD060ciatlAAAU
+[2025-07-17T02:24:19.267Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:24:19.267Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:24:19.274Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:24:19.275Z] [INFO] Loaded 1 messages for conversation 53 by user 1
+[2025-07-17T02:24:23.629Z] [INFO] User  logged out successfully
+[2025-07-17T02:24:23.642Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-07-17T02:24:24.932Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-17T02:24:24.953Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:24:24.958Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:24:24.965Z] [INFO] ✅ Socket 4DpgfUtU5-G_H5k-AAAX authenticated for user demo (ID: 1)
+[2025-07-17T02:24:24.966Z] [INFO] 🔗 User demo (1) connected with socket 4DpgfUtU5-G_H5k-AAAX
+[2025-07-17T02:24:24.983Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:24:24.984Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:24:24.991Z] [INFO] Loaded 1 messages for conversation 53 by user 1
+[2025-07-17T02:24:24.992Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:24:28.408Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:24:30.932Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:24:30.935Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:24:31.431Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:24:31.432Z] [ERROR] AI service error for conversation 53: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:24:31.723Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:26:00.940Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:26:00.942Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:26:00.943Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:28:13.179Z] [INFO] 👋 User demo left conversation 53
+[2025-07-17T02:28:13.180Z] [INFO] 👥 Sent online users list for conversation 53: 0 users
+[2025-07-17T02:28:13.181Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T02:28:13.182Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T02:28:13.188Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T02:28:13.189Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T02:30:20.173Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T02:30:20.173Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T02:30:20.174Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:30:20.175Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:30:20.180Z] [INFO] Loaded 2 messages for conversation 53 by user 1
+[2025-07-17T02:30:20.181Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:30:23.838Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:30:23.966Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:30:23.968Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:30:23.969Z] [INFO] ✅ Socket 2Ajgaty3nFUCQq3IAAAa authenticated for user demo (ID: 1)
+[2025-07-17T02:30:23.969Z] [INFO] 🔗 User demo (1) connected with socket 2Ajgaty3nFUCQq3IAAAa
+[2025-07-17T02:30:23.984Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:30:23.985Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:30:23.985Z] [INFO] Loaded 2 messages for conversation 53 by user 1
+[2025-07-17T02:30:23.986Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:33:11.520Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:33:11.666Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:33:11.666Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:33:11.669Z] [INFO] ✅ Socket QETtSXteHwKdt1fSAAAd authenticated for user demo (ID: 1)
+[2025-07-17T02:33:11.670Z] [INFO] 🔗 User demo (1) connected with socket QETtSXteHwKdt1fSAAAd
+[2025-07-17T02:33:11.684Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:33:11.685Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:33:11.693Z] [INFO] Loaded 2 messages for conversation 53 by user 1
+[2025-07-17T02:33:11.694Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:33:13.522Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:33:14.990Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:33:15.659Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:33:18.365Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:33:18.368Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:33:19.148Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:33:25.644Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:33:25.647Z] [ERROR] AI service error for conversation 53: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T02:34:48.370Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:34:48.371Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:34:48.371Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:38:22.115Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:38:22.351Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:38:22.351Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:38:22.356Z] [INFO] ✅ Socket XTyU352z_sdB9CBsAAAg authenticated for user demo (ID: 1)
+[2025-07-17T02:38:22.356Z] [INFO] 🔗 User demo (1) connected with socket XTyU352z_sdB9CBsAAAg
+[2025-07-17T02:38:22.376Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:38:22.377Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:38:22.381Z] [INFO] Loaded 3 messages for conversation 53 by user 1
+[2025-07-17T02:38:22.382Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:38:23.539Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:38:25.154Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:38:25.158Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:38:26.077Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:38:30.448Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:38:30.449Z] [INFO] Content length: 135
+[2025-07-17T02:38:30.450Z] [INFO] Chart data: None
+[2025-07-17T02:38:30.468Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:38:30.468Z] [INFO] Message ID: 689
+[2025-07-17T02:39:55.159Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:39:55.162Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:39:55.164Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:41:02.127Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:41:04.805Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:41:06.105Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:41:08.851Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:41:09.087Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:41:11.064Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:41:12.915Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:41:18.236Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:44:57.323Z] [INFO] 👋 User demo left conversation 53
+[2025-07-17T02:44:57.331Z] [INFO] 👥 Sent online users list for conversation 53: 0 users
+[2025-07-17T02:44:57.334Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T02:44:57.336Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T02:44:57.352Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T02:44:57.357Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T02:48:06.683Z] [INFO] 👋 User demo left conversation 46
+[2025-07-17T02:48:06.694Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-17T02:48:06.696Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:48:06.710Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:48:06.769Z] [INFO] Loaded 5 messages for conversation 53 by user 1
+[2025-07-17T02:48:06.770Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:48:08.561Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:48:11.060Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:48:11.063Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:48:11.689Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:48:22.657Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:48:22.658Z] [INFO] Chart data: None
+[2025-07-17T02:48:22.658Z] [INFO] Content length: 435
+[2025-07-17T02:48:22.712Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:48:22.713Z] [INFO] Message ID: 691
+[2025-07-17T02:48:30.002Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:48:32.561Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:48:32.564Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:48:33.137Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:48:49.107Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:48:49.108Z] [INFO] Content length: 455
+[2025-07-17T02:48:49.108Z] [INFO] Chart data: None
+[2025-07-17T02:48:49.160Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:48:49.161Z] [INFO] Message ID: 693
+[2025-07-17T02:49:37.865Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T02:49:38.110Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:49:38.121Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T02:49:38.121Z] [INFO] ✅ Socket kmCM6GG0xMg5ic76AAAj authenticated for user demo (ID: 1)
+[2025-07-17T02:49:38.122Z] [INFO] 🔗 User demo (1) connected with socket kmCM6GG0xMg5ic76AAAj
+[2025-07-17T02:49:38.148Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T02:49:38.148Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T02:49:38.158Z] [INFO] Loaded 9 messages for conversation 53 by user 1
+[2025-07-17T02:49:38.159Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T02:49:41.075Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:49:41.075Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:49:41.077Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:49:41.394Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:49:43.654Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:49:43.695Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:49:49.914Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:49:49.918Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:49:50.428Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:50:02.566Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:50:02.567Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:50:02.568Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:50:17.070Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:50:17.071Z] [INFO] Content length: 441
+[2025-07-17T02:50:17.071Z] [INFO] Chart data: None
+[2025-07-17T02:50:17.077Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:50:17.081Z] [INFO] Message ID: 695
+[2025-07-17T02:50:22.861Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:50:24.441Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:50:41.504Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:50:42.518Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:50:42.594Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:50:43.291Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:50:43.293Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:50:43.596Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:51:04.790Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:51:04.790Z] [INFO] Content length: 601
+[2025-07-17T02:51:04.790Z] [INFO] Chart data: None
+[2025-07-17T02:51:04.844Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:51:04.845Z] [INFO] Message ID: 697
+[2025-07-17T02:51:13.288Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:51:18.185Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:51:19.199Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:51:19.228Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:51:19.917Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:51:19.918Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:51:19.919Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:51:23.366Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:51:23.842Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:51:23.845Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:51:24.367Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:51:46.709Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:51:46.709Z] [INFO] Content length: 528
+[2025-07-17T02:51:46.709Z] [INFO] Chart data: None
+[2025-07-17T02:51:46.761Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:51:46.762Z] [INFO] Message ID: 699
+[2025-07-17T02:52:13.290Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:52:13.290Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:52:13.291Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:52:42.676Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:52:53.850Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:52:53.851Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:52:53.852Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:52:56.701Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:52:56.703Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:52:57.233Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:53:21.188Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:53:21.188Z] [INFO] Content length: 301
+[2025-07-17T02:53:21.189Z] [INFO] Chart data: None
+[2025-07-17T02:53:21.243Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:53:21.244Z] [INFO] Message ID: 701
+[2025-07-17T02:53:37.839Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:53:40.880Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:53:41.365Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:53:45.774Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:53:46.715Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:53:46.743Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:53:48.406Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:53:48.945Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:53:48.948Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:53:49.407Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:54:14.147Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:54:14.147Z] [INFO] Content length: 397
+[2025-07-17T02:54:14.147Z] [INFO] Chart data: None
+[2025-07-17T02:54:14.153Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:54:14.153Z] [INFO] Message ID: 703
+[2025-07-17T02:54:24.709Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T02:54:26.704Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:54:26.708Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:54:26.709Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:54:27.442Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T02:54:27.446Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T02:54:28.109Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T02:54:41.061Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T02:54:41.061Z] [INFO] Content length: 506
+[2025-07-17T02:54:41.061Z] [INFO] Chart data: None
+[2025-07-17T02:54:41.111Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T02:54:41.112Z] [INFO] Message ID: 705
+[2025-07-17T02:55:18.949Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:55:18.953Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:55:18.954Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T02:55:57.450Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T02:55:57.452Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T02:55:57.453Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T03:04:06.453Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T03:04:08.172Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T03:04:08.319Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T03:04:10.730Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T03:04:10.731Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T03:04:11.305Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T03:04:15.783Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T03:04:15.784Z] [ERROR] AI service error for conversation 53: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T03:05:40.734Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T03:05:40.735Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T03:05:40.736Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T03:06:02.565Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T03:06:02.742Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T03:06:02.741Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T03:06:02.747Z] [INFO] ✅ Socket ZQwMlsYDjMZqrAVsAAAm authenticated for user demo (ID: 1)
+[2025-07-17T03:06:02.748Z] [INFO] 🔗 User demo (1) connected with socket ZQwMlsYDjMZqrAVsAAAm
+[2025-07-17T03:06:02.765Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T03:06:02.765Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T03:06:02.769Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T03:06:02.770Z] [INFO] Loaded 22 messages for conversation 53 by user 1
+[2025-07-17T03:06:04.647Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T03:06:06.230Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T03:06:06.541Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T03:06:09.117Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T03:06:09.118Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T03:06:10.069Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T03:06:12.993Z] [ERROR] AI service error: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T03:06:12.994Z] [ERROR] AI service error for conversation 53: Bedrock client error: messages.1.content.0.tool_use.name: String should match pattern '^[a-zA-Z0-9_-]{1,64}$'
+[2025-07-17T03:07:39.131Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T03:07:39.134Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T03:07:39.135Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T03:10:26.505Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T03:10:26.707Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T03:10:26.708Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T03:10:26.709Z] [INFO] ✅ Socket s3evrNXXOgNdZNhwAAAp authenticated for user demo (ID: 1)
+[2025-07-17T03:10:26.709Z] [INFO] 🔗 User demo (1) connected with socket s3evrNXXOgNdZNhwAAAp
+[2025-07-17T03:10:26.728Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T03:10:26.728Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T03:10:26.735Z] [INFO] Loaded 23 messages for conversation 53 by user 1
+[2025-07-17T03:10:26.736Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T03:10:28.501Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T03:10:31.833Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T03:10:32.110Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T03:10:35.035Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T03:10:35.037Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T03:10:35.776Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T03:10:44.365Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T03:10:44.365Z] [INFO] Content length: 95
+[2025-07-17T03:10:44.366Z] [INFO] Chart data: None
+[2025-07-17T03:10:44.384Z] [INFO] AI response text only sent to conversation 53
+[2025-07-17T03:10:44.386Z] [INFO] Message ID: 709
+[2025-07-17T03:12:05.048Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T03:12:05.050Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T03:12:05.051Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T03:55:34.174Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T03:55:34.372Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-17T03:55:38.149Z] [INFO] User  logged out successfully
+[2025-07-17T03:55:39.283Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-17T03:55:39.301Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T03:55:39.309Z] [INFO] ✅ Socket O8ZfkkL2QcIXc4cMAAAv authenticated for user demo (ID: 1)
+[2025-07-17T03:55:39.310Z] [INFO] 🔗 User demo (1) connected with socket O8ZfkkL2QcIXc4cMAAAv
+[2025-07-17T03:55:39.311Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T03:55:39.335Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T03:55:39.336Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T03:55:39.342Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T03:55:39.344Z] [INFO] Loaded 25 messages for conversation 53 by user 1
+[2025-07-17T03:55:42.936Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-17T03:55:50.370Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-17T03:55:50.373Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-17T03:55:51.190Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-17T03:56:08.812Z] [INFO] Processing AI response for conversation 53
+[2025-07-17T03:56:08.812Z] [INFO] Chart data: Present
+[2025-07-17T03:56:08.812Z] [INFO] Content length: 421
+[2025-07-17T03:56:08.823Z] [INFO] AI response with chart sent to conversation 53
+[2025-07-17T03:56:08.824Z] [INFO] Message ID: 711
+[2025-07-17T03:57:20.374Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-17T03:57:20.375Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-17T03:57:20.377Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-17T04:15:18.095Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-07-17T04:15:39.504Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T04:15:39.518Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T04:15:39.539Z] [INFO] ✅ Socket yuQPw2WnRNm6x1PBAAAy authenticated for user demo (ID: 1)
+[2025-07-17T04:15:39.540Z] [INFO] 🔗 User demo (1) connected with socket yuQPw2WnRNm6x1PBAAAy
+[2025-07-17T04:15:39.586Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T04:15:39.587Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T04:15:39.594Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-17T04:15:39.596Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T04:15:44.564Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-17T04:24:44.105Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-17T04:24:44.107Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-17T04:24:44.126Z] [INFO] Node.js Server is running on port 3000
+[2025-07-17T04:24:44.129Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-17T04:24:44.130Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-17T04:24:44.130Z] [INFO] SQLite database initialized successfully.
+[2025-07-17T04:24:44.175Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-17T04:24:56.836Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-17T04:24:56.838Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-17T04:24:56.854Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-17T04:24:56.858Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-17T04:24:56.858Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-17T04:24:56.858Z] [INFO] SQLite database initialized successfully.
+[2025-07-17T04:24:56.874Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-17T04:25:09.806Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-17T04:25:09.808Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-17T04:25:09.825Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-17T04:25:09.831Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-17T04:25:09.833Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-17T04:25:09.835Z] [INFO] SQLite database initialized successfully.
+[2025-07-17T04:25:09.851Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-17T04:25:12.530Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-17T04:25:12.533Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-17T04:25:12.551Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-17T04:25:12.555Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-17T04:25:12.556Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-17T04:25:12.557Z] [INFO] SQLite database initialized successfully.
+[2025-07-17T04:25:12.573Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-17T04:29:57.530Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T04:29:57.533Z] [INFO] ✅ Socket 4nKwHyFYI3IWdfnhAAAC authenticated for user demo (ID: 1)
+[2025-07-17T04:29:57.535Z] [INFO] 🔗 User demo (1) connected with socket 4nKwHyFYI3IWdfnhAAAC
+[2025-07-17T04:29:57.540Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-17T04:29:57.550Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-17T04:29:57.552Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-17T04:29:57.564Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-17T04:29:57.569Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-17T04:30:07.174Z] [INFO] 👋 User demo left conversation 53
+[2025-07-17T04:30:07.175Z] [INFO] 👥 Sent online users list for conversation 53: 0 users
+[2025-07-17T04:30:07.179Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-17T04:30:07.180Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-17T04:30:07.191Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-17T04:30:07.194Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-17T04:39:47.025Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-17T04:39:47.028Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-17T04:39:47.044Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-17T04:39:47.048Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-17T04:39:47.048Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-17T04:39:47.049Z] [INFO] SQLite database initialized successfully.
+[2025-07-17T04:39:47.060Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-17T04:39:48.096Z] [INFO] 🔗 User demo (1) connected with socket 40TZDxXNnOWhl-jkAAAB
+[2025-07-17T04:39:48.095Z] [INFO] ✅ Socket 40TZDxXNnOWhl-jkAAAB authenticated for user demo (ID: 1)
+[2025-07-18T02:04:48.366Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T02:04:48.371Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T02:04:48.412Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T02:04:48.427Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T02:04:48.427Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T02:04:48.428Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T02:04:48.457Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T02:05:24.011Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-18T02:05:28.169Z] [INFO] User  logged out successfully
+[2025-07-18T02:06:36.117Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-18T02:06:36.186Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T02:06:36.193Z] [INFO] ✅ Socket h47eHOzA3bbbw-89AAAF authenticated for user demo (ID: 1)
+[2025-07-18T02:06:36.194Z] [INFO] 🔗 User demo (1) connected with socket h47eHOzA3bbbw-89AAAF
+[2025-07-18T02:06:36.199Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T02:06:36.220Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T02:06:36.225Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T02:06:36.236Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T02:06:36.238Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T02:06:43.614Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T02:19:48.620Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T02:19:48.630Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T02:19:48.682Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T02:19:48.691Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T02:19:48.693Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T02:19:48.703Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T02:19:48.726Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T02:19:49.704Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T02:19:49.707Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T02:19:49.727Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T02:19:49.736Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T02:19:49.737Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T02:19:49.738Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T02:19:49.751Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T02:19:51.148Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T02:19:51.154Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T02:19:51.185Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T02:19:51.190Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T02:19:51.193Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T02:19:51.194Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T02:19:51.208Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T02:53:20.125Z] [INFO] ✅ Socket Ra3A68TIoGf67BZxAAAC authenticated for user demo (ID: 1)
+[2025-07-18T02:53:20.126Z] [INFO] 🔗 User demo (1) connected with socket Ra3A68TIoGf67BZxAAAC
+[2025-07-18T02:53:20.138Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T02:53:20.139Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T02:53:20.147Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T02:53:20.149Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T02:53:24.811Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T02:53:37.887Z] [INFO] ✅ Socket kGXi9Ppw2APoj30CAAAF authenticated for user demo (ID: 1)
+[2025-07-18T02:53:37.887Z] [INFO] 🔗 User demo (1) connected with socket kGXi9Ppw2APoj30CAAAF
+[2025-07-18T02:53:37.899Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T02:53:37.899Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T02:53:37.903Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T02:53:37.906Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T02:53:38.430Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-07-18T02:53:39.999Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-18T02:53:40.014Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T02:53:40.017Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T02:53:40.027Z] [INFO] ✅ Socket G_a0RaB9ngEpEuP4AAAI authenticated for user demo (ID: 1)
+[2025-07-18T02:53:40.028Z] [INFO] 🔗 User demo (1) connected with socket G_a0RaB9ngEpEuP4AAAI
+[2025-07-18T02:53:40.045Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T02:53:40.046Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T02:53:40.047Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T02:53:40.048Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T02:53:49.799Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T03:13:05.514Z] [INFO] ✅ Socket V-7qoVqj3fba-O-MAAAL authenticated for user demo (ID: 1)
+[2025-07-18T03:13:05.515Z] [INFO] 🔗 User demo (1) connected with socket V-7qoVqj3fba-O-MAAAL
+[2025-07-18T03:13:05.547Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:13:05.548Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:13:05.558Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T03:13:05.561Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:13:05.959Z] [INFO] 🔌 User demo (1) disconnected: client namespace disconnect
+[2025-07-18T03:13:07.404Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-18T03:13:07.422Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:13:07.434Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:13:07.436Z] [INFO] ✅ Socket lbYWZkrrAehzV54IAAAO authenticated for user demo (ID: 1)
+[2025-07-18T03:13:07.437Z] [INFO] 🔗 User demo (1) connected with socket lbYWZkrrAehzV54IAAAO
+[2025-07-18T03:13:07.469Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:13:07.468Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:13:07.472Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T03:13:07.474Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:13:13.596Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T03:14:36.440Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:14:36.443Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:14:36.460Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:14:36.466Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:14:36.467Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:14:36.467Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:14:36.488Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:14:38.720Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:14:38.723Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:14:38.742Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:14:38.748Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:14:38.748Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:14:38.749Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:14:38.760Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:14:48.144Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:14:48.147Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:14:48.166Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:14:48.171Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:14:48.171Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:14:48.172Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:14:48.184Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:14:49.845Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:14:49.847Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:14:49.864Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:14:49.868Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:14:49.870Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:14:49.869Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:14:49.881Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:14:55.297Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:14:55.300Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:14:55.319Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:14:55.323Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:14:55.324Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:14:55.325Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:14:55.335Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:07.924Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:07.927Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:07.943Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:07.949Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:07.950Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:07.951Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:07.962Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:12.104Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:12.107Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:12.125Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:12.128Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:12.130Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:12.130Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:12.140Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:27.392Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:27.395Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:27.413Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:27.417Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:27.418Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:27.419Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:27.429Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:30.401Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:30.403Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:30.422Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:30.430Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:30.431Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:30.432Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:30.443Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:33.486Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:33.488Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:33.508Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:33.513Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:33.515Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:33.516Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:33.524Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:37.492Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:37.495Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:37.513Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:37.520Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:37.521Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:37.521Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:37.531Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:44.762Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:44.765Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:44.784Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:44.790Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:44.791Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:44.792Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:44.805Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:15:45.708Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:15:45.711Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:15:45.728Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:15:45.732Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:15:45.732Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:15:45.733Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:15:45.743Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:16:13.434Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:16:13.436Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:16:13.454Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:16:13.458Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:16:13.458Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:16:13.458Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:16:13.466Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:16:21.782Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:16:21.779Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:16:21.799Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:16:21.803Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:16:21.804Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:16:21.804Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:16:21.814Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:16:29.615Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:16:29.618Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T03:16:29.634Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T03:16:29.639Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:16:29.640Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:16:29.641Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:16:29.656Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:16:31.153Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:16:31.157Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:16:31.175Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:16:31.179Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:16:31.180Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:16:31.180Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:16:31.190Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:18:42.827Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:18:42.829Z] [INFO] ✅ Socket aQLJEU9FiWW-scBMAAAC authenticated for user demo (ID: 1)
+[2025-07-18T03:18:42.831Z] [INFO] 🔗 User demo (1) connected with socket aQLJEU9FiWW-scBMAAAC
+[2025-07-18T03:18:42.835Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:18:42.860Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:18:42.864Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:18:42.875Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T03:18:42.879Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:19:01.710Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T03:19:36.288Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:19:36.291Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:19:36.295Z] [INFO] ✅ Socket tmYFunArlWhORjgvAAAF authenticated for user demo (ID: 1)
+[2025-07-18T03:19:36.296Z] [INFO] 🔗 User demo (1) connected with socket tmYFunArlWhORjgvAAAF
+[2025-07-18T03:19:36.320Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:19:36.320Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:19:36.329Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:19:36.326Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T03:19:49.727Z] [INFO] 👋 User demo left conversation 53
+[2025-07-18T03:19:49.728Z] [INFO] 👥 Sent online users list for conversation 53: 0 users
+[2025-07-18T03:19:49.729Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-18T03:19:49.731Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-18T03:19:49.741Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-18T03:19:49.744Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-18T03:19:53.061Z] [INFO] 👋 User demo left conversation 46
+[2025-07-18T03:19:53.062Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-18T03:19:53.068Z] [INFO] 👥 User demo joined conversation 11
+[2025-07-18T03:19:53.069Z] [INFO] 👥 Sent online users list for conversation 11: 1 users
+[2025-07-18T03:19:53.084Z] [INFO] Loaded 0 files for conversation 11 by user 1
+[2025-07-18T03:19:53.090Z] [INFO] Loaded 95 messages for conversation 11 by user 1
+[2025-07-18T03:19:56.253Z] [INFO] 👋 User demo left conversation 11
+[2025-07-18T03:19:56.254Z] [INFO] 👥 Sent online users list for conversation 11: 0 users
+[2025-07-18T03:19:56.269Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:19:56.276Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:19:56.279Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T03:19:56.280Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:20:09.380Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T03:20:44.616Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:20:44.622Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:20:44.636Z] [INFO] ✅ Socket 0cFe25ot1COw7VV0AAAI authenticated for user demo (ID: 1)
+[2025-07-18T03:20:44.636Z] [INFO] 🔗 User demo (1) connected with socket 0cFe25ot1COw7VV0AAAI
+[2025-07-18T03:20:44.661Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:20:44.662Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:20:44.671Z] [INFO] Loaded 27 messages for conversation 53 by user 1
+[2025-07-18T03:20:44.673Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:20:49.787Z] [INFO] ⌨️ User demo started typing in conversation 53
+[2025-07-18T03:20:56.249Z] [INFO] 📤 Message sent by demo to conversation 53
+[2025-07-18T03:20:56.253Z] [INFO] Connected to Python AI service for conversation 53
+[2025-07-18T03:20:57.030Z] [INFO] ⌨️ User demo stopped typing in conversation 53
+[2025-07-18T03:21:19.981Z] [INFO] Processing AI response for conversation 53
+[2025-07-18T03:21:19.982Z] [INFO] Chart data: Present
+[2025-07-18T03:21:19.981Z] [INFO] Content length: 229
+[2025-07-18T03:21:19.994Z] [INFO] AI response with chart sent to conversation 53
+[2025-07-18T03:21:19.996Z] [INFO] Message ID: 713
+[2025-07-18T03:21:29.667Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T03:21:29.846Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:21:29.852Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:21:29.863Z] [INFO] ✅ Socket NsgEvJ2VKX-fzlsvAAAL authenticated for user demo (ID: 1)
+[2025-07-18T03:21:29.864Z] [INFO] 🔗 User demo (1) connected with socket NsgEvJ2VKX-fzlsvAAAL
+[2025-07-18T03:21:29.887Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:21:29.887Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:21:29.893Z] [INFO] Loaded 29 messages for conversation 53 by user 1
+[2025-07-18T03:21:29.895Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:21:41.087Z] [INFO] 👋 User demo left conversation 53
+[2025-07-18T03:21:41.087Z] [INFO] 👥 Sent online users list for conversation 53: 0 users
+[2025-07-18T03:21:41.093Z] [INFO] 👥 User demo joined conversation 46
+[2025-07-18T03:21:41.093Z] [INFO] 👥 Sent online users list for conversation 46: 1 users
+[2025-07-18T03:21:41.097Z] [INFO] Loaded 1 files for conversation 46 by user 1
+[2025-07-18T03:21:41.098Z] [INFO] Loaded 24 messages for conversation 46 by user 1
+[2025-07-18T03:21:43.945Z] [INFO] 👋 User demo left conversation 46
+[2025-07-18T03:21:43.945Z] [INFO] 👥 Sent online users list for conversation 46: 0 users
+[2025-07-18T03:21:43.948Z] [INFO] 👥 User demo joined conversation 53
+[2025-07-18T03:21:43.949Z] [INFO] 👥 Sent online users list for conversation 53: 1 users
+[2025-07-18T03:21:43.952Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:21:43.953Z] [INFO] Loaded 29 messages for conversation 53 by user 1
+[2025-07-18T03:21:47.832Z] [INFO] 🔌 User demo (1) disconnected: transport close
+[2025-07-18T03:22:26.262Z] [ERROR] Python AI service timeout for conversation 53
+[2025-07-18T03:22:26.267Z] [ERROR] AI service error for conversation 53: AI service timeout
+[2025-07-18T03:22:26.268Z] [INFO] Python AI service connection closed for conversation 53
+[2025-07-18T03:28:20.974Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:28:20.976Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:28:20.995Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:28:21.004Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:28:21.005Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:28:21.006Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:28:21.025Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:31:39.342Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:31:39.344Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:31:39.361Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:31:39.366Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:31:39.366Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:31:39.367Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:31:39.383Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:31:41.527Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:31:41.529Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:31:41.547Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:31:41.552Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:31:41.556Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:31:41.553Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:31:41.566Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:31:48.438Z] [ERROR] JWT Verify Error: jwt malformed
+[2025-07-18T03:31:49.223Z] [ERROR] JWT Verify Error: jwt malformed
+[2025-07-18T03:31:49.987Z] [ERROR] JWT Verify Error: jwt malformed
+[2025-07-18T03:32:40.073Z] [WARNING] Failed user creation attempt - Invalid data
+[2025-07-18T03:32:40.810Z] [WARNING] Failed user creation attempt - Invalid data
+[2025-07-18T03:32:52.017Z] [WARNING] Failed user creation attempt - Invalid data
+[2025-07-18T03:33:24.305Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:33:25.408Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:33:28.346Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:35:20.583Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:35:21.912Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:35:27.736Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:38:25.431Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:38:26.702Z] [ERROR] Error during user creation: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:81:17
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:35:9
+    at D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateToken (file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/middleware/auth.js:24:9)
+    at Layer.handleRequest (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\layer.js:152:17)
+    at next (D:\INSIGHT DATA\data-chatbot\chatbot\website\node-src\node_modules\router\lib\route.js:157:13)
+[2025-07-18T03:48:00.064Z] [ERROR] JWT Verify Error: jwt malformed
+[2025-07-18T03:49:02.193Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-18T03:50:58.711Z] [WARNING] User creation failed - Insufficient permissions for user ID: 1
+[2025-07-18T03:51:25.643Z] [ERROR] JWT Verify Error: jwt malformed
+[2025-07-18T03:52:47.298Z] [INFO] Retrieved 5 users from the database
+[2025-07-18T03:52:49.811Z] [INFO] Retrieved 5 users from the database
+[2025-07-18T03:52:49.816Z] [INFO] Retrieved 5 users from the database
+[2025-07-18T03:52:59.156Z] [WARNING] Failed user creation attempt - Invalid data
+[2025-07-18T03:54:06.259Z] [INFO] User with ID 4 deleted successfully
+[2025-07-18T03:54:06.300Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T03:57:45.449Z] [INFO] User with ID 1 deleted successfully
+[2025-07-18T03:57:45.457Z] [INFO] Retrieved 3 users from the database
+[2025-07-18T03:57:49.755Z] [INFO] Retrieved 3 users from the database
+[2025-07-18T03:57:49.758Z] [INFO] Retrieved 3 users from the database
+[2025-07-18T03:58:00.232Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:58:00.235Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:58:00.254Z] [WARNING] ❌ User not found for token: 1
+[2025-07-18T03:58:00.274Z] [INFO] Loaded 29 messages for conversation 53 by user 1
+[2025-07-18T03:58:00.275Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:58:02.100Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:58:02.106Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T03:58:02.108Z] [WARNING] ❌ User not found for token: 1
+[2025-07-18T03:58:02.124Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T03:58:02.125Z] [INFO] Loaded 29 messages for conversation 53 by user 1
+[2025-07-18T03:58:49.183Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:58:49.181Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:58:49.201Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:58:49.206Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:58:49.207Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:58:49.208Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:58:49.219Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:58:52.691Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:58:52.693Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T03:58:52.710Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T03:58:52.714Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:58:52.715Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:58:52.715Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:58:52.724Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:58:54.239Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:58:54.236Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:58:54.256Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:58:54.262Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:58:54.263Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:58:54.263Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:58:54.273Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:59:00.111Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:59:00.114Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:59:00.133Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:59:00.139Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:59:00.139Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:59:00.140Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:59:00.148Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:59:05.302Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:59:05.305Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:59:05.322Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:59:05.325Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:59:05.326Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:59:05.326Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:59:05.335Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:59:26.913Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:59:26.915Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T03:59:26.932Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T03:59:26.936Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:59:26.937Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:59:26.937Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:59:26.946Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T03:59:43.009Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T03:59:43.012Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T03:59:43.028Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T03:59:43.033Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T03:59:43.034Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T03:59:43.034Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T03:59:43.044Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:00:52.814Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:00:52.816Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:00:52.834Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:00:52.839Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:00:52.840Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:00:52.840Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:00:52.852Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:00:54.770Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:00:54.768Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:00:54.787Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:00:54.793Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:00:54.793Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:00:54.794Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:00:54.801Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:01:38.137Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T04:01:38.148Z] [WARNING] ❌ User not found for token: 1
+[2025-07-18T04:01:38.149Z] [INFO] Loaded 5 conversations for user 1
+[2025-07-18T04:01:38.183Z] [INFO] Loaded 0 files for conversation 53 by user 1
+[2025-07-18T04:01:38.184Z] [INFO] Loaded 29 messages for conversation 53 by user 1
+[2025-07-18T04:01:46.245Z] [INFO] User logged out successfully
+[2025-07-18T04:01:47.626Z] [WARNING] Login failed for non-existent user: demo@demo.com
+[2025-07-18T04:01:54.045Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-18T04:01:54.942Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-18T04:01:59.628Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-18T04:02:12.685Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:02:12.688Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:02:12.706Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:02:12.710Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:02:12.711Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:02:12.711Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:02:12.723Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:02:14.519Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-18T04:02:47.741Z] [WARNING] Login failed for non-existent user: demo@demo.com
+[2025-07-18T04:02:56.998Z] [INFO] User demo@demo.com registered successfully with ID: 6
+[2025-07-18T04:03:02.072Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-18T04:03:02.113Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:03:02.129Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:03:02.131Z] [INFO] ✅ Socket JKZy-JW2HoiBbkJgAAAC authenticated for user demo@demo.com (ID: 6)
+[2025-07-18T04:03:02.132Z] [INFO] 🔗 User demo@demo.com (6) connected with socket JKZy-JW2HoiBbkJgAAAC
+[2025-07-18T04:03:10.627Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-18T04:03:10.828Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:03:10.835Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:25.066Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:25.069Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:25.856Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:25.859Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:26.431Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:26.432Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:52.223Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:52.224Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:56.744Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:05:56.749Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+[2025-07-18T04:06:55.968Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:06:55.970Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:06:55.986Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:06:55.993Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:06:55.993Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:06:55.995Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:06:56.006Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:07:00.290Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:07:00.298Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+[2025-07-18T04:09:20.153Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+[2025-07-18T04:09:20.154Z] [ERROR] Error retrieving users: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+Error: SQLITE_MISUSE: not an error
+[2025-07-18T04:10:43.092Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:10:43.094Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:10:43.114Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:10:43.124Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:10:43.126Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:10:43.127Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:10:43.141Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:10:50.821Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:10:50.823Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:10:50.840Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:10:50.844Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:10:50.845Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:10:50.845Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:10:50.853Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:11:40.176Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:11:40.179Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:11:40.196Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:11:40.205Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:11:40.206Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:11:40.206Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:11:40.217Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:11:42.866Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:11:42.870Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:11:42.888Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:11:42.892Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:11:42.893Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:11:42.893Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:11:42.904Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:11:45.195Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:11:45.197Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:12:06.847Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:12:06.850Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:12:06.866Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:12:06.871Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:12:06.872Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:12:06.873Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:12:06.884Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:12:07.290Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:12:07.292Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:12:07.310Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:12:07.313Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:12:07.315Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:12:07.314Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:12:07.324Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:13:07.091Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:13:07.093Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:13:07.111Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:13:07.116Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:13:07.117Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:13:07.118Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:13:07.129Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:13:11.975Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:13:11.980Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:13:12.004Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:13:12.012Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:13:12.012Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:13:12.013Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:13:12.024Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:13:27.035Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:13:27.037Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:13:27.055Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:13:27.060Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:13:27.060Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:13:27.061Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:13:27.071Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:13:28.817Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:13:28.820Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:13:28.838Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:13:28.841Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:13:28.842Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:13:28.842Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:13:28.849Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:13:40.013Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:13:40.016Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:13:40.032Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:13:40.037Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:13:40.037Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:13:40.037Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:13:40.047Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:14:35.280Z] [ERROR] Error retrieving users: Cannot read properties of undefined (reading 'length')
+TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:132:46
+[2025-07-18T04:14:35.283Z] [ERROR] Error retrieving users: Cannot read properties of undefined (reading 'length')
+TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:132:46
+[2025-07-18T04:16:23.626Z] [ERROR] Error retrieving users: Cannot read properties of undefined (reading 'length')
+TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:132:46
+[2025-07-18T04:16:23.628Z] [ERROR] Error retrieving users: Cannot read properties of undefined (reading 'length')
+TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:132:46
+[2025-07-18T04:16:33.501Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:16:33.503Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:16:33.520Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:16:33.525Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:16:33.525Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:16:33.526Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:16:33.536Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:16:36.975Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:16:36.978Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:16:36.995Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:16:37.001Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:16:37.001Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:16:37.002Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:16:37.010Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:17:14.951Z] [ERROR] Error retrieving users: userId is not defined
+ReferenceError: userId is not defined
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:130:73
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-07-18T04:17:14.955Z] [ERROR] Error retrieving users: userId is not defined
+ReferenceError: userId is not defined
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:130:73
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-07-18T04:17:34.263Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:17:34.266Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:17:34.282Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:17:34.287Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:17:34.288Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:17:34.288Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:17:34.301Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:17:36.210Z] [ERROR] Error retrieving users: userId is not defined
+ReferenceError: userId is not defined
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:130:73
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-07-18T04:17:36.215Z] [ERROR] Error retrieving users: userId is not defined
+ReferenceError: userId is not defined
+    at file:///D:/INSIGHT%20DATA/data-chatbot/chatbot/website/node-src/routes/account.js:130:73
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-07-18T04:17:49.012Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:17:49.015Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:17:49.032Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:17:49.039Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:17:49.040Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:17:49.041Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:17:49.052Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:17:50.685Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:17:50.688Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:17:50.705Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:17:50.710Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:17:50.712Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:17:50.713Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:17:50.720Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:17:57.934Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:17:57.937Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:17:57.954Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:17:57.959Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:17:57.960Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:17:57.960Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:17:57.969Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:18:08.401Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:18:08.403Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:18:08.419Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:18:08.425Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:18:08.426Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:18:08.426Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:18:08.433Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:18:09.447Z] [INFO] Retrieved undefined users from the database
+[2025-07-18T04:18:09.449Z] [INFO] Retrieved undefined users from the database
+[2025-07-18T04:18:10.722Z] [INFO] Retrieved undefined users from the database
+[2025-07-18T04:18:10.723Z] [INFO] Retrieved undefined users from the database
+[2025-07-18T04:18:25.617Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:18:25.620Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:18:25.637Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:18:25.642Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:18:25.642Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:18:25.642Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:18:25.655Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:18:26.279Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:18:26.281Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:19:09.472Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:19:09.474Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:19:09.492Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:19:09.496Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:19:09.497Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:19:09.497Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:19:09.508Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:19:57.567Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:19:57.573Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:20:32.195Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:20:32.199Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:20:43.838Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:20:43.839Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:20:58.159Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:20:58.160Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:21:47.578Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:21:47.579Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:21:53.646Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:21:53.647Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:22:32.331Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:22:32.332Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:23:03.232Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:23:03.236Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:07.011Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:07.015Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:15.956Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:15.955Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:33.174Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:33.174Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:47.279Z] [INFO] ✅ Socket yKTln8gc2Z5cKOF3AAAC authenticated for user demo@demo.com (ID: 6)
+[2025-07-18T04:24:47.281Z] [INFO] 🔗 User demo@demo.com (6) connected with socket yKTln8gc2Z5cKOF3AAAC
+[2025-07-18T04:24:47.602Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-07-18T04:24:49.857Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-18T04:24:49.877Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:24:49.883Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:24:49.891Z] [INFO] ✅ Socket 4RBMrq2Apr5-Mff9AAAF authenticated for user demo@demo.com (ID: 6)
+[2025-07-18T04:24:49.893Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 4RBMrq2Apr5-Mff9AAAF
+[2025-07-18T04:24:55.759Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-18T04:24:55.967Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:24:55.972Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:25:20.627Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:25:20.628Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:25:45.439Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:25:45.442Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:26:01.682Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:26:01.684Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:26:01.702Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:26:01.708Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:26:01.709Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:26:01.709Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:26:01.720Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:26:04.695Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:26:04.698Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:26:04.715Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:26:04.721Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:26:04.723Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:26:04.722Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:26:04.731Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:28:01.551Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:28:01.554Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:28:02.518Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:28:02.518Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:28:09.759Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:28:09.760Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:29:48.888Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:29:48.888Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:00.211Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:00.212Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:13.153Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:13.156Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:26.911Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:26.916Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:31.609Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:30:31.613Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:31:11.775Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:31:11.778Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:31:37.010Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:31:37.013Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:32:21.363Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:32:21.367Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:33:05.540Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:33:05.541Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:33:52.609Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:33:52.612Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:33:52.631Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:33:52.635Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:33:52.636Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:33:52.636Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:33:52.648Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:33:56.474Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:33:56.471Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:33:56.492Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:33:56.496Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:33:56.497Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:33:56.497Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:33:56.508Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:35:09.352Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:35:09.354Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:35:09.370Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:35:09.375Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:35:09.376Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:35:09.376Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:35:09.389Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:35:10.907Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:35:10.911Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:35:10.928Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:35:10.934Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:35:10.935Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:35:10.935Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:35:10.945Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:35:15.159Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:35:15.162Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:35:15.178Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:35:15.184Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:35:15.185Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:35:15.185Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:35:15.196Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:35:17.230Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:35:17.233Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:35:17.252Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:35:17.257Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:35:17.258Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:35:17.258Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:35:17.267Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:35:20.786Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:20.788Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:21.609Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:21.610Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:22.273Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:22.274Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:22.520Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:22.520Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:25.492Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:35:25.495Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:35:25.513Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:35:25.518Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:35:25.518Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:35:25.519Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:35:25.529Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:35:27.076Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:35:27.080Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:35:27.098Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:35:27.102Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:35:27.104Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:35:27.105Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:35:27.113Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:35:36.649Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:35:36.651Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:18.895Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:18.895Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:19.804Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:19.805Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:28.492Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:28.493Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:28.748Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:28.749Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:29.350Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:29.350Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:30.872Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:36:30.872Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:37:06.574Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:37:06.575Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:37:07.292Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:37:07.293Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:37:09.284Z] [INFO] ✅ Socket Da037GoOvll3f541AAAC authenticated for user demo@demo.com (ID: 6)
+[2025-07-18T04:37:09.286Z] [INFO] 🔗 User demo@demo.com (6) connected with socket Da037GoOvll3f541AAAC
+[2025-07-18T04:37:10.953Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-07-18T04:37:30.797Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:37:30.801Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:37:30.831Z] [INFO] ✅ Socket 94403vcUrIgdagGgAAAF authenticated for user demo@demo.com (ID: 6)
+[2025-07-18T04:37:30.831Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 94403vcUrIgdagGgAAAF
+[2025-07-18T04:37:33.745Z] [INFO] User logged out successfully
+[2025-07-18T04:37:33.790Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-07-18T04:37:35.046Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-18T04:37:35.070Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:37:35.072Z] [INFO] ✅ Socket 8xl5XFC1hSYJso9sAAAI authenticated for user demo@demo.com (ID: 6)
+[2025-07-18T04:37:35.073Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 8xl5XFC1hSYJso9sAAAI
+[2025-07-18T04:37:35.079Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-18T04:37:39.908Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:37:39.917Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:37:40.318Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-18T04:38:08.613Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:38:08.616Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:38:08.631Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:38:08.636Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:38:08.637Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:38:08.638Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:38:08.648Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:38:09.716Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:38:09.718Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:38:09.739Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:38:09.753Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:38:09.755Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:38:09.755Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:38:09.764Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:38:12.934Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:38:12.936Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:38:12.953Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:38:12.957Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:38:12.958Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:38:12.959Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:38:12.967Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:38:17.357Z] [INFO] Retrieved [object Object],[object Object],[object Object],[object Object] users from the database
+[2025-07-18T04:38:17.358Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:38:17.360Z] [INFO] Retrieved [object Object],[object Object],[object Object],[object Object] users from the database
+[2025-07-18T04:38:17.360Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:38:27.554Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:38:27.556Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:38:27.575Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:38:27.579Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:38:27.580Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:38:27.580Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:38:27.589Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:38:29.503Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:38:29.506Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:38:29.525Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:38:29.529Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:38:29.530Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:38:29.530Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:38:29.539Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:38:34.982Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:38:34.985Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:38:35.002Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:38:35.006Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:38:35.007Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:38:35.007Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:38:35.019Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:38:36.725Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:38:36.728Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:38:46.580Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:38:46.582Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-07-18T04:38:46.598Z] [INFO] Node.js Server is running on port 3000
+[2025-07-18T04:38:46.606Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:38:46.607Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:38:46.608Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:38:46.618Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:39:08.401Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:39:08.403Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:39:08.420Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:39:08.426Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:39:08.427Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:39:08.428Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:39:08.436Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:39:09.608Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:39:09.611Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:39:09.631Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:39:09.636Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:39:09.637Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:39:09.637Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:39:09.647Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:39:10.172Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:39:10.175Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:39:13.076Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:39:13.079Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:39:13.095Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:39:13.100Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:39:13.101Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:39:13.102Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:39:13.113Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:39:30.023Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:39:30.026Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:40:10.142Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:40:10.142Z] [INFO] Retrieved 4 users from the database
+[2025-07-18T04:41:07.858Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:41:07.861Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:41:07.877Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:41:07.881Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:41:07.882Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:41:07.882Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:41:07.892Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:54:00.777Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:54:00.780Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:54:00.796Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:54:00.803Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:54:00.802Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:54:00.804Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:54:00.817Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-18T04:54:02.038Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-18T04:54:02.040Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-18T04:54:02.056Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-18T04:54:02.061Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-18T04:54:02.062Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-18T04:54:02.062Z] [INFO] SQLite database initialized successfully.
+[2025-07-18T04:54:02.072Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-21T02:10:51.655Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-21T02:10:51.657Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-21T02:10:51.675Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-21T02:10:51.685Z] [INFO] Hash column already exists in uploaded_files table
+[2025-07-21T02:10:51.686Z] [INFO] Database tables 'users', 'conversations', 'messages', and 'uploaded_files' ensured.
+[2025-07-21T02:10:51.686Z] [INFO] SQLite database initialized successfully.
+[2025-07-21T02:10:51.695Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-21T02:12:24.648Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:12:24.662Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:12:24.674Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-21T02:12:31.643Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:12:31.656Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:12:34.985Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-21T02:20:31.457Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:20:31.462Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:20:31.488Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-21T02:21:01.007Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:01.003Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:01.011Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-21T02:21:01.799Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:01.807Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-21T02:21:01.803Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:36.441Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:36.444Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:36.463Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-21T02:21:45.492Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:45.502Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-21T02:21:45.516Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-21T02:21:50.748Z] [INFO] User logged out successfully
+[2025-07-21T02:21:53.003Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-21T02:21:53.028Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:21:53.029Z] [INFO] ✅ Socket 8Hdw6UxwUvjOc1VIAAAX authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:21:53.030Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 8Hdw6UxwUvjOc1VIAAAX
+[2025-07-21T02:21:53.035Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:21:58.020Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:21:58.029Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:21:58.049Z] [INFO] ✅ Socket NqpC7_m1j8hAt4gYAAAa authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:21:58.050Z] [INFO] 🔗 User demo@demo.com (6) connected with socket NqpC7_m1j8hAt4gYAAAa
+[2025-07-21T02:22:00.081Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:25:47.023Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:25:47.225Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:25:47.232Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:25:47.233Z] [INFO] ✅ Socket zSscsH-9BuBJdIn_AAAd authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:25:47.233Z] [INFO] 🔗 User demo@demo.com (6) connected with socket zSscsH-9BuBJdIn_AAAd
+[2025-07-21T02:26:23.952Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:26:24.170Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:26:24.173Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:26:24.182Z] [INFO] ✅ Socket jtoCfKHgOh0KjEDPAAAg authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:26:24.182Z] [INFO] 🔗 User demo@demo.com (6) connected with socket jtoCfKHgOh0KjEDPAAAg
+[2025-07-21T02:26:26.245Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:26:26.474Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:26:26.479Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:26:26.485Z] [INFO] ✅ Socket 7oz2gn4yJ6GBr6maAAAj authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:26:26.485Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 7oz2gn4yJ6GBr6maAAAj
+[2025-07-21T02:26:32.419Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:26:32.652Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:26:32.656Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:26:32.671Z] [INFO] ✅ Socket 7OtqipDmH_5O7P6MAAAm authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:26:32.671Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 7OtqipDmH_5O7P6MAAAm
+[2025-07-21T02:32:38.694Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:32:38.920Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:32:38.925Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:32:38.940Z] [INFO] ✅ Socket VBJQnl7XbO0ReMpwAAAp authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:32:38.941Z] [INFO] 🔗 User demo@demo.com (6) connected with socket VBJQnl7XbO0ReMpwAAAp
+[2025-07-21T02:33:30.525Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:33:30.765Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:33:30.769Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:33:30.785Z] [INFO] ✅ Socket ukvB1DUGIAfYX4dsAAAs authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:33:30.786Z] [INFO] 🔗 User demo@demo.com (6) connected with socket ukvB1DUGIAfYX4dsAAAs
+[2025-07-21T02:33:35.021Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:33:35.226Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:33:35.232Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:33:35.237Z] [INFO] ✅ Socket 8P3Tnj3kSdREJ68bAAAv authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:33:35.237Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 8P3Tnj3kSdREJ68bAAAv
+[2025-07-21T02:33:40.432Z] [INFO] User logged out successfully
+[2025-07-21T02:33:40.453Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-07-21T02:33:53.860Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-21T02:33:53.885Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:33:53.890Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:33:53.902Z] [INFO] ✅ Socket lRU0j-Xq7-tV60WjAAAy authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:33:53.903Z] [INFO] 🔗 User demo@demo.com (6) connected with socket lRU0j-Xq7-tV60WjAAAy
+[2025-07-21T02:34:00.920Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:34:01.135Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:34:01.138Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:34:01.157Z] [INFO] 🔗 User demo@demo.com (6) connected with socket p7xVjypdHWy6LlL8AAA1
+[2025-07-21T02:34:01.156Z] [INFO] ✅ Socket p7xVjypdHWy6LlL8AAA1 authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:35:48.646Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:35:48.882Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:35:48.883Z] [INFO] Loaded 0 conversations for user 6
+[2025-07-21T02:35:48.888Z] [INFO] ✅ Socket vso0D4hPSfckMK_nAAA4 authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:35:48.889Z] [INFO] 🔗 User demo@demo.com (6) connected with socket vso0D4hPSfckMK_nAAA4
+[2025-07-21T02:36:03.133Z] [INFO] Conversation 54 created for user 6
+[2025-07-21T02:36:03.149Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:36:03.174Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:36:03.178Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:36:03.195Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:36:03.196Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:36:29.463Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:36:29.700Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:36:29.706Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:36:29.707Z] [INFO] ✅ Socket y8w61cdPlIu_rwWSAAA7 authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:36:29.707Z] [INFO] 🔗 User demo@demo.com (6) connected with socket y8w61cdPlIu_rwWSAAA7
+[2025-07-21T02:36:29.732Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:36:29.733Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:36:29.741Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:36:29.742Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:36:34.986Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:36:35.200Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:36:35.206Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:36:35.212Z] [INFO] ✅ Socket JOngmZxxXp7wCvUKAAA- authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:36:35.212Z] [INFO] 🔗 User demo@demo.com (6) connected with socket JOngmZxxXp7wCvUKAAA-
+[2025-07-21T02:36:35.236Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:36:35.236Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:36:35.243Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:36:35.244Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:37:13.184Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:37:13.424Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:37:13.425Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:37:13.430Z] [INFO] 🔗 User demo@demo.com (6) connected with socket Eddys3ml5ZCDIP0pAABB
+[2025-07-21T02:37:13.430Z] [INFO] ✅ Socket Eddys3ml5ZCDIP0pAABB authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:37:13.452Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:37:13.453Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:37:13.461Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:37:13.461Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:37:17.967Z] [INFO] User logged out successfully
+[2025-07-21T02:37:17.988Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-07-21T02:37:19.476Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-21T02:37:19.508Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:37:19.514Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:37:19.537Z] [INFO] ✅ Socket MrEJlk7J995ID_k8AABE authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:37:19.540Z] [INFO] 🔗 User demo@demo.com (6) connected with socket MrEJlk7J995ID_k8AABE
+[2025-07-21T02:37:19.582Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:37:19.583Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:37:19.594Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:37:19.594Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:41:22.367Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:41:22.639Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:41:22.642Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:41:22.652Z] [INFO] ✅ Socket 3rlNBN2WVqpqmrvxAABH authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:41:22.652Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 3rlNBN2WVqpqmrvxAABH
+[2025-07-21T02:41:22.672Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:41:22.672Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:41:22.683Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:41:22.685Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:43:25.376Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:43:25.615Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:43:25.620Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:43:25.638Z] [INFO] ✅ Socket KLJOTyOqHWaYSakyAABK authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:43:25.638Z] [INFO] 🔗 User demo@demo.com (6) connected with socket KLJOTyOqHWaYSakyAABK
+[2025-07-21T02:43:25.661Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:43:25.662Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:43:25.693Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:43:25.695Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:43:51.067Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:43:51.299Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:43:51.305Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:43:51.310Z] [INFO] ✅ Socket CJ6rDcEGNHeymWmhAABN authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:43:51.310Z] [INFO] 🔗 User demo@demo.com (6) connected with socket CJ6rDcEGNHeymWmhAABN
+[2025-07-21T02:43:51.334Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:43:51.335Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:43:51.341Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:43:51.342Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:44:18.590Z] [INFO] User logged out successfully
+[2025-07-21T02:44:18.612Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-07-21T02:44:24.397Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-21T02:44:29.283Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-21T02:44:31.172Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-21T02:44:36.093Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-21T02:44:36.930Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-21T02:44:38.666Z] [WARNING] Login failed for non-existent user: nguyenvanminh0610205@gmail.com
+[2025-07-21T02:45:00.948Z] [WARNING] Login failed for user tchu280305@gmail.com - Incorrect password
+[2025-07-21T02:45:04.753Z] [INFO] User tchu280305@gmail.com logged in successfully
+[2025-07-21T02:45:04.815Z] [INFO] Loaded 0 conversations for user 3
+[2025-07-21T02:45:04.820Z] [INFO] ✅ Socket LHccTc3DnbF1GhDSAABQ authenticated for user tchu12 (ID: 3)
+[2025-07-21T02:45:04.821Z] [INFO] 🔗 User tchu12 (3) connected with socket LHccTc3DnbF1GhDSAABQ
+[2025-07-21T02:45:04.823Z] [INFO] Loaded 0 conversations for user 3
+[2025-07-21T02:45:14.462Z] [INFO] 🔌 User tchu12 (3) disconnected: transport close
+[2025-07-21T02:45:14.738Z] [INFO] Loaded 0 conversations for user 3
+[2025-07-21T02:45:14.742Z] [INFO] Loaded 0 conversations for user 3
+[2025-07-21T02:45:14.750Z] [INFO] ✅ Socket o8-Oj3VQK-C9B3HXAABT authenticated for user tchu12 (ID: 3)
+[2025-07-21T02:45:14.751Z] [INFO] 🔗 User tchu12 (3) connected with socket o8-Oj3VQK-C9B3HXAABT
+[2025-07-21T02:45:16.935Z] [INFO] 🔌 User tchu12 (3) disconnected: transport close
+[2025-07-21T02:45:17.132Z] [INFO] ✅ Socket iko9ukOYqvhw97DKAABW authenticated for user tchu12 (ID: 3)
+[2025-07-21T02:45:17.132Z] [INFO] 🔗 User tchu12 (3) connected with socket iko9ukOYqvhw97DKAABW
+[2025-07-21T02:45:17.804Z] [INFO] 🔌 User tchu12 (3) disconnected: client namespace disconnect
+[2025-07-21T02:45:17.834Z] [INFO] Loaded 0 conversations for user 3
+[2025-07-21T02:45:17.840Z] [INFO] Loaded 0 conversations for user 3
+[2025-07-21T02:45:17.845Z] [INFO] ✅ Socket JoH1_yh45q53_RgcAABZ authenticated for user tchu12 (ID: 3)
+[2025-07-21T02:45:17.845Z] [INFO] 🔗 User tchu12 (3) connected with socket JoH1_yh45q53_RgcAABZ
+[2025-07-21T02:45:20.375Z] [INFO] User logged out successfully
+[2025-07-21T02:45:20.395Z] [INFO] 🔌 User tchu12 (3) disconnected: client namespace disconnect
+[2025-07-21T02:45:22.082Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-21T02:45:22.104Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:45:22.110Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:45:22.115Z] [INFO] ✅ Socket NS_w3IHbkNz7bqlKAABc authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:45:22.116Z] [INFO] 🔗 User demo@demo.com (6) connected with socket NS_w3IHbkNz7bqlKAABc
+[2025-07-21T02:45:22.144Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:45:22.144Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:45:22.151Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:45:22.152Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:47:18.365Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:47:18.605Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:47:18.605Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:47:18.625Z] [INFO] ✅ Socket b4nV8Uv-rQLvXVweAABf authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:47:18.625Z] [INFO] 🔗 User demo@demo.com (6) connected with socket b4nV8Uv-rQLvXVweAABf
+[2025-07-21T02:47:18.645Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:47:18.646Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:47:18.657Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:47:18.658Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:48:34.637Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:48:34.860Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:48:34.864Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:48:34.870Z] [INFO] ✅ Socket kcA5QVy3BoLhDNh6AABi authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:48:34.870Z] [INFO] 🔗 User demo@demo.com (6) connected with socket kcA5QVy3BoLhDNh6AABi
+[2025-07-21T02:48:34.892Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:48:34.892Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:48:34.900Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:48:34.900Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:49:23.038Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:49:23.638Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:49:23.646Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:49:23.670Z] [INFO] 🔗 User demo@demo.com (6) connected with socket W58NAqdjwkMFvhbcAABl
+[2025-07-21T02:49:23.669Z] [INFO] ✅ Socket W58NAqdjwkMFvhbcAABl authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:49:23.726Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:49:23.727Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:49:23.742Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:49:23.743Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:51:11.631Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:51:11.821Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:51:11.825Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:51:14.145Z] [INFO] 🔗 User demo@demo.com (6) connected with socket T9HmxWqSoi0ecblRAABo
+[2025-07-21T02:51:14.144Z] [INFO] ✅ Socket T9HmxWqSoi0ecblRAABo authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:51:14.155Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:51:14.155Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:51:16.890Z] [INFO] User logged out successfully
+[2025-07-21T02:51:16.909Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-07-21T02:51:18.229Z] [INFO] User demo@demo.com logged in successfully
+[2025-07-21T02:51:18.246Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:51:18.254Z] [INFO] Loaded 1 conversations for user 6
+[2025-07-21T02:51:18.262Z] [INFO] ✅ Socket o2-UuHyRRIVBv7HBAABr authenticated for user demo@demo.com (ID: 6)
+[2025-07-21T02:51:18.263Z] [INFO] 🔗 User demo@demo.com (6) connected with socket o2-UuHyRRIVBv7HBAABr
+[2025-07-21T02:51:18.292Z] [INFO] 👥 User demo@demo.com joined conversation 54
+[2025-07-21T02:51:18.293Z] [INFO] 👥 Sent online users list for conversation 54: 1 users
+[2025-07-21T02:51:18.298Z] [INFO] Loaded 0 messages for conversation 54 by user 6
+[2025-07-21T02:51:18.298Z] [INFO] Loaded 0 files for conversation 54 by user 6
+[2025-07-21T02:51:27.441Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-21T02:51:27.643Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:51:27.646Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:51:59.380Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:51:59.381Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:52:22.999Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:52:23.000Z] [INFO] Retrieved 3 users from the database
+[2025-07-21T02:52:36.158Z] [INFO] User with ID 2 deleted successfully
+[2025-07-21T02:52:36.168Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:52:48.395Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:52:48.396Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:53:51.689Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:53:51.690Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:53:52.590Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:53:52.591Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:53:57.455Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:53:57.456Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:54:45.201Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:54:45.201Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:09.734Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:09.734Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:13.134Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:13.134Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:13.644Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:13.644Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:13.981Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:13.981Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:44.476Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:55:44.477Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:56:01.188Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:56:01.189Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:56:08.874Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T02:56:08.875Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T03:38:52.023Z] [INFO] Retrieved 2 users from the database
+[2025-07-21T03:38:52.029Z] [INFO] Retrieved 2 users from the database

@@ -246,6 +246,7 @@ class AISocketServer:
                 }
             
             tool_type = tool_lookup[tool_name]
+            logger.info(f"Tool type for {tool_name}: {tool_type}")
             # Get the original tool name for MCP call
             original_name = original_name_lookup.get(tool_name, tool_name)
             
