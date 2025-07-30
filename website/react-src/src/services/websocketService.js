@@ -229,7 +229,7 @@ class WebSocketService {
   }
 
   // Gửi tin nhắn
-  sendMessage(conversationId, content, role = 'user') {
+  sendMessage(conversationId, content, role = 'user',userID) {
     if (!this.socket || !this.isConnected) {
       console.warn('⚠️ WebSocket not connected');
       return false;
@@ -244,7 +244,8 @@ class WebSocketService {
     this.socket.emit('send_message', {
       conversationId,
       content: content.trim(),
-      role
+      role,
+      userID
     });
     return true;
   }

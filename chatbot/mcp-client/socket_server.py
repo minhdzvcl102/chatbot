@@ -35,9 +35,10 @@ class SocketServer:
         # This callback will now take (conversation_id, user_message, username, response_future)
         self.process_message_callback = process_message_callback 
 
+# Trong socket_server.py - phần handle_client
     def handle_client(self, client_socket, address):
         logger.info(f"New client connected from {address}")
-        client_socket.settimeout(self.connection_timeout - 10 )
+        client_socket.settimeout(self.connection_timeout - 10)
         
         try:
             while self.running:
@@ -55,35 +56,38 @@ class SocketServer:
                             conversation_id = request.get('conversationId')
                             user_message = request.get('message')
                             username = request.get('username', 'User')
+                            user_id = request.get('userId')
+                            if user_id is None:
+                                logger.warning(f"No user_id provided in request for conversation {conversation_id}")
+                                user_id = "unknown"  # Default user_id nếu không có
+                            
+                            # Log user_id để debug
+                            logger.info(f"Processing request for user_id: {user_id}")
                             
                             if not conversation_id or not user_message:
                                 response = {"status": "error", "error": "Missing conversationId or message"}
                             else:
-                                # Create a Future to hold the result from the async processing
-                                response_future = Future() 
+                                response_future = Future()
                                 try:
-                                    # Call the callback, passing the Future.
-                                    # The callback (enqueue_message_callback) will then enqueue
-                                    # the actual message processing along with this Future.
-                                    # The async processor (_process_message_async) will set the result on this Future.
+                                    # Truyền user_id vào callback
                                     self.process_message_callback(
                                         conversation_id, 
                                         user_message, 
                                         username,
-                                        response_future # Pass the Future here
+                                        user_id,  # Đảm bảo user_id được truyền
+                                        response_future
                                     )
-                                    logger.info(f"Waiting for async processing result for {conversation_id}...")
-                                    # Wait for the result from the Future (blocking for this thread)
-                                    response = response_future.result(timeout=self.connection_timeout - 10) # Wait for result, with a sub-timeout
-                                    logger.info(f"Received result for {conversation_id}.")
+                                    logger.info(f"Waiting for async processing result for {conversation_id} (user_id: {user_id})...")
+                                    response = response_future.result(timeout=self.connection_timeout - 10)
+                                    logger.info(f"Received result for {conversation_id} (user_id: {user_id})")
 
                                 except Exception as e:
-                                    logger.error(f"Error during async processing result retrieval: {str(e)}")
+                                    logger.error(f"Error during async processing for user_id {user_id}: {str(e)}")
                                     response = {"status": "error", "error": f"Processing failed: {str(e)}"}
                             
                             response_json = json.dumps(response, ensure_ascii=False) + '\n'
                             client_socket.send(response_json.encode('utf-8'))
-                            logger.info(f"Sent response to {address}: {response.get('status', 'unknown')}")
+                            logger.info(f"Sent response to {address} for user_id: {user_id}")
                             
                         else:
                             error_response = {"status": "error", "error": "Unknown request type"}
@@ -97,20 +101,7 @@ class SocketServer:
                 except socket.timeout:
                     logger.warning(f"Socket timeout for client {address}")
                     break
-                except ConnectionResetError:
-                    logger.info(f"Client {address} reset connection")
-                    break
-                except BrokenPipeError:
-                    logger.info(f"Broken pipe for client {address}")
-                    break
-                except UnicodeDecodeError as e:
-                    logger.error(f"Unicode decode error from {address}: {e}")
-                    error_response = {"status": "error", "error": "Invalid character encoding"}
-                    try:
-                        client_socket.send((json.dumps(error_response) + '\n').encode('utf-8'))
-                    except:
-                        break
-                
+                # ... rest of exception handling
         except Exception as e:
             logger.error(f"Error handling client {address}: {e}")
         finally:
@@ -119,9 +110,6 @@ class SocketServer:
             except:
                 pass
             logger.info(f"Client {address} disconnected")
-
-    # Removed _run_async_processing as it's no longer needed with the queue/Future approach
-
     def start_server(self):
         try:
             self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

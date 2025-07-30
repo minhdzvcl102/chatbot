@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 import logging
 import re
+import sqlite3
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -27,6 +28,30 @@ except mysql.connector.Error as e:
     logger.error(f"Failed to connect to MySQL: {str(e)}")
     raise Exception(f"MySQL connection failed: {str(e)}")
 
+def get_database_name(user_id) -> list:
+    """
+    Get list of database names accessible by the user.
+    """
+    sqlite_path = os.getenv("SQLITE_DATABASE_PATH")
+    conn = sqlite3.connect(sqlite_path)
+    query_db = """
+        SELECT DISTINCT md.database_name 
+        FROM user_database_permissions udp 
+        JOIN mysql_databases md ON udp.database_id = md.id 
+        WHERE udp.user_id = ? AND udp.is_active = 1 AND md.is_active = 1;
+    """
+    logger.info(f"Executing query: {query_db}")
+    try:
+        cursor = conn.cursor()
+        cursor.execute(query_db, (user_id,))
+        db_names = [row[0] for row in cursor.fetchall()]
+        logger.info(f"Found {len(db_names)} databases for user {user_id}: {db_names}")
+        return db_names
+    except Exception as e:
+        logger.error(f"Error fetching database names: {str(e)}")
+        return []
+    finally:
+        conn.close()
 sql_mcp = FastMCP("SQL")
 
 @sql_mcp.tool()
@@ -154,27 +179,35 @@ def get_schema(db_name: Annotated[str, "Database name"]) -> dict:
         return {"error": str(e)}
 
 @sql_mcp.resource(
-    "sql+db://list_databases",
-    description="Show available databases",
+    "sql+db://list_databases/{user_id*}",
+    description="Show available databases for a specific user",
     mime_type="application/json"
 )
-def list_databases() -> dict:
-    """Returns a list of available databases, excluding system databases."""
+def list_databases(user_id) -> dict:
+    """Returns a list of available databases for the user, excluding system databases."""
     try:
-        res = execute_query_with_params(
-            "SHOW DATABASES WHERE `Database` NOT IN ('mysql', 'performance_schema', 'sys', 'information_schema')"
-        )
+        # Get allowed databases from get_database_name
+        allowed_dbs = get_database_name(user_id)
+        if not allowed_dbs:
+            logger.warning(f"No databases found for user {user_id}")
+            return {"databases": []}
+        
+        # Construct query to show only allowed databases
+        placeholders = ','.join(['%s'] * len(allowed_dbs))
+        query = f"SHOW DATABASES WHERE `Database` IN ({placeholders})"
+        res = execute_query_with_params(query, allowed_dbs)
+        
         if "error" in res:
             logger.error(f"Error listing databases: {res['error']}")
             return {"error": res["error"]}
         
         # Extract database names from the result
         databases = [row[0] for row in res["data"]]
-        logger.info(f"Found {len(databases)} databases: {databases}")
+        logger.info(f"Found {len(databases)} databases for user {user_id}: {databases}")
         return {"databases": databases}
         
     except Exception as e:
-        logger.error(f"Error listing databases: {str(e)}")
+        logger.error(f"Error listing databases for user {user_id}: {str(e)}")
         return {"error": str(e)}
 
 @sql_mcp.resource(

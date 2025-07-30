@@ -126,8 +126,8 @@ class WebSocketHandler {
   // Handle send message
   async handleSendMessage(socket, data) {
     try {
-      const { conversationId, content, role = 'user' } = data;
-      const userId = socket.userId;
+      const { conversationId, content, role = 'user' } = data; // Bỏ userID từ data vì đã có từ socket
+      const userId = socket.userId; // Lấy userId từ socket đã authenticated
       
       if (!conversationId || !content || content.trim() === '') {
         socket.emit('error', { message: 'Conversation ID and content are required' });
@@ -172,20 +172,21 @@ class WebSocketHandler {
         username: socket.username
       };
 
-      logMessage("INF", `📤 Message sent by ${socket.username} to conversation ${conversationId}`);
+      logMessage("INF", `📤 Message sent by ${socket.username} (ID: ${userId}) to conversation ${conversationId}`);
 
       const roomName = `conversation_${conversationId}`;
       this.io.to(roomName).emit('new_message', messageData);
 
       if (role === 'user') {
         this.io.to(roomName).emit('typing', {
-          userId: null,
+          userId: userId,
           username: 'AI Assistant',
           conversationId: conversationId,
           isTyping: true
         });
 
-        this.aiHandler.getAIResponse(conversationId, content, socket.username);
+       // FIX: Truyền userId vào getAIResponse
+       this.aiHandler.getAIResponse(conversationId, content, socket.username, userId);
       }
 
       this.io.to(roomName).emit('conversation_updated', {

@@ -214,9 +214,9 @@ export const useWebSocket = (authToken, serverUrl) => {
     }, []);
 
     // Send message
-    const sendMessage = useCallback((conversationId, content, role = 'user') => {
-        console.log('📤 Sending message:', { conversationId, content, role });
-        return websocketService.sendMessage(conversationId, content, role);
+    const sendMessage = useCallback((conversationId, content, role = 'user',userID) => {
+        console.log('📤 Sending message:', { conversationId, content, role , userID});
+        return websocketService.sendMessage(conversationId, content, role,userID);
     }, []);
 
     // Send typing indicator

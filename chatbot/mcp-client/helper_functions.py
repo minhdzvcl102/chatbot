@@ -106,7 +106,7 @@ def sanitize_tool_name(name: str) -> str:
     """
     # Create a mapping for common problematic names
     name_mapping = {
-        "sql+db://sql/list_databases": "list_databases",
+        "sql+db://sql/list_databases/{user_id*}": "list_databases",
         "sql+db://sql/schema/{db_name*}": "get_db_schema",
         "sql+db://sql/list_tables/{db_name*}": "list_tables",
         "rag_query": "rag_query",
@@ -168,5 +168,7 @@ TOOL_CODE_LOOKUP = {
     "sql_query_db": "005",
 }
 
+
 def lookup_tool_code(name):
     return TOOL_CODE_LOOKUP.get(name, "999")  # Default code for unknown tools
+

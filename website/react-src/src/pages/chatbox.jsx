@@ -25,6 +25,7 @@ import { uploadService } from "../services/uploadService";
 import { useWebSocket, useTypingIndicator } from "../hooks/useWebSocket";
 
 const Chatbox = () => {
+  const userID = localStorage.getItem("user.id");
   const [activeTab, setActiveTab] = useState("history");
   const [showNewChatForm, setShowNewChatForm] = useState(false);
   const [newChatName, setNewChatName] = useState("");
@@ -408,11 +409,12 @@ const Chatbox = () => {
 
   const handleSend = async () => {
     console.log("🚀 handleSend called at:", new Date().toISOString());
-    if (!message.trim() || !selectedConversationId || sendingMessage) {
+    if (!message.trim() || !selectedConversationId || sendingMessage || !userID) {
       console.log("⚠️ Cannot send message:", {
         message: message.trim(),
         selectedConversationId,
         sendingMessage,
+        userID,
       });
       return;
     }
@@ -427,7 +429,7 @@ const Chatbox = () => {
         selectedConversationId
       );
       console.log("📝 Message content:", message);
-      sendWebSocketMessage(selectedConversationId, message);
+      sendWebSocketMessage(selectedConversationId, message, "user", userID);
       setMessage("");
     } catch (error) {
       console.error("❌ Error sending message:", error);

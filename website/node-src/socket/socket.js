@@ -15,7 +15,7 @@ class AIHandler {
   }
 
   // Get AI response from Python service
-  async getAIResponse(conversationId, userMessage, username) {
+  async getAIResponse(conversationId, userMessage, username,userId) {
     return new Promise((resolve) => {
       const client = new net.Socket();
       let responseBuffer = '';
@@ -35,6 +35,7 @@ class AIHandler {
           conversationId: conversationId,
           message: userMessage,
           username: username,
+          userId: userId,
           timestamp: new Date().toISOString()
         };
 

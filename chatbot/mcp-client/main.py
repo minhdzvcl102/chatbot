@@ -46,20 +46,21 @@ message_queue = asyncio.Queue()
 main_event_loop = None
 
 # --- Callback for SocketServer to put messages into the queue ---
-def enqueue_message_callback(conversation_id, user_message, username, response_future: Future):
+def enqueue_message_callback(conversation_id, user_message, username, user_id, response_future: Future):
     """
     Callback for SocketServer to put messages into the async queue.
-    It now accepts a Future to set the result later.
+    Now includes user_id for permission control.
     """
-    logger.info(f"Enqueuing message for conversation {conversation_id}")
+    logger.info(f"Enqueuing message for conversation {conversation_id}, user_id: {user_id}")
     try:
         if main_event_loop is None or main_event_loop.is_closed():
             raise RuntimeError("Main event loop is not set or is closed.")
         asyncio.run_coroutine_threadsafe(
-            message_queue.put((conversation_id, user_message, username, response_future)), main_event_loop
+            message_queue.put((conversation_id, user_message, username, user_id, response_future)), 
+            main_event_loop
         )
     except Exception as e:
-        logger.error(f"Failed to enqueue message: {e}")
+        logger.error(f"Failed to enqueue message for user_id {user_id}: {e}")
         if not response_future.done():
             response_future.set_exception(Exception(f"Failed to enqueue message: {e}"))
 
@@ -94,7 +95,7 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
 
     TOOL SELECTION PRINCIPLES:
     1. For database-related questions (like "liệt kê db", "list databases"):
-       - Use `sql+db://sql/list_databases` to list available databases
+       - Use `sql+db://sql/list_databases/{user_id}` to list available databases
        - Use `sql+db://sql/list_tables/{db_name}` to list tables in a database
        - Use `sql+db://sql/schema/{db_name}` to get database schema
        - Use `sql_query_db` for SQL queries
@@ -109,7 +110,7 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
     - Always cite which documents your answer comes from
 
     When working with Vietnamese:
-    - "liệt kê db" = "list databases" → use sql+db://sql/list_databases
+    - "liệt kê db" = "list databases" → use sql+db://sql/list_databases/{user_id}
     - "hiển thị bảng" = "show tables" → use sql+db://sql/list_tables/{db_name}
     - "cấu trúc db" = "database schema" → use sql+db://sql/schema/{db_name}
     - For any other question → use rag_query first
@@ -164,11 +165,12 @@ class AISocketServer:
             region_name=os.getenv("AWS_DEFAULT_REGION", "us-east-1")
         )
 
-    async def mcpCall(self, tool_call: dict, client: Client):
+    async def mcpCall(self, tool_call: dict, client: Client, user_id: str = None):
+        """Execute MCP tool call with user context."""
         try:
             tool_name = tool_call["name"]
             tool_args = tool_call["input"]
-            logger.info(f"Executing tool: {tool_name} with args: {tool_args}")
+            logger.info(f"Executing tool: {tool_name} with args: {tool_args} for user_id: {user_id}")
             
             if tool_call["type"] == "tool":
                 if tool_args and len(tool_args) > 0:
@@ -178,6 +180,7 @@ class AISocketServer:
             elif tool_call["type"] == "resource":
                 result = await client.read_resource(tool_name)
             elif tool_call["type"] == "resource_template":
+                # logger.info('!!!!!!!!!!!!!!!!!!!!!!!!!!! resource_template')
                 a_uri = re.split(r"{|}", tool_name)
                 i = 0
                 for key, a_value in tool_args.items():
@@ -186,17 +189,17 @@ class AISocketServer:
                         i += 1
                 uri = "".join(a_uri)
                 logger.info(f"Constructed URI for resource template: {uri}")
+                if (uri == "sql+db://sql/list_databases"):
+                    uri = f"sql+db://sql/list_databases/{user_id}"
                 result = await client.read_resource(uri)
             else:
                 raise ValueError(f"Unknown tool type: {tool_call['type']}")
             
-            logger.info(f"Tool {tool_name} executed successfully")
+            logger.info(f"Tool {tool_name} executed successfully for user_id: {user_id}")
             
-            # Fixed: Handle CallToolResult properly
+            # Handle result formatting (existing logic)
             if hasattr(result, 'content') and result.content:
-                # For tools that return content list
                 if isinstance(result.content, list) and len(result.content) > 0:
-                    # Get the first content item
                     first_content = result.content[0]
                     if hasattr(first_content, 'text'):
                         result_text = first_content.text
@@ -205,13 +208,10 @@ class AISocketServer:
                 else:
                     result_text = str(result.content)
             elif hasattr(result, 'text'):
-                # For results that have direct text attribute
                 result_text = result.text
             else:
-                # Fallback: convert to string
                 result_text = str(result)
             
-            # Return in the expected format (as a list with text attribute)
             class ResultWrapper:
                 def __init__(self, text):
                     self.text = text
@@ -219,26 +219,29 @@ class AISocketServer:
             return [ResultWrapper(result_text)]
             
         except Exception as e:
-            logger.error(f"Error in mcpCall for tool {tool_call.get('name', 'unknown')}: {str(e)}")
+            logger.error(f"Error in mcpCall for tool {tool_call.get('name', 'unknown')} (user_id: {user_id}): {str(e)}")
             class ErrorResult:
                 def __init__(self, error_msg):
                     self.text = json.dumps({"error": error_msg})
             return [ErrorResult(str(e))]
 
-    async def execute_tool_calls_parallel(self, tool_calls, client, tool_lookup, original_name_lookup):
-        """Execute multiple tool calls in parallel for better performance - FIXED for chart handling"""
+# Trong main.py - Cập nhật execute_tool_calls_parallel
+
+    async def execute_tool_calls_parallel(self, tool_calls, client, tool_lookup, original_name_lookup, user_id: str = None):
+        """Execute multiple tool calls in parallel with user_id context."""
         chart_base64_data = None
-        
+        if user_id is None:
+            logger.warning(f"Received None user_id in execute_tool_calls_parallel")
+            user_id = "unknown"
         async def execute_single_tool_call(tool_call):
             nonlocal chart_base64_data
-            # FIXED: Bedrock format uses different structure
-            tool_name = tool_call["name"]  # This is the sanitized name
+            tool_name = tool_call["name"]
             arguments = tool_call.get("input", {})
             
-            logger.info(f"Processing tool call: {tool_name} with args: {arguments}")
+            logger.info(f"Processing tool call: {tool_name} with args: {arguments} for user_id: {user_id}")
             
             if tool_name not in tool_lookup:
-                logger.error(f"Unknown tool name: {tool_name}")
+                logger.error(f"Unknown tool name: {tool_name} for user_id: {user_id}")
                 return {
                     "type": "tool_result",
                     "tool_use_id": tool_call.get("id", "unknown"),
@@ -246,21 +249,21 @@ class AISocketServer:
                 }
             
             tool_type = tool_lookup[tool_name]
-            logger.info(f"Tool type for {tool_name}: {tool_type}")
-            # Get the original tool name for MCP call
             original_name = original_name_lookup.get(tool_name, tool_name)
             
             tool_dict = {
                 "id": tool_call.get("id", "unknown"),
                 "type": tool_type,
-                "name": original_name,  # Use original name for MCP
+                "name": original_name,
                 "input": arguments,
             }
             
             try:
-                logger.info(f"Executing tool call: {tool_name}")
+                logger.info(f"Executing tool call: {tool_name} for user_id: {user_id}")
                 async with asyncio.timeout(30):
-                    result = await self.mcpCall(tool_dict, client)
+                    # Truyền user_id vào mcpCall
+                    result = await self.mcpCall(tool_dict, client, user_id)
+                
                 result_text = (
                     result[0].text
                     if result and len(result) > 0
@@ -270,42 +273,40 @@ class AISocketServer:
                 try:
                     result_json = json.loads(result_text)
                     if isinstance(result_json, dict) and "error" in result_json:
-                        logger.warning(f"Tool call returned error: {result_json['error']}")
+                        logger.warning(f"Tool call returned error for user_id {user_id}: {result_json['error']}")
                     
-                    # FIXED: Check for chart_create_chart tool and capture base64 data
+                    # Handle chart creation
                     if tool_name == "chart_create_chart" and isinstance(result_json, dict):
                         if "chart_image_base64" in result_json:
                             chart_base64_data = result_json["chart_image_base64"]
-                            logger.info("Chart image base64 captured from chart_create_chart tool.")
-                            # Return success message instead of the full result
+                            logger.info(f"Chart image base64 captured from chart_create_chart tool for user_id: {user_id}")
                             result_text = json.dumps({
                                 "message": "Chart image generated successfully.",
                                 "chart_path": result_json.get("chart_image_path", "")
                             })
                         else:
-                            logger.warning("chart_create_chart tool did not return chart_image_base64")
+                            logger.warning(f"chart_create_chart tool did not return chart_image_base64 for user_id: {user_id}")
                     
                 except json.JSONDecodeError:
-                    # If result is not JSON, keep as is
-                    logger.debug(f"Tool result is not JSON format: {result_text[:100]}...")
+                    logger.debug(f"Tool result is not JSON format for user_id {user_id}: {result_text[:100]}...")
                 except Exception as e:
-                    logger.warning(f"Error processing tool result for chart: {e}")
+                    logger.warning(f"Error processing tool result for chart (user_id: {user_id}): {e}")
                 
-                # FIXED: Return Bedrock format for tool results
                 return {
                     "type": "tool_result",
                     "tool_use_id": tool_call.get("id", "unknown"),
                     "content": [{"type": "text", "text": result_text}]
                 }
+                
             except asyncio.TimeoutError:
-                logger.error(f"Tool call timeout for tool: {tool_name}")
+                logger.error(f"Tool call timeout for tool: {tool_name} (user_id: {user_id})")
                 return {
                     "type": "tool_result",
                     "tool_use_id": tool_call.get("id", "unknown"),
                     "content": [{"type": "text", "text": json.dumps({"error": f"Tool call timeout for {tool_name}"})}]
                 }
             except Exception as e:
-                logger.error(f"Tool call failed for {tool_name}: {str(e)}")
+                logger.error(f"Tool call failed for {tool_name} (user_id: {user_id}): {str(e)}")
                 return {
                     "type": "tool_result",
                     "tool_use_id": tool_call.get("id", "unknown"),
@@ -313,16 +314,16 @@ class AISocketServer:
                 }
         
         start_time = time.time()
-        logger.info(f"Starting parallel execution of {len(tool_calls)} tool calls")
+        logger.info(f"Starting parallel execution of {len(tool_calls)} tool calls for user_id: {user_id}")
         tasks = [execute_single_tool_call(tool_call) for tool_call in tool_calls]
         tool_results = await asyncio.gather(*tasks, return_exceptions=True)
         execution_time = time.time() - start_time
-        logger.info(f"Parallel tool execution completed in {execution_time:.2f} seconds")
+        logger.info(f"Parallel tool execution completed in {execution_time:.2f} seconds for user_id: {user_id}")
         
         processed_results = []
         for i, result in enumerate(tool_results):
             if isinstance(result, Exception):
-                logger.error(f"Tool call {i} failed with exception: {result}")
+                logger.error(f"Tool call {i} failed with exception for user_id {user_id}: {result}")
                 processed_results.append({
                     "type": "tool_result",
                     "tool_use_id": tool_calls[i].get("id", "unknown"),
@@ -333,44 +334,55 @@ class AISocketServer:
         
         return processed_results, chart_base64_data
 
-    async def _setup_mcp_client(self):
-        """Initializes and activates the MCP client."""
+    async def _setup_mcp_client(self, user_id=None):
+        """Initializes and activates the MCP client with user_id context."""
         server_path = os.path.join(
             os.path.dirname(__file__), "..", "mcp-server", "server.py"
         )
         python_cmd = os.path.join(
             os.path.dirname(__file__), "..", ".venv", "Scripts", "python.exe"
         )
+        
         if not os.path.exists(server_path):
             raise FileNotFoundError(f"MCP server script not found: {server_path}")
         if not os.path.exists(python_cmd):
             raise FileNotFoundError(f"Python executable not found: {python_cmd}")
-        transport = PythonStdioTransport(script_path=server_path, python_cmd=python_cmd)
+        
+        # Set up environment variables for MCP server
+        env_vars = os.environ.copy()
+        if user_id != None:
+            env_vars["USER_ID"] = str(user_id)
+            logger.info(f"Setting USER_ID={user_id} for MCP server")
+        
+        transport = PythonStdioTransport(
+            script_path=server_path, 
+            python_cmd=python_cmd,
+            env=env_vars  # Pass environment variables
+        )
         client_instance = Client(transport)
+        
         for attempt in range(self.max_retries):
             try:
-                logger.info(
-                    f"Attempting to initialize MCP client (attempt {attempt + 1}/{self.max_retries})"
-                )
+                logger.info(f"Attempting to initialize MCP client (attempt {attempt + 1}/{self.max_retries}) with user_id: {user_id}")
                 await client_instance.__aenter__()
                 self.mcp_client = client_instance
+                
+                # Wait for tools to be ready
                 for wait_attempt in range(5):
                     tool_list = await self.mcp_client.list_tools()
                     resource_list = await self.mcp_client.list_resources()
                     resource_template_list = await self.mcp_client.list_resource_templates()
                     if tool_list or resource_list or resource_template_list:
-                        logger.info(f"Tool ready after {wait_attempt + 1} attempt(s)")
+                        logger.info(f"MCP client ready after {wait_attempt + 1} attempt(s) for user_id: {user_id}")
                         return
                     logger.info("Tool list empty, retrying...")
                     await asyncio.sleep(1)
+                    
                 await client_instance.__aexit__(None, None, None)
-                raise RuntimeError(
-                    "Tool/resource/resource_template list still empty after retries"
-                )
+                raise RuntimeError("Tool/resource/resource_template list still empty after retries")
+                
             except Exception as e:
-                logger.warning(
-                    f"MCP client initialization attempt {attempt + 1} failed: {str(e)}"
-                )
+                logger.warning(f"MCP client initialization attempt {attempt + 1} failed for user_id {user_id}: {str(e)}")
                 if attempt == self.max_retries - 1:
                     raise
                 if client_instance and client_instance.is_connected:
@@ -384,36 +396,46 @@ class AISocketServer:
     async def _message_processor_task(self):
         """
         An asyncio task that continuously processes messages from the queue.
-        This task runs in the main event loop.
+        Updated to handle user_id.
         """
         while True:
-            conversation_id, user_message, username, response_future = await message_queue.get()
-            logger.info(f"Dequeued message for conversation {conversation_id}")
+            conversation_id, user_message, username, user_id, response_future = await message_queue.get()
+            logger.info(f"Dequeued message for conversation {conversation_id}, user_id: {user_id}")
             response = {}
             try:
-                response = await self._process_message_async(conversation_id, user_message, username, self.mcp_client)
+                # Truyền user_id vào _process_message_async
+                response = await self._process_message_async(
+                    conversation_id, user_message, username, user_id, self.mcp_client
+                )
                 if not response_future.done():
                     response_future.set_result(response)
             except Exception as e:
-                logger.error(f"Error processing dequeued message for {conversation_id}: {e}")
+                logger.error(f"Error processing dequeued message for {conversation_id} (user_id: {user_id}): {e}")
                 response = {"status": "error", "error": f"Internal processing error: {str(e)}"}
                 if not response_future.done():
                     response_future.set_exception(e)
             finally:
                 message_queue.task_done()
-                logger.info(f"Processing complete for {conversation_id}. Status: {response.get('status', 'unknown')}")
+                logger.info(f"Processing complete for {conversation_id} (user_id: {user_id}). Status: {response.get('status', 'unknown')}")
 
-    async def _process_message_async(self, conversation_id, user_message, username, mcp_client: Client):
+
+    async def _process_message_async(self, conversation_id, user_message, username, user_id, mcp_client: Client):
         """
-        The actual async message processing logic, run on the main event loop.
-        FIXED: Proper handling of Bedrock message format and tool calls
+        The actual async message processing logic with user_id for permission control.
         """
         chart_image_base64 = None
         try:
-            logger.info(f"Processing message for conversation {conversation_id}")
+            logger.info(f"Processing message for conversation {conversation_id}, user_id: {user_id}")
+            
+            # Set environment variable cho MCP server
+            os.environ["USER_ID"] = str(user_id)
+            logger.info(f"Set USER_ID environment variable to: {user_id}")
+            
             if not mcp_client:
                 logger.error("MCP client is not initialized or connected during _process_message_async.")
                 return {"status": "error", "error": "Server not fully ready. Please try again."}
+            
+
             
             should_reset, context_type, context_name = should_reset_context(
                 conversation_id, user_message
@@ -523,7 +545,8 @@ class AISocketServer:
                             max_tokens,
                             tools=list_of_tools
                         )
-                    logger.info(f"LLM call completed in {time.time() - start_llm_call:.2f} seconds")
+                    
+                    logger.info(f"LLM call completed in {time.time() - start_llm_call:.2f} seconds " )
                 except asyncio.TimeoutError:
                     logger.error("LLM timeout during chat completion.")
                     return {"status": "error", "error": "LLM response timeout"}
@@ -546,26 +569,46 @@ class AISocketServer:
                 tool_calls = []
                 answer = ""
                 
+                # FIXED: Create sanitized content for message history
+                sanitized_content = []
+                
                 for item in content:
                     if item.get("type") == "text":
                         answer += item.get("text", "")
+                        sanitized_content.append(item)  # Text items don't need sanitization
                     elif item.get("type") == "tool_use":
                         has_tool_calls = True
                         tool_calls.append(item)
+                        
+                        # FIXED: Sanitize tool name in the content for message history
+                        original_tool_name = item.get("name", "")
+                        sanitized_tool_name = helper_functions.sanitize_tool_name(original_tool_name)
+                        
+                        # Create sanitized version for message history
+                        sanitized_tool_item = {
+                            "type": "tool_use",
+                            "id": item.get("id"),
+                            "name": sanitized_tool_name,  # Use sanitized name
+                            "input": item.get("input", {})
+                        }
+                        sanitized_content.append(sanitized_tool_item)
+                        
+                        # Also update the tool_calls list with sanitized names
+                        tool_calls[-1]["name"] = sanitized_tool_name
                 
                 if has_tool_calls:
                     logger.info(f"LLM requested {len(tool_calls)} tool calls")
-                    # FIXED: Add assistant message in proper Bedrock format
+                    # FIXED: Add assistant message with sanitized tool names
                     message_history[conversation_id].append(
                         {
                             "role": "assistant",
-                            "content": content,
+                            "content": sanitized_content,  # Use sanitized content
                         }
                     )
                     
                     start_tool_execution = time.time()
                     tool_results, captured_chart_data = await self.execute_tool_calls_parallel(
-                        tool_calls, client, tool_lookup, original_name_lookup
+                        tool_calls, client, tool_lookup, original_name_lookup,user_id
                     )
                     logger.info(f"Tool execution completed in {time.time() - start_tool_execution:.2f} seconds")
                     
