@@ -85,12 +85,11 @@ def create_chart(
                     ][:len(values)]
                 }]
             }
-        else:
-            # For line, bar, scatter charts
+        elif chart_type == "scatter":
+            # For scatter charts, use {x, y} format
             if x_column not in data[0] or y_column not in data[0]:
                 return {"error": f"Columns '{x_column}' or '{y_column}' not found in data."}
             
-            # Extract data points
             chart_data = []
             for row in data:
                 chart_data.append({
@@ -103,15 +102,15 @@ def create_chart(
                     "label": y_label if y_label else y_column,
                     "data": chart_data,
                     "borderColor": '#36A2EB',
-                    "backgroundColor": '#36A2EB' if chart_type == 'bar' else 'rgba(54, 162, 235, 0.2)',
-                    "fill": chart_type == 'line'
+                    "backgroundColor": 'rgba(54, 162, 235, 0.6)',
+                    "pointRadius": 5
                 }]
             }
             
-            # Add scales configuration
+            # Add scales configuration for scatter
             chart_config["options"]["scales"] = {
                 "x": {
-                    "type": "linear" if chart_type == "scatter" else "category",
+                    "type": "linear",
                     "title": {
                         "display": True,
                         "text": x_label if x_label else x_column
@@ -124,6 +123,43 @@ def create_chart(
                     }
                 }
             }
+        else:
+            # For line and bar charts, use labels and data arrays
+            if x_column not in data[0] or y_column not in data[0]:
+                return {"error": f"Columns '{x_column}' or '{y_column}' not found in data."}
+            
+            # Extract labels and values separately
+            labels = [str(row.get(x_column, "")) for row in data]
+            values = [row.get(y_column, 0) for row in data]
+            
+            chart_config["data"] = {
+                "labels": labels,
+                "datasets": [{
+                    "label": y_label if y_label else y_column,
+                    "data": values,
+                    "borderColor": '#36A2EB',
+                    "backgroundColor": 'rgba(54, 162, 235, 0.6)' if chart_type == 'bar' else 'rgba(54, 162, 235, 0.2)',
+                    "fill": chart_type == 'line',
+                    "tension": 0.1 if chart_type == 'line' else 0
+                }]
+            }
+            
+            # Add scales configuration for line and bar
+            chart_config["options"]["scales"] = {
+                "x": {
+                    "title": {
+                        "display": True,
+                        "text": x_label if x_label else x_column
+                    }
+                },
+                "y": {
+                    "title": {
+                        "display": True,
+                        "text": y_label if y_label else y_column
+                    },
+                    "beginAtZero": True
+                }
+            }
         
         # Prepare API request
         api_payload = {
@@ -132,6 +168,9 @@ def create_chart(
             "height": height,
             "format": "png"
         }
+        
+        # Log the chart configuration for debugging
+        logger.info(f"Chart configuration: {json.dumps(chart_config, indent=2)}")
         
         # Make API request to QuickChart
         logger.info(f"Sending request to QuickChart API for {chart_type} chart")
@@ -238,7 +277,7 @@ async def create_chart_async(
                     ][:len(values)]
                 }]
             }
-        else:
+        elif chart_type == "scatter":
             if x_column not in data[0] or y_column not in data[0]:
                 return {"error": f"Columns '{x_column}' or '{y_column}' not found in data."}
             
@@ -254,14 +293,14 @@ async def create_chart_async(
                     "label": y_label if y_label else y_column,
                     "data": chart_data,
                     "borderColor": '#36A2EB',
-                    "backgroundColor": '#36A2EB' if chart_type == 'bar' else 'rgba(54, 162, 235, 0.2)',
-                    "fill": chart_type == 'line'
+                    "backgroundColor": 'rgba(54, 162, 235, 0.6)',
+                    "pointRadius": 5
                 }]
             }
             
             chart_config["options"]["scales"] = {
                 "x": {
-                    "type": "linear" if chart_type == "scatter" else "category",
+                    "type": "linear",
                     "title": {
                         "display": True,
                         "text": x_label if x_label else x_column
@@ -272,6 +311,41 @@ async def create_chart_async(
                         "display": True,
                         "text": y_label if y_label else y_column
                     }
+                }
+            }
+        else:
+            # For line and bar charts
+            if x_column not in data[0] or y_column not in data[0]:
+                return {"error": f"Columns '{x_column}' or '{y_column}' not found in data."}
+            
+            labels = [str(row.get(x_column, "")) for row in data]
+            values = [row.get(y_column, 0) for row in data]
+            
+            chart_config["data"] = {
+                "labels": labels,
+                "datasets": [{
+                    "label": y_label if y_label else y_column,
+                    "data": values,
+                    "borderColor": '#36A2EB',
+                    "backgroundColor": 'rgba(54, 162, 235, 0.6)' if chart_type == 'bar' else 'rgba(54, 162, 235, 0.2)',
+                    "fill": chart_type == 'line',
+                    "tension": 0.1 if chart_type == 'line' else 0
+                }]
+            }
+            
+            chart_config["options"]["scales"] = {
+                "x": {
+                    "title": {
+                        "display": True,
+                        "text": x_label if x_label else x_column
+                    }
+                },
+                "y": {
+                    "title": {
+                        "display": True,
+                        "text": y_label if y_label else y_column
+                    },
+                    "beginAtZero": True
                 }
             }
         

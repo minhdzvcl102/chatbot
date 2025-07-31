@@ -19164,3 +19164,224 @@ http://localhost:3000
 [2025-07-30T10:05:32.886Z] [INFO] AI response text only sent to conversation 56
 [2025-07-30T10:05:32.887Z] [INFO] Message ID: 1062
 [2025-07-30T10:05:38.977Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-07-30T10:06:36.685Z] [ERROR] Python AI service timeout for conversation 55
+[2025-07-30T10:06:36.688Z] [ERROR] AI service error for conversation 55: AI service timeout
+[2025-07-30T10:06:36.689Z] [INFO] Python AI service connection closed for conversation 55
+[2025-07-30T10:06:55.599Z] [ERROR] Python AI service timeout for conversation 56
+[2025-07-30T10:06:55.600Z] [ERROR] AI service error for conversation 56: AI service timeout
+[2025-07-30T10:06:55.601Z] [INFO] Python AI service connection closed for conversation 56
+[2025-07-30T10:11:26.013Z] [INFO] 🔌 User Duong (5) disconnected: transport close
+[2025-07-31T02:42:48.594Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-07-31T02:42:48.597Z] [INFO] 🔌 WebSocket server initialized
+[2025-07-31T02:42:48.617Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-07-31T02:42:48.629Z] [INFO] Database tables initialized with user permission system.
+[2025-07-31T02:42:48.630Z] [INFO] SQLite database initialized successfully.
+[2025-07-31T02:42:48.640Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-07-31T02:43:20.623Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-31T02:43:20.629Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-07-31T02:43:20.634Z] [ERROR] JWT Verify Error: jwt expired
+[2025-07-31T02:43:22.803Z] [INFO] User logged out successfully
+[2025-07-31T02:43:24.013Z] [INFO] User dangthuyduong2019@gmail.com logged in successfully
+[2025-07-31T02:43:24.032Z] [INFO] Loaded 1 conversations for user 5
+[2025-07-31T02:43:24.040Z] [INFO] ✅ Socket 61MoTtbN5Gqk09PuAAAF authenticated for user Duong (ID: 5)
+[2025-07-31T02:43:24.041Z] [INFO] 🔗 User Duong (5) connected with socket 61MoTtbN5Gqk09PuAAAF
+[2025-07-31T02:43:24.042Z] [INFO] Loaded 1 conversations for user 5
+[2025-07-31T02:43:24.075Z] [INFO] 👥 User Duong joined conversation 55
+[2025-07-31T02:43:24.076Z] [INFO] 👥 Sent online users list for conversation 55: 1 users
+[2025-07-31T02:43:24.082Z] [INFO] Loaded 0 files for conversation 55 by user 5
+[2025-07-31T02:43:24.083Z] [INFO] Loaded 132 messages for conversation 55 by user 5
+[2025-07-31T02:46:12.770Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:46:21.884Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 55
+[2025-07-31T02:46:21.887Z] [ERROR] Python AI service connection error: 
+[2025-07-31T02:46:21.887Z] [ERROR] AI service error for conversation 55: AI service connection error
+[2025-07-31T02:46:21.888Z] [INFO] Python AI service connection closed for conversation 55
+[2025-07-31T02:46:22.593Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:47:01.990Z] [INFO] 🔌 User Duong (5) disconnected: transport close
+[2025-07-31T02:47:02.215Z] [INFO] Loaded 1 conversations for user 5
+[2025-07-31T02:47:02.216Z] [INFO] ✅ Socket XvjX2ETs8KB-nsXDAAAI authenticated for user Duong (ID: 5)
+[2025-07-31T02:47:02.217Z] [INFO] 🔗 User Duong (5) connected with socket XvjX2ETs8KB-nsXDAAAI
+[2025-07-31T02:47:02.215Z] [INFO] Loaded 1 conversations for user 5
+[2025-07-31T02:47:02.231Z] [INFO] 👥 User Duong joined conversation 55
+[2025-07-31T02:47:02.232Z] [INFO] 👥 Sent online users list for conversation 55: 1 users
+[2025-07-31T02:47:02.242Z] [INFO] Loaded 0 files for conversation 55 by user 5
+[2025-07-31T02:47:02.244Z] [INFO] Loaded 133 messages for conversation 55 by user 5
+[2025-07-31T02:47:09.045Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:47:09.547Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 55
+[2025-07-31T02:47:09.549Z] [INFO] Connected to Python AI service for conversation 55
+[2025-07-31T02:47:10.044Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:47:21.232Z] [INFO] Content length: 92
+[2025-07-31T02:47:21.231Z] [INFO] Processing AI response for conversation 55
+[2025-07-31T02:47:21.232Z] [INFO] Chart data: None
+[2025-07-31T02:47:21.249Z] [INFO] AI response text only sent to conversation 55
+[2025-07-31T02:47:21.250Z] [INFO] Message ID: 1065
+[2025-07-31T02:47:24.727Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:47:27.444Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:47:27.988Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:47:41.519Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 55
+[2025-07-31T02:47:41.521Z] [INFO] Connected to Python AI service for conversation 55
+[2025-07-31T02:47:42.709Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:48:07.118Z] [INFO] Processing AI response for conversation 55
+[2025-07-31T02:48:07.119Z] [INFO] Content length: 196
+[2025-07-31T02:48:07.120Z] [INFO] Chart data: Present
+[2025-07-31T02:48:07.136Z] [INFO] AI response with chart sent to conversation 55
+[2025-07-31T02:48:07.136Z] [INFO] Message ID: 1067
+[2025-07-31T02:48:39.562Z] [ERROR] Python AI service timeout for conversation 55
+[2025-07-31T02:48:39.564Z] [ERROR] AI service error for conversation 55: AI service timeout
+[2025-07-31T02:48:39.564Z] [INFO] Python AI service connection closed for conversation 55
+[2025-07-31T02:49:11.524Z] [ERROR] Python AI service timeout for conversation 55
+[2025-07-31T02:49:11.526Z] [ERROR] AI service error for conversation 55: AI service timeout
+[2025-07-31T02:49:11.528Z] [INFO] Python AI service connection closed for conversation 55
+[2025-07-31T02:54:52.402Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:55:03.101Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 55
+[2025-07-31T02:55:03.105Z] [INFO] Connected to Python AI service for conversation 55
+[2025-07-31T02:55:03.573Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:55:15.035Z] [INFO] Processing AI response for conversation 55
+[2025-07-31T02:55:15.035Z] [INFO] Content length: 202
+[2025-07-31T02:55:15.036Z] [INFO] Chart data: None
+[2025-07-31T02:55:15.102Z] [INFO] AI response text only sent to conversation 55
+[2025-07-31T02:55:15.102Z] [INFO] Message ID: 1069
+[2025-07-31T02:55:55.747Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:55:56.501Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:55:56.624Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 55
+[2025-07-31T02:55:56.627Z] [INFO] Connected to Python AI service for conversation 55
+[2025-07-31T02:56:28.289Z] [INFO] Processing AI response for conversation 55
+[2025-07-31T02:56:28.290Z] [INFO] Chart data: None
+[2025-07-31T02:56:28.290Z] [INFO] Content length: 378
+[2025-07-31T02:56:28.303Z] [INFO] AI response text only sent to conversation 55
+[2025-07-31T02:56:28.304Z] [INFO] Message ID: 1071
+[2025-07-31T02:56:33.103Z] [ERROR] Python AI service timeout for conversation 55
+[2025-07-31T02:56:33.107Z] [ERROR] AI service error for conversation 55: AI service timeout
+[2025-07-31T02:56:33.109Z] [INFO] Python AI service connection closed for conversation 55
+[2025-07-31T02:56:56.231Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:56:57.240Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:56:58.797Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:57:01.673Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:57:03.649Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:57:04.655Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:57:04.778Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:57:06.035Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:57:07.326Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:57:11.418Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:57:13.900Z] [INFO] ⌨️ User Duong started typing in conversation 55
+[2025-07-31T02:57:15.009Z] [INFO] ⌨️ User Duong stopped typing in conversation 55
+[2025-07-31T02:57:15.082Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 55
+[2025-07-31T02:57:15.085Z] [INFO] Connected to Python AI service for conversation 55
+[2025-07-31T02:57:26.625Z] [ERROR] Python AI service timeout for conversation 55
+[2025-07-31T02:57:26.627Z] [ERROR] AI service error for conversation 55: AI service timeout
+[2025-07-31T02:57:26.627Z] [INFO] Python AI service connection closed for conversation 55
+[2025-07-31T02:57:34.318Z] [INFO] Content length: 545
+[2025-07-31T02:57:34.317Z] [INFO] Processing AI response for conversation 55
+[2025-07-31T02:57:34.318Z] [INFO] Chart data: None
+[2025-07-31T02:57:34.325Z] [INFO] AI response text only sent to conversation 55
+[2025-07-31T02:57:34.325Z] [INFO] Message ID: 1073
+[2025-07-31T02:58:13.325Z] [INFO] Conversation 55 deleted by user 5
+[2025-07-31T02:58:13.334Z] [INFO] 👋 User Duong left conversation 55
+[2025-07-31T02:58:13.334Z] [INFO] 👥 Sent online users list for conversation 55: 0 users
+[2025-07-31T02:58:18.494Z] [INFO] Conversation 57 created for user 5
+[2025-07-31T02:58:18.500Z] [INFO] Loaded 1 conversations for user 5
+[2025-07-31T02:58:18.507Z] [INFO] 👥 User Duong joined conversation 57
+[2025-07-31T02:58:18.508Z] [INFO] 👥 Sent online users list for conversation 57: 1 users
+[2025-07-31T02:58:18.516Z] [INFO] Loaded 0 files for conversation 57 by user 5
+[2025-07-31T02:58:18.517Z] [INFO] Loaded 0 messages for conversation 57 by user 5
+[2025-07-31T02:58:19.708Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T02:58:22.576Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 57
+[2025-07-31T02:58:22.578Z] [INFO] Connected to Python AI service for conversation 57
+[2025-07-31T02:58:23.381Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T02:58:27.829Z] [INFO] Processing AI response for conversation 57
+[2025-07-31T02:58:27.830Z] [INFO] Content length: 197
+[2025-07-31T02:58:27.830Z] [INFO] Chart data: None
+[2025-07-31T02:58:27.839Z] [INFO] AI response text only sent to conversation 57
+[2025-07-31T02:58:27.840Z] [INFO] Message ID: 1075
+[2025-07-31T02:58:45.084Z] [ERROR] Python AI service timeout for conversation 55
+[2025-07-31T02:58:45.084Z] [ERROR] AI service error for conversation 55: AI service timeout
+[2025-07-31T02:58:45.084Z] [INFO] Python AI service connection closed for conversation 55
+[2025-07-31T02:58:52.895Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-07-31T02:58:52.896Z] [ERROR] AI service error for conversation 57: AI service connection error
+[2025-07-31T02:58:52.896Z] [INFO] Python AI service connection closed for conversation 57
+[2025-07-31T02:59:26.408Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T02:59:29.272Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 57
+[2025-07-31T02:59:29.275Z] [INFO] Connected to Python AI service for conversation 57
+[2025-07-31T02:59:29.968Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T02:59:36.894Z] [INFO] Processing AI response for conversation 57
+[2025-07-31T02:59:36.894Z] [INFO] Content length: 233
+[2025-07-31T02:59:36.894Z] [INFO] Chart data: None
+[2025-07-31T02:59:36.899Z] [INFO] AI response text only sent to conversation 57
+[2025-07-31T02:59:36.899Z] [INFO] Message ID: 1077
+[2025-07-31T02:59:52.332Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T02:59:53.338Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T02:59:53.921Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T02:59:57.569Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T02:59:57.576Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T02:59:58.349Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 57
+[2025-07-31T02:59:58.353Z] [INFO] Connected to Python AI service for conversation 57
+[2025-07-31T02:59:59.845Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:00:05.602Z] [INFO] Processing AI response for conversation 57
+[2025-07-31T03:00:05.603Z] [INFO] Content length: 248
+[2025-07-31T03:00:05.603Z] [INFO] Chart data: None
+[2025-07-31T03:00:05.610Z] [INFO] AI response text only sent to conversation 57
+[2025-07-31T03:00:05.610Z] [INFO] Message ID: 1079
+[2025-07-31T03:00:16.906Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:00:22.595Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 57
+[2025-07-31T03:00:22.599Z] [INFO] Connected to Python AI service for conversation 57
+[2025-07-31T03:00:23.433Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:00:38.010Z] [INFO] Processing AI response for conversation 57
+[2025-07-31T03:00:38.010Z] [INFO] Content length: 629
+[2025-07-31T03:00:38.010Z] [INFO] Chart data: None
+[2025-07-31T03:00:38.016Z] [INFO] AI response text only sent to conversation 57
+[2025-07-31T03:00:38.016Z] [INFO] Message ID: 1081
+[2025-07-31T03:00:49.992Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:00:53.616Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:00:54.005Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:00:59.283Z] [ERROR] Python AI service timeout for conversation 57
+[2025-07-31T03:00:59.285Z] [ERROR] AI service error for conversation 57: AI service timeout
+[2025-07-31T03:00:59.286Z] [INFO] Python AI service connection closed for conversation 57
+[2025-07-31T03:01:02.635Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:01:03.773Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:01:06.026Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:01:06.521Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:01:09.183Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:01:11.800Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:01:14.071Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:01:14.241Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:01:18.144Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:01:19.049Z] [INFO] ⌨️ User Duong started typing in conversation 57
+[2025-07-31T03:01:28.147Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 57
+[2025-07-31T03:01:28.149Z] [INFO] Connected to Python AI service for conversation 57
+[2025-07-31T03:01:28.354Z] [ERROR] Python AI service timeout for conversation 57
+[2025-07-31T03:01:28.355Z] [ERROR] AI service error for conversation 57: AI service timeout
+[2025-07-31T03:01:28.355Z] [INFO] Python AI service connection closed for conversation 57
+[2025-07-31T03:01:28.972Z] [INFO] ⌨️ User Duong stopped typing in conversation 57
+[2025-07-31T03:01:52.611Z] [ERROR] Python AI service timeout for conversation 57
+[2025-07-31T03:01:52.614Z] [ERROR] AI service error for conversation 57: AI service timeout
+[2025-07-31T03:01:52.616Z] [INFO] Python AI service connection closed for conversation 57
+[2025-07-31T03:02:07.586Z] [INFO] Processing AI response for conversation 57
+[2025-07-31T03:02:07.587Z] [INFO] Content length: 396
+[2025-07-31T03:02:07.587Z] [INFO] Chart data: Present
+[2025-07-31T03:02:07.603Z] [INFO] AI response with chart sent to conversation 57
+[2025-07-31T03:02:07.603Z] [INFO] Message ID: 1083
+[2025-07-31T03:02:37.153Z] [INFO] Conversation 58 created for user 5
+[2025-07-31T03:02:37.163Z] [INFO] Loaded 2 conversations for user 5
+[2025-07-31T03:02:37.176Z] [INFO] 👋 User Duong left conversation 57
+[2025-07-31T03:02:37.177Z] [INFO] 👥 Sent online users list for conversation 57: 0 users
+[2025-07-31T03:02:37.189Z] [INFO] 👥 User Duong joined conversation 58
+[2025-07-31T03:02:37.190Z] [INFO] 👥 Sent online users list for conversation 58: 1 users
+[2025-07-31T03:02:37.192Z] [INFO] Loaded 0 messages for conversation 58 by user 5
+[2025-07-31T03:02:37.195Z] [INFO] Loaded 0 files for conversation 58 by user 5
+[2025-07-31T03:02:58.160Z] [ERROR] Python AI service timeout for conversation 57
+[2025-07-31T03:02:58.162Z] [ERROR] AI service error for conversation 57: AI service timeout
+[2025-07-31T03:02:58.163Z] [INFO] Python AI service connection closed for conversation 57
+[2025-07-31T03:03:06.964Z] [INFO] File hash calculated: 4f203765... for demo@demo.com-baocaothuongnienhpg2024.pdf-1748853270102.pdf
+[2025-07-31T03:03:07.165Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\5_58_1753930986967.pdf
+[2025-07-31T03:03:07.170Z] [INFO] File uploaded successfully to conversation 58 by user 5: demo@demo.com-baocaothuongnienhpg2024.pdf-1748853270102.pdf
+[2025-07-31T03:03:07.174Z] [INFO] 📁 File uploaded by Duong to conversation 58: demo@demo.com-baocaothuongnienhpg2024.pdf-1748853270102.pdf
+[2025-07-31T03:03:07.181Z] [INFO] Loaded 1 files for conversation 58 by user 5
+[2025-07-31T03:03:39.813Z] [INFO] ⌨️ User Duong started typing in conversation 58
+[2025-07-31T03:03:44.999Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 58
+[2025-07-31T03:03:45.002Z] [INFO] Connected to Python AI service for conversation 58
+[2025-07-31T03:03:45.934Z] [INFO] ⌨️ User Duong stopped typing in conversation 58
+[2025-07-31T03:03:58.811Z] [INFO] Processing AI response for conversation 58
+[2025-07-31T03:03:58.811Z] [INFO] Content length: 981
+[2025-07-31T03:03:58.811Z] [INFO] Chart data: None
+[2025-07-31T03:03:58.816Z] [INFO] AI response text only sent to conversation 58
+[2025-07-31T03:03:58.816Z] [INFO] Message ID: 1085
