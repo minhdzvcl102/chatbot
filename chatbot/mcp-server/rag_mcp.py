@@ -138,10 +138,11 @@ t1.start()
 
 @rag_mcp.tool()
 def query(
-    query: Annotated[str, Field(description="Query to gather relevant context from uploaded files.")]
+    query: Annotated[str, Field(description="Query to gather relevant context from uploaded files.")],
+    n_results: Annotated[int, Field(description="Number of results to return", default=10)] = 10
 ) -> list:
     try:
-        res = collection.query(query_texts=[query], n_results=3)
+        res = collection.query(query_texts=[query], n_results=n_results)
         logger.info(f"Query executed: {query}")
 
         if res["documents"] and len(res["documents"][0]) > 0:
@@ -152,6 +153,97 @@ def query(
     except Exception as e:
         logger.error(f"Error querying vector store: {str(e)}")
         return [{"error": str(e)}]
+
+@rag_mcp.tool()
+def summarize_pdf(
+    pdf_path: Annotated[str, Field(description="Path to the PDF file to summarize.")]
+) -> str:
+    """
+    Summarize a PDF file by extracting text content and creating a concise summary.
+    """
+    try:
+        # Check if file exists
+        if not os.path.exists(pdf_path):
+            return f"Error: File not found at path: {pdf_path}"
+        
+        # Check if it's a PDF file
+        if not pdf_path.lower().endswith('.pdf'):
+            return "Error: File must be a PDF file"
+        
+        logger.info(f"Starting to summarize PDF: {pdf_path}")
+        
+        # Load the PDF document
+        loader = PyMuPDFLoader(pdf_path)
+        raw_docs = loader.load()
+        
+        if not raw_docs:
+            return "Error: No content found in the PDF file"
+        
+        # Combine all pages content
+        full_text = ""
+        for doc in raw_docs:
+            full_text += doc.page_content + "\n"
+        
+        # Basic text cleaning
+        full_text = full_text.strip()
+        
+        if not full_text:
+            return "Error: No readable text content found in the PDF"
+        
+        # Split into manageable chunks for processing
+        chunks = text_splitter.split_text(full_text)
+        
+        # Create a summary based on the chunks
+        # If document is short (< 2000 chars), return first portion as summary
+        if len(full_text) < 2000:
+            summary = full_text[:1000] + "..." if len(full_text) > 1000 else full_text
+        else:
+            # For longer documents, take key portions from different chunks
+            summary_parts = []
+            
+            # Take beginning of document
+            if chunks:
+                summary_parts.append(chunks[0][:500])
+            
+            # Take middle sections if available
+            if len(chunks) > 2:
+                mid_chunk = chunks[len(chunks)//2]
+                summary_parts.append(mid_chunk[:300])
+            
+            # Take end section if available
+            if len(chunks) > 1:
+                summary_parts.append(chunks[-1][:300])
+            
+            summary = "\n\n--- SECTION ---\n\n".join(summary_parts)
+        
+        # Get document metadata
+        num_pages = len(raw_docs)
+        word_count = len(full_text.split())
+        char_count = len(full_text)
+        
+        # Format the final summary
+        result = f"""
+PDF SUMMARY
+===========
+File: {os.path.basename(pdf_path)}
+Pages: {num_pages}
+Words: {word_count:,}
+Characters: {char_count:,}
+
+CONTENT SUMMARY:
+{summary}
+
+---
+Note: This is an automated extraction summary. For detailed analysis, use the query tool to search specific topics within the document.
+        """.strip()
+        
+        logger.info(f"Successfully summarized PDF: {pdf_path}")
+        return result
+        
+    except Exception as e:
+        error_msg = f"Error summarizing PDF {pdf_path}: {str(e)}"
+        logger.error(error_msg)
+        return error_msg     
 
 @rag_mcp.tool()
 def get_collection_info() -> dict:

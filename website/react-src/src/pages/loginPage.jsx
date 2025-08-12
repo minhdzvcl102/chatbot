@@ -17,9 +17,14 @@ const LoginPage = () => {
       if (user) {
         try {
           const userData = JSON.parse(user);
-          if (userData.role == '0') {
+          console.log('Login page check - User role:', userData.role, 'Type:', typeof userData.role);
+          
+          // Đảm bảo so sánh chính xác
+          if (String(userData.role) === '0') {
+            console.log('Redirecting to admin from login page');
             navigate('/admin');
           } else {
+            console.log('Redirecting to home from login page');
             navigate('/');
           }
         } catch (error) {
@@ -67,22 +72,28 @@ const LoginPage = () => {
         console.log("Đăng nhập thành công:", response.data);
         console.log("Full server response:", response.data);
         console.log("User role from server:", response.data.userRole, "Type:", typeof response.data.userRole);
+        
         // Lưu token
         localStorage.setItem('authToken', response.data.token);
 
-        // Lưu thông tin user với role
+        // Lưu thông tin user với role - đảm bảo role là string
         const userData = {
           id: response.data.userId,
           username: response.data.username,
-          role: response.data.userRole.toString()  // Chuyển thành string
+          role: String(response.data.userRole) // Đảm bảo chuyển thành string
         };
         localStorage.setItem('user', JSON.stringify(userData));
         localStorage.setItem('user.id', response.data.userId);
 
-        // Điều hướng dựa trên role
-        if (response.data.userRole === '0') {
+        console.log('Saved user data:', userData);
+        console.log('Role after save:', userData.role, 'Type:', typeof userData.role);
+
+        // Điều hướng dựa trên role - sử dụng cùng logic với AuthGuard
+        if (String(response.data.userRole) === '0') {
+          console.log('Admin detected, redirecting to admin');
           navigate('/admin');
         } else {
+          console.log('Regular user, redirecting to home');
           navigate('/');
         }
       }

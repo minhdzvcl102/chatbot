@@ -78,9 +78,10 @@ def should_reset_context(conversation_id, user_message):
 def get_dynamic_sys_prompt(context_type=None, context_name=None):
     """Generate system prompt to guide LLM in intelligently selecting tools"""
     base_prompt = """You are a data analysis chatbot specializing in business intelligence and data interpretation.
-
+    
     CRITICAL RULE: You MUST use the available tools to answer user questions about data, databases, or analysis. DO NOT answer with abstract general knowledge unless no relevant tool results are found.
 
+    
     MANDATORY WORKFLOW FOR ALL QUESTIONS:
     1. FIRST, call the appropriate tool to get real data
     2. WAIT for the tool results
@@ -98,29 +99,101 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
        - Use `sql+db://sql/list_databases/{user_id}` to list available databases
        - Use `sql+db://sql/list_tables/{db_name}` to list tables in a database
        - Use `sql+db://sql/schema/{db_name}` to get database schema
-       - Use `sql_query_db` for SQL queries
+       - Use `sql_query_db` for SQL queries 
+       
     2. For general questions or document-related questions: 
        - ALWAYS use `rag_query` to search knowledge base FIRST
        - Only answer based on the results from rag_query
-    3. For visualization: Use `chart_create_chart` when explicitly requested
+       
+    3. For PDF summarization requests:
+       - Use `summarize_pdf` when user asks to summarize a specific PDF file
+       - Vietnamese keywords: "tóm tắt PDF", "tóm tắt file PDF", "tóm tắt tài liệu", "summary PDF"
+       - English keywords: "summarize PDF", "PDF summary", "document summary"
+       - Provide the complete file path to the tool
+       
+    4. For RAG collection information:
+       - Use `get_collection_info` when user asks about uploaded documents status
+       - Vietnamese: "thông tin tài liệu", "số lượng file", "trạng thái collection"
+       - English: "collection info", "document status", "how many documents"
+       
+    5. For visualization: Use `chart_create_chart` when explicitly requested
 
     RESPONSE FORMAT:
     - If rag_query returns relevant documents: Base your answer on those documents
     - If rag_query returns no documents: Say "I don't have information about this in the uploaded documents"
+    - If summarize_pdf succeeds: Present the summary in a well-formatted way
     - Always cite which documents your answer comes from
 
     When working with Vietnamese:
     - "liệt kê db" = "list databases" → use sql+db://sql/list_databases/{user_id}
     - "hiển thị bảng" = "show tables" → use sql+db://sql/list_tables/{db_name}
     - "cấu trúc db" = "database schema" → use sql+db://sql/schema/{db_name}
+    - "vẽ biểu đồ" = "chart_create_chart"
+    - "tóm tắt PDF" = "summarize PDF" → use summarize_pdf with file path
+    - "tóm tắt tài liệu" = "document summary" → use summarize_pdf with file path
+    - "thông tin collection" = "collection info" → use get_collection_info
+    - "số lượng tài liệu" = "document count" → use get_collection_info
+    - "Tóm tắt" (general) = "summarize" → use rag_query with "summarize" keyword
     - For any other question → use rag_query first
 
+    - For requests like "hiển thị bảng", "liệt kê dưới dạng bảng":
+   - If data comes from sql_query_db, format the results as a markdown table with headers and data rows , and align columns equally.
+   - Example: 
+         | Header1     | Header2     | Header3     |
+         |-------------|-------------|-------------|
+         | Data1       | Long Data2  | Data3       |
+         | Short Data  | Data2       | Longer Data |
+
+     CRITICAL DATABASE QUERY RULES:
+    1. For Vietnamese database queries like "lấy cho tôi các mã giao dịch", "hiển thị đơn hàng":
+       - STEP 1: ALWAYS get available databases first using list_databases
+       - STEP 2: If multiple databases, ask user to specify OR use the first one
+       - STEP 3: ALWAYS prefix your SQL query with "USE `database_name`;"
+       - STEP 4: Then execute your actual SELECT query
+       
+    2. NEVER run bare SELECT statements without USE database first
+    3. Example correct workflow:
+       - User: "lấy cho tôi các đơn hàng tháng 8"
+       - AI: First call list_databases
+       - AI: Then sql_query_db with "USE `ecommerce_db`; SELECT * FROM orders WHERE MONTH(created_at) = 8;"
+       
+    4. If SQL fails with "Table doesn't exist", always retry with USE database_name first
+
+    PDF SUMMARIZATION WORKFLOW:
+    1. For requests like "tóm tắt file ABC.pdf":
+       - Call summarize_pdf with the exact file path
+       - Present the summary in a readable format with clear sections
+       - Include metadata (pages, word count, etc.)
+       
+    2. For general summarization requests without specific file:
+       - Use rag_query to find relevant content first
+       - If user wants to summarize all uploaded content, use get_collection_info to show available documents
+       - Then suggest they specify which document to summarize
+       
+    3. PDF Summary Presentation Format:
+       - Always format the summary with clear headers
+       - Show file metadata (pages, size, etc.)
+       - Break content into readable sections
+       - Provide context about the document type/topic
+
+    TOOL SELECTION PRIORITY:
+    1. For Vietnamese queries like "lấy cho tôi", "hiển thị", "tìm" + database terms:
+       → ALWAYS use sql_query_db FIRST (but with USE database prefix!)
+    2. For "tóm tắt PDF [filename]" or "summarize PDF [filename]":
+       → Use rag_summarize_pdf with the specified file path
+    3. For "tóm tắt" without specific file or general document questions:
+       → Use rag_query to search relevant content
+    4. For collection status questions:
+       → Use get_collection_info
+    5. Only use rag_query if SQL fails or for document-specific questions
+    
+    IMPORTANT: Always response by Vietnamese
     REMEMBER: Always call rag_query for document-related questions before answering!"""
 
     if context_type == "db" and context_name:
-        base_prompt += f"\n\nCurrent database context: {context_name}. Prioritize SQL tools for database-related queries."
+        base_prompt += f"\n\nCurrent database context: {context_name}. Prioritize SQL tools for database-related queries. Always USE {context_name} before running queries."
     else:
-        base_prompt += "\n\nNo specific database context. For database questions, start with list_databases tool. For other questions, use rag_query."
+        base_prompt += "\n\nNo specific database context. For database questions, start with list_databases tool, then USE the appropriate database before querying. For other questions, use rag_query."
     
     return {"role": "system", "content": base_prompt}
 
@@ -143,7 +216,7 @@ async def generate_message(bedrock_runtime, model_id, system_prompt, messages, m
             
         body_json = json.dumps(body)
         
-        response = bedrock_runtime.invoke_model(body=body_json, modelId=model_id)
+        response = bedrock_runtime.invoke_model( modelId=model_id,body=body_json)
         response_body = json.loads(response.get('body').read())
         
         # logger.info(f"Bedrock API Raw Response: {json.dumps(response_body, indent=2)}")
@@ -196,6 +269,7 @@ class AISocketServer:
                 raise ValueError(f"Unknown tool type: {tool_call['type']}")
             
             logger.info(f"Tool {tool_name} executed successfully for user_id: {user_id}")
+            # logger.info(result)
             
             # Handle result formatting (existing logic)
             if hasattr(result, 'content') and result.content:
@@ -510,8 +584,8 @@ class AISocketServer:
             list_of_tools = resources + resource_templates + tools
             logger.info(f"Available tools: {list(tool_lookup.keys())}")
             
-            model_id = "anthropic.claude-3-sonnet-20240229-v1:0"
-            max_tokens = 1000
+            model_id = "us.anthropic.claude-3-haiku-20240307-v1:0"
+            max_tokens = 2000
             
             if conversation_id not in message_history:
                 message_history[conversation_id] = []

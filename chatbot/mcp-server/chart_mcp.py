@@ -7,7 +7,6 @@ import io
 from PIL import Image
 import asyncio
 import aiohttp
-
 from fastmcp import FastMCP
 from typing import Annotated, Literal
 from pydantic import Field
