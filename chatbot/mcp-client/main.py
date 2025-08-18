@@ -106,11 +106,10 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
        - Only answer based on the results from rag_query
        
     3. For PDF summarization requests:
-       - Use `summarize_pdf` when user asks to summarize a specific PDF file
-       - Vietnamese keywords: "tóm tắt PDF", "tóm tắt file PDF", "tóm tắt tài liệu", "summary PDF"
-       - English keywords: "summarize PDF", "PDF summary", "document summary"
-       - Provide the complete file path to the tool
-       
+        - Use `rag_summarize_pdf` when user asks to summarize a specific PDF file
+        - Vietnamese keywords: "tóm tắt PDF", "tóm tắt file PDF", "tóm tắt tài liệu", "summary PDF"  
+        - English keywords: "summarize PDF", "PDF summary", "document summary"
+        - MUST provide the conversationId parameter (not file path)       
     4. For RAG collection information:
        - Use `get_collection_info` when user asks about uploaded documents status
        - Vietnamese: "thông tin tài liệu", "số lượng file", "trạng thái collection"
@@ -121,7 +120,7 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
     RESPONSE FORMAT:
     - If rag_query returns relevant documents: Base your answer on those documents
     - If rag_query returns no documents: Say "I don't have information about this in the uploaded documents"
-    - If summarize_pdf succeeds: Present the summary in a well-formatted way
+    - If rag_summarize_pdf succeeds: Present the summary in a well-formatted way
     - Always cite which documents your answer comes from
 
     When working with Vietnamese:
@@ -129,8 +128,8 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
     - "hiển thị bảng" = "show tables" → use sql+db://sql/list_tables/{db_name}
     - "cấu trúc db" = "database schema" → use sql+db://sql/schema/{db_name}
     - "vẽ biểu đồ" = "chart_create_chart"
-    - "tóm tắt PDF" = "summarize PDF" → use summarize_pdf with file path
-    - "tóm tắt tài liệu" = "document summary" → use summarize_pdf with file path
+    - "tóm tắt PDF" = "summarize PDF" → use rag_summarize_pdf with file path
+    - "tóm tắt tài liệu" = "document summary" → use rag_summarize_pdf with file path
     - "thông tin collection" = "collection info" → use get_collection_info
     - "số lượng tài liệu" = "document count" → use get_collection_info
     - "Tóm tắt" (general) = "summarize" → use rag_query with "summarize" keyword
@@ -160,10 +159,11 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
     4. If SQL fails with "Table doesn't exist", always retry with USE database_name first
 
     PDF SUMMARIZATION WORKFLOW:
-    1. For requests like "tóm tắt file ABC.pdf":
-       - Call summarize_pdf with the exact file path
-       - Present the summary in a readable format with clear sections
-       - Include metadata (pages, word count, etc.)
+    1. For requests like "tóm tắt file PDF" or "tóm tắt tài liệu":
+        - Call rag_summarize_pdf with the conversationId parameter
+        - The tool will automatically find the most recent PDF file for that conversation
+        - Present the summary in a readable format with clear sections
+        - Include metadata (pages, word count, etc.)
        
     2. For general summarization requests without specific file:
        - Use rag_query to find relevant content first
@@ -179,9 +179,8 @@ def get_dynamic_sys_prompt(context_type=None, context_name=None):
     TOOL SELECTION PRIORITY:
     1. For Vietnamese queries like "lấy cho tôi", "hiển thị", "tìm" + database terms:
        → ALWAYS use sql_query_db FIRST (but with USE database prefix!)
-    2. For "tóm tắt PDF [filename]" or "summarize PDF [filename]":
-       → Use rag_summarize_pdf with the specified file path
-    3. For "tóm tắt" without specific file or general document questions:
+    2. For "tóm tắt PDF" or "summarize PDF" requests:
+        → Use rag_summarize_pdf with conversationId parameter    3. For "tóm tắt" without specific file or general document questions:
        → Use rag_query to search relevant content
     4. For collection status questions:
        → Use get_collection_info
@@ -269,7 +268,7 @@ class AISocketServer:
                 raise ValueError(f"Unknown tool type: {tool_call['type']}")
             
             logger.info(f"Tool {tool_name} executed successfully for user_id: {user_id}")
-            # logger.info(result)
+            logger.info(result)
             
             # Handle result formatting (existing logic)
             if hasattr(result, 'content') and result.content:
@@ -301,112 +300,118 @@ class AISocketServer:
 
 # Trong main.py - Cập nhật execute_tool_calls_parallel
 
-    async def execute_tool_calls_parallel(self, tool_calls, client, tool_lookup, original_name_lookup, user_id: str = None):
-        """Execute multiple tool calls in parallel with user_id context."""
-        chart_base64_data = None
-        if user_id is None:
-            logger.warning(f"Received None user_id in execute_tool_calls_parallel")
-            user_id = "unknown"
-        async def execute_single_tool_call(tool_call):
-            nonlocal chart_base64_data
-            tool_name = tool_call["name"]
-            arguments = tool_call.get("input", {})
-            
-            logger.info(f"Processing tool call: {tool_name} with args: {arguments} for user_id: {user_id}")
-            
-            if tool_name not in tool_lookup:
-                logger.error(f"Unknown tool name: {tool_name} for user_id: {user_id}")
-                return {
-                    "type": "tool_result",
-                    "tool_use_id": tool_call.get("id", "unknown"),
-                    "content": [{"type": "text", "text": json.dumps({"error": f"Unknown tool: {tool_name}"})}]
-                }
-            
-            tool_type = tool_lookup[tool_name]
-            original_name = original_name_lookup.get(tool_name, tool_name)
-            
-            tool_dict = {
-                "id": tool_call.get("id", "unknown"),
-                "type": tool_type,
-                "name": original_name,
-                "input": arguments,
-            }
-            
-            try:
-                logger.info(f"Executing tool call: {tool_name} for user_id: {user_id}")
-                async with asyncio.timeout(30):
-                    # Truyền user_id vào mcpCall
-                    result = await self.mcpCall(tool_dict, client, user_id)
+    async def execute_tool_calls_parallel(self, tool_calls, client, tool_lookup, original_name_lookup, user_id: str = None, conversation_id: str = None):
+            """Execute multiple tool calls in parallel with user_id context."""
+            chart_base64_data = None
+            if user_id is None:
+                logger.warning(f"Received None user_id in execute_tool_calls_parallel")
+                user_id = "unknown"
+            async def execute_single_tool_call(tool_call):
+                nonlocal chart_base64_data
+                tool_name = tool_call["name"]
+                arguments = tool_call.get("input", {})
                 
-                result_text = (
-                    result[0].text
-                    if result and len(result) > 0
-                    else "No result returned"
-                )
+                # FIX: Sử dụng conversation_id thực tế thay vì để LLM tự tạo
+                if tool_name == "rag_summarize_pdf":
+                    # Thêm conversationId vào arguments nếu chưa có HOẶC thay thế nếu đã có
+                    arguments["conversationId"] = conversation_id  # Sử dụng conversation_id thật
+                    logger.info(f"Updated conversationId to actual value: {conversation_id} for user_id: {user_id}")
+            
+                logger.info(f"Processing tool call: {tool_name} with args: {arguments} for user_id: {user_id}")
+                
+                if tool_name not in tool_lookup:
+                    logger.error(f"Unknown tool name: {tool_name} for user_id: {user_id}")
+                    return {
+                        "type": "tool_result",
+                        "tool_use_id": tool_call.get("id", "unknown"),
+                        "content": [{"type": "text", "text": json.dumps({"error": f"Unknown tool: {tool_name}"})}]
+                    }
+                
+                tool_type = tool_lookup[tool_name]
+                original_name = original_name_lookup.get(tool_name, tool_name)
+                
+                tool_dict = {
+                    "id": tool_call.get("id", "unknown"),
+                    "type": tool_type,
+                    "name": original_name,
+                    "input": arguments,
+                }
                 
                 try:
-                    result_json = json.loads(result_text)
-                    if isinstance(result_json, dict) and "error" in result_json:
-                        logger.warning(f"Tool call returned error for user_id {user_id}: {result_json['error']}")
+                    logger.info(f"Executing tool call: {tool_name} for user_id: {user_id}")
+                    async with asyncio.timeout(30):
+                        # Truyền user_id vào mcpCall
+                        result = await self.mcpCall(tool_dict, client, user_id)
                     
-                    # Handle chart creation
-                    if tool_name == "chart_create_chart" and isinstance(result_json, dict):
-                        if "chart_image_base64" in result_json:
-                            chart_base64_data = result_json["chart_image_base64"]
-                            logger.info(f"Chart image base64 captured from chart_create_chart tool for user_id: {user_id}")
-                            result_text = json.dumps({
-                                "message": "Chart image generated successfully.",
-                                "chart_path": result_json.get("chart_image_path", "")
-                            })
-                        else:
-                            logger.warning(f"chart_create_chart tool did not return chart_image_base64 for user_id: {user_id}")
+                    result_text = (
+                        result[0].text
+                        if result and len(result) > 0
+                        else "No result returned"
+                    )
                     
-                except json.JSONDecodeError:
-                    logger.debug(f"Tool result is not JSON format for user_id {user_id}: {result_text[:100]}...")
+                    try:
+                        result_json = json.loads(result_text)
+                        if isinstance(result_json, dict) and "error" in result_json:
+                            logger.warning(f"Tool call returned error for user_id {user_id}: {result_json['error']}")
+                        
+                        # Handle chart creation
+                        if tool_name == "chart_create_chart" and isinstance(result_json, dict):
+                            if "chart_image_base64" in result_json:
+                                chart_base64_data = result_json["chart_image_base64"]
+                                logger.info(f"Chart image base64 captured from chart_create_chart tool for user_id: {user_id}")
+                                result_text = json.dumps({
+                                    "message": "Chart image generated successfully.",
+                                    "chart_path": result_json.get("chart_image_path", "")
+                                })
+                            else:
+                                logger.warning(f"chart_create_chart tool did not return chart_image_base64 for user_id: {user_id}")
+                        
+                    except json.JSONDecodeError:
+                        logger.debug(f"Tool result is not JSON format for user_id {user_id}: {result_text[:100]}...")
+                    except Exception as e:
+                        logger.warning(f"Error processing tool result for chart (user_id: {user_id}): {e}")
+                    
+                    return {
+                        "type": "tool_result",
+                        "tool_use_id": tool_call.get("id", "unknown"),
+                        "content": [{"type": "text", "text": result_text}]
+                    }
+                    
+                except asyncio.TimeoutError:
+                    logger.error(f"Tool call timeout for tool: {tool_name} (user_id: {user_id})")
+                    return {
+                        "type": "tool_result",
+                        "tool_use_id": tool_call.get("id", "unknown"),
+                        "content": [{"type": "text", "text": json.dumps({"error": f"Tool call timeout for {tool_name}"})}]
+                    }
                 except Exception as e:
-                    logger.warning(f"Error processing tool result for chart (user_id: {user_id}): {e}")
-                
-                return {
-                    "type": "tool_result",
-                    "tool_use_id": tool_call.get("id", "unknown"),
-                    "content": [{"type": "text", "text": result_text}]
-                }
-                
-            except asyncio.TimeoutError:
-                logger.error(f"Tool call timeout for tool: {tool_name} (user_id: {user_id})")
-                return {
-                    "type": "tool_result",
-                    "tool_use_id": tool_call.get("id", "unknown"),
-                    "content": [{"type": "text", "text": json.dumps({"error": f"Tool call timeout for {tool_name}"})}]
-                }
-            except Exception as e:
-                logger.error(f"Tool call failed for {tool_name} (user_id: {user_id}): {str(e)}")
-                return {
-                    "type": "tool_result",
-                    "tool_use_id": tool_call.get("id", "unknown"),
-                    "content": [{"type": "text", "text": json.dumps({"error": f"Tool call failed: {str(e)}"})}]
-                }
-        
-        start_time = time.time()
-        logger.info(f"Starting parallel execution of {len(tool_calls)} tool calls for user_id: {user_id}")
-        tasks = [execute_single_tool_call(tool_call) for tool_call in tool_calls]
-        tool_results = await asyncio.gather(*tasks, return_exceptions=True)
-        execution_time = time.time() - start_time
-        logger.info(f"Parallel tool execution completed in {execution_time:.2f} seconds for user_id: {user_id}")
-        
-        processed_results = []
-        for i, result in enumerate(tool_results):
-            if isinstance(result, Exception):
-                logger.error(f"Tool call {i} failed with exception for user_id {user_id}: {result}")
-                processed_results.append({
-                    "type": "tool_result",
-                    "tool_use_id": tool_calls[i].get("id", "unknown"),
-                    "content": [{"type": "text", "text": json.dumps({"error": f"Tool execution failed: {str(result)}"})}]
-                })
-            else:
-                processed_results.append(result)
-        
-        return processed_results, chart_base64_data
+                    logger.error(f"Tool call failed for {tool_name} (user_id: {user_id}): {str(e)}")
+                    return {
+                        "type": "tool_result",
+                        "tool_use_id": tool_call.get("id", "unknown"),
+                        "content": [{"type": "text", "text": json.dumps({"error": f"Tool call failed: {str(e)}"})}]
+                    }
+            
+            start_time = time.time()
+            logger.info(f"Starting parallel execution of {len(tool_calls)} tool calls for user_id: {user_id}")
+            tasks = [execute_single_tool_call(tool_call) for tool_call in tool_calls]
+            tool_results = await asyncio.gather(*tasks, return_exceptions=True)
+            execution_time = time.time() - start_time
+            logger.info(f"Parallel tool execution completed in {execution_time:.2f} seconds for user_id: {user_id}")
+            
+            processed_results = []
+            for i, result in enumerate(tool_results):
+                if isinstance(result, Exception):
+                    logger.error(f"Tool call {i} failed with exception for user_id {user_id}: {result}")
+                    processed_results.append({
+                        "type": "tool_result",
+                        "tool_use_id": tool_calls[i].get("id", "unknown"),
+                        "content": [{"type": "text", "text": json.dumps({"error": f"Tool execution failed: {str(result)}"})}]
+                    })
+                else:
+                    processed_results.append(result)
+            
+            return processed_results, chart_base64_data
 
     async def _setup_mcp_client(self, user_id=None):
         """Initializes and activates the MCP client with user_id context."""
@@ -682,8 +687,7 @@ class AISocketServer:
                     
                     start_tool_execution = time.time()
                     tool_results, captured_chart_data = await self.execute_tool_calls_parallel(
-                        tool_calls, client, tool_lookup, original_name_lookup,user_id
-                    )
+                    tool_calls, client, tool_lookup, original_name_lookup, user_id, conversation_id)
                     logger.info(f"Tool execution completed in {time.time() - start_tool_execution:.2f} seconds")
                     
                     if captured_chart_data:

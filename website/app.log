@@ -23674,3 +23674,893 @@ http://localhost:3000
 [2025-08-11T08:35:42.207Z] [ERROR] AI service error for conversation 85: AI service timeout
 [2025-08-11T08:35:42.208Z] [INFO] Python AI service connection closed for conversation 85
 [2025-08-11T08:36:54.678Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-08-12T02:02:29.178Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-08-12T02:02:29.180Z] [INFO] 🔌 WebSocket server initialized
+[2025-08-12T02:02:29.197Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-08-12T02:02:29.201Z] [ERROR] ❌ MinIO bucket setup error: 
+[2025-08-12T02:02:29.204Z] [INFO] Database tables initialized with user permission system.
+[2025-08-12T02:02:29.204Z] [INFO] SQLite database initialized successfully.
+[2025-08-12T02:02:43.149Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-08-12T02:02:43.152Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-08-12T02:02:43.169Z] [INFO] Node.js Server is running on port 3000
+[2025-08-12T02:02:43.175Z] [INFO] Database tables initialized with user permission system.
+[2025-08-12T02:02:43.176Z] [INFO] SQLite database initialized successfully.
+[2025-08-12T02:02:43.189Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-08-12T02:23:02.464Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T02:23:02.467Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T02:23:02.492Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-08-12T02:23:05.989Z] [INFO] User logged out successfully
+[2025-08-12T02:23:08.439Z] [INFO] User demo@demo.com logged in successfully
+[2025-08-12T02:23:08.467Z] [INFO] Retrieved 3 users from the database
+[2025-08-12T02:23:08.474Z] [INFO] Retrieved 3 users from the database
+[2025-08-12T02:23:12.726Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-12T02:23:12.732Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-12T02:23:12.743Z] [INFO] ✅ Socket INE0qconsJida9fZAAAF authenticated for user demo@demo.com (ID: 6)
+[2025-08-12T02:23:12.744Z] [INFO] 🔗 User demo@demo.com (6) connected with socket INE0qconsJida9fZAAAF
+[2025-08-12T02:23:12.759Z] [INFO] 👥 User demo@demo.com joined conversation 85
+[2025-08-12T02:23:12.762Z] [INFO] 👥 Sent online users list for conversation 85: 1 users
+[2025-08-12T02:23:12.784Z] [INFO] Loaded 6 messages for conversation 85 by user 6
+[2025-08-12T02:23:12.785Z] [INFO] Loaded 1 files for conversation 85 by user 6
+[2025-08-12T02:23:23.996Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T02:23:28.719Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 85
+[2025-08-12T02:23:28.723Z] [INFO] Connected to Python AI service for conversation 85
+[2025-08-12T02:23:30.009Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T02:23:37.649Z] [INFO] Processing AI response for conversation 85
+[2025-08-12T02:23:37.650Z] [INFO] Content length: 388
+[2025-08-12T02:23:37.650Z] [INFO] Chart data: None
+[2025-08-12T02:23:37.656Z] [INFO] AI response text only sent to conversation 85
+[2025-08-12T02:23:37.656Z] [INFO] Message ID: 1473
+[2025-08-12T02:24:01.148Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T02:24:01.148Z] [ERROR] AI service error for conversation 85: AI service connection error
+[2025-08-12T02:24:01.149Z] [INFO] Python AI service connection closed for conversation 85
+[2025-08-12T03:19:04.403Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:19:04.747Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 85
+[2025-08-12T03:19:04.754Z] [INFO] Connected to Python AI service for conversation 85
+[2025-08-12T03:19:05.404Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:19:15.921Z] [INFO] Processing AI response for conversation 85
+[2025-08-12T03:19:15.921Z] [INFO] Content length: 859
+[2025-08-12T03:19:15.921Z] [INFO] Chart data: None
+[2025-08-12T03:19:15.933Z] [INFO] Message ID: 1475
+[2025-08-12T03:19:15.933Z] [INFO] AI response text only sent to conversation 85
+[2025-08-12T03:19:21.502Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:19:22.511Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:19:23.024Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:19:24.480Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:19:25.471Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:19:25.827Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 85
+[2025-08-12T03:19:25.829Z] [INFO] Connected to Python AI service for conversation 85
+[2025-08-12T03:19:26.472Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:19:32.141Z] [INFO] Processing AI response for conversation 85
+[2025-08-12T03:19:32.141Z] [INFO] Content length: 493
+[2025-08-12T03:19:32.141Z] [INFO] Chart data: None
+[2025-08-12T03:19:32.153Z] [INFO] AI response text only sent to conversation 85
+[2025-08-12T03:19:32.153Z] [INFO] Message ID: 1477
+[2025-08-12T03:20:24.261Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:20:24.660Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 85
+[2025-08-12T03:20:24.664Z] [INFO] Connected to Python AI service for conversation 85
+[2025-08-12T03:20:25.264Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:20:30.543Z] [INFO] Processing AI response for conversation 85
+[2025-08-12T03:20:30.543Z] [INFO] Content length: 548
+[2025-08-12T03:20:30.543Z] [INFO] Chart data: None
+[2025-08-12T03:20:30.554Z] [INFO] AI response text only sent to conversation 85
+[2025-08-12T03:20:30.555Z] [INFO] Message ID: 1479
+[2025-08-12T03:20:34.765Z] [ERROR] Python AI service timeout for conversation 85
+[2025-08-12T03:20:34.767Z] [ERROR] AI service error for conversation 85: AI service timeout
+[2025-08-12T03:20:34.768Z] [INFO] Python AI service connection closed for conversation 85
+[2025-08-12T03:20:55.834Z] [ERROR] Python AI service timeout for conversation 85
+[2025-08-12T03:20:55.835Z] [ERROR] AI service error for conversation 85: AI service timeout
+[2025-08-12T03:20:55.836Z] [INFO] Python AI service connection closed for conversation 85
+[2025-08-12T03:21:54.665Z] [ERROR] Python AI service timeout for conversation 85
+[2025-08-12T03:21:54.668Z] [ERROR] AI service error for conversation 85: AI service timeout
+[2025-08-12T03:21:54.669Z] [INFO] Python AI service connection closed for conversation 85
+[2025-08-12T03:23:18.531Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:23:21.059Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:23:21.781Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:23:22.389Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 85
+[2025-08-12T03:23:22.392Z] [INFO] Connected to Python AI service for conversation 85
+[2025-08-12T03:23:22.784Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:23:27.424Z] [INFO] Processing AI response for conversation 85
+[2025-08-12T03:23:27.426Z] [INFO] Content length: 185
+[2025-08-12T03:23:27.428Z] [INFO] Chart data: None
+[2025-08-12T03:23:27.450Z] [INFO] AI response text only sent to conversation 85
+[2025-08-12T03:23:27.451Z] [INFO] Message ID: 1481
+[2025-08-12T03:24:14.395Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T03:24:14.396Z] [ERROR] AI service error for conversation 85: AI service connection error
+[2025-08-12T03:24:14.396Z] [INFO] Python AI service connection closed for conversation 85
+[2025-08-12T03:24:25.583Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 85
+[2025-08-12T03:24:25.798Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 85
+[2025-08-12T03:24:25.800Z] [INFO] Connected to Python AI service for conversation 85
+[2025-08-12T03:24:26.585Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 85
+[2025-08-12T03:24:32.564Z] [INFO] Processing AI response for conversation 85
+[2025-08-12T03:24:32.569Z] [INFO] Content length: 151
+[2025-08-12T03:24:32.570Z] [INFO] Chart data: None
+[2025-08-12T03:24:32.594Z] [INFO] AI response text only sent to conversation 85
+[2025-08-12T03:24:32.595Z] [INFO] Message ID: 1483
+[2025-08-12T03:25:09.722Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T03:25:09.726Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T03:25:11.211Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-08-12T03:25:12.700Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T03:25:12.704Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T03:25:13.355Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-08-12T03:25:13.380Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T03:25:13.386Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-12T03:25:18.980Z] [INFO] User demo@demo.com logged in successfully
+[2025-08-12T03:25:19.000Z] [INFO] Retrieved 3 users from the database
+[2025-08-12T03:25:19.007Z] [INFO] Retrieved 3 users from the database
+[2025-08-12T03:25:23.341Z] [INFO] Retrieved 3 users from the database
+[2025-08-12T03:25:23.348Z] [INFO] Retrieved 3 users from the database
+[2025-08-12T03:25:26.347Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-12T03:25:26.353Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-12T03:25:26.369Z] [INFO] ✅ Socket U5ipcLkwDbOU1SWZAAAL authenticated for user demo@demo.com (ID: 6)
+[2025-08-12T03:25:26.370Z] [INFO] 🔗 User demo@demo.com (6) connected with socket U5ipcLkwDbOU1SWZAAAL
+[2025-08-12T03:25:26.396Z] [INFO] Loaded 18 messages for conversation 85 by user 6
+[2025-08-12T03:25:26.397Z] [INFO] Loaded 1 files for conversation 85 by user 6
+[2025-08-12T03:25:55.814Z] [ERROR] Python AI service timeout for conversation 85
+[2025-08-12T03:25:55.815Z] [ERROR] AI service error for conversation 85: AI service timeout
+[2025-08-12T03:25:55.817Z] [INFO] Python AI service connection closed for conversation 85
+[2025-08-12T03:27:36.577Z] [INFO] Conversation 85 deleted by user 6
+[2025-08-12T03:27:36.607Z] [INFO] 👋 User demo@demo.com left conversation 85
+[2025-08-12T03:27:36.607Z] [INFO] 👥 Sent online users list for conversation 85: 0 users
+[2025-08-12T03:27:36.609Z] [INFO] 👥 User demo@demo.com joined conversation 78
+[2025-08-12T03:27:36.610Z] [INFO] 👥 Sent online users list for conversation 78: 1 users
+[2025-08-12T03:27:36.619Z] [INFO] Loaded 10 messages for conversation 78 by user 6
+[2025-08-12T03:27:36.621Z] [INFO] Loaded 0 files for conversation 78 by user 6
+[2025-08-12T03:27:43.778Z] [INFO] Conversation 86 created for user 6
+[2025-08-12T03:27:43.786Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-12T03:27:43.800Z] [INFO] 👋 User demo@demo.com left conversation 78
+[2025-08-12T03:27:43.801Z] [INFO] 👥 Sent online users list for conversation 78: 0 users
+[2025-08-12T03:27:43.803Z] [INFO] 👥 User demo@demo.com joined conversation 86
+[2025-08-12T03:27:43.804Z] [INFO] 👥 Sent online users list for conversation 86: 1 users
+[2025-08-12T03:27:43.812Z] [INFO] Loaded 0 files for conversation 86 by user 6
+[2025-08-12T03:27:43.813Z] [INFO] Loaded 0 messages for conversation 86 by user 6
+[2025-08-12T03:29:15.706Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T03:29:16.363Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T03:29:16.366Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T03:29:16.994Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T03:29:18.470Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T03:29:18.471Z] [INFO] Content length: 43
+[2025-08-12T03:29:18.471Z] [INFO] Chart data: None
+[2025-08-12T03:29:18.483Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T03:29:18.483Z] [INFO] Message ID: 1485
+[2025-08-12T03:30:20.461Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T03:30:20.748Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T03:30:20.750Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T03:30:21.997Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T03:30:25.332Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T03:30:25.333Z] [INFO] Content length: 204
+[2025-08-12T03:30:25.334Z] [INFO] Chart data: None
+[2025-08-12T03:30:25.348Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T03:30:25.349Z] [INFO] Message ID: 1487
+[2025-08-12T03:30:46.369Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-12T03:30:46.371Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-12T03:30:46.371Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T03:31:50.750Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-12T03:31:50.751Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-12T03:31:50.751Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T03:38:17.013Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T03:38:17.344Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T03:38:17.347Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T03:38:18.015Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T03:38:22.755Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T03:38:22.756Z] [INFO] Content length: 231
+[2025-08-12T03:38:22.757Z] [INFO] Chart data: None
+[2025-08-12T03:38:22.782Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T03:38:22.783Z] [INFO] Message ID: 1489
+[2025-08-12T03:38:36.474Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T03:38:36.474Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-12T03:38:36.475Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T03:58:53.060Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T03:58:53.285Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T03:58:53.287Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T03:58:54.065Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T03:59:06.303Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T03:59:06.304Z] [INFO] Content length: 225
+[2025-08-12T03:59:06.304Z] [INFO] Chart data: None
+[2025-08-12T03:59:06.313Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T03:59:06.313Z] [INFO] Message ID: 1491
+[2025-08-12T03:59:34.735Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-08-12T03:59:34.908Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-12T03:59:34.918Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-12T03:59:34.919Z] [INFO] ✅ Socket fVtTx079JBvoQDu2AAAO authenticated for user demo@demo.com (ID: 6)
+[2025-08-12T03:59:34.920Z] [INFO] 🔗 User demo@demo.com (6) connected with socket fVtTx079JBvoQDu2AAAO
+[2025-08-12T03:59:34.934Z] [INFO] 👥 User demo@demo.com joined conversation 86
+[2025-08-12T03:59:34.934Z] [INFO] 👥 Sent online users list for conversation 86: 1 users
+[2025-08-12T03:59:34.940Z] [INFO] Loaded 8 messages for conversation 86 by user 6
+[2025-08-12T03:59:34.941Z] [INFO] Loaded 0 files for conversation 86 by user 6
+[2025-08-12T03:59:42.162Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-12T03:59:42.161Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T03:59:42.162Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:04:41.312Z] [INFO] File hash calculated: 13c0d460... for 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-12T04:04:41.485Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\6_86_1754971481318.pdf
+[2025-08-12T04:04:41.491Z] [INFO] File uploaded successfully to conversation 86 by user 6: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-12T04:04:41.499Z] [INFO] 📁 File uploaded by demo@demo.com to conversation 86: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-12T04:04:41.508Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-12T04:04:43.857Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T04:04:48.056Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T04:04:48.058Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T04:04:48.995Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T04:04:52.482Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T04:04:52.482Z] [INFO] Chart data: None
+[2025-08-12T04:04:52.482Z] [INFO] Content length: 478
+[2025-08-12T04:04:52.493Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T04:04:52.493Z] [INFO] Message ID: 1493
+[2025-08-12T04:05:17.076Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T04:05:17.555Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T04:05:17.558Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T04:05:18.999Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T04:05:22.724Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T04:05:22.724Z] [INFO] Content length: 407
+[2025-08-12T04:05:22.725Z] [INFO] Chart data: None
+[2025-08-12T04:05:22.744Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T04:05:22.745Z] [INFO] Message ID: 1495
+[2025-08-12T04:05:41.700Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T04:05:46.134Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T04:05:46.137Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T04:05:46.981Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T04:05:52.748Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T04:05:52.748Z] [INFO] Chart data: None
+[2025-08-12T04:05:52.748Z] [INFO] Content length: 192
+[2025-08-12T04:05:52.762Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T04:05:52.763Z] [INFO] Message ID: 1497
+[2025-08-12T04:06:18.057Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-12T04:06:18.057Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-12T04:06:18.058Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:06:47.558Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-12T04:06:47.561Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-12T04:06:47.562Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:07:16.138Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-12T04:07:16.139Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-12T04:07:16.141Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:23:11.443Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T04:23:11.787Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T04:23:11.789Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T04:23:12.445Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T04:23:17.732Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T04:23:17.733Z] [INFO] Content length: 281
+[2025-08-12T04:23:17.733Z] [INFO] Chart data: None
+[2025-08-12T04:23:17.738Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T04:23:17.738Z] [INFO] Message ID: 1499
+[2025-08-12T04:23:26.255Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T04:23:27.267Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T04:23:27.326Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T04:23:27.328Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T04:23:31.509Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T04:23:31.509Z] [INFO] Content length: 166
+[2025-08-12T04:23:31.509Z] [INFO] Chart data: None
+[2025-08-12T04:23:31.520Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T04:23:31.521Z] [INFO] Message ID: 1501
+[2025-08-12T04:23:38.056Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T04:23:38.056Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-12T04:23:38.057Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:23:38.057Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-12T04:23:38.057Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T04:23:38.058Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:23:53.610Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T04:23:54.015Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T04:23:54.016Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T04:23:54.613Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T04:24:04.197Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T04:24:04.197Z] [INFO] Content length: 399
+[2025-08-12T04:24:04.197Z] [INFO] Chart data: None
+[2025-08-12T04:24:04.208Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T04:24:04.208Z] [INFO] Message ID: 1503
+[2025-08-12T04:24:26.273Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T04:24:26.273Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-12T04:24:26.273Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:24:47.138Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-12T04:24:49.693Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-12T04:24:49.695Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-12T04:24:50.994Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-12T04:24:58.840Z] [INFO] Processing AI response for conversation 86
+[2025-08-12T04:24:58.840Z] [INFO] Content length: 433
+[2025-08-12T04:24:58.840Z] [INFO] Chart data: None
+[2025-08-12T04:24:58.851Z] [INFO] AI response text only sent to conversation 86
+[2025-08-12T04:24:58.852Z] [INFO] Message ID: 1505
+[2025-08-12T04:25:12.491Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\6_86_1754971481318.pdf'
+[2025-08-12T04:25:12.499Z] [INFO] File 46 deleted from conversation 86 by user 6
+[2025-08-12T04:25:12.512Z] [INFO] Loaded 0 files for conversation 86 by user 6
+[2025-08-12T04:25:15.021Z] [INFO] 👋 User demo@demo.com left conversation 86
+[2025-08-12T04:25:15.022Z] [INFO] 👥 Sent online users list for conversation 86: 0 users
+[2025-08-12T04:25:15.025Z] [INFO] 👥 User demo@demo.com joined conversation 78
+[2025-08-12T04:25:15.027Z] [INFO] 👥 Sent online users list for conversation 78: 1 users
+[2025-08-12T04:25:15.049Z] [INFO] Loaded 10 messages for conversation 78 by user 6
+[2025-08-12T04:25:15.051Z] [INFO] Loaded 0 files for conversation 78 by user 6
+[2025-08-12T04:25:18.248Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 78
+[2025-08-12T04:25:20.058Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 78
+[2025-08-12T04:25:20.060Z] [INFO] Connected to Python AI service for conversation 78
+[2025-08-12T04:25:20.890Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 78
+[2025-08-12T04:25:25.449Z] [INFO] Processing AI response for conversation 78
+[2025-08-12T04:25:25.450Z] [INFO] Content length: 157
+[2025-08-12T04:25:25.450Z] [INFO] Chart data: None
+[2025-08-12T04:25:25.468Z] [INFO] Message ID: 1507
+[2025-08-12T04:25:25.467Z] [INFO] AI response text only sent to conversation 78
+[2025-08-12T04:26:04.790Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T04:26:04.791Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-12T04:26:04.791Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-12T04:26:04.793Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-12T04:26:04.794Z] [ERROR] AI service error for conversation 78: AI service connection error
+[2025-08-12T04:26:04.794Z] [INFO] Python AI service connection closed for conversation 78
+[2025-08-12T04:26:18.239Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 78
+[2025-08-12T04:26:19.661Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 78
+[2025-08-12T04:26:20.585Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 78
+[2025-08-12T04:26:23.170Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 78
+[2025-08-12T04:26:23.172Z] [INFO] Connected to Python AI service for conversation 78
+[2025-08-12T04:26:23.793Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 78
+[2025-08-12T04:26:29.622Z] [INFO] Processing AI response for conversation 78
+[2025-08-12T04:26:29.622Z] [INFO] Chart data: None
+[2025-08-12T04:26:29.622Z] [INFO] Content length: 271
+[2025-08-12T04:26:29.631Z] [INFO] AI response text only sent to conversation 78
+[2025-08-12T04:26:29.631Z] [INFO] Message ID: 1509
+[2025-08-12T04:27:53.183Z] [ERROR] Python AI service timeout for conversation 78
+[2025-08-12T04:27:53.185Z] [ERROR] AI service error for conversation 78: AI service timeout
+[2025-08-12T04:27:53.187Z] [INFO] Python AI service connection closed for conversation 78
+[2025-08-14T05:52:35.089Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-08-14T05:52:35.091Z] [INFO] 🔌 WebSocket server initialized
+[2025-08-14T05:52:35.109Z] [INFO] Node.js Server is running on port 3000
+http://localhost:3000
+[2025-08-14T05:52:35.119Z] [INFO] Database tables initialized with user permission system.
+[2025-08-14T05:52:35.120Z] [INFO] SQLite database initialized successfully.
+[2025-08-14T05:52:35.133Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-08-14T05:53:07.722Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T05:53:07.728Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-08-14T05:53:07.734Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T05:53:07.814Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T05:53:07.822Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T05:53:07.880Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-08-14T05:53:10.787Z] [INFO] User logged out successfully
+[2025-08-14T05:53:11.978Z] [INFO] User demo@demo.com logged in successfully
+[2025-08-14T05:53:12.006Z] [INFO] Retrieved 3 users from the database
+[2025-08-14T05:53:12.013Z] [INFO] Retrieved 3 users from the database
+[2025-08-14T05:53:16.002Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T05:53:16.007Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T05:53:16.018Z] [INFO] ✅ Socket 4oF9KEWSPvF-aKy4AAAI authenticated for user demo@demo.com (ID: 6)
+[2025-08-14T05:53:16.019Z] [INFO] 🔗 User demo@demo.com (6) connected with socket 4oF9KEWSPvF-aKy4AAAI
+[2025-08-14T05:53:16.044Z] [INFO] 👥 User demo@demo.com joined conversation 86
+[2025-08-14T05:53:16.046Z] [INFO] 👥 Sent online users list for conversation 86: 1 users
+[2025-08-14T05:53:16.060Z] [INFO] Loaded 22 messages for conversation 86 by user 6
+[2025-08-14T05:53:16.061Z] [INFO] Loaded 0 files for conversation 86 by user 6
+[2025-08-14T05:55:17.380Z] [INFO] File hash calculated: 13c0d460... for 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-14T05:55:17.518Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\6_86_1755150917381.pdf
+[2025-08-14T05:55:17.526Z] [INFO] File uploaded successfully to conversation 86 by user 6: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-14T05:55:17.537Z] [INFO] 📁 File uploaded by demo@demo.com to conversation 86: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-14T05:55:17.548Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-14T05:55:20.329Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T05:55:24.824Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T05:55:24.829Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T05:55:25.657Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T05:55:36.156Z] [INFO] Content length: 772
+[2025-08-14T05:55:36.155Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T05:55:36.156Z] [INFO] Chart data: None
+[2025-08-14T05:55:36.170Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T05:55:36.172Z] [INFO] Message ID: 1511
+[2025-08-14T05:56:54.829Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T05:56:54.832Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T05:56:54.834Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T05:58:49.303Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T05:58:52.116Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T05:58:52.118Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T05:58:52.948Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T05:58:56.063Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T05:58:56.063Z] [INFO] Content length: 329
+[2025-08-14T05:58:56.064Z] [INFO] Chart data: None
+[2025-08-14T05:58:56.069Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T05:58:56.070Z] [INFO] Message ID: 1513
+[2025-08-14T06:00:22.120Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T06:00:22.122Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T06:00:22.123Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T06:31:52.219Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T06:31:53.159Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T06:31:53.248Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T06:31:53.250Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T06:32:04.042Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T06:32:04.042Z] [INFO] Content length: 191
+[2025-08-14T06:32:04.043Z] [INFO] Chart data: None
+[2025-08-14T06:32:04.056Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T06:32:04.057Z] [INFO] Message ID: 1515
+[2025-08-14T06:33:23.255Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T06:33:23.256Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T06:33:23.262Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T06:35:36.539Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T06:35:37.287Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T06:35:37.288Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T06:35:37.540Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T06:35:41.070Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T06:35:41.071Z] [INFO] Chart data: None
+[2025-08-14T06:35:41.071Z] [INFO] Content length: 357
+[2025-08-14T06:35:41.076Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T06:35:41.077Z] [INFO] Message ID: 1517
+[2025-08-14T06:36:33.811Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T06:36:33.810Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T06:36:33.811Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T06:36:41.197Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T06:36:42.451Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T06:36:42.453Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T06:36:43.102Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T06:36:48.768Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T06:36:48.769Z] [INFO] Chart data: None
+[2025-08-14T06:36:48.768Z] [INFO] Content length: 309
+[2025-08-14T06:36:48.780Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T06:36:48.781Z] [INFO] Message ID: 1519
+[2025-08-14T06:38:12.468Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T06:38:12.471Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T06:38:12.473Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T06:54:56.062Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T06:54:56.792Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T06:54:56.794Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T06:54:57.064Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T06:55:02.570Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T06:55:02.571Z] [INFO] Content length: 294
+[2025-08-14T06:55:02.571Z] [INFO] Chart data: None
+[2025-08-14T06:55:02.576Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T06:55:02.576Z] [INFO] Message ID: 1521
+[2025-08-14T06:56:26.799Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T06:56:26.800Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T06:56:26.801Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:00:53.259Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:00:54.272Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:00:54.501Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:00:55.502Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:00:55.504Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:00:55.736Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:01:08.136Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:01:08.137Z] [INFO] Content length: 551
+[2025-08-14T07:01:08.138Z] [INFO] Chart data: None
+[2025-08-14T07:01:08.151Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:01:08.151Z] [INFO] Message ID: 1523
+[2025-08-14T07:02:05.154Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:02:05.155Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:02:05.155Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:02:09.403Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:02:10.614Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:02:13.000Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:02:13.001Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:02:18.215Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:02:18.216Z] [INFO] Content length: 252
+[2025-08-14T07:02:18.216Z] [INFO] Chart data: None
+[2025-08-14T07:02:18.227Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:02:18.228Z] [INFO] Message ID: 1525
+[2025-08-14T07:03:26.476Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:03:26.477Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:03:26.477Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:03:30.932Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:03:31.459Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:03:34.425Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:03:34.426Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:03:39.367Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:03:39.368Z] [INFO] Content length: 210
+[2025-08-14T07:03:39.368Z] [INFO] Chart data: None
+[2025-08-14T07:03:39.380Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:03:39.381Z] [INFO] Message ID: 1527
+[2025-08-14T07:04:51.598Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:04:51.599Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:04:51.599Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:05:00.469Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:05:02.594Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:05:02.634Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:05:02.637Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:05:08.511Z] [INFO] Content length: 257
+[2025-08-14T07:05:08.510Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:05:08.511Z] [INFO] Chart data: None
+[2025-08-14T07:05:08.528Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:05:08.529Z] [INFO] Message ID: 1529
+[2025-08-14T07:05:31.157Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:05:31.157Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:05:31.158Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:05:36.981Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:05:37.861Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:05:40.821Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:05:41.773Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:05:41.776Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:05:41.969Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:05:47.389Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:05:47.395Z] [INFO] Content length: 206
+[2025-08-14T07:05:47.396Z] [INFO] Chart data: None
+[2025-08-14T07:05:47.414Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:05:47.414Z] [INFO] Message ID: 1531
+[2025-08-14T07:07:11.779Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T07:07:11.781Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T07:07:11.781Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:08:35.271Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T07:08:36.598Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T07:08:39.280Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-08-14T07:08:39.434Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T07:08:39.439Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-08-14T07:08:39.444Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-14T07:08:41.445Z] [INFO] User logged out successfully
+[2025-08-14T07:08:42.280Z] [INFO] User demo@demo.com logged in successfully
+[2025-08-14T07:08:42.298Z] [INFO] Retrieved 3 users from the database
+[2025-08-14T07:08:42.304Z] [INFO] Retrieved 3 users from the database
+[2025-08-14T07:08:45.724Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T07:08:45.728Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T07:08:45.743Z] [INFO] ✅ Socket S94moLt7QO9-GtVoAAAO authenticated for user demo@demo.com (ID: 6)
+[2025-08-14T07:08:45.744Z] [INFO] 🔗 User demo@demo.com (6) connected with socket S94moLt7QO9-GtVoAAAO
+[2025-08-14T07:08:45.763Z] [INFO] Loaded 44 messages for conversation 86 by user 6
+[2025-08-14T07:08:45.765Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-14T07:08:49.925Z] [INFO] File hash calculated: 13c0d460... for 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-14T07:08:49.927Z] [INFO] File with same hash already exists in conversation 86: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-14T07:08:49.931Z] [INFO] 📁 File uploaded by demo@demo.com to conversation 86: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-14T07:08:49.937Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-14T07:09:35.321Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-08-14T07:09:35.494Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T07:09:35.496Z] [INFO] ✅ Socket sYzssrqas8eXahIAAAAR authenticated for user demo@demo.com (ID: 6)
+[2025-08-14T07:09:35.497Z] [INFO] 🔗 User demo@demo.com (6) connected with socket sYzssrqas8eXahIAAAAR
+[2025-08-14T07:09:35.498Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T07:09:35.522Z] [INFO] 👥 Sent online users list for conversation 86: 1 users
+[2025-08-14T07:09:35.521Z] [INFO] 👥 User demo@demo.com joined conversation 86
+[2025-08-14T07:09:35.523Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-14T07:09:35.525Z] [INFO] Loaded 44 messages for conversation 86 by user 6
+[2025-08-14T07:09:39.517Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:09:40.530Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:09:40.562Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:09:41.756Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:09:42.743Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:09:42.746Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:09:46.002Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:09:46.002Z] [INFO] Chart data: None
+[2025-08-14T07:09:46.002Z] [INFO] Content length: 255
+[2025-08-14T07:09:46.021Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:09:46.021Z] [INFO] Message ID: 1533
+[2025-08-14T07:11:12.750Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T07:11:12.751Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T07:11:12.751Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:28:39.521Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:28:41.565Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:28:41.567Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:28:42.145Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:28:46.809Z] [INFO] Content length: 230
+[2025-08-14T07:28:46.808Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:28:46.810Z] [INFO] Chart data: None
+[2025-08-14T07:28:46.824Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:28:46.825Z] [INFO] Message ID: 1535
+[2025-08-14T07:29:06.106Z] [INFO] 🔌 User demo@demo.com (6) disconnected: transport close
+[2025-08-14T07:29:06.303Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T07:29:06.305Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-14T07:29:06.306Z] [INFO] ✅ Socket SwEZRju8GJXpBlgkAAAU authenticated for user demo@demo.com (ID: 6)
+[2025-08-14T07:29:06.306Z] [INFO] 🔗 User demo@demo.com (6) connected with socket SwEZRju8GJXpBlgkAAAU
+[2025-08-14T07:29:06.323Z] [INFO] 👥 User demo@demo.com joined conversation 86
+[2025-08-14T07:29:06.324Z] [INFO] 👥 Sent online users list for conversation 86: 1 users
+[2025-08-14T07:29:06.334Z] [INFO] Loaded 48 messages for conversation 86 by user 6
+[2025-08-14T07:29:06.335Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-14T07:30:11.567Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T07:30:11.568Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T07:30:11.569Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:31:23.997Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:31:25.536Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:31:25.538Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:31:25.914Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:31:30.409Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:31:30.409Z] [INFO] Content length: 203
+[2025-08-14T07:31:30.410Z] [INFO] Chart data: None
+[2025-08-14T07:31:30.420Z] [INFO] Message ID: 1537
+[2025-08-14T07:31:30.419Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:32:10.968Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:32:10.969Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:32:10.970Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:32:18.002Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:32:19.372Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:32:19.374Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:32:20.408Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:32:23.838Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:32:23.838Z] [INFO] Content length: 322
+[2025-08-14T07:32:23.838Z] [INFO] Chart data: None
+[2025-08-14T07:32:23.849Z] [INFO] Message ID: 1539
+[2025-08-14T07:32:23.849Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:33:24.901Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:33:24.901Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:33:24.901Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:34:27.667Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:34:28.963Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:34:28.965Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:34:29.590Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:34:35.906Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:34:35.906Z] [INFO] Content length: 240
+[2025-08-14T07:34:35.906Z] [INFO] Chart data: None
+[2025-08-14T07:34:35.920Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:34:35.920Z] [INFO] Message ID: 1541
+[2025-08-14T07:35:55.124Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:35:55.125Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:35:55.126Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:36:05.870Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:36:06.964Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:36:06.967Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:36:08.399Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:36:10.990Z] [INFO] Content length: 209
+[2025-08-14T07:36:10.990Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:36:10.990Z] [INFO] Chart data: None
+[2025-08-14T07:36:11.002Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:36:11.003Z] [INFO] Message ID: 1543
+[2025-08-14T07:36:31.900Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:36:31.901Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:36:31.901Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:36:36.040Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:36:37.888Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:36:37.891Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:36:38.010Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:36:42.706Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:36:42.707Z] [INFO] Content length: 261
+[2025-08-14T07:36:42.707Z] [INFO] Chart data: None
+[2025-08-14T07:36:42.722Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:36:42.723Z] [INFO] Message ID: 1545
+[2025-08-14T07:37:33.177Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:37:33.178Z] [ERROR] AI service error for conversation 86: AI service connection error
+[2025-08-14T07:37:33.178Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:37:40.459Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 86
+[2025-08-14T07:37:42.655Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 86
+[2025-08-14T07:37:42.959Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 86
+[2025-08-14T07:37:42.961Z] [INFO] Connected to Python AI service for conversation 86
+[2025-08-14T07:37:53.244Z] [INFO] Processing AI response for conversation 86
+[2025-08-14T07:37:53.244Z] [INFO] Chart data: None
+[2025-08-14T07:37:53.244Z] [INFO] Content length: 544
+[2025-08-14T07:37:53.250Z] [INFO] AI response text only sent to conversation 86
+[2025-08-14T07:37:53.250Z] [INFO] Message ID: 1547
+[2025-08-14T07:38:08.760Z] [INFO] User logged out successfully
+[2025-08-14T07:38:08.805Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-08-14T07:38:18.777Z] [INFO] User dangthuyduong2019@gmail.com logged in successfully
+[2025-08-14T07:38:18.798Z] [INFO] Loaded 2 conversations for user 5
+[2025-08-14T07:38:18.801Z] [INFO] Loaded 2 conversations for user 5
+[2025-08-14T07:38:18.815Z] [INFO] ✅ Socket 1SeBXk1tfrEwxUg5AAAX authenticated for user Duong (ID: 5)
+[2025-08-14T07:38:18.815Z] [INFO] 🔗 User Duong (5) connected with socket 1SeBXk1tfrEwxUg5AAAX
+[2025-08-14T07:38:18.827Z] [INFO] 👥 User Duong joined conversation 58
+[2025-08-14T07:38:18.828Z] [INFO] 👥 Sent online users list for conversation 58: 1 users
+[2025-08-14T07:38:18.834Z] [INFO] Loaded 10 messages for conversation 58 by user 5
+[2025-08-14T07:38:18.834Z] [INFO] Loaded 0 files for conversation 58 by user 5
+[2025-08-14T07:38:31.434Z] [INFO] File hash calculated: 6ad57882... for Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-14T07:38:31.516Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\5_58_1755157111435.pdf
+[2025-08-14T07:38:31.520Z] [INFO] File uploaded successfully to conversation 58 by user 5: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-14T07:38:31.523Z] [INFO] 📁 File uploaded by Duong to conversation 58: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-14T07:38:31.531Z] [INFO] Loaded 1 files for conversation 58 by user 5
+[2025-08-14T07:38:33.056Z] [INFO] ⌨️ User Duong started typing in conversation 58
+[2025-08-14T07:38:34.258Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 58
+[2025-08-14T07:38:34.261Z] [INFO] Connected to Python AI service for conversation 58
+[2025-08-14T07:38:34.917Z] [INFO] ⌨️ User Duong stopped typing in conversation 58
+[2025-08-14T07:38:36.100Z] [INFO] Processing AI response for conversation 58
+[2025-08-14T07:38:36.103Z] [INFO] Content length: 195
+[2025-08-14T07:38:36.104Z] [INFO] Chart data: None
+[2025-08-14T07:38:36.116Z] [INFO] AI response text only sent to conversation 58
+[2025-08-14T07:38:36.116Z] [INFO] Message ID: 1549
+[2025-08-14T07:38:54.198Z] [INFO] ⌨️ User Duong started typing in conversation 58
+[2025-08-14T07:38:55.648Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 58
+[2025-08-14T07:38:55.650Z] [INFO] Connected to Python AI service for conversation 58
+[2025-08-14T07:38:56.028Z] [INFO] ⌨️ User Duong stopped typing in conversation 58
+[2025-08-14T07:38:57.597Z] [INFO] Content length: 215
+[2025-08-14T07:38:57.597Z] [INFO] Processing AI response for conversation 58
+[2025-08-14T07:38:57.598Z] [INFO] Chart data: None
+[2025-08-14T07:38:57.610Z] [INFO] AI response text only sent to conversation 58
+[2025-08-14T07:38:57.611Z] [INFO] Message ID: 1551
+[2025-08-14T07:39:12.948Z] [ERROR] Python AI service timeout for conversation 86
+[2025-08-14T07:39:12.948Z] [ERROR] AI service error for conversation 86: AI service timeout
+[2025-08-14T07:39:12.948Z] [INFO] Python AI service connection closed for conversation 86
+[2025-08-14T07:39:16.243Z] [ERROR] AI service error for conversation 58: AI service connection error
+[2025-08-14T07:39:16.242Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:39:16.244Z] [ERROR] AI service error for conversation 58: AI service connection error
+[2025-08-14T07:39:16.244Z] [INFO] Python AI service connection closed for conversation 58
+[2025-08-14T07:39:16.243Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:39:16.244Z] [INFO] Python AI service connection closed for conversation 58
+[2025-08-14T07:39:49.241Z] [INFO] ⌨️ User Duong started typing in conversation 58
+[2025-08-14T07:39:50.610Z] [INFO] 📤 Message sent by Duong (ID: 5) to conversation 58
+[2025-08-14T07:39:50.612Z] [INFO] Connected to Python AI service for conversation 58
+[2025-08-14T07:39:51.109Z] [INFO] ⌨️ User Duong stopped typing in conversation 58
+[2025-08-14T07:39:56.704Z] [INFO] Processing AI response for conversation 58
+[2025-08-14T07:39:56.705Z] [INFO] Chart data: None
+[2025-08-14T07:39:56.705Z] [INFO] Content length: 254
+[2025-08-14T07:39:56.718Z] [INFO] AI response text only sent to conversation 58
+[2025-08-14T07:39:56.718Z] [INFO] Message ID: 1553
+[2025-08-14T07:40:31.394Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-14T07:40:31.394Z] [ERROR] AI service error for conversation 58: AI service connection error
+[2025-08-14T07:40:31.395Z] [INFO] Python AI service connection closed for conversation 58
+[2025-08-18T08:10:21.724Z] [INFO] Log mode set to: CONSOLE+FILE
+[2025-08-18T08:10:21.726Z] [INFO] 🔌 WebSocket server initialized
+http://localhost:3000
+[2025-08-18T08:10:21.743Z] [INFO] Node.js Server is running on port 3000
+[2025-08-18T08:10:21.753Z] [INFO] Database tables initialized with user permission system.
+[2025-08-18T08:10:21.754Z] [INFO] SQLite database initialized successfully.
+[2025-08-18T08:10:21.767Z] [INFO] ✅ MinIO bucket "chat-files" already exists.
+[2025-08-18T08:11:08.581Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-18T08:11:08.585Z] [ERROR] JWT Verify Error: jwt expired
+[2025-08-18T08:11:08.597Z] [ERROR] ❌ Socket authentication error: jwt expired
+[2025-08-18T08:11:12.113Z] [INFO] User logged out successfully
+[2025-08-18T08:11:16.856Z] [INFO] User demo@demo.com logged in successfully
+[2025-08-18T08:11:16.882Z] [INFO] Retrieved 3 users from the database
+[2025-08-18T08:11:16.891Z] [INFO] Retrieved 3 users from the database
+[2025-08-18T08:11:21.511Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-18T08:11:21.517Z] [INFO] Loaded 2 conversations for user 6
+[2025-08-18T08:11:21.528Z] [INFO] ✅ Socket MKUOzQNWzzsW7AIPAAAF authenticated for user demo@demo.com (ID: 6)
+[2025-08-18T08:11:21.529Z] [INFO] 🔗 User demo@demo.com (6) connected with socket MKUOzQNWzzsW7AIPAAAF
+[2025-08-18T08:11:21.567Z] [INFO] Loaded 60 messages for conversation 86 by user 6
+[2025-08-18T08:11:21.570Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-18T08:11:40.428Z] [INFO] Conversation 87 created for user 6
+[2025-08-18T08:11:40.445Z] [INFO] Loaded 3 conversations for user 6
+[2025-08-18T08:11:40.483Z] [INFO] 👋 User demo@demo.com left conversation 86
+[2025-08-18T08:11:40.485Z] [INFO] 👥 Sent online users list for conversation 86: 0 users
+[2025-08-18T08:11:40.489Z] [INFO] 👥 User demo@demo.com joined conversation 87
+[2025-08-18T08:11:40.490Z] [INFO] 👥 Sent online users list for conversation 87: 1 users
+[2025-08-18T08:11:40.502Z] [INFO] Loaded 0 messages for conversation 87 by user 6
+[2025-08-18T08:11:40.504Z] [INFO] Loaded 0 files for conversation 87 by user 6
+[2025-08-18T08:14:49.236Z] [INFO] File hash calculated: 13c0d460... for 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-18T08:14:49.394Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\6_87_1755504889238.pdf
+[2025-08-18T08:14:49.398Z] [INFO] File uploaded successfully to conversation 87 by user 6: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-18T08:14:49.405Z] [INFO] 📁 File uploaded by demo@demo.com to conversation 87: 111191 ProductGuide_Financial_Analytics (1).pdf
+[2025-08-18T08:14:49.414Z] [INFO] Loaded 1 files for conversation 87 by user 6
+[2025-08-18T08:14:50.957Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 87
+[2025-08-18T08:14:57.708Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 87
+[2025-08-18T08:14:57.713Z] [INFO] Connected to Python AI service for conversation 87
+[2025-08-18T08:14:58.479Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 87
+[2025-08-18T08:15:06.782Z] [INFO] Processing AI response for conversation 87
+[2025-08-18T08:15:06.784Z] [INFO] Chart data: None
+[2025-08-18T08:15:06.783Z] [INFO] Content length: 452
+[2025-08-18T08:15:06.805Z] [INFO] AI response text only sent to conversation 87
+[2025-08-18T08:15:06.806Z] [INFO] Message ID: 1555
+[2025-08-18T08:16:27.723Z] [ERROR] AI service error for conversation 87: AI service timeout
+[2025-08-18T08:16:27.722Z] [ERROR] Python AI service timeout for conversation 87
+[2025-08-18T08:16:27.723Z] [INFO] Python AI service connection closed for conversation 87
+[2025-08-18T08:17:48.256Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\6_87_1755504889238.pdf'
+[2025-08-18T08:17:48.264Z] [INFO] File 49 deleted from conversation 87 by user 6
+[2025-08-18T08:17:48.271Z] [INFO] Loaded 0 files for conversation 87 by user 6
+[2025-08-18T08:17:55.116Z] [INFO] File hash calculated: 6ad57882... for Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:17:55.204Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\6_87_1755505075118.pdf
+[2025-08-18T08:17:55.211Z] [INFO] File uploaded successfully to conversation 87 by user 6: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:17:55.215Z] [INFO] 📁 File uploaded by demo@demo.com to conversation 87: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:17:55.225Z] [INFO] Loaded 1 files for conversation 87 by user 6
+[2025-08-18T08:17:57.302Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 87
+[2025-08-18T08:18:01.956Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 87
+[2025-08-18T08:18:01.961Z] [INFO] Connected to Python AI service for conversation 87
+[2025-08-18T08:18:02.357Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 87
+[2025-08-18T08:18:06.731Z] [INFO] Processing AI response for conversation 87
+[2025-08-18T08:18:06.739Z] [INFO] Content length: 661
+[2025-08-18T08:18:06.740Z] [INFO] Chart data: None
+[2025-08-18T08:18:06.752Z] [INFO] AI response text only sent to conversation 87
+[2025-08-18T08:18:06.752Z] [INFO] Message ID: 1557
+[2025-08-18T08:18:41.182Z] [INFO] ⌨️ User demo@demo.com started typing in conversation 87
+[2025-08-18T08:18:42.589Z] [INFO] 📤 Message sent by demo@demo.com (ID: 6) to conversation 87
+[2025-08-18T08:18:42.592Z] [INFO] Connected to Python AI service for conversation 87
+[2025-08-18T08:18:43.203Z] [INFO] ⌨️ User demo@demo.com stopped typing in conversation 87
+[2025-08-18T08:18:46.154Z] [INFO] Processing AI response for conversation 87
+[2025-08-18T08:18:46.154Z] [INFO] Content length: 686
+[2025-08-18T08:18:46.155Z] [INFO] Chart data: None
+[2025-08-18T08:18:46.159Z] [INFO] AI response text only sent to conversation 87
+[2025-08-18T08:18:46.159Z] [INFO] Message ID: 1559
+[2025-08-18T08:19:31.968Z] [ERROR] Python AI service timeout for conversation 87
+[2025-08-18T08:19:31.969Z] [ERROR] AI service error for conversation 87: AI service timeout
+[2025-08-18T08:19:31.970Z] [INFO] Python AI service connection closed for conversation 87
+[2025-08-18T08:19:52.960Z] [INFO] Conversation 87 deleted by user 6
+[2025-08-18T08:19:52.972Z] [INFO] 👋 User demo@demo.com left conversation 87
+[2025-08-18T08:19:52.974Z] [INFO] 👥 Sent online users list for conversation 87: 0 users
+[2025-08-18T08:19:52.977Z] [INFO] 👥 User demo@demo.com joined conversation 86
+[2025-08-18T08:19:52.980Z] [INFO] 👥 Sent online users list for conversation 86: 1 users
+[2025-08-18T08:19:52.994Z] [INFO] Loaded 60 messages for conversation 86 by user 6
+[2025-08-18T08:19:52.996Z] [INFO] Loaded 1 files for conversation 86 by user 6
+[2025-08-18T08:19:59.763Z] [INFO] User logged out successfully
+[2025-08-18T08:19:59.808Z] [INFO] 🔌 User demo@demo.com (6) disconnected: client namespace disconnect
+[2025-08-18T08:20:12.606Z] [ERROR] Python AI service timeout for conversation 87
+[2025-08-18T08:20:12.611Z] [ERROR] AI service error for conversation 87: AI service timeout
+[2025-08-18T08:20:12.612Z] [INFO] Python AI service connection closed for conversation 87
+[2025-08-18T08:20:27.463Z] [INFO] User demo@demo.com logged in successfully
+[2025-08-18T08:20:27.489Z] [INFO] Retrieved 3 users from the database
+[2025-08-18T08:20:27.498Z] [INFO] Retrieved 3 users from the database
+[2025-08-18T08:20:40.812Z] [INFO] User nguyenvanminh0610205@gmail.com logged in successfully
+[2025-08-18T08:20:40.853Z] [INFO] Loaded 1 conversations for user 8
+[2025-08-18T08:20:40.863Z] [INFO] ✅ Socket PX1lEXkZu6kuJAwMAAAI authenticated for user Minh (ID: 8)
+[2025-08-18T08:20:40.864Z] [INFO] 🔗 User Minh (8) connected with socket PX1lEXkZu6kuJAwMAAAI
+[2025-08-18T08:20:40.865Z] [INFO] Loaded 1 conversations for user 8
+[2025-08-18T08:20:40.885Z] [INFO] 👥 User Minh joined conversation 68
+[2025-08-18T08:20:40.886Z] [INFO] 👥 Sent online users list for conversation 68: 1 users
+[2025-08-18T08:20:40.895Z] [INFO] Loaded 0 files for conversation 68 by user 8
+[2025-08-18T08:20:40.896Z] [INFO] Loaded 20 messages for conversation 68 by user 8
+[2025-08-18T08:20:55.221Z] [INFO] Conversation 88 created for user 8
+[2025-08-18T08:20:55.232Z] [INFO] Loaded 2 conversations for user 8
+[2025-08-18T08:20:55.254Z] [INFO] 👋 User Minh left conversation 68
+[2025-08-18T08:20:55.255Z] [INFO] 👥 Sent online users list for conversation 68: 0 users
+[2025-08-18T08:20:55.259Z] [INFO] 👥 User Minh joined conversation 88
+[2025-08-18T08:20:55.260Z] [INFO] 👥 Sent online users list for conversation 88: 1 users
+[2025-08-18T08:20:55.274Z] [INFO] Loaded 0 files for conversation 88 by user 8
+[2025-08-18T08:20:55.273Z] [INFO] Loaded 0 messages for conversation 88 by user 8
+[2025-08-18T08:21:29.881Z] [INFO] File hash calculated: 6ad57882... for Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:21:29.976Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\8_88_1755505289888.pdf
+[2025-08-18T08:21:29.983Z] [INFO] File uploaded successfully to conversation 88 by user 8: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:21:29.986Z] [INFO] 📁 File uploaded by Minh to conversation 88: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:21:29.993Z] [INFO] Loaded 1 files for conversation 88 by user 8
+[2025-08-18T08:21:41.956Z] [INFO] ⌨️ User Minh started typing in conversation 88
+[2025-08-18T08:21:48.653Z] [INFO] ⌨️ User Minh stopped typing in conversation 88
+[2025-08-18T08:21:49.368Z] [INFO] ⌨️ User Minh started typing in conversation 88
+[2025-08-18T08:21:51.995Z] [INFO] 📤 Message sent by Minh (ID: 8) to conversation 88
+[2025-08-18T08:21:51.999Z] [INFO] Connected to Python AI service for conversation 88
+[2025-08-18T08:21:52.151Z] [INFO] ⌨️ User Minh stopped typing in conversation 88
+[2025-08-18T08:21:56.743Z] [INFO] Processing AI response for conversation 88
+[2025-08-18T08:21:56.750Z] [INFO] Content length: 364
+[2025-08-18T08:21:56.752Z] [INFO] Chart data: None
+[2025-08-18T08:21:56.761Z] [INFO] AI response text only sent to conversation 88
+[2025-08-18T08:21:56.761Z] [INFO] Message ID: 1561
+[2025-08-18T08:23:10.521Z] [ERROR] Python AI service connection error: read ECONNRESET
+[2025-08-18T08:23:10.522Z] [ERROR] AI service error for conversation 88: AI service connection error
+[2025-08-18T08:23:10.522Z] [INFO] Python AI service connection closed for conversation 88
+[2025-08-18T08:23:14.968Z] [INFO] ⌨️ User Minh started typing in conversation 88
+[2025-08-18T08:23:16.236Z] [INFO] ⌨️ User Minh stopped typing in conversation 88
+[2025-08-18T08:23:17.542Z] [INFO] 📤 Message sent by Minh (ID: 8) to conversation 88
+[2025-08-18T08:23:17.544Z] [INFO] Connected to Python AI service for conversation 88
+[2025-08-18T08:23:22.668Z] [INFO] Processing AI response for conversation 88
+[2025-08-18T08:23:22.668Z] [INFO] Chart data: None
+[2025-08-18T08:23:22.668Z] [INFO] Content length: 353
+[2025-08-18T08:23:22.674Z] [INFO] AI response text only sent to conversation 88
+[2025-08-18T08:23:22.674Z] [INFO] Message ID: 1563
+[2025-08-18T08:23:54.451Z] [INFO] ⌨️ User Minh started typing in conversation 88
+[2025-08-18T08:23:55.519Z] [INFO] ⌨️ User Minh stopped typing in conversation 88
+[2025-08-18T08:23:56.851Z] [INFO] ⌨️ User Minh started typing in conversation 88
+[2025-08-18T08:23:57.865Z] [INFO] ⌨️ User Minh stopped typing in conversation 88
+[2025-08-18T08:23:58.043Z] [INFO] ⌨️ User Minh started typing in conversation 88
+[2025-08-18T08:24:02.397Z] [INFO] 📤 Message sent by Minh (ID: 8) to conversation 88
+[2025-08-18T08:24:02.398Z] [INFO] Connected to Python AI service for conversation 88
+[2025-08-18T08:24:03.188Z] [INFO] ⌨️ User Minh stopped typing in conversation 88
+[2025-08-18T08:24:10.502Z] [INFO] Processing AI response for conversation 88
+[2025-08-18T08:24:10.502Z] [INFO] Chart data: None
+[2025-08-18T08:24:10.502Z] [INFO] Content length: 1551
+[2025-08-18T08:24:10.513Z] [INFO] AI response text only sent to conversation 88
+[2025-08-18T08:24:10.513Z] [INFO] Message ID: 1565
+[2025-08-18T08:24:47.549Z] [ERROR] Python AI service timeout for conversation 88
+[2025-08-18T08:24:47.550Z] [ERROR] AI service error for conversation 88: AI service timeout
+[2025-08-18T08:24:47.551Z] [INFO] Python AI service connection closed for conversation 88
+[2025-08-18T08:25:10.020Z] [WARNING] Could not delete PDF from data folder: ENOENT: no such file or directory, unlink 'D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\8_88_1755505289888.pdf'
+[2025-08-18T08:25:10.029Z] [INFO] File 51 deleted from conversation 88 by user 8
+[2025-08-18T08:25:10.035Z] [INFO] Loaded 0 files for conversation 88 by user 8
+[2025-08-18T08:25:13.002Z] [INFO] ⌨️ User Minh started typing in conversation 88
+[2025-08-18T08:25:18.042Z] [INFO] 📤 Message sent by Minh (ID: 8) to conversation 88
+[2025-08-18T08:25:18.044Z] [INFO] Connected to Python AI service for conversation 88
+[2025-08-18T08:25:19.037Z] [INFO] ⌨️ User Minh stopped typing in conversation 88
+[2025-08-18T08:25:20.234Z] [INFO] Processing AI response for conversation 88
+[2025-08-18T08:25:20.243Z] [INFO] Content length: 195
+[2025-08-18T08:25:20.245Z] [INFO] Chart data: None
+[2025-08-18T08:25:20.264Z] [INFO] AI response text only sent to conversation 88
+[2025-08-18T08:25:20.265Z] [INFO] Message ID: 1567
+[2025-08-18T08:25:32.403Z] [ERROR] Python AI service timeout for conversation 88
+[2025-08-18T08:25:32.405Z] [ERROR] AI service error for conversation 88: AI service timeout
+[2025-08-18T08:25:32.406Z] [INFO] Python AI service connection closed for conversation 88
+[2025-08-18T08:25:40.726Z] [INFO] Conversation 88 deleted by user 8
+[2025-08-18T08:25:40.744Z] [INFO] 👋 User Minh left conversation 88
+[2025-08-18T08:25:40.745Z] [INFO] 👥 Sent online users list for conversation 88: 0 users
+[2025-08-18T08:25:40.748Z] [INFO] 👥 Sent online users list for conversation 68: 1 users
+[2025-08-18T08:25:40.747Z] [INFO] 👥 User Minh joined conversation 68
+[2025-08-18T08:25:40.761Z] [INFO] Loaded 20 messages for conversation 68 by user 8
+[2025-08-18T08:25:40.762Z] [INFO] Loaded 0 files for conversation 68 by user 8
+[2025-08-18T08:25:47.014Z] [INFO] Conversation 89 created for user 8
+[2025-08-18T08:25:47.025Z] [INFO] Loaded 2 conversations for user 8
+[2025-08-18T08:25:47.042Z] [INFO] 👋 User Minh left conversation 68
+[2025-08-18T08:25:47.044Z] [INFO] 👥 Sent online users list for conversation 68: 0 users
+[2025-08-18T08:25:47.048Z] [INFO] 👥 User Minh joined conversation 89
+[2025-08-18T08:25:47.049Z] [INFO] 👥 Sent online users list for conversation 89: 1 users
+[2025-08-18T08:25:47.060Z] [INFO] Loaded 0 messages for conversation 89 by user 8
+[2025-08-18T08:25:47.061Z] [INFO] Loaded 0 files for conversation 89 by user 8
+[2025-08-18T08:25:54.715Z] [INFO] File hash calculated: 6ad57882... for Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:25:54.812Z] [INFO] PDF saved to data folder for RAG processing: D:\INSIGHT DATA\data-chatbot\chatbot\chatbot\mcp-server\data\8_89_1755505554717.pdf
+[2025-08-18T08:25:54.817Z] [INFO] File uploaded successfully to conversation 89 by user 8: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:25:54.820Z] [INFO] 📁 File uploaded by Minh to conversation 89: Nguyen-Van-Minh-TopCV.vn-130825.151730.pdf
+[2025-08-18T08:25:54.826Z] [INFO] Loaded 1 files for conversation 89 by user 8
+[2025-08-18T08:26:01.391Z] [INFO] ⌨️ User Minh started typing in conversation 89
+[2025-08-18T08:26:05.037Z] [INFO] ⌨️ User Minh stopped typing in conversation 89
+[2025-08-18T08:26:05.761Z] [INFO] ⌨️ User Minh started typing in conversation 89
+[2025-08-18T08:26:08.394Z] [INFO] 📤 Message sent by Minh (ID: 8) to conversation 89
+[2025-08-18T08:26:08.397Z] [INFO] Connected to Python AI service for conversation 89
+[2025-08-18T08:26:09.106Z] [INFO] ⌨️ User Minh stopped typing in conversation 89
+[2025-08-18T08:26:14.375Z] [INFO] Processing AI response for conversation 89
+[2025-08-18T08:26:14.397Z] [INFO] Content length: 596
+[2025-08-18T08:26:14.398Z] [INFO] Chart data: None
+[2025-08-18T08:26:14.419Z] [INFO] AI response text only sent to conversation 89
+[2025-08-18T08:26:14.420Z] [INFO] Message ID: 1569
+[2025-08-18T08:26:25.248Z] [INFO] ⌨️ User Minh started typing in conversation 89
+[2025-08-18T08:26:31.257Z] [INFO] 📤 Message sent by Minh (ID: 8) to conversation 89
+[2025-08-18T08:26:31.260Z] [INFO] Connected to Python AI service for conversation 89
+[2025-08-18T08:26:32.166Z] [INFO] ⌨️ User Minh stopped typing in conversation 89
+[2025-08-18T08:26:38.978Z] [INFO] Processing AI response for conversation 89
+[2025-08-18T08:26:38.978Z] [INFO] Content length: 1069
+[2025-08-18T08:26:38.978Z] [INFO] Chart data: None
+[2025-08-18T08:26:38.989Z] [INFO] AI response text only sent to conversation 89
+[2025-08-18T08:26:38.990Z] [INFO] Message ID: 1571
+[2025-08-18T08:26:48.053Z] [ERROR] Python AI service timeout for conversation 88
+[2025-08-18T08:26:48.054Z] [ERROR] AI service error for conversation 88: AI service timeout
+[2025-08-18T08:26:48.055Z] [INFO] Python AI service connection closed for conversation 88
+[2025-08-18T08:27:38.408Z] [ERROR] Python AI service timeout for conversation 89
+[2025-08-18T08:27:38.409Z] [ERROR] AI service error for conversation 89: AI service timeout
+[2025-08-18T08:27:38.410Z] [INFO] Python AI service connection closed for conversation 89
+[2025-08-18T08:28:01.266Z] [ERROR] Python AI service timeout for conversation 89
+[2025-08-18T08:28:01.268Z] [ERROR] AI service error for conversation 89: AI service timeout
+[2025-08-18T08:28:01.270Z] [INFO] Python AI service connection closed for conversation 89

@@ -153,7 +153,7 @@ def get_original_tool_name(sanitized_name: str) -> str:
         "get_db_schema": "sql+db://sql/schema/{db_name*}",
         "list_tables": "sql+db://sql/list_tables/{db_name*}",
         "rag_query": "rag_query",
-        "rag_summarize_pdf": "summarize_pdf",
+        "rag_summarize_pdf": "rag_summarize_pdf",
         "rag_get_collection_info": "rag_get_collection_info",
         "sql_query_db": "sql_query_db",
         "chart_create_chart": "chart_create_chart"
